@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --color_darkblue: #1c3144;
+  --color_darkblue2: #234058;
+  --color_blue: #255175;
+  --color_blue2: #3f88c5;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/*  PAGE CONTENTS  */
+.content {
+  width: 100%;
+}
+.content > div {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+.content-circle::before {
+  content: '';
+  height: 200px;
+  display: block;
+  background-color: var(--color_darkblue);
+  clip-path: polygon(50% 0%,100% 0%,100% 61%,58% 79%,0% 86%,0% 0%);
+}
+.content-circle::after{
+  content: '';
+  height: 200px;
+  display: block;
+  background-color: var(--color_darkblue);
+  clip-path: polygon(50% 0%,100% 0%,100% 61%,58% 79%,0% 86%,0% 0%);
+}
+
+/*  BACKGROUNDS  */
+.bg-darkblue {
+  background-color: var(--color_darkblue);
+}
+.bg-darkblue2 {
+  background-color: var(--color_darkblue2);
+}
+.bg-blue {
+  background-color: var(--color_blue);
+}
+.bg-blue2 {
+  background-color: var(--color_blue2);
+}
+
+/*  TITLES  */
+.title-large {
+  width: fit-content;
+  margin: 0;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+/*  LISTS  */
+.list-unordered {
+  margin: 0;
+  padding: 0;
+}
+.list-unordered li {
+  font-family: Ubuntu;
+  font-weight: 700;
+  list-style-type: none;
+}
+
+/*  FONTS  */
+.col-white {
+  color: white;
+}
