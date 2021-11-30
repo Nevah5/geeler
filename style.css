@@ -12,6 +12,17 @@ html {
   margin: 0;
   padding: 0;
   color: var(--white);
+  background-color: var(--white);
+}
+
+.nvbar {
+  position: fixed;
+  width: 5vw;
+  max-width: 100px;
+  height: 100vh;
+  background-color: var(--white);
+  border-right: solid 3px var(--palette3);
+  z-index: 100;
 }
 
 .section-circle-after {
@@ -25,9 +36,12 @@ html {
           justify-content: space-between;
   padding-top: 9vh;
   width: 100%;
-  height: 100vh;
-  -webkit-clip-path: circle(140vw at 0 -60vw);
-          clip-path: circle(140vw at 0 -60vw);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 14vw;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   background-image: radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
@@ -73,28 +87,28 @@ html {
 }
 
 .section-circle-after .wrapper-right div::after {
-  -webkit-animation: chevronscrolldown 3s infinite backwards ease-in-out;
-          animation: chevronscrolldown 3s infinite backwards ease-in-out;
+  -webkit-animation: chevronscrolldown 4s infinite backwards ease-in-out;
+          animation: chevronscrolldown 4s infinite backwards ease-in-out;
 }
 
 .section-circle-after .wrapper-right div:nth-child(2)::after {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+}
+
+.section-circle-after .wrapper-right div:nth-child(3)::after {
   -webkit-animation-delay: .5s;
           animation-delay: .5s;
 }
 
-.section-circle-after .wrapper-right div:nth-child(3)::after {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
 .section-circle-after .wrapper-right div:nth-child(4)::after {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
 }
 
 .section-circle-after .wrapper-right div:nth-child(5)::after {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes chevronscrolldown {
@@ -103,10 +117,20 @@ html {
     width: 3vw;
     opacity: 0.8;
   }
+  25% {
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
+  }
   50% {
     opacity: 1;
     height: 4vw;
     width: 4vw;
+  }
+  75% {
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
   }
   100% {
     opacity: 0.8;
@@ -121,10 +145,20 @@ html {
     width: 3vw;
     opacity: 0.8;
   }
+  25% {
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
+  }
   50% {
     opacity: 1;
     height: 4vw;
     width: 4vw;
+  }
+  75% {
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
   }
   100% {
     opacity: 0.8;

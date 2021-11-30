@@ -12,10 +12,20 @@ html {
   margin: 0;
   padding: 0;
   color: var(--white);
+  background-color: var(--white);
 }
 
 //                                              //
 
+.nvbar{
+  position: fixed;
+  width: 5vw;
+  max-width: 100px;
+  height: 100vh;
+  background-color: var(--white);
+  border-right: solid 3px var(--palette3);
+  z-index: 100;
+}
 .section-circle-after{
   background-color: var(--palette3);
   position: relative;
@@ -23,8 +33,9 @@ html {
   justify-content: space-between;
   padding-top: 9vh;
   width: 100%;
-  height: 100vh;
-  clip-path: circle(140vw at 0 -60vw);
+  height: fit-content;
+  padding-bottom: 14vw;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   // clip-path: circle(1400px at 0 -60vw);background-color: #e5e5f7;
   background-image:  radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
   background-size: 20px 20px;
@@ -52,19 +63,19 @@ html {
     width: 4vw;
 
     &::after{
-      animation: chevronscrolldown 3s infinite backwards ease-in-out;
+      animation: chevronscrolldown 4s infinite backwards ease-in-out;
     }
     &:nth-child(2)::after{
-      animation-delay: .5s;
+      animation-delay: .25s;
     }
     &:nth-child(3)::after{
-      animation-delay: 1s;
+      animation-delay: .5s;
     }
     &:nth-child(4)::after{
-      animation-delay: 1.5s;
+      animation-delay: .75s;
     }
     &:nth-child(5)::after{
-      animation-delay: 2s;
+      animation-delay: 1s;
     }
   }
 }
@@ -75,10 +86,20 @@ html {
     width: 3vw;
     opacity: 0.8;
   }
+  25%{
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
+  }
   50%{
     opacity: 1;
     height: 4vw;
     width: 4vw;
+  }
+  75%{
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
   }
   100%{
     opacity: 0.8;
