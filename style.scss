@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --white: #ecf4ff;
+  --palette1: #4C89E1;
+  --palette2: #284BB8;
+  --palette3: #1C3684;
+  --black: #000104;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+//                                              //
+
+.section-circle-after{
+  background-color: var(--palette3);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 9vh;
+  width: 100%;
+  height: 100vh;
+  clip-path: circle(140vw at 0 -60vw);
+  // clip-path: circle(1400px at 0 -60vw);background-color: #e5e5f7;
+  background-image:  radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+.section-circle-after .wrapper-align{
+  margin-left: 15vw;
+  height: fit-content;
+}
+.section-circle-after .wrapper-right{
+  height: fit-content;
+  margin-right: 2vw;
+  width: 90px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: flex-start;
+
+  & div{
+    position: relative;
+    height: 4vw;
+    width: 4vw;
+
+    &::after{
+      animation: chevronscrolldown 3s infinite backwards ease-in-out;
+    }
+    &:nth-child(2)::after{
+      animation-delay: .5s;
+    }
+    &:nth-child(3)::after{
+      animation-delay: 1s;
+    }
+    &:nth-child(4)::after{
+      animation-delay: 1.5s;
+    }
+    &:nth-child(5)::after{
+      animation-delay: 2s;
+    }
+  }
+}
+
+@keyframes chevronscrolldown {
+  0%{
+    height: 3vw;
+    width: 3vw;
+    opacity: 0.8;
+  }
+  50%{
+    opacity: 1;
+    height: 4vw;
+    width: 4vw;
+  }
+  100%{
+    opacity: 0.8;
+    height: 3vw;
+    width: 3vw;
+  }
+}
+
+//                                              //
+
+.title-large{
+  margin: 0;
+  color: var(--white);
+  font-family: Oswald;
+  font-weight: 700;
+  width: fit-content;
+  font-size: 6vw;
+}
+.unsorted-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+
+  & li{
+    font-size: 1.6vw;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+  }
+}
+.f-ubuntu{
+  font-family: Ubuntu;
+  font-weight: 400;
+}
+#scroll-chevron-down::after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  background-color: var(--white);
+  clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 40%, 50% 90%, 0 40%);
+}
