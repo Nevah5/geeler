@@ -17,12 +17,21 @@ html {
 
 .nvbar {
   position: fixed;
+  min-width: 50px;
   width: 5vw;
   max-width: 100px;
   height: 100vh;
   background-color: var(--white);
   border-right: solid 3px var(--palette3);
   z-index: 100;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nvbar:hover {
+  min-width: 200px;
+  width: 20vw;
+  max-width: 400px;
 }
 
 .section-circle-after {
@@ -40,8 +49,10 @@ html {
   height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 14vw;
+  background-attachment: fixed;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  background-image: url("jon.jpeg");
   background-image: radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
@@ -111,6 +122,94 @@ html {
           animation-delay: 1s;
 }
 
+.section-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  width: 80vw;
+      grid-template-areas: "box1 box2 box3" "box1 box4 box4" "box5 box5 box6";
+  gap: 15px;
+}
+
+.section-grid div {
+  border-radius: .6em;
+  background-attachment: fixed;
+  background-image: radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  position: relative;
+  padding: 15px 45px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 1;
+}
+
+.section-grid div h1 {
+  margin: 5px 0;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+
+.section-grid div span {
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  font-family: Ubuntu;
+  font-weight: 400;
+  width: 100%;
+}
+
+.section-grid div:hover {
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+  z-index: 10;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.section-grid div:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: box1;
+}
+
+.section-grid div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: box2;
+}
+
+.section-grid div:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: box3;
+}
+
+.section-grid div:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: box4;
+}
+
+.section-grid div:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: box5;
+}
+
+.section-grid div:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: box6;
+}
+
 @-webkit-keyframes chevronscrolldown {
   0% {
     height: 3vw;
@@ -165,6 +264,20 @@ html {
     height: 3vw;
     width: 3vw;
   }
+}
+
+.wrapper-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95vw;
+  margin-left: auto;
 }
 
 .title-large {
