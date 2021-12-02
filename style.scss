@@ -41,10 +41,10 @@ html {
   justify-content: space-between;
   padding-top: 9vh;
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   padding-bottom: 14vw;
   background-attachment: fixed;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: circle(200vh at 50% -125vh);
   // clip-path: circle(1400px at 0 -60vw);background-color: #e5e5f7;
   background-image: url("jon.jpeg");
   background-image:  radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
