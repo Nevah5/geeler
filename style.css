@@ -237,6 +237,10 @@ html {
   height: 2px;
 }
 
+.wrapper-about .about-text p {
+  font-size: 1.5vw;
+}
+
 @-webkit-keyframes chevronscrolldown {
   0% {
     height: 3vw;
