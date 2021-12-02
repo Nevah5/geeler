@@ -45,7 +45,7 @@ html {
           justify-content: space-between;
   padding-top: 9vh;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   padding-bottom: 14vw;
   background-attachment: fixed;
   -webkit-clip-path: circle(200vh at 50% -125vh);
@@ -208,6 +208,35 @@ html {
   grid-area: box6;
 }
 
+.wrapper-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 50vh;
+}
+
+.wrapper-about .about-text {
+  width: 30vw;
+  margin-right: 10vw;
+  max-width: 50vw;
+}
+
+.wrapper-about .about-text .title-medium {
+  color: var(--palette3);
+}
+
+.wrapper-about .about-text .divider {
+  width: 30%;
+  background-color: var(--palette3);
+  height: 2px;
+}
+
 @-webkit-keyframes chevronscrolldown {
   0% {
     height: 3vw;
@@ -289,6 +318,16 @@ html {
   font-size: 6vw;
 }
 
+.title-medium {
+  margin: 0;
+  font-family: Oswald;
+  font-weight: 700;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4vw;
+}
+
 .unsorted-list {
   list-style-type: none;
   margin: 0;
@@ -325,5 +364,19 @@ html {
   background-color: var(--white);
   -webkit-clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 40%, 50% 90%, 0 40%);
           clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 40%, 50% 90%, 0 40%);
+}
+
+.c-darkblue {
+  color: var(--palette3);
+}
+
+.link-button-blue {
+  padding: 7px 15px;
+  border-radius: .5em;
+  background-color: var(--palette3);
+  color: var(--white);
+  font-family: Ubuntu;
+  text-decoration: none;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

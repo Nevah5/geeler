@@ -41,7 +41,7 @@ html {
   justify-content: space-between;
   padding-top: 9vh;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   padding-bottom: 14vw;
   background-attachment: fixed;
   clip-path: circle(200vh at 50% -125vh);
@@ -152,6 +152,27 @@ html {
     }
   }
 }
+.wrapper-about{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 50vh;
+
+  .about-text{
+    width: 30vw;
+    margin-right: 10vw;
+    max-width: 50vw;
+
+    .title-medium{
+      color: var(--palette3);
+    }
+    .divider {
+      width: 30%;
+      background-color: var(--palette3);
+      height: 2px;
+    }
+  }
+}
 
 @keyframes chevronscrolldown {
   0%{
@@ -198,6 +219,13 @@ html {
   width: fit-content;
   font-size: 6vw;
 }
+.title-medium{
+  margin: 0;
+  font-family: Oswald;
+  font-weight: 700;
+  width: fit-content;
+  font-size: 4vw;
+}
 .unsorted-list{
   list-style-type: none;
   margin: 0;
@@ -226,4 +254,16 @@ html {
   left: 50%;
   background-color: var(--white);
   clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 40%, 50% 90%, 0 40%);
+}
+.c-darkblue{
+  color: var(--palette3);
+}
+.link-button-blue{
+  padding: 7px 15px;
+  border-radius: .5em;
+  background-color: var(--palette3);
+  color: var(--white);
+  font-family: Ubuntu;
+  text-decoration: none;
+  font-weight: 700;
 }
