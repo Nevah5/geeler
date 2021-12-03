@@ -51,7 +51,6 @@
         <?php } ?>
         <link rel="icon" href="../media/icon/logo_small_icon.png">
         <script src="https://kit.fontawesome.com/a44080dbce.js" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <?php include("../media/site/header.inc.php"); ?>

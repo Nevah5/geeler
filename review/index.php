@@ -48,7 +48,6 @@
         <link rel="icon" href="../media/icon/logo_small_icon.png">
         <link rel="stylesheet" href="../media/labels/labels.css">
         <script src="https://kit.fontawesome.com/a44080dbce.js" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <?php include("../media/site/header.inc.php"); ?>
@@ -63,16 +62,6 @@
             <div class="postform">
                 <h1><a href="../" id="back">Zurück</a> Bewertung abgeben</h1>
                 <form action="?submit" name="create-general" method="POST">
-                    <?php
-                        if(isset($_GET["submit"])){
-                            $captcha=$_POST['g-recaptcha-response'];
-                            
-                            $secretKey = "6LdRUsAaAAAAAKALeySeOZbsdhQFxj6MKx1UjmY7";
-                            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-                            $response = file_get_contents($url);
-                            $responseKeys = json_decode($response,true);
-                        }
-                    ?>
                     <h3>Eindruck:</h3>
                     <section class="rating">
                         <input type="radio" id="verygood" name="impression" value="verygood">
@@ -86,35 +75,21 @@
                         <input type="radio" id="verybad" name="impression" value="verybad">
                         <label for="verybad"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></label><br>
                     </section><br>
-                    
+
                     <textarea cols="50" rows="20" maxlength="2000" placeholder="Bewertung..." name="description"><?php echo $_POST['description']; ?></textarea><br>
                     <?php
-                        if(isset($_GET["submit"]) AND $captcha){
+                        if(isset($_GET["submit"])){
                             if(empty($_POST['description'])){
                                 $err = true;
                                 echo '<p id="error">Bitte gib eine Beschreibung an.</p>';
                             }
                         }
                     ?>
-                    <div class="g-recaptcha" data-sitekey="6LdRUsAaAAAAAE8fgFDbFLKqIxCok8wWuw2oCD1H"></div>
-                    <?php 
-                        if(isset($_GET['submit'])){
-                            if(!$captcha){
-                                echo '<p id="error">Bitte löse zuerst das reCaptcha!</p>';
-                                $err = true;
-                            }
-                            // should return JSON with success as true
-                            if(!$responseKeys["success"] && $err == false) {
-                                echo '<p id="error">Das reCaptcha ist fehlgeschlagen. Bitte versuche es erneut.</p>';
-                                $err = true;
-                            }
-                        }
-                    ?>
                     <input type="submit" value="Bewertung Einreichen">
-                    <?php 
+                    <?php
                         //PHP zum Einreichen
                         if(isset($_GET['submit'])){
-                            if(!$err AND $captcha){
+                            if(!$err){
                                 $title = $_POST['title'];
                                 $description = $_POST['description'];
                                 $impression = $_POST['impression'];
@@ -136,7 +111,7 @@
                 //display reviews ?>
                 <div class="comments">
                 <h1>Rückmeldungen</h1>
-                <?php 
+                <?php
                     $reviews = mysqli_query($conn, "SELECT * FROM `reviews` WHERE 1");
                     foreach($reviews as $key => $data){
                         $userID = $data['userID'];

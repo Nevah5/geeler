@@ -48,7 +48,6 @@
         <link rel="icon" href="../media/icon/logo_small_icon.png">
         <link rel="stylesheet" href="../media/labels/labels.css">
         <script src="https://kit.fontawesome.com/a44080dbce.js" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <?php include("../media/site/header.inc.php"); ?>
@@ -63,36 +62,12 @@
                 <div class="postform">
                 <h1><a href="../" id="back">Zurück</a> Support</h1>
                 <form action="?submit" method="POST">
-                    <?php
-                        if(isset($_GET["submit"])){
-                            $captcha=$_POST['g-recaptcha-response'];
-                            
-                            $secretKey = "6LdRUsAaAAAAAKALeySeOZbsdhQFxj6MKx1UjmY7";
-                            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-                            $response = file_get_contents($url);
-                            $responseKeys = json_decode($response,true);
-                        }
-                    ?>
                     <textarea cols="50" rows="20" maxlength="2000" placeholder="Schreibe hier deine Frage oder Bemerkung..." name="content"><?php echo $_POST['content']; ?></textarea><br>
                     <?php
-                        if(isset($_GET["submit"]) AND $captcha){
+                        if(isset($_GET["submit"])){
                             if(empty($_POST['content'])){
                                 $err = true;
                                 echo '<p id="error">Bitte gib eine Beschreibung an.</p>';
-                            }
-                        }
-                    ?>
-                    <div class="g-recaptcha" data-sitekey="6LdRUsAaAAAAAE8fgFDbFLKqIxCok8wWuw2oCD1H"></div>
-                    <?php 
-                        if(isset($_GET['submit'])){
-                            if(!$captcha){
-                                echo '<p id="error">Bitte löse zuerst das reCaptcha!</p>';
-                                $err = true;
-                            }
-                            // should return JSON with success as true
-                            if(!$responseKeys["success"] && $err == false) {
-                                echo '<p id="error">Das reCaptcha ist fehlgeschlagen. Bitte versuche es erneut.</p>';
-                                $err = true;
                             }
                         }
                     ?>
@@ -100,7 +75,7 @@
                     <?php 
                         //PHP zum Einreichen
                         if(isset($_GET['submit'])){
-                            if(!$err AND $captcha){
+                            if(!$err){
                                 $content = $_POST['content'];
                                 $userID = $_SESSION['userid'];
                                 $caseID = dechex(rand(0, 999999999));
