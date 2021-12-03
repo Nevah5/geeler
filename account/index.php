@@ -57,7 +57,6 @@
         <?php } ?>
         <link rel="icon" href="../media/icon/logo_small_icon.png">
         <script src="https://kit.fontawesome.com/a44080dbce.js" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <?php include("../media/site/header.inc.php"); ?>
@@ -91,20 +90,10 @@
                         if($login == true){
                     ?>
                     <form action="?l" method="post">
-                    <?php
-                        if(isset($_GET["l"])){
-                            $captcha=$_POST['g-recaptcha-response'];
-                            
-                            $secretKey = "6LdRUsAaAAAAAKALeySeOZbsdhQFxj6MKx1UjmY7";
-                            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-                            $response = file_get_contents($url);
-                            $responseKeys = json_decode($response,true);
-                        }
-                    ?>
                         <!-- USERNAME: -->
                         <input type="text" size="40" maxlength="250" name="username" placeholder="Benutzername" value="<?php echo $_POST["username"] ?>"><br>
                         <?php
-                            if(isset($_GET["l"]) and $captcha){
+                            if(isset($_GET["l"])){
                                 $err = false;
                                 if (empty($_POST["username"])) {
                                     echo '<p id="error">Bitte gib einen Benutzername an.</p>';
@@ -139,7 +128,7 @@
                         <!-- PASSWORD: -->
                         <input type="password" size="40"  maxlength="250" name="password" placeholder="Passwort" value="<?php echo $_POST["password"] ?>"><br>
                         <?php
-                            if(isset($_GET["l"]) and $captcha){
+                            if(isset($_GET["l"])){
                                 if(empty($_POST["password"])){
                                     echo '<p id="error">Bitte gib ein Passwort an.</p>';
                                     $err = true;
@@ -170,27 +159,11 @@
                             }
                         ?>
 
-                        <!-- RECAPTCHA: -->
-                        <div class="g-recaptcha" data-sitekey="6LdRUsAaAAAAAE8fgFDbFLKqIxCok8wWuw2oCD1H"></div>
-                        <?php 
-                            if(isset($_GET['l'])){
-                                if(!$captcha){
-                                    echo '<p id="error">Bitte löse zuerst das reCaptcha!</p>';
-                                    $err = true;
-                                }
-                                // should return JSON with success as true
-                                if(!$responseKeys["success"] && $err == false) {
-                                    echo '<p id="error">Das reCaptcha ist fehlgeschlagen. Bitte versuche es erneut.</p>';
-                                    $err = true;
-                                }
-                            }
-                        ?>
-
                         <input type="submit" value="Einloggen">
 
                         <!-- PHP zum Login -->
                         <?php
-                            if(isset($_GET["l"]) and $captcha){
+                            if(isset($_GET["l"])){
                                 if($err == false){
                                     $username = $_POST["username"];
                                     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -276,19 +249,10 @@
                         if($registration == true){
                     ?>
                     <form action="?r" method="post">
-                        <?php 
-                            if(isset($_GET["r"])){
-                                $captcha=$_POST['g-recaptcha-response'];
-                                $secretKey = "6LdRUsAaAAAAAKALeySeOZbsdhQFxj6MKx1UjmY7";
-                                $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-                                $response = file_get_contents($url);
-                                $responseKeys = json_decode($response,true);
-                            }
-                        ?>
                         <!-- EMAIL: -->
                         <input type="email" size="40" maxlength="36" name="email" placeholder="Email" value="<?php echo $_POST["email"] ?>"><br>
                         <?php 
-                            if(isset($_GET["r"]) and $captcha){
+                            if(isset($_GET["r"])){
                                 $err = false;
                                 if(!empty($_POST["email"]) && !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
                                     echo '<p id="error">Die angegebene Email ist nicht gültig.</p>';
@@ -323,7 +287,7 @@
                         <!-- USERNAME: -->
                         <input type="text" size="40" maxlength="40" name="username" placeholder="Benutzername" value="<?php echo $_POST["username"] ?>"><br>
                         <?php
-                            if(isset($_GET["r"]) and $captcha){
+                            if(isset($_GET["r"])){
                                 $username = $_POST["username"];
                                 if(strlen($username) > 40){
                                     echo '<p id="error">Dein Benutzername darf maximal 40 Zeichen lange sein!</p>';
@@ -359,7 +323,7 @@
                         <input type="password" size="40"  maxlength="250" name="password" placeholder="Passwort" value="<?php echo $_POST["password"] ?>"><br>
                         <input type="password" size="40" maxlength="250" name="password2" placeholder="Passwort wiederholen"><br>
                         <?php 
-                            if(isset($_GET["r"]) and $captcha){
+                            if(isset($_GET["r"])){
                                 //a-z, A-Z, 0-9, _, min. 8 Zeichen /^[\w\d\s]{8,}$/
                                 if (!empty($_POST["password"]) && !preg_match("/^.{8,}$/",$_POST["password"])) {
                                     echo '<p id="error">Dein Passwort muss mindestens 8 Zeichen beinhalten.</p>';
@@ -374,27 +338,11 @@
                             }
                         ?>
 
-                        <!-- RECAPTCHA: -->
-                        <div class="g-recaptcha" data-sitekey="6LdRUsAaAAAAAE8fgFDbFLKqIxCok8wWuw2oCD1H"></div>
-                        <?php 
-                            if(isset($_GET["r"])){
-                                if(!$captcha){
-                                    echo '<p id="error">Bitte löse zuerst das reCaptcha!</p>';
-                                    $err = true;
-                                }
-                                // should return JSON with success as true
-                                if(!$responseKeys["success"] && $err == false) {
-                                    echo '<p id="error">Das reCaptcha ist fehlgeschlagen. Bitte versuche es erneut.</p>';
-                                    $err = true;
-                                }
-                            }
-                        ?>
-
                         <input type="submit" value="Registrieren">
 
                         <!-- PHP zur Registration: -->
                         <?php
-                            if(isset($_GET["r"]) and $captcha){
+                            if(isset($_GET["r"])){
                                 $username = $_POST["username"];
                                 $email = $_POST["email"];
                                 $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
