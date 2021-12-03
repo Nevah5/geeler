@@ -6,7 +6,7 @@
     include("updatesession.inc.php");
     include("../online.inc.php");
 
-    
+
     include("../database.inc.php");
 
     $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_dbname);
@@ -21,7 +21,7 @@
             header("Location: account/logout.php?accountdeleted");
         }
     }
-    
+
     mysqli_close($conn);
     if(isset($_GET['accept'])){
         setcookie("accept", true, time() + (86400 * 30), "/");
@@ -74,10 +74,10 @@
                         if(!$conn){
                             die("Connection failed: " . mysqli_connect_error());
                         }
-                
+
                         $sql = "SELECT login FROM admin WHERE ID='1' AND login=true";
                         $result = mysqli_fetch_array($conn->query($sql));
-                
+
                         if ($result["login"]) {
                             $login = true;
                         }else{
@@ -212,7 +212,7 @@
                                     $sql_savecookie = "INSERT INTO cookielogin(token, IP, userID) VALUES ('$cookielogin', '$ip', '$userid')";
                                     $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_dbname);
                                     $conn->query($sql_savecookie);
-                                    
+
                                     mysqli_close($conn);
                                     header("Location: ../../");
                                 }
@@ -233,10 +233,10 @@
                         if(!$conn){
                             die("Connection failed: " . mysqli_connect_error());
                         }
-                
+
                         $sql = "SELECT registration FROM admin WHERE ID='1' AND registration=true";
                         $result = mysqli_fetch_array($conn->query($sql));
-                
+
                         if ($result["registration"]) {
                             $registration = true;
                         }else{
@@ -283,7 +283,7 @@
                                 }
                             }
                         ?>
-                        
+
                         <!-- USERNAME: -->
                         <input type="text" size="40" maxlength="40" name="username" placeholder="Benutzername" value="<?php echo $_POST["username"] ?>"><br>
                         <?php
@@ -349,7 +349,7 @@
                                 $hash = md5(rand(0,99999));
                                 $userid = dechex(time() * rand(0, 9999999));
                                 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-                                
+
                                 if(spam_check($ip)){
                                     echo '<p id="error">Du darfst dich nicht mehr registrieren!</p>';
                                     $err == true;
@@ -390,7 +390,7 @@
                     $userid = $_SESSION['userid'];
                     $data = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM users WHERE ID='$userid'"));
                     $pfp = $data['Avatar'];
-                    
+
                     //Test if File still exists, if not then put in default pic for the user.
                     if(!file_exists("../media/uploads/profiles/" . $pfp)){
                         mysqli_query($conn, "UPDATE users SET Avatar='default.png' WHERE ID='$userid'");
@@ -427,10 +427,10 @@
                     if(!$conn){
                         die("Connection failed: " . mysqli_connect_error());
                     }
-            
+
                     $sql = "SELECT usernamechanging FROM admin WHERE ID='1' AND usernamechanging=true";
                     $result = mysqli_fetch_array($conn->query($sql));
-            
+
                     if ($result["usernamechanging"]) {
                         $usernamechanging = true;
                     }else{
