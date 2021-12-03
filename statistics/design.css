@@ -1,0 +1,59 @@
+:root{
+    --white1: #D5DDF2;
+    --white2: #F1F4FB;
+
+    --logo1: #2A3C67;
+    --logo2: #405A9B;
+    --logo3: #3C62C1;
+    --logo4: #6481CA;
+    --logo5: #7699F0;
+    --logo6: #95b2fc;
+
+    --important: #e63232;
+    --sucess: #33df41;
+
+    --devbg: rgba(10, 10, 10, 0.4);
+
+    --standart_font:Verdana, Geneva, Tahoma, sans-serif;
+}
+@font-face {
+    font-family: logo;
+    src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+}
+
+p#error{
+    font-family: var(--standart_font);
+    color: var(--important);
+    font-weight: 1000;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white1);
+}.body #information{
+    border: var(--important) solid 3px;
+    color: var(--important);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+    text-shadow: var(--logo6) 0 0 20px;
+}.body #information2{
+    border: var(--sucess) solid 3px;
+    color: var(--sucess);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+    text-shadow: var(--logo6) 0 0 20px;
+}
+
+p#error{
+    color: var(--important);
+    font-weight: 1000;
+}
+
+
+.statistics{
+    font-family: var(--standart_font);
+    color: var(--logo2);
+    background-color: var(--white2);
+    border: var(--logo2) solid 3px;
+}

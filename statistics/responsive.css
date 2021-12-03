@@ -1,0 +1,129 @@
+@font-face {
+    font-family: logo;
+    src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/*Smartphones (Portrait and Landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .body{
+        margin-top: 341px;
+    }.body #information{
+        width: 70%;
+        margin: 600px auto 500px auto;
+        text-align: center;
+        padding: 60px;
+        font-size: 3rem;
+    }.body #information2{
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 800px;
+        margin-bottom: 800px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+
+    .statistics{
+        padding: 60px;
+        margin: 400px auto 200px;
+        width: 60%;
+    }.statistics h1{
+        font-size: 3rem;
+    }.statistics span{
+        font-size: 2rem;
+    }
+
+}
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .body{
+        margin-top: 111px;
+    }.body #information{
+        width: 70%;
+        margin: 400px auto 500px auto;
+        text-align: center;
+        padding: 60px;
+        font-size: 2rem;
+    }.body #information2{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+
+    .statistics{
+        padding: 60px;
+        margin: 170px auto 200px;
+        width: 60%;
+    }.statistics h1{
+        font-size: 2.5rem;
+    }.statistics span{
+        font-size: 1.7rem;
+    }
+
+}
+/* Desktops and Laptops */
+@media only screen and (min-device-width : 1025px) and (max-width : 1201px) {
+    .body{
+        margin-top: 111px;
+    }.body #information{
+        width: 50%;
+        margin: 300px auto 500px auto;
+        text-align: center;
+        padding: 40px;
+        font-size: 1.7rem;
+    }.body #information2{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+
+    .statistics{
+        padding: 60px;
+        margin: 170px auto 200px;
+        width: 60%;
+    }
+
+}@media only screen and (min-device-width : 1025px) and (min-width : 1201px) {
+    .body{
+        margin-top: 111px;
+    }.body #information{
+        width: 70%;
+        margin: 300px auto 500px auto;
+        text-align: center;
+        padding: 60px;
+        font-size: 2rem;
+    }.body #information2{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+
+    .statistics{
+        padding: 60px;
+        margin: 170px auto 200px;
+        width: 70%;
+    }
+}

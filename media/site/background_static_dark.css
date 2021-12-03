@@ -1,0 +1,38 @@
+/*Smartphones (Portrait and Landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    html,body{
+        background: url("../backgrounds/wave_static_dark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+}
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    html,body{
+        background: url("../backgrounds/wave_static_dark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+/* Desktops and Laptops */
+@media only screen and (min-device-width : 1025px) and (max-width : 900px) {
+    html,body{
+        background: url("../backgrounds/wave_static_dark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+@media only screen and (min-device-width : 1025px) and (min-width : 900px) {
+    html,body{
+        background: url("../backgrounds/wave_static_dark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}

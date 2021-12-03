@@ -1,0 +1,54 @@
+:root{
+    --white1: #1a1a2e;
+    --white2: #16213e;
+
+    --logo1: #567bd1;
+    --logo2: #5c81dd;
+    --logo3: #436bce;
+    --logo4: #6481CA;
+    --logo5: #617dc5;
+    --logo6: #7c94d1;
+
+    --important: #e63232;
+
+    --devbg: rgba(10, 10, 10, 0.4);
+
+    --standart_font:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white1);
+}.body{
+    border-color: var(--logo1);
+    color: var(--important);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+}.body h1{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body h2{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body h3{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body h4{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body h5{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body h6{
+    color: var(--logo1);
+    font-weight: 1000;
+}.body p{
+    color: var(--logo1);
+}.body a{
+    color: var(--logo3);
+}.body li{
+    color: var(--logo1);
+}.body span{
+    color: var(--logo1);
+}

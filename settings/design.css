@@ -1,0 +1,68 @@
+:root{
+    --white2: #F1F4FB;
+    --logo1: #2A3C67;
+    --logo2: #405A9B;
+    --dark: #1A1A1B;
+}
+.body #toggle{
+    background-color: var(--white2);
+    border-color: var(--logo2);
+}.body #toggle h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+    font-weight: 1000;
+}.body #toggle p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+}.body #toggle a{
+    text-decoration: none;
+    border-color: var(--logo2);
+    color: var(--logo2);
+    font-weight: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.body #toggledark{
+    background-color: var(--white2);
+    border-color: var(--logo2);
+
+}.body #toggledark h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+    font-weight: 1000;
+}.body #toggledark p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+}.body #toggledark a{
+    border-color: var(--logo2);
+    color: var(--logo2);
+    font-weight: 1000;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.body #admin{
+    background-color: var(--white2);
+    border-color: var(--logo2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}.body #admin h1{
+    color: var(--logo2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+}.body #admin h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+    font-weight: 1000;
+}.body #admin p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+}.body #admin a{
+    border: none;
+    color: var(--logo2);
+    font-weight: 1000;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}

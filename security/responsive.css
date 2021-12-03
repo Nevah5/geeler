@@ -1,0 +1,55 @@
+/*Smartphones (Portrait and Landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .body{
+        border: solid 3px;
+        width: 80%;
+        margin: 400px auto;
+        padding: 20px 40px;
+    }.body #title{
+        font-size: 2.6rem;
+    }.body h1{
+        font-size: 2.3rem;
+    }.body h2{
+        font-size: 2.2rem;
+    }.body p{
+        font-size: 1rem;
+    }
+}
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .body{
+        border: solid 3px;
+        width: 80%;
+        margin: 140px auto;
+        padding: 20px 40px;
+    }.body #title{
+        font-size: 3rem;
+    }.body h1{
+        font-size: 2.3rem;
+    }.body h2{
+        font-size: 2.1rem;
+    }.body p{
+        font-size: 2rem;
+    }
+}
+/* Desktops and Laptops */
+@media only screen and (min-device-width : 1025px) and (max-width : 900px) {
+    .body{
+        border: solid 3px;
+        width: 80%;
+        margin: 140px auto;
+        padding: 20px 40px;
+    }.body #title{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-device-width : 1025px) and (min-width : 900px) {
+    .body{
+        border: solid 3px;
+        width: 80%;
+        margin: 140px auto;
+        padding: 20px 40px;
+    }.body #title{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,1317 @@
+/*Smartphones (Portrait and Landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    @font-face {
+        font-family: logo;
+        src: url("../media/fonts/Pervitina-Dex-FFP.ttf");
+    }
+    
+    .header{
+        height: 340px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+    }.body{
+        margin-bottom: 130px;
+        margin-top: 360px;
+        top: 300px;
+    }.body #information{
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 800px;
+        margin-bottom: 800px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 800px;
+        margin-bottom: 800px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body .user_settings{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 370px auto 0 ;
+    }.body .user_settings h2{
+        font-size: 3rem;
+    }.profileimg2{
+        height: 340px !important;
+        width: 340px !important;
+        border-radius: 50% !important;
+    }.body .user_settings i{
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }.body .user_settings label{
+        font-size: 2.5rem;
+        padding: 10px 23px;
+        margin-top: 20px;
+    }.body .user_settings input[type='submit']{
+        font-size: 2.5rem;
+        padding: 10px 16px;
+        margin-top: 40px;
+    }.body .user_settings #verified{
+        margin-left: 5px;
+    }.body .user_settings span{
+        font-size: 2rem;
+        margin-right: 16px;
+    }.body .user{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }.body .user #logout{
+        position: relative;
+        border: solid 3px;
+        width: fit-content;
+        font-size: 3rem;
+        padding: 23px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body .user div#delete{
+        width: fit-content;
+        margin: 0 auto;
+    }.body .user #delete a{
+        position: relative;
+        border: solid 3px;
+        max-width: fit-content;
+        font-size: 3rem;
+        padding: 23px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body #overlay_background{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }.body .user #delete_overlay{
+        border: solid 3px;
+        padding: 50px 100px;
+        width: 500px;
+        display: none;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }.body .user #delete_overlay h2{
+        font-size: 3rem;
+    }.body .user #delete_overlay p{
+        font-size: 2.8rem;
+    }.body .user #delete_overlay #close{
+        position: absolute;
+        border: solid 3px;
+        right: 100px;
+        width: fit-content;
+        font-size: 2.5rem;
+        padding: 10px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }.body .user #delete_overlay input[type='submit']{
+        font-size: 2.5rem;
+        width: fit-content;
+        cursor: pointer;
+        padding: 10px;
+        border: solid 3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }.body .user #delete_overlay input[type='password']{
+        height: 80px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px;
+        font-size: 2rem;
+    }.body .user #delete_overlay ::placeholder{
+        font-size: 2rem;
+    }.body #changeusername{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+        font-size: 2rem;
+    }.body #changeusername input{
+        font-size: 2rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #changeusername input[type="text"]{
+        width: 100%;
+    }.body #pwreset{
+        border: solid 3px;
+        padding: 30px 100px;
+        font-size: 2rem;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0;
+    }.body #pwreset input{
+        font-size: 2rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #pwreset input[type="password"]{
+        width: 100%;
+    }.body #setdescription{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #setdescription input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #setdescription #descriptionbox{
+        width: 100%;
+    }
+
+    .header #logo{
+        margin-left: 35px;
+        height: 300px;
+        width: 300px;
+        left: 150px;
+        top: 150px;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }.header #logo:hover{
+        cursor: pointer;
+    }.header #logo img{
+        height: 40%;
+        width: auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }.header #logo p{
+        transform: translate(0,55%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 75px;
+    }#icon{
+        float: right;
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 50px;
+        position: absolute;
+        z-index: 105;
+    }
+
+    .register{
+        width: 70%;
+        margin: 50px auto 0 auto;
+        border: solid 3px;
+        padding: 50px;
+    }.register h1{
+        text-align: center;
+    }.register input[type="text"],.register input[type="email"],.register input[type="password"]{
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        border: solid 3px;
+        border-radius: 25px;
+        padding-left: 20px;
+    }.register input[type="submit"]{
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        width: 100%;
+        height: 100px;
+        margin-top: 40px;
+        font-size: 2.5rem;
+        border: solid 3px;
+        border-radius: 25px;
+    }
+
+    .login{
+        width: 70%;
+        margin: 400px auto 0 auto;
+        border: solid 3px;
+        padding: 50px;
+    }.login h1{
+        text-align: center;
+    }.login input[type="text"],.login input[type="email"],.login input[type="password"]{
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        border: solid 3px;
+        border-radius: 25px;
+        padding-left: 20px;
+    }.login input[type="submit"]{
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        width: 100%;
+        height: 100px;
+        margin-top: 40px;
+        font-size: 2.5rem;
+        border: solid 3px;
+        border-radius: 25px;
+    }
+    p#error{
+        font-size: 2rem;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+}
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1512px) {
+    @font-face {
+        font-family: logo;
+        src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+    }
+    .header{
+        top: 0;
+        height: 100px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+    }.body{
+        margin-bottom: 100px;
+        margin-top: 140px;
+        top: 300px;
+    }.body #information{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body .user_settings{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 130px auto 0 ;
+    }.body .user_settings i{
+        font-size: 1rem;
+    }.body .user_settings label{
+        padding: 5px 15px;
+        margin-top: 20px;
+    }.body .user_settings input[type='submit']{
+        padding: 5px 10px;
+        margin-top: 15px;
+    }.body .user_settings #verified{
+        margin-left: 5px;
+    }.body .user_settings span{
+        font-size: 1.2rem;
+        margin-right: 16px;
+    }.body .user{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }.body .user #logout{
+        position: relative;
+        border: solid 3px;
+        width: fit-content;
+        text-align: center;
+        font-size: 2rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto 0;
+    }.body .user div#delete{
+        width: fit-content;
+        margin: 0 auto;
+    }.body .user #delete a{
+        position: relative;
+        border: solid 3px;
+        max-width: fit-content;
+        font-size: 2rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body #overlay_background{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }.body .user #delete_overlay{
+        border: solid 3px;
+        padding: 50px 100px;
+        width: 350px;
+        display: none;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }.body .user #delete_overlay h2{
+        font-size: 2rem;
+    }.body .user #delete_overlay p{
+        font-size: 1.3rem;
+    }.body .user #delete_overlay #close{
+        position: absolute;
+        border: solid 3px;
+        right: 100px;
+        width: fit-content;
+        font-size: 1.3rem;
+        padding: 15px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }.body .user #delete_overlay input[type='submit']{
+        font-size: 1.3rem;
+        width: fit-content;
+        cursor: pointer;
+        padding: 15px;
+        border: solid 3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }.body .user #delete_overlay input[type='password']{
+        height: 80px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px;
+        font-size: 1.3rem;
+    }.body .user #delete_overlay ::placeholder{
+        font-size: 1.8rem;
+    }.body #changeusername{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+        font-size: 1rem;
+    }.body #changeusername input{
+        font-size: 1rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #changeusername input[type="text"]{
+        width: 100%;
+    }.body #pwreset{
+        border: solid 3px;
+        padding: 30px 100px;
+        font-size: 1rem;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0;
+    }.body #pwreset input{
+        font-size: 1rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #pwreset input[type="password"]{
+        width: 100%;
+    }.body #setdescription{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #setdescription input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #setdescription #descriptionbox{
+        width: 100%;
+    }
+
+    .header #logo{
+        height: 100px;
+        width: 280px;
+        left: 10px;
+        top: 0px;
+        position: absolute;
+    }.header #logo:hover{
+        cursor: pointer;
+    }.header #logo img{
+        height: 80%;
+        width: auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }.header #logo p{
+        transform: translate(20%,50%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+    }#icon{
+        float: right;
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 50px;
+        position: absolute;
+        z-index: 105;
+    }
+
+    .register{
+        width: 35%;
+        border: solid 3px;
+        padding: 25px;
+        display: inline-flex;
+    }.register h1{
+        text-align: center;
+    }.register input[type="text"],.register input[type="email"],.register input[type="password"]{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        border: solid 3px;
+        border-radius: 10px;
+        padding-left: 20px;
+    }.register input[type="submit"]{
+        width: 100%;
+        height: 40px;
+        margin-top: 40px;
+        font-size: 2rem;
+        border: solid 3px;
+        border-radius: 10px;
+    }
+    .flex-container{
+        display: flex;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 130px auto 0 auto;
+    }
+    .login{
+        width: 35%;
+        border: solid 3px;
+        padding: 25px;
+        display: inline-flex;
+    }.login h1{
+        text-align: center;
+    }.login input[type="text"],.login input[type="email"],.login input[type="password"]{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        border: solid 3px;
+        border-radius: 10px;
+        padding-left: 20px;
+    }.login input[type="submit"]{
+        width: 100%;
+        height: 40px;
+        margin-top: 40px;
+        font-size: 2rem;
+        border: solid 3px;
+        border-radius: 10px;
+    }
+    p#error{
+        font-size: 2rem;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+}
+/* Desktops and Laptops */
+@media only screen and (min-device-width : 1513px) and (min-width : 1124px) {
+    @font-face {
+        font-family: logo;
+        src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+    }
+    .header{
+        top: 0;
+        height: 100px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+    }.body{
+        margin-bottom: 100px;
+        margin-top: 140px;
+        top: 300px;
+    }.body #information{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information h1{
+        font-size: 6rem;
+    }.body #information2 h1{
+        font-size: 6rem;
+    }.body .user_settings{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 130px auto 0 ;
+    }.body .user_settings i{
+        font-size: 1rem;
+    }.body .user_settings label{
+        padding: 5px 15px;
+        margin-top: 20px;
+    }.body .user_settings input[type='submit']{
+        padding: 5px 10px;
+        margin-top: 15px;
+    }.body .user_settings #verified{
+        margin-left: 5px;
+    }.body .user_settings span{
+        font-size: 1.2rem;
+        margin-right: 16px;
+    }.body .user{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }.body .user #logout{
+        position: relative;
+        text-align: center;
+        border: solid 3px;
+        width: fit-content;
+        font-size: 1.5rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto 0;
+    }.body .user div#delete{
+        width: fit-content;
+        margin: 0 auto;
+    }.body .user #delete a{
+        position: relative;
+        max-width: fit-content;
+        border: solid 3px;
+        font-size: 1.5rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body #overlay_background{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }.body .user #delete_overlay{
+        border: solid 3px;
+        padding: 50px 100px;
+        display: none;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }.body .user #delete_overlay #close{
+        position: absolute;
+        border: solid 3px;
+        right: 100px;
+        width: fit-content;
+        font-size: 1.5rem;
+        padding: 15px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }.body .user #delete_overlay input[type='submit']{
+        font-size: 1.5rem;
+        width: fit-content;
+        cursor: pointer;
+        padding: 15px;
+        border: solid 3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }.body .user #delete_overlay input[type='password']{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px;
+    }.body #changeusername{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #changeusername input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+    }.body #pwreset{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #pwreset input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+    }.body #setdescription{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #setdescription input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #setdescription #descriptionbox{
+        width: 100%;
+    }
+
+    .header #logo{
+        height: 100px;
+        width: 280px;
+        left: 10px;
+        top: 0px;
+        position: absolute;
+    }.header #logo:hover{
+        cursor: pointer;
+    }.header #logo img{
+        height: 80%;
+        width: auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }.header #logo p{
+        transform: translate(20%,50%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+    }#icon{
+        float: right;
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 50px;
+        position: absolute;
+        z-index: 105;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 90%;
+        overflow: auto;
+        flex-direction: row;
+        margin: 130px auto 200px;
+    }
+
+    .register,.login {
+        width: 330px;
+        margin: 20px;
+        border: solid 3px;
+    }.register h1{
+        text-align: center;
+    }.login h1{
+        text-align: center;
+    }.login input[type=text],.login input[type=password]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+        text-align: center;
+    }.login input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+    }.g-recaptcha{
+        transform: scale(.88);
+        mask-origin: 0, 0;
+        margin: 20px 20px 0 0;
+        position: relative;
+    }.register input[type=text],.register input[type=password],.register input[type=email]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+        text-align: center;
+    }.register input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+    }.register .g-recaptcha{
+        transform: scale(.88);
+        mask-origin: 0, 0;
+        margin: 20px 20px 0 0;
+        position: relative;
+    }p#error{
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+}
+@media only screen and (min-device-width : 1513px) and (min-width : 900px) and (max-width : 1124px){
+    @font-face {
+        font-family: logo;
+        src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+    }
+    .header{
+        top: 0;
+        height: 100px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+    }.body{
+        margin-bottom: 100px;
+        margin-top: 140px;
+        top: 300px;
+    }.body #information{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information h1{
+        font-size: 6rem;
+    }.body #information2 h1{
+        font-size: 6rem;
+    }.body .user_settings{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 130px auto 0 ;
+    }.body .user_settings i{
+        font-size: 1rem;
+    }.body .user_settings label{
+        padding: 5px 15px;
+        margin-top: 20px;
+    }.body .user_settings input[type='submit']{
+        padding: 5px 10px;
+        margin-top: 15px;
+    }.body .user_settings #verified{
+        margin-left: 5px;
+    }.body .user_settings span{
+        font-size: 1.2rem;
+        margin-right: 16px;
+    }.body .user{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }.body .user #logout{
+        position: relative;
+        border: solid 3px;
+        width: fit-content;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto 0;
+    }.body .user div#delete{
+        width: fit-content;
+        margin: 0 auto;
+        margin: 0 auto;
+    }.body .user #delete a{
+        position: relative;
+        border: solid 3px;
+        font-size: 1.5rem;
+        max-width: fit-content;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body #overlay_background{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }.body .user #delete_overlay{
+        border: solid 3px;
+        padding: 50px 100px;
+        display: none;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }.body .user #delete_overlay h2{
+        font-size: 1.3rem;
+    }.body .user #delete_overlay #close{
+        position: absolute;
+        border: solid 3px;
+        right: 100px;
+        width: fit-content;
+        font-size: 1rem;
+        padding: 8px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }.body .user #delete_overlay input[type='submit']{
+        font-size: 1rem;
+        width: fit-content;
+        cursor: pointer;
+        padding: 8px;
+        border: solid 3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }.body .user #delete_overlay input[type='password']{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px;
+    }.body #changeusername{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0;
+    }.body #changeusername input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #changeusername input[type="text"]{
+        width: 100%;
+    }.body #pwreset{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 60%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #pwreset input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #pwreset input[type="password"]{
+        width: 100%;
+    }.body #setdescription{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #setdescription input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #setdescription #descriptionbox{
+        width: 100%;
+    }
+
+    .header #logo{
+        height: 100px;
+        width: 280px;
+        left: 10px;
+        top: 0px;
+        position: absolute;
+    }.header #logo:hover{
+        cursor: pointer;
+    }.header #logo img{
+        height: 80%;
+        width: auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }.header #logo p{
+        transform: translate(20%,50%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+    }#icon{
+        float: right;
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 50px;
+        position: absolute;
+        z-index: 105;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 90%;
+        overflow: auto;
+        flex-direction: row;
+        margin: 130px auto 200px;
+    }
+
+    .register,.login {
+        width: 300px;
+        margin: 20px;
+        border: solid 3px;
+    }.register h1{
+        text-align: center;
+    }.login h1{
+        text-align: center;
+    }.login input[type=text],.login input[type=password]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+    }.login input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+    }.g-recaptcha{
+        transform: scale(.75);
+        mask-origin: 0, 0;
+        margin: 20px 20px 0 0;
+        position: relative;
+    }.register input[type=text],.register input[type=password],.register input[type=email]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+    }.register input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+    }
+    p#error{
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+}
+@media only screen and (min-device-width : 1513px) and (max-width : 900px) {
+    @font-face {
+        font-family: logo;
+        src: url("media/fonts/Pervitina-Dex-FFP.ttf");
+    }
+    .header{
+        top: 0;
+        height: 100px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+    }.body{
+        margin-bottom: 100px;
+        margin-top: 140px;
+        top: 300px;
+    }.body #information{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information2{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 300px;
+        margin-bottom: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }.body #information h1{
+        font-size: 4rem;
+    }.body #information2 h1{
+        font-size: 4rem;
+    }.body .user_settings{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 130px auto 0 ;
+    }.body .user_settings i{
+        font-size: 1rem;
+    }.body .user_settings label{
+        padding: 5px 15px;
+        margin-top: 20px;
+    }.body .user_settings input[type='submit']{
+        padding: 5px 10px;
+        margin-top: 15px;
+    }.body .user_settings #verified{
+        margin-left: 5px;
+    }.body .user_settings p{
+        font-size: 1rem;
+    }.body .user_settings span{
+        font-size: 1.2rem;
+        margin-right: 16px;
+    }.body .user{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }.body .user #logout{
+        position: relative;
+        border: solid 3px;
+        width: fit-content;
+        font-size: 1.5rem;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+    }.body .user div#delete{
+        width: fit-content;
+        margin: 0 auto;
+    }.body .user #delete a{
+        position: relative;
+        border: solid 3px;
+        font-size: 1.5rem;
+        max-width: fit-content;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        margin: 20px auto 0;
+    }.body #overlay_background{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }.body .user #delete_overlay{
+        border: solid 3px;
+        padding: 50px 100px;
+        width: 250px;
+        display: none;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }.body .user #delete_overlay h2{
+        font-size: 1rem;
+    }.body .user #delete_overlay p{
+        font-size: .8rem;
+    }.body .user #delete_overlay #close{
+        position: absolute;
+        border: solid 3px;
+        right: 100px;
+        width: fit-content;
+        font-size: 1rem;
+        padding: 10px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+    }.body .user #delete_overlay input[type='submit']{
+        font-size: 1rem;
+        width: fit-content;
+        cursor: pointer;
+        padding: 10px;
+        border: solid 3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }.body .user #delete_overlay input[type='password']{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px;
+    }.body #changeusername{
+        border: solid 3px;
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #changeusername input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #changeusername input[type="text"]{
+        width: 100%;
+    }.body #pwreset{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #pwreset input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #pwreset input[type="password"]{
+        width: 100%;
+    }.body #setdescription{
+        padding: 30px 100px;
+        width: 50%;
+        height: fit-content;
+        margin: 20px auto 0 ;
+    }.body #setdescription input{
+        font-size: .8rem;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }.body #setdescription #descriptionbox{
+        width: 100%;
+    }
+
+    .header #logo{
+        height: 100px;
+        width: 280px;
+        left: 10px;
+        top: 0px;
+        position: absolute;
+    }.header #logo:hover{
+        cursor: pointer;
+    }.header #logo img{
+        height: 80%;
+        width: auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }.header #logo p{
+        transform: translate(20%,50%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+    }#icon{
+        float: right;
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 50px;
+        position: absolute;
+        z-index: 105;
+    }
+
+    .login{
+        width: 300px;
+        margin: 150px auto 0;
+        border: solid 3px;
+        display: block;
+    }.login h1{
+        text-align: center;
+    }.login input[type=text],.login input[type=password]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+    }.login input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+    }.g-recaptcha{
+        transform: scale(.75);
+        mask-origin: 0, 0;
+        margin: 20px 20px 0 0;
+        position: relative;
+    }.register{
+        border: solid 3px;
+        width: 300px;
+        margin: 20px auto 0;
+        display: block;
+    }.register h1{
+        text-align: center;
+    }.register input[type=text],.register input[type=password],.register input[type=email]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+    }.register input[type=submit]{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        height: 40px;
+        width: 250px;
+        border-radius: 10px;
+    }
+    p#error{
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+}

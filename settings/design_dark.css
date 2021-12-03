@@ -1,0 +1,80 @@
+:root{
+    --white1: #1a1a2e;
+    --white2: #16213e;
+    
+    --logo1: #567bd1;
+    --logo2: #5c81dd;
+    --logo3: #436bce;
+    --logo4: #6481CA;
+    --logo5: #617dc5;
+    --logo6: #7c94d1;
+
+    --important: #e63232;
+
+    --devbg: rgba(10, 10, 10, 0.4);
+
+    --standart_font:Verdana, Geneva, Tahoma, sans-serif;
+}
+.body #toggle{
+    background-color: var(--white2);
+    border-color: var(--logo1);
+
+}.body #toggle h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo1);
+    font-weight: 1000;
+}.body #toggle p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo1);
+}.body #toggle a{
+    text-decoration: none;
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-weight: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.body #toggledark{
+    background-color: var(--white2);
+    border-color: var(--logo1);
+
+}.body #toggledark h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo1);
+    font-weight: 1000;
+}.body #toggledark p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo1);
+}.body #toggledark a{
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-weight: 1000;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.body #admin{
+    background-color: var(--white2);
+    border-color: var(--logo2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}.body #admin h1{
+    color: var(--logo2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+}.body #admin h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+    font-weight: 1000;
+}.body #admin p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--logo2);
+}.body #admin a{
+    border: none;
+    color: var(--logo2);
+    font-weight: 1000;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}

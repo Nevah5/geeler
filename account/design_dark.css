@@ -1,0 +1,334 @@
+:root{
+    --white1: #1a1a2e;
+    --white2: #16213e;
+
+    --logo1: #567bd1;
+    --logo2: #5c81dd;
+    --logo3: #436bce;
+    --logo4: #6481CA;
+    --logo5: #617dc5;
+    --logo6: #7c94d1;
+
+    --errorcolor: #df3333;
+    --important: #e63232;
+    --verifiedcolor: #33df41;
+
+    --overlay: #313131;
+
+    --standart_font:Verdana, Geneva, Tahoma, sans-serif;
+}
+@font-face {
+    font-family: logo;
+    src: url("../media/fonts/Pervitina-Dex-FFP.ttf");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white1);
+}.body #information{
+    border: var(--important) solid 3px;
+    color: var(--important);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+    text-shadow: var(--logo6) 0 0 20px;
+}.body #information2{
+    border: var(--verifiedcolor) solid 3px;
+    color: var(--verifiedcolor);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+    text-shadow: var(--logo6) 0 0 20px;
+}input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-color: var(--white1);
+    -webkit-text-fill-color: var(--white1);
+    transition: background-color 99999999s ease-in-out 0s;
+}
+
+.header{
+    background-color: var(--white2);
+    border-bottom: var(--logo2) solid 3px;
+}.header #dropdown{
+    background-color: var(--white2);
+    display: none;
+    border-bottom: var(--logo2) solid 3px;
+}.header #dropdown li{
+    list-style-type: none;
+    color: var(--logo2);
+    font-family: var(--standart_font);
+}.header #dropdown li a{
+    text-decoration: none;
+    color: var(--logo2);
+}.body .user_settings{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body .user_settings h1{
+    text-decoration: underline;
+}.body .user_settings input[type='file']{
+    display: none;
+}.body .user_settings label{
+    border: var(--logo2) solid 3px;
+    cursor: pointer;
+}.body .user_settings input[type='submit']{
+    border: var(--logo2) solid 3px;
+    background-color: var(--white1);
+    color: var(--logo2);
+    font-weight: 1000;
+    cursor: pointer;
+}.body .user #logout{
+    background-color: var(--white1);
+    border-color: var(--logo2);
+    color: var(--logo2);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    cursor: pointer;
+}.body .user #delete{
+    background-color: var(--white1);
+    border-color: var(--errorcolor);
+    color: var(--errorcolor);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    text-decoration: none;
+}.body .user #logout a{
+    text-decoration: none;
+    color: var(--logo2);
+}.body #overlay_background{
+    background-color: var(--overlay);
+    opacity: 0.75;
+    z-index: 100;
+}.body .user #delete_overlay{
+    border-color: var(--important);
+    color: var(--important);
+    font-family: var(--standart_font);
+    background-color: var(--white1);
+    text-shadow: var(--logo6) 0 0 20px;
+    z-index: 10001;
+    font-weight: 1000;
+}.body .user #delete_overlay h2{
+    text-decoration: underline;
+}.body .user #delete_overlay #close{
+    cursor: pointer;
+    border-color: var(--errorcolor);
+    color: var(--errorcolor);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body .user #delete_overlay input[type='submit']{
+    font-family: var(--standart_font);
+    border-color: var(--important);
+    background-color: var(--white1);
+    color: var(--important);
+    font-weight: 1000;
+    -webkit-appearance: none;
+}.body .user #delete_overlay input[type='password']{
+    background-color: var(--white1);
+    border-color: var(--important);
+    font-family: var(--standart_font);
+    color: var(--important);
+    font-weight: 1000;
+}.body .user #delete_overlay input[type='password']::placeholder{
+    color: var(--important);
+    font-weight: 1000;
+}.footer{
+    border-top: var(--logo2) solid 3px;
+    background-color: var(--white2);
+}.footer .ft{
+    font-family: var(--standart_font);
+    text-align: center;
+}.footer h3{
+    color: var(--logo2);
+}.footer li{
+    list-style-type: none;
+    color: var(--logo2);
+}.footer li a{
+    color: var(--logo2);
+    text-decoration: none;
+}
+
+
+#logo p{
+    font-family: logo, monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}#logo p{
+    color: var(--logo1);
+}#logo p #a{
+    color: var(--logo2);
+}#logo p #b{
+    color: var(--logo3);
+}#logo p #c{
+    color: var(--logo4);
+}#logo p #d{
+    color: var(--logo5);
+}#logo p #e{
+    color: var(--logo6);
+}
+#icon_dropdown, #icon_dropdown_close{
+    color: var(--logo2);
+}#icon_dropdown:hover, #icon_dropdown_close:hover{
+    cursor: pointer;
+}
+
+
+
+.register{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+}.register h1{
+    color: var(--logo1);
+    font-weight: 1000;
+    font-family: var(--standart_font);
+    text-decoration: underline;
+}.register input[type="text"],.register input[type="email"],.register input[type="password"]{
+    background-color: var(--logo6);
+    border-color: var(--logo1);
+    color: var(--white1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    outline: none;
+    
+}.register ::placeholder{
+    color: var(--white1);
+    font-weight: 100;
+}.register input[type="submit"]{
+    font-family: var(--standart_font);
+    background-color: var(--logo6);
+    border-color: var(--logo1);
+    color: var(--white1);
+    font-weight: 1000;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.login{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+}.login h1{
+    color: var(--logo1);
+    font-weight: 1000;
+    font-family: var(--standart_font);
+    text-decoration: underline;
+}.login input[type="text"],.login input[type="email"],.login input[type="password"]{
+    background-color: var(--logo6);
+    font-family: var(--standart_font);
+    border-color: var(--logo1);
+    color: var(--white1);
+    font-weight: 1000;
+    outline: none;
+}.login ::placeholder{
+    color: var(--white1);
+    font-weight: 100;
+}.login input[type="submit"]{
+    font-weight: 1000;
+    background-color: var(--logo6);
+    background-color: var(--logo6);
+    font-family: var(--standart_font);
+    border-color: var(--logo1);
+    color: var(--white1);
+    cursor: pointer;
+}
+
+p#error{
+    font-weight: 1000;
+    color: var(--errorcolor);
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.body #changeusername{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body #changeusername input[type="text"]{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body #changeusername input[type="submit"]{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    cursor: pointer;
+}.body #changeusername ::placeholder{
+    color: var(--logo1);
+    font-weight: 100;
+    font-family: var(--standart_font);
+}
+
+.body #pwreset{
+    background-color: var(--white1);
+    border-color: var(--logo1);
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body #pwreset input[type="password"]{
+    background-color: var(--white1);
+    border: var(--logo1) solid 3px;
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}.body #pwreset input[type="submit"]{
+    background-color: var(--white1);
+    border: var(--logo1) solid 3px;
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    cursor: pointer;
+}.body #pwreset ::placeholder{
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 100;
+}.body .user_settings h2{
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}
+
+#setdescription{
+    background-color: var(--white1);
+    border: var(--logo1) solid 3px;
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}#setdescription span{
+    font-family: var(--standart_font);
+}#setdescription #descriptionbox{
+    background-color: var(--white1);
+    border: var(--logo1) solid 3px;
+    color: var(--logo1);
+    resize: none;
+    font-family: var(--standart_font);
+    font-weight: 1000;
+}#setdescription input[type="submit"]{
+    background-color: var(--white1);
+    border: var(--logo1) solid 3px;
+    color: var(--logo1);
+    font-family: var(--standart_font);
+    font-weight: 1000;
+    cursor: pointer;
+} 
+
+
+.profileimg1{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}.profileimg2{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}.profileimg3{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
