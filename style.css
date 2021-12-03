@@ -44,6 +44,7 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 9vh;
+  z-index: 10;
   width: 100%;
   height: 60vh;
   padding-bottom: 14vw;
@@ -122,8 +123,8 @@ html {
 .section-circle-left {
   width: 100%;
   height: 100vh;
-  -webkit-clip-path: circle(200vh at 0 -50%);
-          clip-path: circle(200vh at 0 -50%);
+  -webkit-clip-path: circle(50vw at 0 100%);
+          clip-path: circle(50vw at 0 100%);
   background-image: radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
@@ -227,13 +228,28 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 50vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-image: url("media/portrait.jpg");
+  -webkit-transform: translateY(-40vh);
+          transform: translateY(-40vh);
+  background-position: center;
+  background-position-x: left;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .wrapper-about .about-text {
-  width: 30vw;
-  margin-right: 10vw;
-  max-width: 50vw;
+  background-color: var(--white);
+  -webkit-box-shadow: 0 0 10px 60px var(--white);
+          box-shadow: 0 0 10px 60px var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 50vh 10vw 0 0;
+  height: 100vh;
+  width: 40vw;
 }
 
 .wrapper-about .about-text .title-medium {
