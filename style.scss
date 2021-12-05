@@ -34,7 +34,7 @@ html {
     max-width: 400px;
   }
 }
-.section-circle-after{
+.rounded{
   background-color: var(--palette3);
   position: relative;
   display: flex;
@@ -45,11 +45,6 @@ html {
   height: 60vh;
   padding-bottom: 14vw;
   background-attachment: fixed;
-  clip-path: circle(200vh at 50% -125vh);
-  // clip-path: circle(1400px at 0 -60vw);background-color: #e5e5f7;
-  background-image:  radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
 
   & .wrapper-align{
     margin-left: 15vw;
@@ -87,6 +82,24 @@ html {
       &:nth-child(5)::after{
         animation-delay: 1s;
       }
+    }
+  }
+  .roundwrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+
+    .round{
+      height: 10vw;
+      width: 10vw;
+      // clip-path: circle(50% at 50% 50%);
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      background-color: var(--white);
     }
   }
 }

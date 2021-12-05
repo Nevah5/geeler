@@ -34,7 +34,7 @@ html {
   max-width: 400px;
 }
 
-.section-circle-after {
+.rounded {
   background-color: var(--palette3);
   position: relative;
   display: -webkit-box;
@@ -49,21 +49,16 @@ html {
   height: 60vh;
   padding-bottom: 14vw;
   background-attachment: fixed;
-  -webkit-clip-path: circle(200vh at 50% -125vh);
-          clip-path: circle(200vh at 50% -125vh);
-  background-image: radial-gradient(var(--palette1) 0.5px, transparent 0.5px), radial-gradient(var(--palette1) 0.5px, var(--palette3) 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
 }
 
-.section-circle-after .wrapper-align {
+.rounded .wrapper-align {
   margin-left: 15vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.section-circle-after .wrapper-right {
+.rounded .wrapper-right {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -89,35 +84,61 @@ html {
       align-self: flex-start;
 }
 
-.section-circle-after .wrapper-right div {
+.rounded .wrapper-right div {
   position: relative;
   height: 4vw;
   width: 4vw;
 }
 
-.section-circle-after .wrapper-right div::after {
+.rounded .wrapper-right div::after {
   -webkit-animation: chevronscrolldown 4s infinite backwards ease-in-out;
           animation: chevronscrolldown 4s infinite backwards ease-in-out;
 }
 
-.section-circle-after .wrapper-right div:nth-child(2)::after {
+.rounded .wrapper-right div:nth-child(2)::after {
   -webkit-animation-delay: .25s;
           animation-delay: .25s;
 }
 
-.section-circle-after .wrapper-right div:nth-child(3)::after {
+.rounded .wrapper-right div:nth-child(3)::after {
   -webkit-animation-delay: .5s;
           animation-delay: .5s;
 }
 
-.section-circle-after .wrapper-right div:nth-child(4)::after {
+.rounded .wrapper-right div:nth-child(4)::after {
   -webkit-animation-delay: .75s;
           animation-delay: .75s;
 }
 
-.section-circle-after .wrapper-right div:nth-child(5)::after {
+.rounded .wrapper-right div:nth-child(5)::after {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+.rounded .roundwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.rounded .roundwrapper .round {
+  height: 10vw;
+  width: 10vw;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: var(--white);
 }
 
 .section-circle-left {
