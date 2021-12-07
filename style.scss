@@ -87,6 +87,23 @@ nav.navbar{
         font-family: Alata;
       }
     }
+    .chevronscroll{
+      width: fit-content;
+      margin-right: 3vw;
+      min-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      .chevron{
+        background-color: white;
+        clip-path: polygon(0 0, 30% 0, 50% 30%, 70% 0, 100% 0, 50% 70%);
+        height: 60px;
+        width: 60px;
+      }
+    }
   }
   img{
     position: absolute;
