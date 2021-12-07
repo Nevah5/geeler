@@ -28,9 +28,7 @@ nav.navbar{
   span.logo{
     color: white;
     font-family: Russo One;
-    font-size: 3vw;
     order: 1;
-    margin-left: 1vw;
   }
   ul{
     width: 30vw;
@@ -38,14 +36,12 @@ nav.navbar{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    order: 2;
     list-style-type: none;
     padding: 0;
     margin: 0;
 
     a{
       color: white;
-      font-size: 1.3vw;
     }
   }
   ul ~ a{
@@ -55,11 +51,6 @@ nav.navbar{
     background: white;
     color: black;
     mix-blend-mode: screen;
-    padding: 10px 15px;
-    border-radius: .5em;
-    order: 3;
-    font-size: 1.3vw;
-    margin-right: 1vw;
 
     li{
       width: fit-content;
@@ -91,10 +82,8 @@ nav.navbar{
       }
       h1{
         font-family: Russo One;
-        font-size: 5vw;
       }
       h2{
-        font-size: 1.7vw;
         font-family: Alata;
       }
     }
@@ -107,5 +96,86 @@ nav.navbar{
     min-height: 100%;
     width: auto;
     min-width: 100%;
+  }
+}
+
+//smaller screens
+@media only screen and (max-width: 1000px) {
+  nav.navbar{
+    span.logo{
+      font-size: 2rem;
+      margin-left: 2vw;
+    }
+    ul{
+      order: 3;
+      display: none;
+
+      a{
+        font-size: 1.1rem;
+      }
+    }
+    ul ~ a{
+      order: 2;
+      padding: 10px 15px;
+      border-radius: .5em;
+      font-size: 1.1rem;
+      margin-right: 1vw;
+
+      li{
+        //navbar
+      }
+    }
+  }
+  .home{
+    .wrapper{
+      .text_left{
+        h1{
+          font-size: 3.5rem;
+        }
+        h2{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+//large screens
+@media only screen and (min-width: 1000px) {
+  nav.navbar{
+    span.logo{
+      font-size: 3vw;
+      margin-left: 1vw;
+    }
+    ul{
+      order: 2;
+
+      a{
+        font-size: 1.7vw;
+      }
+    }
+    ul ~ a{
+      order: 3;
+      order: 2;
+      padding: 10px 15px;
+      border-radius: .5em;
+      font-size: 1.3vw;
+      margin-right: 1vw;
+
+      li{
+        //navbar
+      }
+    }
+  }
+  .home{
+    .wrapper{
+      .text_left{
+        h1{
+          font-size: 5vw;
+        }
+        h2{
+          font-size: 1.7vw;
+        }
+      }
+    }
   }
 }

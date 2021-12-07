@@ -36,11 +36,9 @@ nav.navbar {
 nav.navbar span.logo {
   color: white;
   font-family: Russo One;
-  font-size: 3vw;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  margin-left: 1vw;
 }
 
 nav.navbar ul {
@@ -56,9 +54,6 @@ nav.navbar ul {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -66,7 +61,6 @@ nav.navbar ul {
 
 nav.navbar ul a {
   color: white;
-  font-size: 1.3vw;
 }
 
 nav.navbar ul ~ a {
@@ -82,13 +76,6 @@ nav.navbar ul ~ a {
   background: white;
   color: black;
   mix-blend-mode: screen;
-  padding: 10px 15px;
-  border-radius: .5em;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  font-size: 1.3vw;
-  margin-right: 1vw;
 }
 
 nav.navbar ul ~ a li {
@@ -138,11 +125,9 @@ nav.navbar ul ~ a li {
 
 .home .wrapper .text_left h1 {
   font-family: Russo One;
-  font-size: 5vw;
 }
 
 .home .wrapper .text_left h2 {
-  font-size: 1.7vw;
   font-family: Alata;
 }
 
@@ -154,5 +139,69 @@ nav.navbar ul ~ a li {
   min-height: 100%;
   width: auto;
   min-width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav.navbar span.logo {
+    font-size: 2rem;
+    margin-left: 2vw;
+  }
+  nav.navbar ul {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: none;
+  }
+  nav.navbar ul a {
+    font-size: 1.1rem;
+  }
+  nav.navbar ul ~ a {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 10px 15px;
+    border-radius: .5em;
+    font-size: 1.1rem;
+    margin-right: 1vw;
+  }
+  .home .wrapper .text_left h1 {
+    font-size: 3.5rem;
+  }
+  .home .wrapper .text_left h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  nav.navbar span.logo {
+    font-size: 3vw;
+    margin-left: 1vw;
+  }
+  nav.navbar ul {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  nav.navbar ul a {
+    font-size: 1.7vw;
+  }
+  nav.navbar ul ~ a {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 10px 15px;
+    border-radius: .5em;
+    font-size: 1.3vw;
+    margin-right: 1vw;
+  }
+  .home .wrapper .text_left h1 {
+    font-size: 5vw;
+  }
+  .home .wrapper .text_left h2 {
+    font-size: 1.7vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
