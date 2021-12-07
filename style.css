@@ -183,7 +183,7 @@ nav.navbar ul ~ a li {
             order: 2;
   }
   nav.navbar ul a {
-    font-size: 1.7vw;
+    font-size: 1.8vw;
   }
   nav.navbar ul ~ a {
     -webkit-box-ordinal-group: 4;
