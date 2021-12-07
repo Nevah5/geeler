@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+nav.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 10vh;
+  max-height: 80px;
+  background-color: blue;
+}
+
+nav.navbar span.logo {
+  color: white;
+  font-family: Russo One;
+  font-size: 3vw;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: 1vw;
+}
+
+nav.navbar ul {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.navbar ul a {
+  color: white;
+  font-size: 1.3vw;
+}
+
+nav.navbar ul ~ a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blue;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: .5em;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  font-size: 1.3vw;
+  margin-right: 1vw;
+}
+
+nav.navbar ul ~ a li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

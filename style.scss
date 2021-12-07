@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+nav.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  min-height: 10vh;
+  max-height: 80px;
+  background-color: blue;
+
+  span.logo{
+    color: white;
+    font-family: Russo One;
+    font-size: 3vw;
+    order: 1;
+    margin-left: 1vw;
+  }
+  ul{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    order: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    a{
+      color: white;
+      font-size: 1.3vw;
+    }
+  }
+  ul ~ a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: .5em;
+    order: 3;
+    font-size: 1.3vw;
+    margin-right: 1vw;
+
+    li{
+      width: fit-content;
+      height: fit-content;
+      display: block;
+    }
+  }
+}
