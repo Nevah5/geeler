@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
 
+/**
+ * Big Titles - Russo One
+ * Important Text - Concert One
+ * Text - Alata
+ */
+
 html, body{
   margin: 0;
   padding: 0;
@@ -9,7 +15,6 @@ a{
   font-family: Concert One;
   text-decoration: none;
 }
-
 nav.navbar{
   display: flex;
   justify-content: space-between;
@@ -18,7 +23,7 @@ nav.navbar{
   height: fit-content;
   min-height: 10vh;
   max-height: 80px;
-  background-color: blue;
+  background-color: transparent;
 
   span.logo{
     color: white;
@@ -47,8 +52,9 @@ nav.navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
-    background-color: white;
+    background: white;
+    color: black;
+    mix-blend-mode: screen;
     padding: 10px 15px;
     border-radius: .5em;
     order: 3;
@@ -60,5 +66,46 @@ nav.navbar{
       height: fit-content;
       display: block;
     }
+  }
+}
+.home{
+  position: relative;
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    min-height: 800px;
+    max-height: 1100px;
+
+    .text_left{
+      width: fit-content;
+      margin-left: 3vw;
+
+      h1, h2{
+        color: white;
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+      }
+      h1{
+        font-family: Russo One;
+        font-size: 5vw;
+      }
+      h2{
+        font-size: 1.7vw;
+        font-family: Alata;
+      }
+    }
+  }
+  img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    min-height: 100%;
+    width: auto;
+    min-width: 100%;
   }
 }

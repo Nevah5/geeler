@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+/**
+ * Big Titles - Russo One
+ * Important Text - Concert One
+ * Text - Alata
+ */
 html, body {
   margin: 0;
   padding: 0;
@@ -25,7 +30,7 @@ nav.navbar {
   height: fit-content;
   min-height: 10vh;
   max-height: 80px;
-  background-color: blue;
+  background-color: transparent;
 }
 
 nav.navbar span.logo {
@@ -74,8 +79,9 @@ nav.navbar ul ~ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: blue;
-  background-color: white;
+  background: white;
+  color: black;
+  mix-blend-mode: screen;
   padding: 10px 15px;
   border-radius: .5em;
   -webkit-box-ordinal-group: 4;
@@ -93,5 +99,60 @@ nav.navbar ul ~ a li {
   height: -moz-fit-content;
   height: fit-content;
   display: block;
+}
+
+.home {
+  position: relative;
+}
+
+.home .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  min-height: 800px;
+  max-height: 1100px;
+}
+
+.home .wrapper .text_left {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 3vw;
+}
+
+.home .wrapper .text_left h1, .home .wrapper .text_left h2 {
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.home .wrapper .text_left h1 {
+  font-family: Russo One;
+  font-size: 5vw;
+}
+
+.home .wrapper .text_left h2 {
+  font-size: 1.7vw;
+  font-family: Alata;
+}
+
+.home img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  min-height: 100%;
+  width: auto;
+  min-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
