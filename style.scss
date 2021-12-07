@@ -44,18 +44,22 @@ nav.navbar{
       color: white;
     }
   }
-  ul ~ a{
+  ul ~ .group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    background: white;
-    color: black;
-    mix-blend-mode: screen;
+    width: fit-content;
 
-    li{
-      width: fit-content;
-      height: fit-content;
-      display: block;
+    a{
+      background: white;
+      color: black;
+      mix-blend-mode: screen;
+
+      li{
+        width: fit-content;
+        height: fit-content;
+        display: block;
+      }
     }
   }
 }
@@ -114,12 +118,33 @@ nav.navbar{
         font-size: 1.1rem;
       }
     }
-    ul ~ a{
+    ul ~ .group {
       order: 2;
-      padding: 10px 15px;
-      border-radius: .5em;
-      font-size: 1.1rem;
-      margin-right: 1vw;
+      a{
+        padding: 10px 15px;
+        border-radius: .5em;
+        font-size: 1.1rem;
+        margin-right: 1vw;
+      }
+      .navigation-dropdown{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 1.4rem;
+        margin-left: 2rem;
+        background-image: url("menu.png");
+        filter: invert(1);
+        background-position: center;
+        background-size: cover;
+
+        &:hover a{
+          display: block;
+        }
+        a{
+          display: none;
+          background-color: transparent;
+        }
+      }
     }
   }
   .home{
@@ -149,13 +174,20 @@ nav.navbar{
         font-size: 1.8vw;
       }
     }
-    ul ~ a{
+    ul ~ .group {
       order: 3;
-      order: 2;
-      padding: 10px 15px;
-      border-radius: .5em;
-      font-size: 1.3vw;
-      margin-right: 1vw;
+
+      a{
+        order: 3;
+        order: 2;
+        padding: 10px 15px;
+        border-radius: .5em;
+        font-size: 1.3vw;
+        margin-right: 1vw;
+      }
+      .navigation-dropdown{
+        display: none;
+      }
     }
   }
   .home{
