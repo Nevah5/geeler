@@ -328,7 +328,7 @@ nav.navbar ul ~ a li {
     right: 0;
     top: 0;
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 200px);
     background-color: white;
     border-radius: .5em;
     -webkit-box-pack: start;
@@ -343,8 +343,8 @@ nav.navbar ul ~ a li {
   }
   nav.navbar ul.navigation label.close {
     display: block;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     position: fixed;
     top: 20px;
     right: 10px;
@@ -352,7 +352,7 @@ nav.navbar ul ~ a li {
   }
   nav.navbar ul.navigation label.close div {
     width: 100%;
-    height: 4px;
+    height: 6px;
     background-color: blue;
     border-radius: .5em;
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -366,17 +366,40 @@ nav.navbar ul ~ a li {
             transform: translate(-50%, -50%) rotate(-45deg);
   }
   nav.navbar ul.navigation a {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
     color: blue;
   }
   nav.navbar ul ~ a {
     display: none;
   }
+  .home .wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 75vh;
+    min-height: 500px;
+    max-height: 1000px;
+  }
+  .home .wrapper .chevronscroll {
+    margin-top: 5vh;
+  }
+  .home .wrapper .text_left {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
   .home .wrapper .text_left h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .home .wrapper .text_left h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -444,7 +467,7 @@ nav.navbar ul ~ a li {
     right: 0;
     top: 0;
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 200px);
     background-color: white;
     border-radius: .5em;
     -webkit-box-pack: start;
@@ -482,7 +505,8 @@ nav.navbar ul ~ a li {
             transform: translate(-50%, -50%) rotate(-45deg);
   }
   nav.navbar ul.navigation a {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 3vh;
     color: blue;
   }
   nav.navbar ul ~ a {
