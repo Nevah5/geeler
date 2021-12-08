@@ -199,13 +199,7 @@ nav.navbar ul ~ a li {
     font-size: 1.1rem;
   }
   nav.navbar ul ~ a {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    padding: 10px 15px;
-    border-radius: .5em;
-    font-size: 1.1rem;
-    margin-right: 1vw;
+    display: none;
   }
   .home .wrapper .text_left h1 {
     font-size: 3.5rem;

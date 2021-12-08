@@ -147,11 +147,7 @@ nav.navbar{
       }
     }
     ul ~ a{
-      order: 2;
-      padding: 10px 15px;
-      border-radius: .5em;
-      font-size: 1.1rem;
-      margin-right: 1vw;
+      display: none;
     }
   }
   .home{
