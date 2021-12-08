@@ -41,6 +41,15 @@ nav.navbar{
     padding: 0;
     margin: 0;
 
+    h4{
+      display: none;
+      position: absolute;
+      left: 15px;
+      top: -5px;
+      font-size: 1.5rem;
+      font-family: Concert One;
+      color: blue;
+    }
     a{
       color: white;
     }
@@ -195,6 +204,9 @@ nav.navbar{
         & .align_end{
           display: flex;
         }
+        & h4{
+          display: initial;
+        }
       }
       & ~ label{
         z-index: 5;
@@ -340,6 +352,9 @@ nav.navbar{
         & .align_end{
           display: flex;
         }
+        & h4{
+          display: initial;
+        }
       }
       & ~ label{
         z-index: 5;
@@ -386,6 +401,9 @@ nav.navbar{
       flex-direction: column;
       flex-wrap: nowrap;
 
+      h4{
+        top: -13px;
+      }
       label.close{
         display: block;
         height: 25px;
@@ -436,6 +454,7 @@ nav.navbar{
             background-color: blue;
             color: white !important;
             border-radius: .5em;
+            font-size: 1rem;
           }
         }
       }

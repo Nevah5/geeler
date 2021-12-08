@@ -60,6 +60,16 @@ nav.navbar ul {
   margin: 0;
 }
 
+nav.navbar ul h4 {
+  display: none;
+  position: absolute;
+  left: 15px;
+  top: -5px;
+  font-size: 1.5rem;
+  font-family: Concert One;
+  color: blue;
+}
+
 nav.navbar ul a {
   color: white;
 }
@@ -299,6 +309,9 @@ nav.navbar .align_end {
     display: -ms-flexbox;
     display: flex;
   }
+  nav.navbar input:checked ~ ul h4 {
+    display: initial;
+  }
   nav.navbar input ~ label {
     z-index: 5;
     height: 50px;
@@ -475,6 +488,9 @@ nav.navbar .align_end {
     display: -ms-flexbox;
     display: flex;
   }
+  nav.navbar input:checked ~ ul h4 {
+    display: initial;
+  }
   nav.navbar input ~ label {
     z-index: 5;
     height: 50px;
@@ -540,6 +556,9 @@ nav.navbar .align_end {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  nav.navbar ul.navigation h4 {
+    top: -13px;
+  }
   nav.navbar ul.navigation label.close {
     display: block;
     height: 25px;
@@ -599,6 +618,7 @@ nav.navbar .align_end {
     background-color: blue;
     color: white !important;
     border-radius: .5em;
+    font-size: 1rem;
   }
   nav.navbar ul ~ a {
     display: none;
