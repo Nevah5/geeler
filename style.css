@@ -291,6 +291,21 @@ nav.navbar .align_end {
   }
 }
 
+@media only screen and (max-height: 400px) {
+  nav.navbar ul.navigation {
+    height: 400px !important;
+    width: initial;
+    max-height: 100vh;
+    overflow: auto;
+  }
+  nav.navbar ul.navigation a {
+    margin: 0 0 15px !important;
+  }
+  nav.navbar ul.navigation .align_end {
+    margin: 100px 0 !important;
+  }
+}
+
 @media only screen and (max-device-width: 500px) {
   nav.navbar input {
     display: none;
