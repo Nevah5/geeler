@@ -211,7 +211,7 @@ nav.navbar{
       margin-left: 2vw;
     }
     ul.navigation{
-      transition: opacity .4s, transform .4s;
+      transition: opacity .4s;
       opacity: 0;
       transform: translateX(100%);
       padding: 100px 0;
@@ -297,6 +297,7 @@ nav.navbar{
         z-index: 10;
         opacity: 1;
         transform: translateX(0%);
+        transition: opacity .4s;
       }
       & ~ label{
         z-index: 5;
@@ -326,7 +327,7 @@ nav.navbar{
       margin-left: 2vw;
     }
     ul.navigation{
-      transition: opacity .4s, transform .4s;
+      transition: opacity .4s;
       opacity: 0;
       transform: translateX(100%);
       padding: 100px 0;

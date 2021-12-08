@@ -315,10 +315,8 @@ nav.navbar ul ~ a li {
     margin-left: 2vw;
   }
   nav.navbar ul.navigation {
-    -webkit-transition: opacity .4s, -webkit-transform .4s;
-    transition: opacity .4s, -webkit-transform .4s;
-    transition: opacity .4s, transform .4s;
-    transition: opacity .4s, transform .4s, -webkit-transform .4s;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -415,6 +413,8 @@ nav.navbar ul ~ a li {
     opacity: 1;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
   }
   nav.navbar input ~ label {
     z-index: 5;
@@ -454,10 +454,8 @@ nav.navbar ul ~ a li {
     margin-left: 2vw;
   }
   nav.navbar ul.navigation {
-    -webkit-transition: opacity .4s, -webkit-transform .4s;
-    transition: opacity .4s, -webkit-transform .4s;
-    transition: opacity .4s, transform .4s;
-    transition: opacity .4s, transform .4s, -webkit-transform .4s;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
