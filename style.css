@@ -67,7 +67,7 @@ nav.navbar ul h4 {
   top: -5px;
   font-size: 1.5rem;
   font-family: Concert One;
-  color: blue;
+  color: #144A8F;
 }
 
 nav.navbar ul a {
@@ -386,7 +386,7 @@ nav.navbar .align_end {
   nav.navbar ul.navigation label.close div {
     width: 100%;
     height: 6px;
-    background-color: blue;
+    background-color: #144A8F;
     border-radius: .5em;
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
             transform: translate(-50%, -50%) rotate(45deg);
@@ -401,7 +401,7 @@ nav.navbar .align_end {
   nav.navbar ul.navigation a {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    color: blue;
+    color: #144A8F;
   }
   nav.navbar ul.navigation .align_end {
     margin-top: auto;
@@ -431,7 +431,7 @@ nav.navbar .align_end {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: blue;
+    background-color: #144A8F;
     color: white !important;
     border-radius: .5em;
   }
@@ -571,7 +571,7 @@ nav.navbar .align_end {
   nav.navbar ul.navigation label.close div {
     width: 100%;
     height: 4px;
-    background-color: blue;
+    background-color: #144A8F;
     border-radius: .5em;
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
             transform: translate(-50%, -50%) rotate(45deg);
@@ -586,7 +586,7 @@ nav.navbar .align_end {
   nav.navbar ul.navigation a {
     font-size: 1.3rem;
     margin-bottom: 3vh;
-    color: blue;
+    color: #144A8F;
   }
   nav.navbar ul.navigation .align_end {
     margin-top: auto;
@@ -615,7 +615,7 @@ nav.navbar .align_end {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: blue;
+    background-color: #144A8F;
     color: white !important;
     border-radius: .5em;
     font-size: 1rem;
