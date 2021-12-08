@@ -28,8 +28,9 @@ nav.navbar {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 10vh;
-  max-height: 80px;
+  min-height: 70px;
+  height: 10vh;
+  max-height: 90px;
   background-color: transparent;
 }
 
