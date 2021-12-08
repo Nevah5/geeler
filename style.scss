@@ -170,8 +170,111 @@ nav.navbar{
   }
 }
 
-//smaller screens
-@media only screen and (max-width: 1000px) {
+
+//small screens
+@media only screen and (max-device-width: 500px) {
+  nav.navbar{
+    input{
+      display: none;
+
+      &:checked ~ ul{
+        display: flex !important;
+        z-index: 10;
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      & ~ label{
+        z-index: 5;
+        height: 50px;
+        width: 50px;
+        order: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        margin-right: 10px;
+
+        div{
+          position: relative;
+          margin: 5px 0;
+          height: 7px;
+          border-radius: 5em;
+          width: 100%;
+          background-color: white;
+        }
+      }
+    }
+    span.logo{
+      font-size: 2rem;
+      margin-left: 2vw;
+    }
+    ul.navigation{
+      transition: opacity .4s, transform .4s;
+      opacity: 0;
+      transform: translateX(100%);
+      padding: 100px 0;
+      z-index: 1;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 300px;
+      height: 100vh;
+      background-color: white;
+      border-radius: .5em;
+      justify-content: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      label.close{
+        display: block;
+        height: 25px;
+        width: 25px;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+
+        div{
+          width: 100%;
+          height: 4px;
+          background-color: blue;
+          border-radius: .5em;
+          transform: translate(-50%, -50%) rotate(45deg);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          &:nth-child(2){
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+      }
+      a{
+        font-size: 1.1rem;
+        color: blue;
+      }
+    }
+    ul ~ a{
+      display: none;
+    }
+  }
+  .home{
+    .wrapper{
+      .text_left{
+        h1{
+          font-size: 4rem;
+        }
+        h2{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+//small window
+@media only screen and (max-width: 1000px) and (min-device-width: 500px) {
   nav.navbar{
     input{
       display: none;
@@ -272,7 +375,7 @@ nav.navbar{
     }
   }
 }
-//large screens
+//large window
 @media only screen and (min-width: 1000px) {
   nav.navbar{
     input{
