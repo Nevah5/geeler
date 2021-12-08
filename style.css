@@ -33,6 +33,14 @@ nav.navbar {
   background-color: transparent;
 }
 
+nav.navbar input {
+  display: none;
+}
+
+nav.navbar input ~ label {
+  display: none;
+}
+
 nav.navbar span.logo {
   color: white;
   font-family: Russo One;
@@ -142,6 +150,41 @@ nav.navbar ul ~ a li {
 }
 
 @media only screen and (max-width: 1000px) {
+  nav.navbar input {
+    display: none;
+  }
+  nav.navbar input ~ label {
+    height: 50px;
+    width: 50px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  nav.navbar input ~ label div {
+    position: relative;
+    margin: 5px 0;
+    height: 7px;
+    border-radius: 5em;
+    width: 100%;
+    background-color: white;
+  }
   nav.navbar span.logo {
     font-size: 2rem;
     margin-left: 2vw;

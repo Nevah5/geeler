@@ -25,6 +25,13 @@ nav.navbar{
   max-height: 80px;
   background-color: transparent;
 
+  input{
+    display: none;
+
+    & ~ label{
+      display: none;
+    }
+  }
   span.logo{
     color: white;
     font-family: Russo One;
@@ -102,6 +109,31 @@ nav.navbar{
 //smaller screens
 @media only screen and (max-width: 1000px) {
   nav.navbar{
+  input{
+    display: none;
+
+    & ~ label{
+      height: 50px;
+      width: 50px;
+      order: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      margin-right: 10px;
+
+      div{
+        position: relative;
+        margin: 5px 0;
+        height: 7px;
+        border-radius: 5em;
+        width: 100%;
+        background-color: white;
+      }
+    }
+  }
     span.logo{
       font-size: 2rem;
       margin-left: 2vw;
