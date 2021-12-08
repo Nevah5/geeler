@@ -264,27 +264,112 @@ nav.navbar ul ~ a li {
 }
 
 @media only screen and (max-width: 1000px) {
+  nav.navbar input {
+    display: none;
+  }
+  nav.navbar input:checked ~ ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    z-index: 10;
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  nav.navbar input ~ label {
+    z-index: 5;
+    height: 50px;
+    width: 50px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  nav.navbar input ~ label div {
+    position: relative;
+    margin: 5px 0;
+    height: 7px;
+    border-radius: 5em;
+    width: 100%;
+    background-color: white;
+  }
   nav.navbar span.logo {
     font-size: 2rem;
     margin-left: 2vw;
   }
-  nav.navbar ul {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    display: none;
+  nav.navbar ul.navigation {
+    -webkit-transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, transform .4s;
+    transition: opacity .4s, transform .4s, -webkit-transform .4s;
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    padding: 100px 0;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    border-radius: .5em;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-  nav.navbar ul a {
+  nav.navbar ul.navigation label.close {
+    display: block;
+    height: 25px;
+    width: 25px;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+  }
+  nav.navbar ul.navigation label.close div {
+    width: 100%;
+    height: 4px;
+    background-color: blue;
+    border-radius: .5em;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  nav.navbar ul.navigation label.close div:nth-child(2) {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  nav.navbar ul.navigation a {
     font-size: 1.1rem;
+    color: blue;
   }
   nav.navbar ul ~ a {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    padding: 10px 15px;
-    border-radius: .5em;
-    font-size: 1.1rem;
-    margin-right: 1vw;
+    display: none;
   }
   .home .wrapper .text_left h1 {
     font-size: 3.5rem;
@@ -295,6 +380,12 @@ nav.navbar ul ~ a li {
 }
 
 @media only screen and (min-width: 1000px) {
+  nav.navbar input {
+    display: none;
+  }
+  nav.navbar input ~ label {
+    display: none;
+  }
   nav.navbar span.logo {
     font-size: 3vw;
     margin-left: 1vw;
@@ -303,6 +394,9 @@ nav.navbar ul ~ a li {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  nav.navbar ul label {
+    display: none;
   }
   nav.navbar ul a {
     font-size: 1.8vw;
