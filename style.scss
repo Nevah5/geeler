@@ -98,7 +98,6 @@ nav.navbar{
     min-width: 100%;
   }
 }
-
 //smaller screens
 @media only screen and (max-width: 1000px) {
   nav.navbar{
@@ -107,8 +106,12 @@ nav.navbar{
 
       &:checked ~ ul{
         display: flex !important;
+        z-index: 10;
+        opacity: 1;
+        transform: translateX(0%);
       }
       & ~ label{
+        z-index: 5;
         height: 50px;
         width: 50px;
         order: 3;
@@ -134,10 +137,12 @@ nav.navbar{
       font-size: 2rem;
       margin-left: 2vw;
     }
-    ul{
+    ul.navigation{
+      transition: opacity .4s, transform .4s;
+      opacity: 0;
+      transform: translateX(100%);
       padding: 100px 0;
-      z-index: 10;
-      display: none;
+      z-index: 1;
       position: fixed;
       right: 0;
       top: 0;
