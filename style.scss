@@ -59,6 +59,9 @@ nav.navbar{
       display: block;
     }
   }
+  .align_end{
+    display: none;
+  }
 }
 .home{
   position: relative;
@@ -146,6 +149,12 @@ nav.navbar{
     min-width: 100%;
   }
 }
+.center{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @keyframes chevron {
   0%{
@@ -182,6 +191,10 @@ nav.navbar{
         z-index: 10;
         opacity: 1;
         transform: translateX(0%);
+
+        & .align_end{
+          display: flex;
+        }
       }
       & ~ label{
         z-index: 5;
@@ -256,6 +269,31 @@ nav.navbar{
         margin-bottom: 1rem;
         color: blue;
       }
+      .align_end{
+        margin-top: auto;
+        padding-bottom: 20px;
+
+        .grid{
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: 1fr;
+          width: 100%;
+          padding: 0 15px;
+          gap: 15px;
+
+          a{
+            font-size: 1.4rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white !important;
+            border-radius: .5em;
+          }
+        }
+      }
     }
     ul ~ a{
       display: none;
@@ -266,8 +304,8 @@ nav.navbar{
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 75vh;
-      min-height: 500px;
+      height: 85vh;
+      min-height: 600px;
       max-height: 1000px;
 
       .chevronscroll{
@@ -298,6 +336,10 @@ nav.navbar{
         opacity: 1;
         transform: translateX(0%);
         transition: opacity .4s;
+
+        & .align_end{
+          display: flex;
+        }
       }
       & ~ label{
         z-index: 5;
@@ -330,16 +372,17 @@ nav.navbar{
       transition: opacity .4s;
       opacity: 0;
       transform: translateX(100%);
-      padding: 100px 0;
+      padding: 100px 0 0;
       z-index: 1;
       position: fixed;
       right: 0;
       top: 0;
       width: 300px;
-      height: calc(100vh - 200px);
+      height: calc(100vh - 100px);
       background-color: white;
       border-radius: .5em;
       justify-content: flex-start;
+      align-items: center;
       flex-direction: column;
       flex-wrap: nowrap;
 
@@ -371,6 +414,30 @@ nav.navbar{
         font-size: 1.3rem;
         margin-bottom: 3vh;
         color: blue;
+      }
+      .align_end{
+        margin-top: auto;
+        padding-bottom: 15px;
+
+        .grid{
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: 1fr;
+          width: 100%;
+          padding: 0 15px;
+          gap: 15px;
+
+          a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white !important;
+            border-radius: .5em;
+          }
+        }
       }
     }
     ul ~ a{

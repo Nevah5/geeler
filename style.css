@@ -89,6 +89,10 @@ nav.navbar ul ~ a li {
   display: block;
 }
 
+nav.navbar .align_end {
+  display: none;
+}
+
 .home {
   position: relative;
 }
@@ -218,6 +222,19 @@ nav.navbar ul ~ a li {
   min-width: 100%;
 }
 
+.center {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @-webkit-keyframes chevron {
   0% {
     height: 50px;
@@ -276,6 +293,11 @@ nav.navbar ul ~ a li {
     opacity: 1;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+  }
+  nav.navbar input:checked ~ ul .align_end {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   nav.navbar input ~ label {
     z-index: 5;
@@ -368,6 +390,38 @@ nav.navbar ul ~ a li {
     margin-bottom: 1rem;
     color: blue;
   }
+  nav.navbar ul.navigation .align_end {
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  nav.navbar ul.navigation .align_end .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 15px;
+    gap: 15px;
+  }
+  nav.navbar ul.navigation .align_end .grid a {
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: blue;
+    color: white !important;
+    border-radius: .5em;
+  }
   nav.navbar ul ~ a {
     display: none;
   }
@@ -382,8 +436,8 @@ nav.navbar ul ~ a li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 75vh;
-    min-height: 500px;
+    height: 85vh;
+    min-height: 600px;
     max-height: 1000px;
   }
   .home .wrapper .chevronscroll {
@@ -415,6 +469,11 @@ nav.navbar ul ~ a li {
             transform: translateX(0%);
     -webkit-transition: opacity .4s;
     transition: opacity .4s;
+  }
+  nav.navbar input:checked ~ ul .align_end {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   nav.navbar input ~ label {
     z-index: 5;
@@ -459,18 +518,21 @@ nav.navbar ul ~ a li {
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    padding: 100px 0;
+    padding: 100px 0 0;
     z-index: 1;
     position: fixed;
     right: 0;
     top: 0;
     width: 300px;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 100px);
     background-color: white;
     border-radius: .5em;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -506,6 +568,37 @@ nav.navbar ul ~ a li {
     font-size: 1.3rem;
     margin-bottom: 3vh;
     color: blue;
+  }
+  nav.navbar ul.navigation .align_end {
+    margin-top: auto;
+    padding-bottom: 15px;
+  }
+  nav.navbar ul.navigation .align_end .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 15px;
+    gap: 15px;
+  }
+  nav.navbar ul.navigation .align_end .grid a {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: blue;
+    color: white !important;
+    border-radius: .5em;
   }
   nav.navbar ul ~ a {
     display: none;
