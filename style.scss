@@ -44,22 +44,18 @@ nav.navbar{
       color: white;
     }
   }
-  ul ~ .group {
+  ul ~ a{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    width: fit-content;
+    background: white;
+    color: black;
+    mix-blend-mode: screen;
 
-    a{
-      background: white;
-      color: black;
-      mix-blend-mode: screen;
-
-      li{
-        width: fit-content;
-        height: fit-content;
-        display: block;
-      }
+    li{
+      width: fit-content;
+      height: fit-content;
+      display: block;
     }
   }
 }
@@ -118,33 +114,12 @@ nav.navbar{
         font-size: 1.1rem;
       }
     }
-    ul ~ .group {
+    ul ~ a{
       order: 2;
-      a{
-        padding: 10px 15px;
-        border-radius: .5em;
-        font-size: 1.1rem;
-        margin-right: 1vw;
-      }
-      .navigation-dropdown{
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin-right: 1.4rem;
-        margin-left: 2rem;
-        background-image: url("menu.png");
-        filter: invert(1);
-        background-position: center;
-        background-size: cover;
-
-        &:hover a{
-          display: block;
-        }
-        a{
-          display: none;
-          background-color: transparent;
-        }
-      }
+      padding: 10px 15px;
+      border-radius: .5em;
+      font-size: 1.1rem;
+      margin-right: 1vw;
     }
   }
   .home{
@@ -174,20 +149,13 @@ nav.navbar{
         font-size: 1.8vw;
       }
     }
-    ul ~ .group {
+    ul ~ a{
       order: 3;
-
-      a{
-        order: 3;
-        order: 2;
-        padding: 10px 15px;
-        border-radius: .5em;
-        font-size: 1.3vw;
-        margin-right: 1vw;
-      }
-      .navigation-dropdown{
-        display: none;
-      }
+      order: 2;
+      padding: 10px 15px;
+      border-radius: .5em;
+      font-size: 1.3vw;
+      margin-right: 1vw;
     }
   }
   .home{

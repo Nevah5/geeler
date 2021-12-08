@@ -63,28 +63,22 @@ nav.navbar ul a {
   color: white;
 }
 
-nav.navbar ul ~ .group {
+nav.navbar ul ~ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-nav.navbar ul ~ .group a {
   background: white;
   color: black;
   mix-blend-mode: screen;
 }
 
-nav.navbar ul ~ .group a li {
+nav.navbar ul ~ a li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -161,35 +155,14 @@ nav.navbar ul ~ .group a li {
   nav.navbar ul a {
     font-size: 1.1rem;
   }
-  nav.navbar ul ~ .group {
+  nav.navbar ul ~ a {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-  nav.navbar ul ~ .group a {
     padding: 10px 15px;
     border-radius: .5em;
     font-size: 1.1rem;
     margin-right: 1vw;
-  }
-  nav.navbar ul ~ .group .navigation-dropdown {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin-right: 1.4rem;
-    margin-left: 2rem;
-    background-image: url("menu.png");
-    -webkit-filter: invert(1);
-            filter: invert(1);
-    background-position: center;
-    background-size: cover;
-  }
-  nav.navbar ul ~ .group .navigation-dropdown:hover a {
-    display: block;
-  }
-  nav.navbar ul ~ .group .navigation-dropdown a {
-    display: none;
-    background-color: transparent;
   }
   .home .wrapper .text_left h1 {
     font-size: 3.5rem;
@@ -212,12 +185,7 @@ nav.navbar ul ~ .group a li {
   nav.navbar ul a {
     font-size: 1.8vw;
   }
-  nav.navbar ul ~ .group {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  nav.navbar ul ~ .group a {
+  nav.navbar ul ~ a {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -228,9 +196,6 @@ nav.navbar ul ~ .group a li {
     border-radius: .5em;
     font-size: 1.3vw;
     margin-right: 1vw;
-  }
-  nav.navbar ul ~ .group .navigation-dropdown {
-    display: none;
   }
   .home .wrapper .text_left h1 {
     font-size: 5vw;
