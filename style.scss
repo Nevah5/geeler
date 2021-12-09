@@ -250,7 +250,7 @@ nav.navbar{
 
 
 //navbar scroll
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 400px) and (min-device-height: 400px) {
   nav.navbar{
     ul.navigation{
       height: 400px !important;
@@ -318,13 +318,13 @@ nav.navbar{
       transition: opacity .4s;
       opacity: 0;
       transform: translateX(100%);
-      padding: 100px 0;
+      padding: 100px 0 0;
       z-index: 1;
       position: fixed;
       right: 0;
       top: 0;
       width: 300px;
-      height: calc(100vh - 200px);
+      height: calc(100vh - 100px);
       background-color: white;
       border-radius: .5em;
       justify-content: flex-start;
