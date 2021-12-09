@@ -728,6 +728,9 @@ div.footer .foot .row a {
   .home .wrapper .text_left h2 {
     font-size: 1rem;
   }
+  div.footer {
+    padding: 0 10px;
+  }
 }
 
 @media only screen and (max-width: 1000px) and (min-device-width: 500px) {

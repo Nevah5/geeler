@@ -515,6 +515,9 @@ div.footer{
       }
     }
   }
+  div.footer{
+    padding: 0 10px;
+  }
 }
 //small window
 @media only screen and (max-width: 1000px) and (min-device-width: 500px) {
