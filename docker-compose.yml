@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  phpapache:
+    container_name: webserver
+    image: php:8.0-apache
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 80:80
