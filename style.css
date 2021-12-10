@@ -523,7 +523,7 @@ div.footer .foot .row a {
 }
 
 @media only screen and (max-width: 700px) {
-  nav {
+  .footer nav {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -545,7 +545,7 @@ div.footer .foot .row a {
     -ms-grid-column-span: 4;
     grid-area: nav;
   }
-  nav div {
+  .footer nav div {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
