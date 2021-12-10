@@ -183,9 +183,9 @@ nav.navbar{
     grid-template-rows: repeat(3, 1fr);
     gap: 2em;
     grid-template-areas:
-      "general st st"
-      "general achievements motivation"
-      "weakness weakness motivation";
+      "g st st"
+      "g a m"
+      "w w m";
 
     div{
       background-color: #2A66AA;
@@ -201,19 +201,19 @@ nav.navbar{
       }
 
       &:nth-child(1){
-        grid-area: general;
+        grid-area: g;
       }
       &:nth-child(2){
         grid-area: st;
       }
       &:nth-child(3){
-        grid-area: weakness;
+        grid-area: w;
       }
       &:nth-child(4){
-        grid-area: motivation;
+        grid-area: m;
       }
       &:nth-child(5){
-        grid-area: achievements;
+        grid-area: a;
       }
     }
   }
@@ -268,7 +268,26 @@ div.footer{
     a{
       font-family: Alata;
       font-weight: 1000;
-      color: #2A66AA;
+      border-radius: 50%;
+      background-position: center;
+      background-size: 70%;
+      background-repeat: no-repeat;
+      height: 30px;
+      width: 30px;
+      filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
+
+      &:nth-child(1){
+        background-image: url("/media/icons/github.png");
+      }
+      &:nth-child(2){
+        background-image: url("media/icons/reddit.png");
+      }
+      &:nth-child(3){
+        background-image: url("media/icons/steam.png");
+      }
+      &:nth-child(4){
+        background-image: url("media/icons/discord.png");
+      }
     }
   }
   .foot{
