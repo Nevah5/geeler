@@ -161,59 +161,59 @@ nav.navbar{
   }
 }
 .about{
-  height: 100vh;
+  position: relative;
+  padding: 40px 0 100px;
+  height: fit-content;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  background-color: black;
 
-  .img{
-    width: 50vw;
-    height: 100%;
-    background-image: url("portrait.jpg");
-    background-position: center;
-    background-size: cover;
+  & > h1{
+    color: #2A66AA;
+    font-family: Concert One;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
   }
-  .overlay{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 100%;
-    padding: 0 6vw 0 6vw;
-    background-color: white;
-    box-shadow: white 0 0 50px 100px;
+  div.grid{
+    position: relative;
+    display: block;
+    margin: 0 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2em;
+    grid-template-areas:
+      "general st st"
+      "general achievements motivation"
+      "weakness weakness motivation";
 
-    .abouttext{
-      margin: 0;
-      width: 30vw;
+    div{
+      background-color: #2A66AA;
+      border-radius: .5em;
+      padding: 15px;
+      color: white;
 
-      h2{
-        width: fit-content;
+      h1{
         font-family: Concert One;
-        font-size: 3.5vw;
-        margin: 0;
-        color: #144A8F;
       }
       p{
-        width: fit-content;
         font-family: Alata;
-        font-size: 1.75vw;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        color: #144A8F;
-        font-weight: 1000;
       }
-      a.more{
-        width: fit-content;
-        font-family: Concert One;
-        font-size: 2vw;
-        background-color: #144A8F;
-        border-radius: .4em;
-        padding: 5px 15px;
-        color: white !important;
+
+      &:nth-child(1){
+        grid-area: general;
+      }
+      &:nth-child(2){
+        grid-area: st;
+      }
+      &:nth-child(3){
+        grid-area: weakness;
+      }
+      &:nth-child(4){
+        grid-area: motivation;
+      }
+      &:nth-child(5){
+        grid-area: achievements;
       }
     }
   }

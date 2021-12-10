@@ -235,86 +235,84 @@ nav.navbar .align_end {
 }
 
 .about {
-  height: 100vh;
+  position: relative;
+  padding: 40px 0 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 1;
+  background-color: black;
 }
 
-.about .img {
-  width: 50vw;
-  height: 100%;
-  background-image: url("portrait.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.about .overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40vw;
-  height: 100%;
-  padding: 0 6vw 0 6vw;
-  background-color: white;
-  -webkit-box-shadow: white 0 0 50px 100px;
-          box-shadow: white 0 0 50px 100px;
-}
-
-.about .overlay .abouttext {
-  margin: 0;
-  width: 30vw;
-}
-
-.about .overlay .abouttext h2 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.about > h1 {
+  color: #2A66AA;
   font-family: Concert One;
-  font-size: 3.5vw;
-  margin: 0;
-  color: #144A8F;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.about .overlay .abouttext p {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.about div.grid {
+  position: relative;
+  display: block;
+  margin: 0 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 2em;
+      grid-template-areas: "general st st" "general achievements motivation" "weakness weakness motivation";
+}
+
+.about div.grid div {
+  background-color: #2A66AA;
+  border-radius: .5em;
+  padding: 15px;
+  color: white;
+}
+
+.about div.grid div h1 {
+  font-family: Concert One;
+}
+
+.about div.grid div p {
   font-family: Alata;
-  font-size: 1.75vw;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  color: #144A8F;
-  font-weight: 1000;
 }
 
-.about .overlay .abouttext a.more {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: Concert One;
-  font-size: 2vw;
-  background-color: #144A8F;
-  border-radius: .4em;
-  padding: 5px 15px;
-  color: white !important;
+.about div.grid div:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: general;
+}
+
+.about div.grid div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: st;
+}
+
+.about div.grid div:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: weakness;
+}
+
+.about div.grid div:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: motivation;
+}
+
+.about div.grid div:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: achievements;
 }
 
 div.footer {
