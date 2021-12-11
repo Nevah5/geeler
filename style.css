@@ -241,6 +241,21 @@ nav.navbar .align_end {
   height: fit-content;
   width: 100%;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .about > h1 {
@@ -254,36 +269,56 @@ nav.navbar .align_end {
 
 .about div.section {
   height: 60vh;
-  padding: 40px 150px 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
 
-.about div.section .img {
-  background-color: black;
-  height: 400px;
-  width: 320px;
+.about div.section .center {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.about div.section .center .img {
+  background-position: center;
+  background-size: cover;
   border-radius: 2em;
-  float: left;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  height: 440px;
+  width: 280px;
 }
 
 .about div.section .text {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5 / 9;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .about div.section .text h1 {
@@ -294,6 +329,7 @@ nav.navbar .align_end {
   font-size: 2rem;
   color: #144A8F;
   float: left;
+  margin: 0 0 10px;
 }
 
 .about div.section .text p {
@@ -304,6 +340,28 @@ nav.navbar .align_end {
   font-family: Alata;
   color: #144A8F;
   float: left;
+}
+
+.about div.section#general .center .img {
+  background-image: url("media/pictures/portrait.jpg");
+}
+
+.about div.section#hobby .center {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+}
+
+.about div.section#hobby .center .img {
+  background-image: url("media/pictures/setup.jpg");
+  height: 280px;
+  width: 440px;
+}
+
+.about div.section#hobby .text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
 }
 
 div.footer {
