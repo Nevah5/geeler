@@ -73,7 +73,7 @@ nav.navbar ul h4 {
   color: #144A8F;
 }
 
-nav.navbar ul a {
+nav.navbar ul > a {
   color: white;
   margin: 0 15px;
 }
