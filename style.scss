@@ -33,7 +33,7 @@ nav.navbar{
     order: 1;
   }
   ul{
-    width: 30vw;
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,9 +53,10 @@ nav.navbar{
     }
     a{
       color: white;
+      margin: 0 15px;
     }
   }
-  ul ~ a{
+  ul ~ a{ /*Login*/
     display: flex;
     justify-content: center;
     align-items: center;

@@ -44,7 +44,9 @@ nav.navbar span.logo {
 }
 
 nav.navbar ul {
-  width: 30vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,9 +75,11 @@ nav.navbar ul h4 {
 
 nav.navbar ul a {
   color: white;
+  margin: 0 15px;
 }
 
 nav.navbar ul ~ a {
+  /*Login*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
