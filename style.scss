@@ -162,58 +162,49 @@ nav.navbar{
 }
 .about{
   position: relative;
-  padding: 40px 0 100px;
   height: fit-content;
   width: 100%;
-  background-color: black;
+  background-color: white;
 
   & > h1{
     color: #2A66AA;
-    font-family: Concert One;
+    font-family: Russo One;
+    font-size: 5rem;
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
   }
-  div.grid{
-    position: relative;
-    display: block;
-    margin: 0 150px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2em;
-    grid-template-areas:
-      "g st st"
-      "g a m"
-      "w w m";
+  div.section{
+    height: 60vh;
+    padding: 40px 150px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    div{
-      background-color: #2A66AA;
-      border-radius: .5em;
-      padding: 15px;
-      color: white;
-
+    .img{
+      background-color: black;
+      height: 400px;
+      width: 320px;
+      border-radius: 2em;
+      float: left;
+      flex: 1;
+    }
+    .text{
+      width: fit-content;
+      flex: 1;
       h1{
         font-family: Concert One;
+        width: fit-content;
+        font-size: 2rem;
+        color: #144A8F;
+        float: left;
       }
       p{
+        width: fit-content;
+        margin: 0 auto;
         font-family: Alata;
-      }
-
-      &:nth-child(1){
-        grid-area: g;
-      }
-      &:nth-child(2){
-        grid-area: st;
-      }
-      &:nth-child(3){
-        grid-area: w;
-      }
-      &:nth-child(4){
-        grid-area: m;
-      }
-      &:nth-child(5){
-        grid-area: a;
+        color: #144A8F;
+        float: left;
       }
     }
   }
