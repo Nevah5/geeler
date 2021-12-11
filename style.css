@@ -268,7 +268,10 @@ nav.navbar .align_end {
 }
 
 .about div.section {
-  height: 60vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 0 150px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[10];
@@ -362,6 +365,24 @@ nav.navbar .align_end {
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
   grid-column: 2 / 6;
+}
+
+.about div.section#motivation .center {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+}
+
+.about div.section#motivation .center .img {
+  background-image: url("media/pictures/code.jpg");
+  height: 280px;
+  width: 440px;
+}
+
+.about div.section#whyme .text {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-column: 4 / 8;
 }
 
 div.footer {

@@ -180,7 +180,8 @@ nav.navbar{
     margin-bottom: 40px;
   }
   div.section{
-    height: 60vh;
+    height: fit-content;
+    margin: 0 0 150px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
@@ -241,6 +242,22 @@ nav.navbar{
     }
     .text{
       grid-column: 2 / 6;
+    }
+  }
+  div.section#motivation{
+    .center{
+      grid-column: 1 / 5;
+
+      .img{
+        background-image: url("media/pictures/code.jpg");
+        height: 280px;
+        width: 440px;
+      }
+    }
+  }
+  div.section#whyme{
+    .text{
+      grid-column: 4 / 8;
     }
   }
 }
