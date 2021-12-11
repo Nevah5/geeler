@@ -255,7 +255,31 @@ nav.navbar{
       }
     }
   }
-  div.section#whyme{
+  div#whyme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 100px;
+
+    .text{
+      width: 50%;
+
+      h1{
+        font-family: Concert One;
+        width: fit-content;
+        font-size: 2rem;
+        color: #144A8F;
+        float: left;
+        margin: 0 0 10px;
+      }
+      p{
+        width: fit-content;
+        margin: 0 auto;
+        font-family: Alata;
+        color: #144A8F;
+        float: left;
+      }
+    }
     .text{
       grid-column: 4 / 8;
     }

@@ -379,7 +379,45 @@ nav.navbar .align_end {
   width: 440px;
 }
 
-.about div.section#whyme .text {
+.about div#whyme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 100px;
+}
+
+.about div#whyme .text {
+  width: 50%;
+}
+
+.about div#whyme .text h1 {
+  font-family: Concert One;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  color: #144A8F;
+  float: left;
+  margin: 0 0 10px;
+}
+
+.about div#whyme .text p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: Alata;
+  color: #144A8F;
+  float: left;
+}
+
+.about div#whyme .text {
   -ms-grid-column: 4;
   -ms-grid-column-span: 4;
   grid-column: 4 / 8;
