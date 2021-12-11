@@ -299,6 +299,15 @@ nav.navbar .align_end {
   border-radius: 2em;
   height: 440px;
   width: 280px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.about div.section .center .img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .about div.section .text {
