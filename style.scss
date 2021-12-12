@@ -170,7 +170,7 @@ nav.navbar{
   background-color: white;
   position: absolute;
   bottom: 0;
-  clip-path: polygon(0 30%, 100% 100%, 0 100%);
+  clip-path: polygon(-1% 30%, 102% 101%, 0 101%);
   z-index: 3;
 }
 .about{
@@ -302,6 +302,111 @@ nav.navbar{
       grid-column: 4 / 8;
     }
   }
+}
+.projects::before{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  clip-path: polygon(-1% 101%, 101% 101%, 101% 0);
+}
+.projects{
+  padding: 20vh 0;
+  position: relative;
+  height: fit-content;
+
+  .contents{
+    height: fit-content;
+    width: 100%;
+    background-color: #144A8F;
+
+    h1{
+      font-size: 4rem;
+      grid-column: 1 / 15;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      color: white;
+      font-family: Russo One;
+    }
+
+    .grid{
+      margin-top: 30px;
+      height: fit-content;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 5% 40% 10% 40% 5%;
+      grid-template-rows: repeat(1, 1fr);
+
+      .project{
+        background-color: white;
+        border-radius: .5em;
+        padding: 15px;
+
+        .header{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          h3{
+            width: fit-content;
+            margin: 0;
+            font-size: 2rem;
+            font-family: Concert One;
+            color: #144A8F;
+            margin-right: 15px;
+          }
+          .tags{
+            span::after{
+              font-family: Alata;
+              font-size: 0.7rem;
+              padding: 3px 7px;
+              border-radius: .5em;
+              margin-right: 5px;
+              color: white;
+            }
+            #html::after{
+              content: 'HTML';
+              background-color: #DD4B25;
+            }
+            #css::after{
+              content: 'CSS';
+              background-color: #254BDD;
+            }
+            #php::after{
+              content: 'PHP';
+              background-color: #787CB4;
+            }
+          }
+        }
+        p{
+          margin: 0;
+          font-family: Alata;
+          color: #144A8F;
+        }
+
+        &:nth-child(2n+1){ //every first element in row
+          grid-column: 2 / 2;
+        }
+        &:nth-child(2n+0){ //every second element in row
+          grid-column: 4 / 5;
+        }
+      }
+    }
+  }
+}
+.projects::after{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  clip-path: polygon(0 -1%, 103% -1%, 0 101%);
 }
 div.footer{
   position: relative;
