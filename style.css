@@ -471,6 +471,7 @@ nav.navbar .align_end {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  overflow: hidden;
 }
 
 .projects .contents {
@@ -488,7 +489,7 @@ nav.navbar .align_end {
   grid-column: 1 / 15;
   width: 100%;
   text-align: center;
-  margin: 0;
+  margin: 0 0 50px;
   color: white;
   font-family: Russo One;
 }
@@ -518,6 +519,7 @@ nav.navbar .align_end {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .projects .contents .grid .wrapper:nth-child(2n+1) {
@@ -538,6 +540,81 @@ nav.navbar .align_end {
   padding: 15px;
   height: 250px;
   width: 400px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.projects .contents .grid .wrapper .project:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.projects .contents .grid .wrapper .project .overlay {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.projects .contents .grid .wrapper .project .overlay:hover .foot {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.projects .contents .grid .wrapper .project .overlay .foot {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.projects .contents .grid .wrapper .project .overlay .foot a {
+  margin-right: 15px;
+  color: #144A8F;
+  font-weight: 1000;
+}
+
+.projects .contents .grid .wrapper .project .overlay:hover::before {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.projects .contents .grid .wrapper .project .overlay::before {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  height: 105%;
+  width: 105%;
+  background-position: center;
+  background-size: cover;
 }
 
 .projects .contents .grid .wrapper .project .header {
@@ -633,6 +710,21 @@ nav.navbar .align_end {
 .projects .contents .grid .wrapper .project .type #teamwork::after {
   content: 'Teamwork';
   background-color: #7647ce;
+}
+
+.projects .contents .grid .wrapper .project .type #opensource::after {
+  content: 'Open-Source';
+  background-color: #d6be51;
+}
+
+.projects .contents .grid .wrapper .project .type #private::after {
+  content: 'Private';
+  background-color: #d35fac;
+}
+
+.projects .contents .grid .wrapper .project .type #copyright::after {
+  content: 'Copyright';
+  background-color: #000000;
 }
 
 .projects::after {
@@ -1429,5 +1521,9 @@ div.footer .foot .row a {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
   }
+}
+
+.projects .contents .grid #projectnevah .project .overlay::before {
+  background-image: url("media/pictures/nevah5.com.jpg");
 }
 /*# sourceMappingURL=style.css.map */

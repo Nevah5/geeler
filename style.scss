@@ -317,6 +317,7 @@ nav.navbar{
   padding: 20vh 0;
   position: relative;
   height: fit-content;
+  overflow: hidden;
 
   .contents{
     height: fit-content;
@@ -328,7 +329,7 @@ nav.navbar{
       grid-column: 1 / 15;
       width: 100%;
       text-align: center;
-      margin: 0;
+      margin: 0 0 50px;
       color: white;
       font-family: Russo One;
     }
@@ -346,6 +347,7 @@ nav.navbar{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         &:nth-child(2n+1){ //every first element in row
           grid-column: 2 / 2;
@@ -360,7 +362,57 @@ nav.navbar{
           padding: 15px;
           height: 250px;
           width: 400px;
+          transition: transform .5s;
 
+          &:hover{
+            transform: scale(1.05);
+          }
+          .overlay{
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-radius: .5em;
+            overflow: hidden;
+
+            &:hover .foot{
+              transform: translateY(0%);
+            }
+            .foot{
+              position: absolute;
+              width: 100%;
+              height: 40px;
+              background-color: white;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              transform: translateY(101%);
+              transition: transform .5s;
+
+              a{
+                margin-right: 15px;
+                color: #144A8F;
+                font-weight: 1000;
+              }
+            }
+            &:hover::before{
+              transform: translateY(0%);
+            }
+            &::before{
+              content: '';
+              position: absolute;
+              transform: translateY(101%);
+              transition: transform .5s;
+              height: 105%;
+              width: 105%;
+              background-position: center;
+              background-size: cover;
+            }
+          }
           .header{
             display: flex;
             justify-content: flex-start;
@@ -432,6 +484,18 @@ nav.navbar{
             #teamwork::after{
               content: 'Teamwork';
               background-color: #7647ce;
+            }
+            #opensource::after{
+              content: 'Open-Source';
+              background-color: #d6be51;
+            }
+            #private::after{
+              content: 'Private';
+              background-color: #d35fac;
+            }
+            #copyright::after{
+              content: 'Copyright';
+              background-color: #000000;
             }
           }
         }
@@ -1078,4 +1142,9 @@ div.footer{
   .about .section .center .img:hover{
     transform: scale(1.03);
   }
+}
+
+//project images
+.projects .contents .grid #projectnevah .project .overlay::before{
+  background-image: url("media/pictures/nevah5.com.jpg");
 }
