@@ -677,6 +677,13 @@ div.footer .foot .row a {
   .about div.section#hobby .text h1, .about div.section#motivation .text h1 {
     width: 100%;
   }
+  .about #whyme .text {
+    text-align: center;
+    width: 80% !important;
+  }
+  .about #whyme .text h1 {
+    width: 100% !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -684,7 +691,7 @@ div.footer .foot .row a {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin: 0 0 150px;
+    margin: 0 0 75px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[10];
@@ -699,7 +706,6 @@ div.footer .foot .row a {
     -ms-grid-row: 2 !important;
     -ms-grid-row-span: 1 !important;
     grid-row: 2 / 3 !important;
-    margin: 30px 0 0;
   }
   .about div.section .center .img {
     height: 293px;
@@ -947,6 +953,25 @@ div.footer .foot .row a {
   }
   .home .wrapper .text_left h2 {
     font-size: 1rem;
+  }
+  .about .section:not(#motivation), .about .section:not(#hobby) {
+    -ms-grid-rows: 1fr 330px !important;
+        grid-template-rows: 1fr 330px !important;
+  }
+  .about .section:not(#motivation) .center, .about .section:not(#hobby) .center {
+    margin-top: 30px;
+  }
+  .about .section#motivation, .about .section#hobby {
+    -ms-grid-rows: 1fr 250px !important;
+        grid-template-rows: 1fr 250px !important;
+  }
+  .about .section#motivation .center, .about .section#hobby .center {
+    -ms-grid-column: 2 !important;
+    -ms-grid-column-span: 8 !important;
+    grid-column: 2 / 10 !important;
+    -ms-grid-row: 2 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row: 2 / 3 !important;
   }
   .about h1 {
     font-size: 3rem;
