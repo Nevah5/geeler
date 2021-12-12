@@ -298,16 +298,12 @@ nav.navbar .align_end {
   background-position: center;
   background-size: cover;
   border-radius: 2em;
-  min-height: 293px;
-  height: 20vw;
-  max-height: 440px;
-  min-width: 186px;
-  width: 20vw;
-  max-width: 280px;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  height: 440px;
+  width: 280px;
+  -webkit-transition: height .5s, width .5s, -webkit-transform .5s;
+  transition: height .5s, width .5s, -webkit-transform .5s;
+  transition: transform .5s, height .5s, width .5s;
+  transition: transform .5s, height .5s, width .5s, -webkit-transform .5s;
 }
 
 .about div.section .text {
@@ -363,12 +359,8 @@ nav.navbar .align_end {
 }
 
 .about div.section#hobby .center .img, .about div.section#motivation .center .img {
-  min-width: 293px;
-  width: 20vw;
-  max-width: 440px;
-  min-height: 186px;
-  height: 20vw;
-  max-height: 280px;
+  height: 280px;
+  width: 440px;
 }
 
 .about div.section#hobby .center {
