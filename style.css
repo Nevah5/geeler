@@ -308,11 +308,6 @@ nav.navbar .align_end {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.about div.section .center .img:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
 .about div.section .text {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -393,6 +388,12 @@ nav.navbar .align_end {
   background-image: url("media/pictures/code.jpg");
   height: 280px;
   width: 440px;
+}
+
+.about div.section#motivation .text {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 5;
+  grid-column: 5 / 10;
 }
 
 .about div#whyme {
@@ -654,6 +655,74 @@ div.footer .foot .row a {
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .about div.section#hobby .center, .about div.section#motivation .center {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 8;
+    grid-column: 2 / 10;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    margin: 30px 0 0;
+  }
+  .about div.section#hobby .text, .about div.section#motivation .text {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 8;
+    grid-column: 2 / 10;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    text-align: center;
+  }
+  .about div.section#hobby .text h1, .about div.section#motivation .text h1 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about div.section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 0 150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .about div.section .center {
+    -ms-grid-column: 3 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-column: 3 / 9 !important;
+    -ms-grid-row: 2 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row: 2 / 3 !important;
+    margin: 30px 0 0;
+  }
+  .about div.section .center .img {
+    height: 293px;
+    width: 186px;
+  }
+  .about div.section .text {
+    -ms-grid-column: 2 !important;
+    -ms-grid-column-span: 8 !important;
+    grid-column: 2 / 10 !important;
+    -ms-grid-row: 1 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row: 1 / 2 !important;
+    text-align: center !important;
+  }
+  .about div.section .text h1 {
+    width: 100%;
+  }
+  .about div.section#hobby .center .img, .about div.section#motivation .center .img {
+    width: 293px !important;
+    height: 186px !important;
+  }
+}
+
 @media only screen and (max-height: 400px) and (min-device-height: 400px) {
   nav.navbar ul.navigation {
     height: 400px !important;
@@ -879,6 +948,9 @@ div.footer .foot .row a {
   .home .wrapper .text_left h2 {
     font-size: 1rem;
   }
+  .about h1 {
+    font-size: 3rem;
+  }
   div.footer {
     padding: 0 10px;
   }
@@ -1045,6 +1117,35 @@ div.footer .foot .row a {
   .home .wrapper .text_left h2 {
     font-size: 1.2rem;
   }
+  .about div.section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 0 150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .about div.section .center {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .about div.section .center .img {
+    height: 293px;
+    width: 186px;
+  }
+  .about div.section .text {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 5;
+    grid-column: 5 / 10;
+  }
   div.footer {
     padding: 0 50px;
   }
@@ -1089,6 +1190,13 @@ div.footer .foot .row a {
   }
   .home .wrapper .text_left h2 {
     font-size: 1.7vw;
+  }
+}
+
+@media only screen and (min-device-width: 400px) {
+  .about .section .center .img:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
 }
 /*# sourceMappingURL=style.css.map */

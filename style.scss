@@ -200,10 +200,6 @@ nav.navbar{
         height: 440px;
         width: 280px;
         transition: transform .5s;
-
-        &:hover{
-          transform: scale(1.03);
-        }
       }
     }
     .text{
@@ -261,6 +257,9 @@ nav.navbar{
         height: 280px;
         width: 440px;
       }
+    }
+    .text{
+      grid-column: 5 / 10;
     }
   }
   div#whyme{
@@ -427,7 +426,66 @@ div.footer{
   }
 }
 
+//really small window about wrapp
+@media only screen and (max-width: 1300px) {
+  .about{
+    div.section#hobby, div.section#motivation{
+      .center{
+        grid-column: 2 / 10;
+        grid-row: 2 / 3;
+        margin: 30px 0 0;
+      }
+      .text{
+        grid-column: 2 / 10;
+        grid-row: 1 / 2;
+        text-align: center;
 
+        h1{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about{
+    div.section{
+      height: fit-content;
+      margin: 0 0 150px;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      .center{
+        grid-column: 3 / 9 !important;
+        grid-row: 2 / 3 !important;
+        margin: 30px 0 0;
+
+        .img{
+          height: 293px;
+          width: 186px;
+        }
+      }
+      .text{
+        grid-column: 2 / 10 !important;
+        grid-row: 1 / 2 !important;
+        text-align: center !important;
+
+        h1{
+          width: 100%;
+        }
+      }
+    }
+    div.section#hobby, div.section#motivation{
+      .center{
+        .img{
+          width: 293px !important;
+          height: 186px !important;
+        }
+      }
+    }
+  }
+}
 //navbar scroll
 @media only screen and (max-height: 400px) and (min-device-height: 400px) {
   nav.navbar{
@@ -613,6 +671,11 @@ div.footer{
       }
     }
   }
+  .about{
+    h1{
+      font-size: 3rem;
+    }
+  }
   div.footer{
     padding: 0 10px;
   }
@@ -756,6 +819,28 @@ div.footer{
       }
     }
   }
+  .about{
+    div.section{
+      height: fit-content;
+      margin: 0 0 150px;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 1fr;
+
+      .center{
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+
+        .img{
+          height: 293px;
+          width: 186px;
+        }
+      }
+      .text{
+        grid-column: 5 / 10;
+      }
+    }
+  }
   div.footer{
     padding: 0 50px;
   }
@@ -804,5 +889,12 @@ div.footer{
         }
       }
     }
+  }
+}
+
+//only pc
+@media only screen and (min-device-width: 400px) {
+  .about .section .center .img:hover{
+    transform: scale(1.03);
   }
 }
