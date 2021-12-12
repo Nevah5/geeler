@@ -198,8 +198,12 @@ nav.navbar{
         background-position: center;
         background-size: cover;
         border-radius: 2em;
-        height: 440px;
-        width: 280px;
+        min-height: 293px;
+        height: 20vw;
+        max-height: 440px;
+        min-width: 186px;
+        width: 20vw;
+        max-width: 280px;
         transition: transform .5s;
       }
     }
@@ -236,8 +240,12 @@ nav.navbar{
     }
   }
   div.section#hobby .center .img, div.section#motivation .center .img{
-    height: 280px;
-    width: 440px;
+    min-width: 293px;
+    width: 20vw;
+    max-width: 440px;
+    min-height: 186px;
+    height: 20vw;
+    max-height: 280px;
   }
   div.section#hobby{
     .center{
