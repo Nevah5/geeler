@@ -464,11 +464,11 @@ div.footer{
       margin: 0 0 75px;
       display: grid;
       grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: 1fr 1fr;
 
       .center{
         grid-column: 3 / 9 !important;
         grid-row: 2 / 3 !important;
+        margin: 30px 0 0;
 
         .img{
           height: 293px;
