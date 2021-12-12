@@ -484,9 +484,6 @@ nav.navbar .align_end {
 
 .projects .contents h1 {
   font-size: 4rem;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 14;
-  grid-column: 1 / 15;
   width: 100%;
   text-align: center;
   margin: 0 0 50px;
@@ -751,9 +748,9 @@ div.footer {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 160px 50px 60px;
-      grid-template-rows: 160px 50px 60px;
-      grid-template-areas: "nav nav nav nav" "socials socials socials socials" "foot foot foot foot";
+  -ms-grid-rows: 160px 0 50px 60px;
+      grid-template-rows: 160px 0 50px 60px;
+      grid-template-areas: "nav nav nav nav" ". . . ." "socials socials socials socials" "foot foot foot foot";
 }
 
 div.footer nav {
@@ -804,7 +801,7 @@ div.footer nav > div a {
 }
 
 div.footer .wrapper {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: socials;
@@ -855,7 +852,7 @@ div.footer .wrapper a:nth-child(4) {
 
 div.footer .foot {
   width: 100%;
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: foot;
@@ -954,6 +951,44 @@ div.footer .foot .row a {
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  .projects .contents .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 35px;
+  }
+  .projects .contents .grid .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .projects .contents .grid .wrapper:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .projects .contents .grid .wrapper:nth-child(2) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .about div.section#hobby .center, .about div.section#motivation .center {
     -ms-grid-column: 2;
@@ -1044,8 +1079,8 @@ div.footer .foot .row a {
 
 @media only screen and (max-width: 700px) {
   .footer {
-    -ms-grid-rows: 500px 60px 60px !important;
-        grid-template-rows: 500px 60px 60px !important;
+    -ms-grid-rows: 500px 20px 60px 60px !important;
+        grid-template-rows: 500px 20px 60px 60px !important;
   }
   .footer nav {
     width: 100%;
@@ -1273,6 +1308,24 @@ div.footer .foot .row a {
   }
   .about h1 {
     font-size: 3rem;
+  }
+  .projects .contents h1 {
+    font-size: 3rem;
+    margin: 0 0 30px;
+  }
+  .projects .contents .grid .wrapper .project {
+    padding: 15px;
+    height: 200px;
+    width: 300px;
+  }
+  .projects .contents .grid .wrapper .project .header h3 {
+    font-size: 1.6rem;
+  }
+  .projects .contents .grid .wrapper .project p {
+    font-size: .8rem;
+  }
+  .projects .contents .grid .wrapper .project .type div::after {
+    font-size: 0.4rem;
   }
   div.footer {
     padding: 0 10px;
@@ -1525,5 +1578,9 @@ div.footer .foot .row a {
 
 .projects .contents .grid #projectnevah .project .overlay::before {
   background-image: url("media/pictures/nevah5.com.jpg");
+}
+
+.projects .contents .grid #projectdiscoin .project .overlay::before {
+  background-image: url("https://raw.githubusercontent.com/Nevah5/discoin/main/media/examples/CryptoValueMessage.png");
 }
 /*# sourceMappingURL=style.css.map */
