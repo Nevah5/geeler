@@ -173,6 +173,7 @@ nav.navbar{
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  z-index: 1;
 
   & > h1{
     color: #2A66AA;
@@ -234,14 +235,16 @@ nav.navbar{
       background-image: url("media/pictures/portrait.jpg");
     }
   }
+  div.section#hobby .center .img, div.section#motivation .center .img{
+    height: 280px;
+    width: 440px;
+  }
   div.section#hobby{
     .center{
       grid-column: 6 / 10;
 
       .img{
         background-image: url("media/pictures/setup.jpg");
-        height: 280px;
-        width: 440px;
       }
     }
     .text{
@@ -254,8 +257,6 @@ nav.navbar{
 
       .img{
         background-image: url("media/pictures/code.jpg");
-        height: 280px;
-        width: 440px;
       }
     }
     .text{
@@ -917,7 +918,7 @@ div.footer{
 }
 
 //only pc
-@media only screen and (min-device-width: 400px) {
+@media only screen and (min-device-width: 450px) {
   .about .section .center .img:hover{
     transform: scale(1.03);
   }
