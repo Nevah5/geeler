@@ -501,8 +501,8 @@ nav.navbar .align_end {
   display: grid;
   -ms-grid-columns: 5% 40% 10% 40% 5%;
       grid-template-columns: 5% 40% 10% 40% 5%;
-  -ms-grid-rows: (1fr)[1];
-      grid-template-rows: repeat(1, 1fr);
+  -ms-grid-rows: 1fr 35px 1fr;
+      grid-template-rows: 1fr 35px 1fr;
   padding-bottom: 50px;
 }
 
@@ -521,13 +521,20 @@ nav.navbar .align_end {
 
 .projects .contents .grid .wrapper:nth-child(2n+1) {
   -ms-grid-column: 2;
-  grid-column: 2 / 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
 }
 
 .projects .contents .grid .wrapper:nth-child(2n+0) {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
+}
+
+.projects .contents .grid .wrapper:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
 }
 
 .projects .contents .grid .wrapper .project {
@@ -659,6 +666,11 @@ nav.navbar .align_end {
 .projects .contents .grid .wrapper .project .header .tags #php::after {
   content: 'PHP';
   background-color: #787CB4;
+}
+
+.projects .contents .grid .wrapper .project .header .tags #docker::after {
+  content: 'Docker';
+  background-color: #0098D4;
 }
 
 .projects .contents .grid .wrapper .project p {
@@ -986,6 +998,14 @@ div.footer .foot .row a {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+  }
+  .projects .contents .grid .wrapper:nth-child(3) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
   }
 }
 
@@ -1582,5 +1602,9 @@ div.footer .foot .row a {
 
 .projects .contents .grid #projectdiscoin .project .overlay::before {
   background-image: url("https://raw.githubusercontent.com/Nevah5/discoin/main/media/examples/CryptoValueMessage.png");
+}
+
+.projects .contents .grid #projectdiscoin .project .overlay::before {
+  background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/7.png");
 }
 /*# sourceMappingURL=style.css.map */
