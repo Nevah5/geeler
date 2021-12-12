@@ -505,15 +505,42 @@ nav.navbar .align_end {
       grid-template-columns: 5% 40% 10% 40% 5%;
   -ms-grid-rows: (1fr)[1];
       grid-template-rows: repeat(1, 1fr);
+  padding-bottom: 50px;
 }
 
-.projects .contents .grid .project {
+.projects .contents .grid .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .contents .grid .wrapper:nth-child(2n+1) {
+  -ms-grid-column: 2;
+  grid-column: 2 / 2;
+}
+
+.projects .contents .grid .wrapper:nth-child(2n+0) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+.projects .contents .grid .wrapper .project {
+  position: relative;
   background-color: white;
   border-radius: .5em;
   padding: 15px;
+  height: 250px;
+  width: 400px;
 }
 
-.projects .contents .grid .project .header {
+.projects .contents .grid .wrapper .project .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,7 +552,7 @@ nav.navbar .align_end {
           align-items: center;
 }
 
-.projects .contents .grid .project .header h3 {
+.projects .contents .grid .wrapper .project .header h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -536,7 +563,7 @@ nav.navbar .align_end {
   margin-right: 15px;
 }
 
-.projects .contents .grid .project .header .tags span::after {
+.projects .contents .grid .wrapper .project .header .tags span::after {
   font-family: Alata;
   font-size: 0.7rem;
   padding: 3px 7px;
@@ -545,36 +572,67 @@ nav.navbar .align_end {
   color: white;
 }
 
-.projects .contents .grid .project .header .tags #html::after {
+.projects .contents .grid .wrapper .project .header .tags #html::after {
   content: 'HTML';
   background-color: #DD4B25;
 }
 
-.projects .contents .grid .project .header .tags #css::after {
+.projects .contents .grid .wrapper .project .header .tags #css::after {
   content: 'CSS';
   background-color: #254BDD;
 }
 
-.projects .contents .grid .project .header .tags #php::after {
+.projects .contents .grid .wrapper .project .header .tags #php::after {
   content: 'PHP';
   background-color: #787CB4;
 }
 
-.projects .contents .grid .project p {
+.projects .contents .grid .wrapper .project p {
   margin: 0;
   font-family: Alata;
   color: #144A8F;
 }
 
-.projects .contents .grid .project:nth-child(2n+1) {
-  -ms-grid-column: 2;
-  grid-column: 2 / 2;
+.projects .contents .grid .wrapper .project .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: calc(100% - 20px);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
-.projects .contents .grid .project:nth-child(2n+0) {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
+.projects .contents .grid .wrapper .project .type div::after {
+  display: block;
+  font-family: Alata;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  border-radius: .5em;
+  margin-right: 5px;
+  color: white;
+}
+
+.projects .contents .grid .wrapper .project .type #unfinished::after {
+  content: 'Unfinished';
+  background-color: #dd2c00;
+}
+
+.projects .contents .grid .wrapper .project .type #inprogress::after {
+  content: 'Work in progress';
+  background-color: #40cf53;
+}
+
+.projects .contents .grid .wrapper .project .type #teamwork::after {
+  content: 'Teamwork';
+  background-color: #7647ce;
 }
 
 .projects::after {
@@ -585,8 +643,8 @@ nav.navbar .align_end {
   background-color: #144A8F;
   position: absolute;
   bottom: 0;
-  -webkit-clip-path: polygon(0 -1%, 103% -1%, 0 101%);
-          clip-path: polygon(0 -1%, 103% -1%, 0 101%);
+  -webkit-clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
+          clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
 }
 
 div.footer {

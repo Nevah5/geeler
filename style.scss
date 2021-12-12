@@ -340,27 +340,80 @@ nav.navbar{
       display: grid;
       grid-template-columns: 5% 40% 10% 40% 5%;
       grid-template-rows: repeat(1, 1fr);
+      padding-bottom: 50px;
 
-      .project{
-        background-color: white;
-        border-radius: .5em;
-        padding: 15px;
+      .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .header{
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
+        &:nth-child(2n+1){ //every first element in row
+          grid-column: 2 / 2;
+        }
+        &:nth-child(2n+0){ //every second element in row
+          grid-column: 4 / 5;
+        }
+        .project{
+          position: relative;
+          background-color: white;
+          border-radius: .5em;
+          padding: 15px;
+          height: 250px;
+          width: 400px;
 
-          h3{
-            width: fit-content;
-            margin: 0;
-            font-size: 2rem;
-            font-family: Concert One;
-            color: #144A8F;
-            margin-right: 15px;
+          .header{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            h3{
+              width: fit-content;
+              margin: 0;
+              font-size: 2rem;
+              font-family: Concert One;
+              color: #144A8F;
+              margin-right: 15px;
+            }
+            .tags{
+              span::after{
+                font-family: Alata;
+                font-size: 0.7rem;
+                padding: 3px 7px;
+                border-radius: .5em;
+                margin-right: 5px;
+                color: white;
+              }
+              #html::after{
+                content: 'HTML';
+                background-color: #DD4B25;
+              }
+              #css::after{
+                content: 'CSS';
+                background-color: #254BDD;
+              }
+              #php::after{
+                content: 'PHP';
+                background-color: #787CB4;
+              }
+            }
           }
-          .tags{
-            span::after{
+          p{
+            margin: 0;
+            font-family: Alata;
+            color: #144A8F;
+          }
+          .type{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 30px;
+            width: calc(100% - 20px);
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            div::after{
+              display: block;
               font-family: Alata;
               font-size: 0.7rem;
               padding: 3px 7px;
@@ -368,31 +421,19 @@ nav.navbar{
               margin-right: 5px;
               color: white;
             }
-            #html::after{
-              content: 'HTML';
-              background-color: #DD4B25;
+            #unfinished::after{
+              content: 'Unfinished';
+              background-color: #dd2c00;
             }
-            #css::after{
-              content: 'CSS';
-              background-color: #254BDD;
+            #inprogress::after{
+              content: 'Work in progress';
+              background-color: #40cf53;
             }
-            #php::after{
-              content: 'PHP';
-              background-color: #787CB4;
+            #teamwork::after{
+              content: 'Teamwork';
+              background-color: #7647ce;
             }
           }
-        }
-        p{
-          margin: 0;
-          font-family: Alata;
-          color: #144A8F;
-        }
-
-        &:nth-child(2n+1){ //every first element in row
-          grid-column: 2 / 2;
-        }
-        &:nth-child(2n+0){ //every second element in row
-          grid-column: 4 / 5;
         }
       }
     }
@@ -406,7 +447,7 @@ nav.navbar{
   background-color: #144A8F;
   position: absolute;
   bottom: 0;
-  clip-path: polygon(0 -1%, 103% -1%, 0 101%);
+  clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
 }
 div.footer{
   position: relative;
