@@ -111,9 +111,6 @@ nav.navbar .align_end {
 .home {
   position: relative;
   z-index: 2;
-  padding: 0 0 50px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 .home .wrapper {
