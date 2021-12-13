@@ -311,7 +311,8 @@ nav.navbar{
   background-color: #144A8F;
   position: absolute;
   top: 0;
-  clip-path: polygon(-1% 101%, 101% 101%, 101% 0);
+  transform: translateY(0.5px);
+  clip-path: polygon(-1% 101%, 101% 101%, 101% -1%);
 }
 .projects{
   padding: 20vh 0;
