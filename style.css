@@ -537,6 +537,12 @@ nav.navbar .align_end {
   grid-row: 3 / 4;
 }
 
+.projects .contents .grid .wrapper:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
 .projects .contents .grid .wrapper .project {
   position: relative;
   background-color: white;
@@ -1006,6 +1012,14 @@ div.footer .foot .row a {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
+  }
+  .projects .contents .grid .wrapper:nth-child(4) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
   }
 }
 
@@ -1601,10 +1615,14 @@ div.footer .foot .row a {
 }
 
 .projects .contents .grid #projectdiscoin .project .overlay::before {
-  background-image: url("https://raw.githubusercontent.com/Nevah5/discoin/main/media/examples/CryptoValueMessage.png");
+  background-image: url("media/pictures/discoin.png");
 }
 
-.projects .contents .grid #projectdiscoin .project .overlay::before {
+.projects .contents .grid #projectcheckmk .project .overlay::before {
   background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/7.png");
+}
+
+.projects .contents .grid #projectgeeler .project .overlay::before {
+  background-image: url("media/pictures/geeler.net.png");
 }
 /*# sourceMappingURL=style.css.map */
