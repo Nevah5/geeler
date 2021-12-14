@@ -531,6 +531,68 @@ nav.navbar{
     width: 100%;
     text-align: center;
   }
+  h3{
+    font-family: Concert One;
+    font-size: 2rem;
+    color: #144A8F;
+    margin: 0;
+  }
+  a{
+    font-family: Alata;
+    font-size: 1.3rem;
+    color: #144A8F !important;
+  }
+  .details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .detail{
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  }
+  .message{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 50px 0 30px;
+
+    .wrapper{
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: 80%;
+
+      h3, p{
+        font-family: Alata;
+        font-size: 1.3rem;
+        color: #DD4B25 !important;
+      }
+      h3{
+        font-family: Concert One;
+        font-size: 1.3rem;
+        color: #144A8F;
+        margin: 0 30px 0 0;
+      }
+      .exclamation{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+      p{
+        margin: 0;
+        width: 90%;
+      }
+    }
+  }
 }
 div.footer{
   position: relative;
