@@ -756,6 +756,14 @@ nav.navbar .align_end {
           clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
 }
 
+.contact h1 {
+  font-family: Russo One;
+  font-size: 4rem;
+  color: #144A8F;
+  width: 100%;
+  text-align: center;
+}
+
 div.footer {
   position: relative;
   width: auto;
