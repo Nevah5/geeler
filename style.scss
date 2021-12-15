@@ -593,6 +593,20 @@ nav.navbar{
       }
     }
   }
+  .wrapper#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .form{
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
 }
 div.footer{
   position: relative;
