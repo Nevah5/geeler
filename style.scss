@@ -593,6 +593,35 @@ nav.navbar{
       }
     }
   }
+  .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form{
+      .input{
+        position: relative;
+
+        span{
+          background-color: #40cf5369;
+          height: 100%;
+
+          @mixin spacer {
+            content: '';
+            width: 5px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background-color: #40cf5369;
+          }
+          &::before{
+            @include spacer();
+          }
+        }
+      }
+    }
+  }
 }
 div.footer{
   position: relative;
