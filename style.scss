@@ -597,14 +597,67 @@ nav.navbar{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin-bottom: 100px;
 
+    h3{
+      margin-top: 50px;
+    }
     .form{
       width: 60%;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
+
+      input[type="text"], textarea{
+        width: calc(100% - 6px);
+        padding: 5px 0 5px 4px;
+        height: 30px;
+        border: #144A8F 2px solid;
+        font-family: Alata;
+        color: #144A8F;
+        border-radius: .5em;
+        outline: none;
+
+        &#message{
+          height: 40vh;
+          resize: vertical;
+        }
+        &:focus{
+          width: calc(100% - 7px);
+          border: #144A8F 3px solid;
+        }
+      }
+      div{
+        margin: 20px 0 0;
+        width: 100%;
+      }
+      label{
+        font-family: Alata;
+        color: #144A8F;
+        font-size: 1rem;
+
+        a{
+          text-decoration: underline;
+          font-size: 1em;
+
+          &:active, &:visited{
+            color: #144A8F;
+          }
+        }
+      }
+      #submit{
+        padding: 5px 15px;
+        border-radius: .5em;
+        background-color: #144A8F;
+        color: white;
+        cursor: pointer;
+      }
+      #submitbtn{
+        display: none;
+      }
     }
   }
 }

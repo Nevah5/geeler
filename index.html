@@ -183,7 +183,7 @@
     <div class="details">
       <div class="detail">
         <h3>✉️ Email</h3>
-        <a href="mailto:noah@geeler.net">noah@geeler.net</a>
+        <a href="mailto:noah@geeler.net">contact@geeler.net</a>
       </div>
       <div class="detail">
         <h3>📞 Phone</h3>
@@ -197,19 +197,25 @@
       </div>
     </div>
     <div class="wrapper" id="form">
-      <div class="form">
+      <h3>Send me a message</h3>
+      <form class="form">
         <label for="sender">Your Email</label>
         <input type="text" id="sender" name="sender">
-        <label for="message">Your Message</label>
-        <input type="text" id="message" name="message">
+        <div>
+          <label for="message">Your Message</label>
+        </div>
+        <textarea type="text" id="message" name="message"></textarea>
         <div>
           <input type="checkbox" id="acceptdb" name="acceptdb"><label for="acceptdb">You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only.</label>
         </div>
         <div>
           <input type="checkbox" id="acceptsecurity" name="acceptsecurity"><label for="acceptsecurity">You have read the <a href="/privacy/">Privacy</a> agreement and accept it.</label>
         </div>
-        <input type="submit" value="Submit">
-      </div>
+        <div>
+          <label for="submitbtn" id="submit">Submit</label>
+        </div>
+        <input type="submit" id="submitbtn">
+      </form>
     </div>
   </div>
   <div class="footer">
