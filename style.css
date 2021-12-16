@@ -1043,6 +1043,20 @@ nav.navbar .align_end {
   margin: 3vh 0;
 }
 
+.donate .contents .paypal {
+  font-family: Concert One;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #FFC439;
+  padding: 15px 50px;
+  border-radius: .5em;
+  font-weight: 1000;
+  background-image: url("media/pictures/paypal.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .donate .contents .buymeacoffee {
   min-width: 200px;
   max-width: 240px;
