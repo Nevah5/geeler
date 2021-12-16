@@ -521,6 +521,7 @@ nav.navbar{
   background-color: #144A8F;
   position: absolute;
   bottom: 0;
+  transform: translateY(-0.5px);
   clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
 }
 .contact{
@@ -599,7 +600,7 @@ nav.navbar{
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     h3{
       margin-top: 50px;
@@ -660,6 +661,72 @@ nav.navbar{
       }
     }
   }
+}
+.donate::before{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  transform: translateY(0.5px);
+  clip-path: polygon(-1% 101%, 101% 101%, 101% -1%);
+}
+.donate{
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 20vh 0;
+
+  .contents{
+    width: 100%;
+    background-color: #144A8F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 0 25px;
+
+    h1{
+      font-size: 3rem;
+      width: 100%;
+      text-align: center;
+      margin: 50px 0 50px;
+      color: white;
+      font-family: Russo One;
+    }
+    h4{
+      font-family: Concert One;
+      font-size: 2rem;
+      color: white;
+      margin: 3vh 0;
+    }
+    .buymeacoffee{
+      min-width: 200px;
+      max-width: 240px;
+      width: 20vw;
+      height: 9vh;
+      max-height: 70px;
+      background-image: url("media/pictures/buymeacoffee.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: .5em;
+    }
+  }
+}
+.donate::after{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-0.5px);
+  clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
 }
 div.footer{
   position: relative;
