@@ -552,7 +552,7 @@ nav.navbar{
     width: 100%;
 
     .detail{
-      width: 60%;
+      width: 80%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -691,7 +691,7 @@ nav.navbar{
 
     h1{
       font-size: 3rem;
-      width: 100%;
+      width: 85%;
       text-align: center;
       margin: 50px 0 50px;
       color: white;
@@ -1171,6 +1171,17 @@ div.footer{
     }
     h1{
       font-size: 3rem;
+    }
+  }
+  .contact{
+    h1{
+      font-size: 3rem;
+    }
+    h3{
+      font-size: 1.4rem;
+    }
+    a{
+      font-size: 1rem;
     }
   }
   .projects{

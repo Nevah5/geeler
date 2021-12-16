@@ -799,7 +799,7 @@ nav.navbar .align_end {
 }
 
 .contact .details .detail {
-  width: 60%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,7 +1008,7 @@ nav.navbar .align_end {
 
 .donate .contents h1 {
   font-size: 3rem;
-  width: 100%;
+  width: 85%;
   text-align: center;
   margin: 50px 0 50px;
   color: white;
@@ -1637,6 +1637,15 @@ div.footer .foot .row a {
   }
   .about h1 {
     font-size: 3rem;
+  }
+  .contact h1 {
+    font-size: 3rem;
+  }
+  .contact h3 {
+    font-size: 1.4rem;
+  }
+  .contact a {
+    font-size: 1rem;
   }
   .projects .contents h1 {
     font-size: 3rem;
