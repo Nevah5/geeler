@@ -954,6 +954,60 @@ nav.navbar .align_end {
 .contact .wrapper#form .form div {
   margin: 20px 0 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .wrapper#form .form div input[type="checkbox"] {
+  display: none;
+}
+
+.contact .wrapper#form .form div label#chkbx {
+  display: block;
+  min-height: 10px;
+  min-width: 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
+  margin-right: 10px;
+  background-color: white;
+  border: solid 2px #144A8F;
+  border-radius: 2px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .wrapper#form .form div label#chkbx div#tik {
+  margin: 0;
+  display: block;
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  -webkit-clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+          clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+}
+
+.contact .wrapper#form .form div input[type="checkbox"]:checked ~ label#chkbx {
+  background-color: #144A8F;
 }
 
 .contact .wrapper#form .form label {
