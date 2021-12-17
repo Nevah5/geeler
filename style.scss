@@ -689,7 +689,7 @@ nav.navbar{
   position: absolute;
   top: 0;
   transform: translateY(0.5px);
-  clip-path: polygon(-1% 101%, 101% 101%, 101% -1%);
+  clip-path: polygon(-101% 101%, -101% -1%, 101% 101%);
 }
 .donate{
   position: relative;
@@ -757,7 +757,7 @@ nav.navbar{
   position: absolute;
   bottom: 0;
   transform: translateY(-0.5px);
-  clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
+  clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
 }
 div.footer{
   position: relative;

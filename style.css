@@ -993,8 +993,8 @@ nav.navbar .align_end {
   top: 0;
   -webkit-transform: translateY(0.5px);
           transform: translateY(0.5px);
-  -webkit-clip-path: polygon(-1% 101%, 101% 101%, 101% -1%);
-          clip-path: polygon(-1% 101%, 101% 101%, 101% -1%);
+  -webkit-clip-path: polygon(-101% 101%, -101% -1%, 101% 101%);
+          clip-path: polygon(-101% 101%, -101% -1%, 101% 101%);
 }
 
 .donate {
@@ -1080,8 +1080,8 @@ nav.navbar .align_end {
   bottom: 0;
   -webkit-transform: translateY(-0.5px);
           transform: translateY(-0.5px);
-  -webkit-clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
-          clip-path: polygon(0 -1%, 103% -1%, -1% 101%);
+  -webkit-clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+          clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
 }
 
 div.footer {
