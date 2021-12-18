@@ -374,26 +374,46 @@ nav.navbar{
         border-radius: .5em;
         overflow: hidden;
         transition: box-shadow .5s, transform .5s; //scale and shadow
-        background-image: url("media/pictures/nevah5.com.jpg");
         background-size: cover;
         background-position: center;
 
+        &#nevah5com{
+          background-image: url("media/pictures/nevah5.com.jpg");
+        }
+        &#geelernetv2{
+          background-image: url("media/pictures/geeler.net.png");
+        }
+        &#discoin{
+          background-image: url("media/pictures/discoin.png");
+        }
+        &#checkmkdocker{
+          background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
+        }
         &:hover{
           transform: scale(1.05);
           box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
 
           .overlay{
-            background-color: rgba(0, 0, 0, 0.61);
+            background-color: white;
           }
           .line{
             opacity: 1;
+            background-color: #144A8F;
           }
           .head{
             opacity: 1;
+
+            h2{
+              color: #144A8F;
+            }
           }
           .text{
             transform: translateY(0);
             opacity: 1;
+
+            p{
+              color: #144A8F;
+            }
           }
         }
         .overlay{
@@ -416,7 +436,7 @@ nav.navbar{
           background-color: white;
           position: absolute;
           z-index: 2;
-          transition: opacity .7s;
+          transition: opacity .7s, background-color .7s;
           opacity: 0.5;
           bottom: 0;
         }
@@ -433,6 +453,7 @@ nav.navbar{
             font-weight: 1000;
             font-size: 2.4rem;
             color: white;
+            transition: color .7s;
           }
           .tags{
             span::after{
@@ -481,6 +502,7 @@ nav.navbar{
             font-size: 1rem;
             color: white;
             margin: 0 0 10px;
+            transition: color .7s;
           }
           .type{
             position: relative;

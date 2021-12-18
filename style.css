@@ -555,9 +555,24 @@ nav.navbar .align_end {
   transition: -webkit-box-shadow .5s, -webkit-transform .5s;
   transition: box-shadow .5s, transform .5s;
   transition: box-shadow .5s, transform .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
-  background-image: url("media/pictures/nevah5.com.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.projects .contents .wrapper .project#nevah5com {
+  background-image: url("media/pictures/nevah5.com.jpg");
+}
+
+.projects .contents .wrapper .project#geelernetv2 {
+  background-image: url("media/pictures/geeler.net.png");
+}
+
+.projects .contents .wrapper .project#discoin {
+  background-image: url("media/pictures/discoin.png");
+}
+
+.projects .contents .wrapper .project#checkmkdocker {
+  background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
 }
 
 .projects .contents .wrapper .project:hover {
@@ -568,21 +583,30 @@ nav.navbar .align_end {
 }
 
 .projects .contents .wrapper .project:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.61);
+  background-color: white;
 }
 
 .projects .contents .wrapper .project:hover .line {
   opacity: 1;
+  background-color: #144A8F;
 }
 
 .projects .contents .wrapper .project:hover .head {
   opacity: 1;
 }
 
+.projects .contents .wrapper .project:hover .head h2 {
+  color: #144A8F;
+}
+
 .projects .contents .wrapper .project:hover .text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+.projects .contents .wrapper .project:hover .text p {
+  color: #144A8F;
 }
 
 .projects .contents .wrapper .project .overlay {
@@ -607,8 +631,8 @@ nav.navbar .align_end {
   background-color: white;
   position: absolute;
   z-index: 2;
-  -webkit-transition: opacity .7s;
-  transition: opacity .7s;
+  -webkit-transition: opacity .7s, background-color .7s;
+  transition: opacity .7s, background-color .7s;
   opacity: 0.5;
   bottom: 0;
 }
@@ -632,6 +656,8 @@ nav.navbar .align_end {
   font-weight: 1000;
   font-size: 2.4rem;
   color: white;
+  -webkit-transition: color .7s;
+  transition: color .7s;
 }
 
 .projects .contents .wrapper .project .head .tags span::after {
@@ -702,6 +728,8 @@ nav.navbar .align_end {
   font-size: 1rem;
   color: white;
   margin: 0 0 10px;
+  -webkit-transition: color .7s;
+  transition: color .7s;
 }
 
 .projects .contents .wrapper .project .text .type {
