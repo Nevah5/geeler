@@ -76,6 +76,7 @@ nav.navbar{
     & > a{
       color: white;
       margin: 0 15px;
+      font-family: Russo One;
     }
   }
   ul ~ a{ /*Login*/
@@ -1224,8 +1225,10 @@ div.footer{
 
         h1{
           font-size: 3rem;
+          margin-left: 7px;
         }
         h2{
+          margin-left: 7px;
           font-size: 1rem;
         }
       }
