@@ -529,15 +529,19 @@ nav.navbar .align_end {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .projects .contents .wrapper .project {
   position: relative;
   height: 30vh;
   min-height: 500px;
-  width: 30vw;
-  min-width: 200px;
-  background-color: white;
+  width: 330px;
   margin: 30px 10vw;
   display: -ms-grid;
   display: grid;
@@ -547,6 +551,51 @@ nav.navbar .align_end {
       grid-template-rows: 15% 30px 1fr;
   border-radius: .5em;
   overflow: hidden;
+  -webkit-transition: -webkit-box-shadow .5s, -webkit-transform .5s;
+  transition: -webkit-box-shadow .5s, -webkit-transform .5s;
+  transition: box-shadow .5s, transform .5s;
+  transition: box-shadow .5s, transform .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+  background-image: url("media/pictures/nevah5.com.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projects .contents .wrapper .project:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
+          box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
+}
+
+.projects .contents .wrapper .project:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.projects .contents .wrapper .project:hover .line {
+  opacity: 1;
+}
+
+.projects .contents .wrapper .project:hover .head {
+  opacity: 1;
+}
+
+.projects .contents .wrapper .project:hover .text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.projects .contents .wrapper .project .overlay {
+  background-color: rgba(0, 0, 0, 0.233);
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: background-color .7s;
+  transition: background-color .7s;
+  z-index: 1;
 }
 
 .projects .contents .wrapper .project .line {
@@ -555,8 +604,12 @@ nav.navbar .align_end {
   border-top-left-radius: .5em;
   border-top-right-radius: .5em;
   margin-left: 10px;
-  background-color: #2A66AA;
+  background-color: white;
   position: absolute;
+  z-index: 2;
+  -webkit-transition: opacity .7s;
+  transition: opacity .7s;
+  opacity: 0.5;
   bottom: 0;
 }
 
@@ -567,6 +620,10 @@ nav.navbar .align_end {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  opacity: 0.5;
+  -webkit-transition: opacity .7s;
+  transition: opacity .7s;
+  z-index: 2;
 }
 
 .projects .contents .wrapper .project .head h2 {
@@ -574,6 +631,7 @@ nav.navbar .align_end {
   font-family: Concert One;
   font-weight: 1000;
   font-size: 2.4rem;
+  color: white;
 }
 
 .projects .contents .wrapper .project .head .tags span::after {
@@ -628,12 +686,21 @@ nav.navbar .align_end {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   max-width: 90%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: opacity 1.3s, -webkit-transform .7s;
+  transition: opacity 1.3s, -webkit-transform .7s;
+  transition: transform .7s, opacity 1.3s;
+  transition: transform .7s, opacity 1.3s, -webkit-transform .7s;
+  z-index: 2;
+  opacity: 0.5;
 }
 
 .projects .contents .wrapper .project .text p {
   font-family: Alata;
   font-weight: 1000;
   font-size: 1rem;
+  color: white;
   margin: 0 0 10px;
 }
 

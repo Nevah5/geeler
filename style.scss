@@ -359,41 +359,80 @@ nav.navbar{
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
 
       .project{
         position: relative;
         height: 30vh;
         min-height: 500px;
-        width: 30vw;
-        min-width: 200px;
-        background-color: white;
+        width: 330px;
         margin: 30px 10vw;
         display: grid;
         grid-template-columns: 40px 1fr;
         grid-template-rows: 15% 30px 1fr;
         border-radius: .5em;
         overflow: hidden;
+        transition: box-shadow .5s, transform .5s; //scale and shadow
+        background-image: url("media/pictures/nevah5.com.jpg");
+        background-size: cover;
+        background-position: center;
 
+        &:hover{
+          transform: scale(1.05);
+          box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
 
+          .overlay{
+            background-color: rgba(0, 0, 0, 0.61);
+          }
+          .line{
+            opacity: 1;
+          }
+          .head{
+            opacity: 1;
+          }
+          .text{
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        .overlay{
+          background-color: rgba(0, 0, 0, 0.233);
+          position: absolute;
+          z-index: 2;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          transition: background-color .7s;
+          z-index: 1;
+        }
         .line{
           height: 85%;
           width: 10px;
           border-top-left-radius: .5em;
           border-top-right-radius: .5em;
           margin-left: 10px;
-          background-color: #2A66AA;
+          background-color: white;
           position: absolute;
+          z-index: 2;
+          transition: opacity .7s;
+          opacity: 0.5;
           bottom: 0;
         }
         .head{
           grid-column: 2/3;
           grid-row: 2/3;
+          opacity: 0.5;
+          transition: opacity .7s;
+          z-index: 2;
 
           h2{
             margin: 0 0 5px;
             font-family: Concert One;
             font-weight: 1000;
             font-size: 2.4rem;
+            color: white;
           }
           .tags{
             span::after{
@@ -431,11 +470,16 @@ nav.navbar{
           flex-direction: column;
           flex-wrap: nowrap;
           max-width: 90%;
+          transform: translateY(100%);
+          transition: transform .7s, opacity 1.3s;
+          z-index: 2;
+          opacity: 0.5;
 
           p{
             font-family: Alata;
             font-weight: 1000;
             font-size: 1rem;
+            color: white;
             margin: 0 0 10px;
           }
           .type{
