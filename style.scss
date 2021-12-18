@@ -389,36 +389,6 @@ nav.navbar{
         &#checkmkdocker{
           background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
         }
-        &:hover{
-          transform: scale(1.05);
-          box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
-
-          .overlay{
-            background-color: white;
-          }
-          .line{
-            opacity: 1;
-
-            .slider{
-              height: 100%;
-            }
-          }
-          .head{
-            opacity: 1;
-
-            h2{
-              color: #144A8F;
-            }
-          }
-          .text{
-            transform: translateY(0);
-            opacity: 1;
-
-            p{
-              color: #144A8F;
-            }
-          }
-        }
         .overlay{
           background-color: rgba(0, 0, 0, 0.233);
           position: absolute;
@@ -1543,6 +1513,36 @@ div.footer{
 @media only screen and (min-device-width: 450px) {
   .about .section .center .img:hover{
     transform: scale(1.03);
+  }
+  .projects .contents .wrapper .project:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
+
+    .overlay{
+      background-color: white;
+    }
+    .line{
+      opacity: 1;
+
+      .slider{
+        height: 100%;
+      }
+    }
+    .head{
+      opacity: 1;
+
+      h2{
+        color: #144A8F;
+      }
+    }
+    .text{
+      transform: translateY(0);
+      opacity: 1;
+
+      p{
+        color: #144A8F;
+      }
+    }
   }
 }
 

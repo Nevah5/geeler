@@ -575,43 +575,6 @@ nav.navbar .align_end {
   background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
 }
 
-.projects .contents .wrapper .project:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
-          box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
-}
-
-.projects .contents .wrapper .project:hover .overlay {
-  background-color: white;
-}
-
-.projects .contents .wrapper .project:hover .line {
-  opacity: 1;
-}
-
-.projects .contents .wrapper .project:hover .line .slider {
-  height: 100%;
-}
-
-.projects .contents .wrapper .project:hover .head {
-  opacity: 1;
-}
-
-.projects .contents .wrapper .project:hover .head h2 {
-  color: #144A8F;
-}
-
-.projects .contents .wrapper .project:hover .text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-}
-
-.projects .contents .wrapper .project:hover .text p {
-  color: #144A8F;
-}
-
 .projects .contents .wrapper .project .overlay {
   background-color: rgba(0, 0, 0, 0.233);
   position: absolute;
@@ -2053,6 +2016,35 @@ div.footer .foot .row a {
   .about .section .center .img:hover {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
+  }
+  .projects .contents .wrapper .project:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
+            box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.349);
+  }
+  .projects .contents .wrapper .project:hover .overlay {
+    background-color: white;
+  }
+  .projects .contents .wrapper .project:hover .line {
+    opacity: 1;
+  }
+  .projects .contents .wrapper .project:hover .line .slider {
+    height: 100%;
+  }
+  .projects .contents .wrapper .project:hover .head {
+    opacity: 1;
+  }
+  .projects .contents .wrapper .project:hover .head h2 {
+    color: #144A8F;
+  }
+  .projects .contents .wrapper .project:hover .text {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  .projects .contents .wrapper .project:hover .text p {
+    color: #144A8F;
   }
 }
 
