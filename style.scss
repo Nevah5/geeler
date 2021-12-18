@@ -766,7 +766,7 @@ nav.navbar{
   position: absolute;
   top: 0;
   transform: translateY(0.5px);
-  clip-path: polygon(-101% 101%, -101% -1%, 101% 101%);
+  clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
 }
 .donate{
   position: relative;
@@ -788,7 +788,7 @@ nav.navbar{
       font-size: 3rem;
       width: 85%;
       text-align: center;
-      margin: 50px 0 50px;
+      margin: 0 0 50px;
       color: white;
       font-family: Russo One;
     }
