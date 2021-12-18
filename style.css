@@ -570,7 +570,39 @@ nav.navbar .align_end {
 }
 
 .projects .contents .wrapper .project .head h2 {
-  margin: 0;
+  margin: 0 0 5px;
+  font-family: Concert One;
+  font-weight: 1000;
+  font-size: 2.4rem;
+}
+
+.projects .contents .wrapper .project .head .tags span::after {
+  font-family: Alata;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  border-radius: .5em;
+  margin-right: 3px;
+  color: white;
+}
+
+.projects .contents .wrapper .project .head .tags #html::after {
+  content: 'HTML';
+  background-color: #DD4B25;
+}
+
+.projects .contents .wrapper .project .head .tags #css::after {
+  content: 'CSS';
+  background-color: #254BDD;
+}
+
+.projects .contents .wrapper .project .head .tags #php::after {
+  content: 'PHP';
+  background-color: #787CB4;
+}
+
+.projects .contents .wrapper .project .head .tags #docker::after {
+  content: 'Docker';
+  background-color: #0098D4;
 }
 
 .projects .contents .wrapper .project .text {
@@ -595,10 +627,78 @@ nav.navbar .align_end {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  max-width: 90%;
 }
 
 .projects .contents .wrapper .project .text p {
-  max-width: 90%;
+  font-family: Alata;
+  font-weight: 1000;
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.projects .contents .wrapper .project .text .type {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.projects .contents .wrapper .project .text .type div::after {
+  display: block;
+  font-family: Alata;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  border-radius: .5em;
+  margin: 4px 5px 0 0;
+  color: white;
+}
+
+.projects .contents .wrapper .project .text .type #unfinished::after {
+  content: 'Unfinished';
+  background-color: #dd2c00;
+}
+
+.projects .contents .wrapper .project .text .type #inprogress::after {
+  content: 'Work in progress';
+  background-color: #40cf53;
+}
+
+.projects .contents .wrapper .project .text .type #teamwork::after {
+  content: 'Teamwork';
+  background-color: #7647ce;
+}
+
+.projects .contents .wrapper .project .text .type #opensource::after {
+  content: 'Open-Source';
+  background-color: #d6be51;
+}
+
+.projects .contents .wrapper .project .text .type #private::after {
+  content: 'Private';
+  background-color: #d35fac;
+}
+
+.projects .contents .wrapper .project .text .type #copyright::after {
+  content: 'Copyright';
+  background-color: #000000;
 }
 
 .projects::after {

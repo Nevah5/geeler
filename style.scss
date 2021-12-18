@@ -390,7 +390,36 @@ nav.navbar{
           grid-row: 2/3;
 
           h2{
-            margin: 0;
+            margin: 0 0 5px;
+            font-family: Concert One;
+            font-weight: 1000;
+            font-size: 2.4rem;
+          }
+          .tags{
+            span::after{
+              font-family: Alata;
+              font-size: 0.7rem;
+              padding: 3px 7px;
+              border-radius: .5em;
+              margin-right: 3px;
+              color: white;
+            }
+            #html::after{
+              content: 'HTML';
+              background-color: #DD4B25;
+            }
+            #css::after{
+              content: 'CSS';
+              background-color: #254BDD;
+            }
+            #php::after{
+              content: 'PHP';
+              background-color: #787CB4;
+            }
+            #docker::after{
+              content: 'Docker';
+              background-color: #0098D4;
+            }
           }
         }
         .text{
@@ -401,10 +430,60 @@ nav.navbar{
           align-items: flex-start;
           flex-direction: column;
           flex-wrap: nowrap;
+          max-width: 90%;
 
           p{
-            max-width: 90%;
+            font-family: Alata;
+            font-weight: 1000;
+            font-size: 1rem;
+            margin: 0 0 10px;
           }
+          .type{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: fit-content;
+            width: 100%;
+            margin-bottom: 10px;
+
+            div::after{
+              display: block;
+              font-family: Alata;
+              font-size: 0.7rem;
+              padding: 3px 7px;
+              border-radius: .5em;
+              margin: 4px 5px 0 0;
+              color: white;
+            }
+            #unfinished::after{
+              content: 'Unfinished';
+              background-color: #dd2c00;
+            }
+            #inprogress::after{
+              content: 'Work in progress';
+              background-color: #40cf53;
+            }
+            #teamwork::after{
+              content: 'Teamwork';
+              background-color: #7647ce;
+            }
+            #opensource::after{
+              content: 'Open-Source';
+              background-color: #d6be51;
+            }
+            #private::after{
+              content: 'Private';
+              background-color: #d35fac;
+            }
+            #copyright::after{
+              content: 'Copyright';
+              background-color: #000000;
+            }
+          }
+
         }
       }
     }
