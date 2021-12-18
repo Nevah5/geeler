@@ -504,6 +504,13 @@ nav.navbar{
             margin: 0 0 10px;
             transition: color .7s;
           }
+          a{
+            padding: 5px 15px;
+            background-color: #144A8F;
+            color: white;
+            margin: 0 0 10px;
+            border-radius: .2em;
+          }
           .type{
             position: relative;
             display: flex;

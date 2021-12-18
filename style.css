@@ -732,6 +732,14 @@ nav.navbar .align_end {
   transition: color .7s;
 }
 
+.projects .contents .wrapper .project .text a {
+  padding: 5px 15px;
+  background-color: #144A8F;
+  color: white;
+  margin: 0 0 10px;
+  border-radius: .2em;
+}
+
 .projects .contents .wrapper .project .text .type {
   position: relative;
   display: -webkit-box;
