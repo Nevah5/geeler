@@ -1755,23 +1755,27 @@ div.footer .foot .row a {
   .contact a {
     font-size: 1rem;
   }
-  .projects .contents h1 {
-    font-size: 3rem;
-    margin: 0 0 30px;
+  .projects .contents .wrapper .project .overlay {
+    background-color: white;
   }
-  .projects .contents .grid .wrapper .project {
-    padding: 15px;
-    height: 200px;
-    width: 300px;
+  .projects .contents .wrapper .project .head {
+    opacity: 1;
   }
-  .projects .contents .grid .wrapper .project .header h3 {
-    font-size: 1.6rem;
+  .projects .contents .wrapper .project .head h2 {
+    color: #144A8F;
   }
-  .projects .contents .grid .wrapper .project p {
-    font-size: .8rem;
+  .projects .contents .wrapper .project .line {
+    background-color: #144A8F;
+    opacity: 1;
   }
-  .projects .contents .grid .wrapper .project .type div::after {
-    font-size: 0.4rem;
+  .projects .contents .wrapper .project .text {
+    opacity: 1;
+    color: #144A8F;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .projects .contents .wrapper .project .text p {
+    color: #144A8F;
   }
   div.footer {
     padding: 0 10px;

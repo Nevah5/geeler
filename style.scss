@@ -1265,34 +1265,29 @@ div.footer{
       font-size: 1rem;
     }
   }
-  .projects{
-    .contents{
-      h1{
-        font-size: 3rem;
-        margin: 0 0 30px;
-      }
-      .grid{
-        .wrapper{
-          .project{
-            padding: 15px;
-            height: 200px;
-            width: 300px;
+  .projects .contents .wrapper .project{
+    .overlay{
+      background-color: white;
+    }
+    .head{
+      opacity: 1;
 
-            .header{
-              h3{
-                font-size: 1.6rem;
-              }
-            }
-            p{
-              font-size: .8rem;
-            }
-            .type{
-              div::after{
-                font-size: 0.4rem;
-              }
-            }
-          }
-        }
+      h2{
+        color: #144A8F;
+      }
+    }
+
+    .line{
+      background-color: #144A8F;
+      opacity: 1;
+    }
+    .text{
+      opacity: 1;
+      color: #144A8F;
+      transform: translate(0);
+
+      p{
+        color: #144A8F;
       }
     }
   }
