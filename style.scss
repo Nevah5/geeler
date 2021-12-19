@@ -659,6 +659,7 @@ nav.navbar{
         &#message{
           height: 40vh;
           resize: vertical;
+          min-height: 45px;
         }
       }
       div{
@@ -1260,6 +1261,7 @@ div.footer{
     }
     h3{
       font-size: 1.4rem;
+      margin: 0 0 10px;
     }
     a{
       font-size: 1rem;

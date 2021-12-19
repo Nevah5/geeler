@@ -966,6 +966,7 @@ nav.navbar .align_end {
 .contact .wrapper#form .form input[type="text"]#message, .contact .wrapper#form .form textarea#message {
   height: 40vh;
   resize: vertical;
+  min-height: 45px;
 }
 
 .contact .wrapper#form .form div {
@@ -1751,6 +1752,7 @@ div.footer .foot .row a {
   }
   .contact h3 {
     font-size: 1.4rem;
+    margin: 0 0 10px;
   }
   .contact a {
     font-size: 1rem;
