@@ -499,13 +499,25 @@ nav.navbar{
             transition: color .7s;
             cursor: default;
           }
-          a{
-            padding: 5px 15px;
-            background-color: #144A8F;
-            color: white;
+          div.anchors{
             margin: 0 0 10px;
-            border-radius: .2em;
-            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            a{
+              padding: 5px 15px;
+              background-color: #144A8F;
+              color: white;
+              border-radius: .2em;
+              cursor: pointer;
+              position: relative;
+
+              &:not(:nth-child(1)){
+                margin-top: 5px;
+              }
+            }
           }
           .type{
             position: relative;

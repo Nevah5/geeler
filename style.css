@@ -723,13 +723,34 @@ nav.navbar .align_end {
   cursor: default;
 }
 
-.projects .contents .wrapper .project .text a {
+.projects .contents .wrapper .project .text div.anchors {
+  margin: 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .contents .wrapper .project .text div.anchors a {
   padding: 5px 15px;
   background-color: #144A8F;
   color: white;
-  margin: 0 0 10px;
   border-radius: .2em;
   cursor: pointer;
+  position: relative;
+}
+
+.projects .contents .wrapper .project .text div.anchors a:not(:nth-child(1)) {
+  margin-top: 5px;
 }
 
 .projects .contents .wrapper .project .text .type {
