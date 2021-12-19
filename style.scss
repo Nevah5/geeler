@@ -48,7 +48,7 @@ nav.navbar{
     font-family: Russo One;
     order: 1;
   }
-  ul{
+  ul.navigation{
     width: fit-content;
     display: flex;
     justify-content: space-between;
@@ -73,18 +73,26 @@ nav.navbar{
       font-family: Russo One;
     }
   }
-  ul ~ a{ /*Login*/
+  ul ~ ul.user{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
-    color: black;
-    mix-blend-mode: screen;
 
-    li{
-      width: fit-content;
-      height: fit-content;
-      display: block;
+    a{ /*Login*/
+      background: white;
+      color: black;
+      mix-blend-mode: screen;
+      padding: 7px 10px;
+      border-radius: .3em;
+      font-size: 1rem;
+      font-family: Concert One;
+      margin: 0 8px 0 0;
+
+      li{
+        width: fit-content;
+        height: fit-content;
+        display: block;
+      }
     }
   }
   .align_end{
@@ -1090,7 +1098,7 @@ div.footer{
     input{
       display: none;
 
-      &:checked ~ ul{
+      &:checked ~ ul:not(.user){
         display: flex !important;
         z-index: 10;
         opacity: 1;
@@ -1202,7 +1210,7 @@ div.footer{
         }
       }
     }
-    ul ~ a{
+    ul ~ ul.user{
       display: none;
     }
   }
@@ -1300,7 +1308,7 @@ div.footer{
     input{
       display: none;
 
-      &:checked ~ ul{
+      &:checked ~ ul:not(.user){
         display: flex !important;
         z-index: 10;
         opacity: 1;
@@ -1417,7 +1425,7 @@ div.footer{
         }
       }
     }
-    ul ~ a{
+    ul ~ ul.user{
       display: none;
     }
   }

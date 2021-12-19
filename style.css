@@ -61,7 +61,7 @@ nav.navbar span.logo {
           order: 1;
 }
 
-nav.navbar ul {
+nav.navbar ul.navigation {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -81,7 +81,7 @@ nav.navbar ul {
   margin: 0;
 }
 
-nav.navbar ul h4 {
+nav.navbar ul.navigation h4 {
   display: none;
   position: absolute;
   left: 15px;
@@ -91,14 +91,13 @@ nav.navbar ul h4 {
   color: #144A8F;
 }
 
-nav.navbar ul > a {
+nav.navbar ul.navigation > a {
   color: white;
   margin: 0 15px;
   font-family: Russo One;
 }
 
-nav.navbar ul ~ a {
-  /*Login*/
+nav.navbar ul ~ ul.user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,12 +107,21 @@ nav.navbar ul ~ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+nav.navbar ul ~ ul.user a {
+  /*Login*/
   background: white;
   color: black;
   mix-blend-mode: screen;
+  padding: 7px 10px;
+  border-radius: .3em;
+  font-size: 1rem;
+  font-family: Concert One;
+  margin: 0 8px 0 0;
 }
 
-nav.navbar ul ~ a li {
+nav.navbar ul ~ ul.user a li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1547,7 +1555,7 @@ div.footer .foot .row a {
   nav.navbar input {
     display: none;
   }
-  nav.navbar input:checked ~ ul {
+  nav.navbar input:checked ~ ul:not(.user) {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -1556,12 +1564,12 @@ div.footer .foot .row a {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
-  nav.navbar input:checked ~ ul .align_end {
+  nav.navbar input:checked ~ ul:not(.user) .align_end {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  nav.navbar input:checked ~ ul h4 {
+  nav.navbar input:checked ~ ul:not(.user) h4 {
     display: initial;
   }
   nav.navbar input ~ label {
@@ -1687,7 +1695,7 @@ div.footer .foot .row a {
     color: white !important;
     border-radius: .5em;
   }
-  nav.navbar ul ~ a {
+  nav.navbar ul ~ ul.user {
     display: none;
   }
   .home .wrapper {
@@ -1783,7 +1791,7 @@ div.footer .foot .row a {
   nav.navbar input {
     display: none;
   }
-  nav.navbar input:checked ~ ul {
+  nav.navbar input:checked ~ ul:not(.user) {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -1794,12 +1802,12 @@ div.footer .foot .row a {
     -webkit-transition: opacity .4s;
     transition: opacity .4s;
   }
-  nav.navbar input:checked ~ ul .align_end {
+  nav.navbar input:checked ~ ul:not(.user) .align_end {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  nav.navbar input:checked ~ ul h4 {
+  nav.navbar input:checked ~ ul:not(.user) h4 {
     display: initial;
   }
   nav.navbar input ~ label {
@@ -1931,7 +1939,7 @@ div.footer .foot .row a {
     border-radius: .5em;
     font-size: 1rem;
   }
-  nav.navbar ul ~ a {
+  nav.navbar ul ~ ul.user {
     display: none;
   }
   .home .wrapper .text_left h1 {
