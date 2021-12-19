@@ -17,8 +17,7 @@ a {
 
 ::-webkit-scrollbar {
   width: 10px;
-  -webkit-box-shadow: inset 0 0 5px black;
-          box-shadow: inset 0 0 5px black;
+  background-color: white;
 }
 
 ::-webkit-scrollbar-track {
@@ -26,19 +25,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0e376d;
+  background: rgba(0, 0, 0, 0.589);
   border-radius: .5em;
 }
 
-::-webkit-scrollbar-thumb::after {
-  content: '';
-  width: 80%;
-  height: 5px;
-  background-color: white;
-}
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b2c57;
+  background: rgba(0, 0, 0, 0.76);
 }
 
 nav.navbar {
