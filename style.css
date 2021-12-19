@@ -641,6 +641,7 @@ nav.navbar .align_end {
   color: white;
   -webkit-transition: color .7s;
   transition: color .7s;
+  cursor: default;
 }
 
 .projects .contents .wrapper .project .head .tags span::after {
@@ -713,6 +714,7 @@ nav.navbar .align_end {
   margin: 0 0 10px;
   -webkit-transition: color .7s;
   transition: color .7s;
+  cursor: default;
 }
 
 .projects .contents .wrapper .project .text a {
@@ -721,6 +723,7 @@ nav.navbar .align_end {
   color: white;
   margin: 0 0 10px;
   border-radius: .2em;
+  cursor: pointer;
 }
 
 .projects .contents .wrapper .project .text .type {

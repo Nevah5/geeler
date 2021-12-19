@@ -439,6 +439,7 @@ nav.navbar{
             font-size: 2.4rem;
             color: white;
             transition: color .7s;
+            cursor: default;
           }
           .tags{
             span::after{
@@ -488,6 +489,7 @@ nav.navbar{
             color: white;
             margin: 0 0 10px;
             transition: color .7s;
+            cursor: default;
           }
           a{
             padding: 5px 15px;
@@ -495,6 +497,7 @@ nav.navbar{
             color: white;
             margin: 0 0 10px;
             border-radius: .2em;
+            cursor: pointer;
           }
           .type{
             position: relative;
