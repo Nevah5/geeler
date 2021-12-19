@@ -395,6 +395,12 @@ nav.navbar .align_end {
   float: left;
 }
 
+.about div.section .text p a {
+  font-family: Alata;
+  color: #144A8F;
+  text-decoration: underline;
+}
+
 .about div.section#general .center .img {
   background-image: url("media/pictures/portrait.jpg");
 }
@@ -1270,7 +1276,11 @@ div.footer .wrapper a:nth-child(3) {
 }
 
 div.footer .wrapper a:nth-child(4) {
-  background-image: url("media/icons/discord.png");
+  background-image: url("media/icons/twitter.png");
+}
+
+div.footer .wrapper a:nth-child(5) {
+  background-image: url("media/icons/stack-overflow.png");
 }
 
 div.footer .foot {

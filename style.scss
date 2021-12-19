@@ -262,6 +262,12 @@ nav.navbar{
         font-family: Alata;
         color: #144A8F;
         float: left;
+
+        a{
+          font-family: Alata;
+          color: #144A8F;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -883,7 +889,10 @@ div.footer{
         background-image: url("media/icons/steam.png");
       }
       &:nth-child(4){
-        background-image: url("media/icons/discord.png");
+        background-image: url("media/icons/twitter.png");
+      }
+      &:nth-child(5){
+        background-image: url("media/icons/stack-overflow.png");
       }
     }
   }
