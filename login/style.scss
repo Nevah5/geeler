@@ -1,7 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
+@import url("/media/styles/footer.css");
 
+html, body{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 a{
   font-family: Concert One;
   text-decoration: none;
 }
-@import url("/media/styles/footer.css");
+
+.header{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: -1;
+  background-image: url("/media/backgrounds/triangles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 70%;
+  min-height: 450px;
+  clip-path: polygon(-1% -1%, 101% -1%, 101% 100%, -1% 30%);
+
+  a{
+    margin-top: 1vh;
+
+    span{
+      font-family: Russo One;
+      font-size: 3vw;
+      padding-left: 1vw;
+      color: white;
+    }
+  }
+}
+.content{
+  position: relative;
+  width: 100%;
+  min-height: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form{
+    width: 400px;
+    height: fit-content;
+    background-color: white;
+    border: solid 4px #144A8F;
+    padding: 30px 40px 25px;
+    border-radius: .5em;
+
+    h2{
+      margin: 0;
+      font-family: Concert One;
+      color: #144A8F;
+    }
+    .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      label{
+        color: #144A8F;
+        font-family: Alata;
+      }
+      input:not([type="submit"]){
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

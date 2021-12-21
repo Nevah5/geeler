@@ -1,7 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
 @import url("/media/styles/footer.css");
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 a {
   font-family: Concert One;
   text-decoration: none;
+}
+
+.header {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: -1;
+  background-image: url("/media/backgrounds/triangles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 70%;
+  min-height: 450px;
+  -webkit-clip-path: polygon(-1% -1%, 101% -1%, 101% 100%, -1% 30%);
+          clip-path: polygon(-1% -1%, 101% -1%, 101% 100%, -1% 30%);
+}
+
+.header a {
+  margin-top: 1vh;
+}
+
+.header a span {
+  font-family: Russo One;
+  font-size: 3vw;
+  padding-left: 1vw;
+  color: white;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  min-height: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content form {
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border: solid 4px #144A8F;
+  padding: 30px 40px 25px;
+  border-radius: .5em;
+}
+
+.content form h2 {
+  margin: 0;
+  font-family: Concert One;
+  color: #144A8F;
+}
+
+.content form .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.content form .wrapper label {
+  color: #144A8F;
+  font-family: Alata;
+}
+
+.content form .wrapper input:not([type="submit"]) {
+  margin-bottom: 20px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

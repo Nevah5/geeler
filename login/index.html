@@ -5,18 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>${title}</title>
+  <title>Login - geeler.net</title>
 </head>
 <body>
-  <div class="header"><a href="/">${logo}</a></div>
-  <div class="wrapper">
+  <div class="header"><a href="/"><span>geeler</span></a></div>
+  <div class="content">
     <form action="login.php">
-      <h2>${login.login}</h2>
-      <label for="username">${login.username}</label>
-      <input type="text" name="username" id="username">
-      <label for="password">${login.password}</label>
-      <input type="password" name="password" id="password">
-      <input type="submit" value="${login.submit}">
+      <h2>Login</h2>
+      <div class="wrapper">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Submit">
+      </div>
     </form>
   </div>
   <div class="footer">
