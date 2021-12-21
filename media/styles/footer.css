@@ -1,0 +1,207 @@
+div.footer {
+  position: relative;
+  width: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 150px;
+  margin-bottom: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 160px 0 50px 60px;
+      grid-template-rows: 160px 0 50px 60px;
+      grid-template-areas: "nav nav nav nav" ". . . ." "socials socials socials socials" "foot foot foot foot";
+}
+
+div.footer nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: nav;
+}
+
+div.footer nav > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+div.footer nav > div h1 {
+  margin: 0 0 7px;
+  font-family: Concert One;
+  color: #144A8F;
+}
+
+div.footer nav > div a {
+  font-family: Alata;
+  font-weight: 1000;
+  color: #2A66AA;
+}
+
+div.footer .wrapper {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: socials;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+}
+
+div.footer .wrapper a {
+  font-family: Alata;
+  font-weight: 1000;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  -webkit-filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
+          filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
+}
+
+div.footer .wrapper a:nth-child(1) {
+  background-image: url("/media/icons/github.png");
+}
+
+div.footer .wrapper a:nth-child(2) {
+  background-image: url("media/icons/reddit.png");
+}
+
+div.footer .wrapper a:nth-child(3) {
+  background-image: url("media/icons/steam.png");
+}
+
+div.footer .wrapper a:nth-child(4) {
+  background-image: url("media/icons/twitter.png");
+}
+
+div.footer .wrapper a:nth-child(5) {
+  background-image: url("media/icons/stack-overflow.png");
+}
+
+div.footer .foot {
+  width: 100%;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: foot;
+}
+
+div.footer .foot .spacer {
+  width: 100%;
+  height: 5px;
+  background-color: #144A8F;
+  border-radius: 2px;
+}
+
+div.footer .foot .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.footer .foot .row h1 {
+  font-family: Russo One;
+  color: #144A8F;
+  margin: 10px 0;
+}
+
+div.footer .foot .row a {
+  margin: 10px 0;
+  padding: 5px 15px;
+  background-color: #144A8F;
+  color: white;
+  border-radius: .3em;
+}
+
+@media only screen and (max-width: 700px) {
+  .footer {
+    -ms-grid-rows: 500px 20px 60px 60px !important;
+        grid-template-rows: 500px 20px 60px 60px !important;
+  }
+  .footer nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: nav;
+  }
+  .footer nav div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 30px;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+  div.footer {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-device-width: 500px) {
+  div.footer {
+    padding: 0 50px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
