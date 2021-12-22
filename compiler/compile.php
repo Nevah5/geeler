@@ -3,7 +3,8 @@ session_start();
 
 if(!isset($_GET["input"]) || !isset($_GET["lang"]) || !isset($_GET["output"])){
   header("Location: ../");
-}else if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
+}
+if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
   header("Location: ../");
 }
 

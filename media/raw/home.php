@@ -129,7 +129,7 @@
       </div>
       <div class="text">
         <h1>${home.about.hobby.title}</h1>
-        <p>${home.about.hobby.title}</p>
+        <p>${home.about.hobby.text}</p>
       </div>
     </div>
     <div class="section" id="motivation">
@@ -144,7 +144,7 @@
     <div id="whyme">
       <div class="text">
         <h1>${home.about.whyme.title}</h1>
-        <p>${home.about.whyme.title}</p>
+        <p>${home.about.whyme.text}</p>
       </div>
     </div>
   </div>
