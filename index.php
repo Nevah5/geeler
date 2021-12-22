@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,8 +54,21 @@
         </a>
         <div class="center align_end">
           <div class="grid">
+            <?php
+              if(!$_SESSION["login"]){
+            ?>
             <a href="/login/"><span>Login</span></a>
             <a href="/register/"><span>Register</span></a>
+            <?php
+              }else{
+            ?>
+            <a class="user" href="/logout/">
+              <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+              <span class="account"><?= $_SESSION["username"] ?></span>
+            </a>
+            <?php
+              }
+            ?>
           </div>
         </div>
       </ul>
@@ -61,10 +77,23 @@
         <div></div>
         <div></div>
       </label>
+      <?php
+        if(!$_SESSION["login"]){
+      ?>
       <ul class="user">
         <a href="/login/">Login</a>
         <a href="/register/">Register</a>
       </ul>
+      <?php
+        }else{
+      ?>
+      <a class="user" href="/logout/">
+        <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+        <span class="account"><?= $_SESSION["username"] ?></span>
+      </a>
+      <?php
+        }
+      ?>
     </nav>
     <div class="wrapper">
       <div class="text_left">
@@ -126,7 +155,7 @@
         <h1>Motivation</h1>
         <p>
           When I know, what I'm contributing to the project and at the end can say or see what I have done, then I'm
-          really motivated to help and support it. My motivation to finish a project pushes me forward until I almost
+          really motivated to help and support it. My motivation to finish a project pushes me forwards until I almost
           see the finished product shimmering in front of my eyes. My goals are always to learn something new and
           interesting. Also, I want to get on the limits of something, trying, succeeding, and failing. Those are the
           most important things, that I really appreciate, that's also partially why I have chosen this job.
@@ -348,7 +377,7 @@
       <div class="spacer"></div>
       <div class="row">
         <h1>geeler</h1>
-        <a href="/login/">Login</a>
+        <a href="/login/" class="login">Login</a>
       </div>
     </div>
   </div>

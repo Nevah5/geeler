@@ -132,6 +132,43 @@ nav.navbar ul ~ ul.user a li {
   display: block;
 }
 
+nav.navbar a.user {
+  padding: 10px;
+  background-color: white;
+  color: #144A8F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.navbar a.user .image {
+  height: 30px;
+  width: 30px;
+  display: block;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+nav.navbar a.user span {
+  color: #144A8F;
+  font-family: Alata;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 5px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 nav.navbar .align_end {
   display: none;
 }
@@ -1535,6 +1572,9 @@ nav.navbar .align_end {
   nav.navbar ul ~ ul.user {
     display: none;
   }
+  nav.navbar ul ~ a.user {
+    display: none;
+  }
   .home .wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1756,7 +1796,7 @@ nav.navbar .align_end {
     padding: 0 15px;
     gap: 15px;
   }
-  nav.navbar ul.navigation .align_end .grid a {
+  nav.navbar ul.navigation .align_end .grid > a:not(.user) {
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -1773,7 +1813,42 @@ nav.navbar .align_end {
     border-radius: .5em;
     font-size: 1rem;
   }
+  nav.navbar ul.navigation .align_end .grid a.user {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  nav.navbar ul.navigation .align_end .grid a.user .image {
+    height: 30px;
+    width: 30px;
+    display: block;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+  }
+  nav.navbar ul.navigation .align_end .grid a.user span {
+    color: #144A8F;
+    font-family: Alata;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 5px;
+  }
   nav.navbar ul ~ ul.user {
+    display: none;
+  }
+  nav.navbar ul ~ a.user {
     display: none;
   }
   .home .wrapper .text_left h1 {
