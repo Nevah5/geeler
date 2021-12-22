@@ -14,9 +14,9 @@
 </head>
 <body>
   <a href='compile.php?input=home.php&lang=en&output=index.php'>Home Index [EN]</a><br>
-  <a href='compile.php?input=login.php&lang=en&output=login/index.php'>Login Index [EN]</a>
+  <a href='compile.php?input=home.php&lang=de&output=index.php'>Home Index [DE]</a>
   <br><br><br>
-  <a href='compile.php?input=home.php&lang=de&output=index.php'>Home Index [DE]</a><br>
+  <a href='compile.php?input=login.php&lang=en&output=login/index.php'>Login Index [EN]</a><br>
   <a href='compile.php?input=login.php&lang=de&output=login/index.php'>Login Index [DE]</a>
 </body>
 </html>

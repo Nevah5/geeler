@@ -2,10 +2,10 @@
 session_start();
 
 if(!isset($_GET["input"]) || !isset($_GET["lang"]) || !isset($_GET["output"])){
-  header("Location: ../");
+    header("Location: ../");
 }
 if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
-  header("Location: ../");
+    header("Location: ../");
 }
 
 $input = "../media/raw/" . $_GET["input"]; //input file with placeholders
@@ -48,4 +48,5 @@ if ($handle) {
 //save compiled file
 file_put_contents($output, $new_content);
 
-echo "Done!" . PHP_EOL;
+$redirect = explode("index.php", $output)[0];
+header("Location: ../$redirect");
