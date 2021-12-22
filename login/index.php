@@ -29,17 +29,18 @@
             if($_POST["submit"] && !$_SESSION["login"]){
               $userexists = false;
               if(empty($_POST["email"])){
-                echo "<h1 style='color: red;'>Bitte gib eine Email an!</h1>" . PHP_EOL;
+                echo "<span>Please specify an email adress.</span>" . PHP_EOL;
               }else{
                 $email = $_POST["email"];
                 if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) != 1){
-                  echo "<h1 style='color: red;'>Dieser Benutzer existiert nicht!</h1>" . PHP_EOL;
+                  echo "<span>This user does not exist!</span>" . PHP_EOL;
                 }else{
                   $userexists = true;
                 }
               }
+            }
           ?>
-          <div class="grid">
+          <div class="grid" id="mtop">
             <label for="password">Password</label>
             <div>
               <i id="pw"></i>
@@ -47,12 +48,13 @@
             </div>
           </div>
           <?php
+            if($_POST["submit"] && !$_SESSION["login"]){
               if(empty($_POST["password"]) && $userexists){
-                echo "<h1 style='color: red;'>Bitte gib eine Passwort an!</h1>" . PHP_EOL;
+                echo "<span>Please specify a password!</span>" . PHP_EOL;
               }else if($userexists){
                 $pw = mysqli_fetch_array(mysqli_query($con, "SELECT password FROM users JOIN passwords ON users.ID = passwords.userFK WHERE email='$email' LIMIT 1"))["password"];
                 if($_POST["password"] != $pw){
-                  echo "<h1 style='color: red;'>Passwort stimmt überein!</h1>" . PHP_EOL;
+                  echo "<span>The password doesn't match!</span>" . PHP_EOL;
                 }else{
                   //user login
                   $_SESSION["login"] = true;

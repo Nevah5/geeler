@@ -108,6 +108,10 @@ form .content .wrapper .box .grid {
       grid-template-rows: 10px 5px 1fr;
 }
 
+form .content .wrapper .box .grid#mtop {
+  margin-top: 30px;
+}
+
 form .content .wrapper .box .grid label:not(#submitbtn) {
   font-family: Alata;
   color: #144A8F;
@@ -138,7 +142,6 @@ form .content .wrapper .box .grid div {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 form .content .wrapper .box .grid div input:not([type="submit"]) {
@@ -188,11 +191,17 @@ form .content .wrapper .box .grid div i#pw::before {
   background-image: url("/media/icons/padlock.png");
 }
 
+form .content .wrapper .box span {
+  font-size: .8rem;
+  font-family: Alata;
+  color: #b34040;
+}
+
 form .content .wrapper .box label#submitbtn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 6px 30px;
   background-color: #144A8F;
   color: white;
