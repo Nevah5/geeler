@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
 </head>
 <body>
   <a href="/" class="logo"><span>geeler</span></a>
-  <form action="login.php" method="POST">
+  <form action="index.php" method="POST">
     <div class="content">
       <h2>Login</h2>
       <div class="wrapper">
@@ -18,7 +22,7 @@
             <label for="email">Email</label>
             <div>
               <i id="email"></i>
-              <input type="text" name="email" id="email">
+              <input type="text" name="email" id="email" value="<?= $_POST["email"] ?>">
             </div>
           </div>
           <div class="grid">
@@ -29,7 +33,7 @@
             </div>
           </div>
           <label for="submit" id="submitbtn">Submit</label>
-          <input type="submit" value="Submit" id="submit">
+          <input type="submit" name="submit" value="Submit" id="submit">
         </div>
       </div>
     </div>
@@ -87,3 +91,37 @@ Site made by Noah Geeler
   -->
 </body>
 </html>
+<?php
+  if($_POST["submit"] && !$_SESSION["login"]){
+    $userexists = false;
+    if(empty($_POST["email"])){
+      echo "<h1 style='color: red;'>Bitte gib eine Email an!</h1>";
+    }else{
+      $email = $_POST["email"];
+      if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) != 1){
+        echo "<h1 style='color: red;'>Dieser Benutzer existiert nicht!</h1>";
+      }else{
+        $userexists = true;
+      }
+    }
+
+    if(empty($_POST["password"]) && $userexists){
+      echo "<h1 style='color: red;'>Bitte gib eine Passwort an!</h1>";
+    }else if($userexists){
+      $pw = mysqli_fetch_array(mysqli_query($con, "SELECT password FROM users JOIN passwords ON users.ID = passwords.userFK WHERE email='$email' LIMIT 1"))["password"];
+      if($_POST["password"] != $pw){
+        echo "<h1 style='color: red;'>Passwort stimmt überein!</h1>";
+      }else{
+        //user login
+        $_SESSION["login"] = true;
+        $_SESSION["email"] = $email;
+        $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
+        $_SESSION["username"] = $username;
+        header("Location: /");
+      }
+    }
+  }else if($_SESSION["login"]){
+    header("Location: /");
+  }
+  mysqli_close($con);
+?>
