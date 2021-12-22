@@ -117,7 +117,7 @@
         <?php
           if(!$_SESSION["login"]){
         ?>
-        <a href="/login/" class="login">Login</a>
+        <a href="/login/" class="register">Register</a>
         <?php
           }else{
         ?>
