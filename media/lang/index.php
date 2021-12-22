@@ -19,7 +19,7 @@ while($line = fgets($file)){
   if($title != ""){
     echo $before ? "," . PHP_EOL : "";
     $before = true;
-    echo "(\"" . strtoupper($lang) . "\", \"" . $type . "\", \"". $title ."\" \"" . $value . "\")";
+    echo "(\"" . strtoupper($lang) . "\", \"" . $type . "\", \"". $title ."\", \"" . $value . "\")";
   }
 }
 echo ";";
