@@ -11,70 +11,141 @@ a{
   text-decoration: none;
 }
 
-.header{
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  z-index: -1;
-  background-image: url("/media/backgrounds/triangles.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 70%;
-  min-height: 450px;
-  clip-path: polygon(-1% -1%, 101% -1%, 101% 100%, -1% 30%);
+a.logo{
+  margin-top: 1vh;
 
-  a{
-    margin-top: 1vh;
-
-    span{
-      font-family: Russo One;
-      font-size: 3vw;
-      padding-left: 1vw;
-      color: white;
-    }
+  span{
+    font-family: Russo One;
+    font-size: 3vw;
+    padding-left: 1vw;
+    color: #144A8F;
   }
 }
-.content{
-  position: relative;
+form::before{
+  content: '';
+  display: block;
+  height: 20vh;
   width: 100%;
-  min-height: 780px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  transform: translateY(0.5px);
+  clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+}
+form{
+  margin-top: 10vh;
+  position: relative;
+  padding: 20vh 0;
+  height: fit-content;
 
-  form{
-    width: 400px;
-    height: fit-content;
-    background-color: white;
-    border: solid 4px #144A8F;
-    padding: 30px 40px 25px;
-    border-radius: .5em;
+  .content{
+    background-color: #144A8F;
+    width: 100%;
 
     h2{
       margin: 0;
-      font-family: Concert One;
-      color: #144A8F;
+      text-align: center;
+      font-family: Russo One;
+      font-size: 3.3rem;
+      color: white;
     }
     .wrapper{
+      width: 100%;
+      height: fit-content;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      flex-wrap: nowrap;
+      align-items: center;
 
-      label{
-        color: #144A8F;
-        font-family: Alata;
-      }
-      input:not([type="submit"]){
-        margin-bottom: 20px;
-        width: 100%;
+      .box{
+        border: white solid 2px;
+        background-color: white;
+        padding: 70px 100px;
+        margin: 50px 0 30px;
+        border-radius: .5em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        min-width: 400px;
+
+        .grid{
+          display: grid;
+          width: 100%;
+          grid-template-columns: 40px 10px 1fr;
+          grid-template-rows: 10px 5px 1fr;
+
+          label:not(#submitbtn){
+            font-family: Alata;
+            color: #144A8F;
+            font-size: 0.8rem;
+            grid-column: 2/3;
+            grid-row: 1/2;
+          }
+          div{
+            font-size: 0.8rem;
+            grid-column: 1/4;
+            grid-row: 3/4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+
+            input:not([type="submit"]){
+              border: none;
+              border-bottom: solid #144A8F 2px;
+              outline: none;
+              color: #144A8F;
+              font-family: Alata;
+              width: 100%;
+              height: 75%;
+              margin-left: 15px;
+            }
+            @mixin icon {
+              content: '';
+              display: inline-block;
+              height: 24px;
+              width: 24px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+            }
+            i#email::before{
+              @include icon();
+              background-image: url("/media/icons/user.png");
+            }
+            i#pw::before{
+              @include icon();
+              background-image: url("/media/icons/padlock.png");
+            }
+          }
+        }
+        label#submitbtn{
+          align-self: center;
+          margin-top: 10px;
+          padding: 6px 30px;
+          background-color: #144A8F;
+          color: white;
+          font-family: Alata;
+          border-radius: .5em;
+          cursor: pointer;
+        }
+        input[type="submit"]{
+          display: none;
+        }
       }
     }
   }
+}
+form::after{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-0.5px);
+  clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
 }
