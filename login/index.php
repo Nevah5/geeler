@@ -53,7 +53,7 @@
                 echo "<span>Please specify a password!</span>" . PHP_EOL;
               }else if($userexists){
                 $pw = mysqli_fetch_array(mysqli_query($con, "SELECT password FROM users JOIN passwords ON users.ID = passwords.userFK WHERE email='$email' LIMIT 1"))["password"];
-                if($_POST["password"] != $pw){
+                if(!password_verify($_POST["password"], $pw)){
                   echo "<span>The password doesn't match!</span>" . PHP_EOL;
                 }else{
                   //user login
