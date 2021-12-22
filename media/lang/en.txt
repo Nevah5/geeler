@@ -1,0 +1,52 @@
+meta.desc:My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.
+
+title.home:Home - geeler.net
+home.navbar.title:Navigation
+home.navbar.home:Home
+home.navbar.about:About
+home.navbar.projects:Projects
+home.navbar.contact:Contact
+home.navbar.donate:Donate
+home.home.title:Noah Geeler
+home.home.subtitle1:Apprentice Application Developer
+home.home.subtitle2:Hobby Programmer
+home.home.subtitle3:Layer 8
+user.login:Login
+user.register:Register
+home.about.title:About me
+home.about.general.title:General
+home.about.general.text:Hi, I'm Noah Geeler. I'm 16 years old and doing an apprenticeship as an application developer in Zurich (Switzerland). I really like cats of any size and squirrels, because of their jumping skills, they're both my favourite animals.<br> My strengths are PHP and maybe CSS, because I've worked with them for a longer time and haven't focused on anything else. My weakness is French, because I really don't like the language.<br> When family members and friends describe me, they say that I'm always on time, clever and sometimes a nerd. 
+home.about.hobby.title:My hobby
+home.about.hobby.text:I mainly work on private projects, such as this website.<br> I've also done my biggest project as one. You can learn more about it <a href="#nevah5com">here</a>.<br> Apart from programming or making websites, I also play Valorant, a tactical shooter game, with my friends. The aim of the game is it to plant a bomb/defuse the bomb. You always play in a team of 5. I would say that the most important thing of this game is the communication. If you ignore your team leader's commands, you will probably die quickly and loose the round. In most cases, I see myself as this leader, because I think about special tactics to execute or optimizing our teamplay. 
+home.about.motivation.title:Motivation
+home.about.motivation.text:When I know, what I'm contributing to the project and at the end can say or see what I have done, then I'm really motivated to help and support it. My motivation to finish a project pushes me forwards until I almost see the finished product shimmering in front of my eyes. My goals are always to learn something new and interesting. Also, I want to get on the limits of something, trying, succeeding, and failing. Those are the most important things, that I really appreciate, that's also partially why I have chosen this job. 
+home.about.whyme.title:Why me?
+home.about.whyme.text:So maybe you have already taken a picture of me, but why should you pick exactly me? Well, let me tell you. If I'd have to pick an animal that mostly describes me with its characteristics, I will say a cat, because it uses its energy the most efficient, in this case for hunting. They're also always looking forwards into the future, like me.<br> If you now want a young, productive, and interested man, that always knows what his tasks are, thinking in advance and caring about his team, then I'm the perfect candidate. 
+home.project.title:Projects
+home.contact.title:Contact
+home.contact.email.emoji:✉️ Email
+home.contact.email:Email
+home.contact.phone.emoji:📞 Phone
+home.contact.phone:Phone
+home.contact.message:If you try to reach me on the specified email above, I might not respond quickly. I'd recommend using the form below, that automatically sends an email, with your message to my private inbox.
+home.contact.form.title:Send me a message
+home.contact.form.email:Your Email
+home.contact.form.message:Your Message
+home.contact.form.acceptdb:You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only.
+home.contact.form.acceptsecurity:You have read the <a href="/privacy/" target="_blank">Privacy</a> agreement and accept it.
+home.contact.form.submit:Submit
+home.donate.title:Donate to support me
+home.donate.or:or
+
+title.login:Login - geeler.net
+login.title:Login
+login.email:Email
+login.password:Password
+login.submit:Login
+
+footer.stuff.title:Stuff
+footer.stuff.tos:Terms of service
+footer.stuff.privacy:Privacy
+footer.stuff.guidelines:Guidelines
+footer.stuff.acknownledgements:Acknownledgements
+footer.stuff.licence:Licence

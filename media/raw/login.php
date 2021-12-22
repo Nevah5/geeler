@@ -6,20 +6,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  <meta name="googlebot-news" content="noindex">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://geeler.net/">
+  <meta property="og:title" content="geeler.net">
+  <meta property="og:description" content="${meta.desc}">
+  <meta property="og:image" content="https://geeler.net/media/preview/site.png">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://geeler.net">
+  <meta property="twitter:title" content="geeler.net">
+  <meta property="twitter:description" content="${meta.desc}">
+  <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
+  <meta name="author" content="Noah Geeler">
+  <meta name="description" content="${meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Login - geeler.net</title>
+  <title>${title.login}</title>
 </head>
 <body>
   <a href="/" class="logo"><span>geeler</span></a>
   <form action="index.php" method="POST">
     <div class="content">
-      <h2>Login</h2>
+      <h2>${login.title}</h2>
       <div class="wrapper">
         <div class="box">
           <div class="grid">
-            <label for="email">Email</label>
+            <label for="email">${login.email}</label>
             <div>
               <i id="email"></i>
               <input type="text" name="email" id="email" value="<?= $_POST["email"] ?>">
@@ -41,7 +56,7 @@
             }
           ?>
           <div class="grid" id="mtop">
-            <label for="password">Password</label>
+            <label for="password">${login.password}</label>
             <div>
               <i id="pw"></i>
               <input type="password" name="password" id="password">
@@ -69,8 +84,8 @@
             }
             mysqli_close($con);
           ?>
-          <label for="submit" id="submitbtn">Submit</label>
-          <input type="submit" name="submit" value="Submit" id="submit">
+          <label for="submit" id="submitbtn">${login.submit}</label>
+          <input type="submit" name="submit" id="submit">
         </div>
       </div>
     </div>
@@ -78,29 +93,29 @@
   <div class="footer">
     <nav>
       <div>
-        <h1>About</h1>
+        <h1>${home.navbar.home}</h1>
         <a href="#general">About Me</a>
         <a href="#hobby">My hobby</a>
         <a href="#motivation">Motivation</a>
         <a href="#whyme">Why me?</a>
       </div>
       <div>
-        <h1>Contact</h1>
-        <a href="tel:+41789500085">Telefon</a>
-        <a href="email:contact@geeler.net">Email</a>
+        <h1>${home.navbar.contact}</h1>
+        <a href="tel:+41789500085">${home.contact.phone}</a>
+        <a href="email:contact@geeler.net">${home.contact.email}</a>
       </div>
       <div>
-        <h1>Donate</h1>
+        <h1>${home.navbar.donate}</h1>
         <a href="https://www.paypal.com/donate/?hosted_button_id=AP8EUCER58QRA" target="_blank">PayPal</a>
         <a href="https://www.buymeacoffee.com/nevah5" target="_blank">Buy me a coffee</a>
       </div>
       <div>
-        <h1>Stuff</h1>
-        <a href="/tos/">Terms of service</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/guidelines/">Guidelines</a>
-        <a href="/acknownledgements/">Acknownledgements</a>
-        <a href="/copyright/">Licence</a>
+        <h1>${footer.stuff.title}</h1>
+        <a href="/tos/">${footer.stuff.tos}</a>
+        <a href="/privacy">${footer.stuff.privacy}</a>
+        <a href="/guidelines/">${footer.stuff.guidelines}</a>
+        <a href="/acknownledgements/">${footer.stuff.acknownledgements}</a>
+        <a href="/copyright/">${footer.stuff.licence}</a>
       </div>
     </nav>
     <div class="wrapper">
@@ -117,7 +132,7 @@
         <?php
           if(!$_SESSION["login"]){
         ?>
-        <a href="/login/" class="register">Register</a>
+        <a href="/login/" class="login">${user.login}</a>
         <?php
           }else{
         ?>
