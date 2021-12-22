@@ -20,16 +20,18 @@ CREATE TABLE passwords(
   FOREIGN KEY (userFK) REFERENCES users(ID)
 );
 CREATE TABLE lang(
+  ID INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   lang CHAR(2) NOT NULL,
   type VARCHAR(20) NOT NULL,
-  ID VARCHAR(100) NOT NULL UNIQUE PRIMARY KEY,
-  content TEXT NOT NULL
+  title VARCHAR(100) NOT NULL,
+  content TEXT NOT NULL,
+  INDEX index_lang_id(ID)
 );
 
 INSERT INTO users VALUES (0, "admin", "email", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
 
-INSERT INTO lang VALUES
+INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "meta", "desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
 ("DE", "title", "home", "Startseite - geeler.net"),
 ("DE", "home", "navbar.title", "Navigation"),
@@ -84,7 +86,7 @@ INSERT INTO lang VALUES
 ("DE", "footer", "stuff.acknownledgements", "Dankeschön"),
 ("DE", "footer", "stuff.licence", "Lizenz");
 
-INSERT INTO lang VALUES
+INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "meta", "desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
 ("EN", "title", "home", "Home - geeler.net"),
 ("EN", "home", "navbar.title", "Navigation"),

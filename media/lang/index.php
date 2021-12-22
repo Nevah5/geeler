@@ -2,7 +2,7 @@
 $lang = "de";
 $file = fopen("$lang.txt", "r");
 $before = false;
-echo "INSERT INTO lang VALUES" . PHP_EOL;
+echo "INSERT INTO lang (lang, type, title, content) VALUES" . PHP_EOL;
 while($line = fgets($file)){
   //split up line with both title and value
   $content = explode(":", $line);
@@ -16,6 +16,7 @@ while($line = fgets($file)){
   unset($title[0]);
   $title = implode(".", $title);
 
+  //prints the tupel
   if($title != ""){
     echo $before ? "," . PHP_EOL : "";
     $before = true;
