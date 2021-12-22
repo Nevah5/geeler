@@ -97,7 +97,7 @@ nav.navbar{
     }
   }
   a.user{
-    padding: 10px;
+    padding: 5px 15px;
     background-color: white;
     color: #144A8F;
     display: flex;
@@ -105,8 +105,8 @@ nav.navbar{
     align-items: center;
 
     .image{
-      height: 30px;
-      width: 30px;
+      height: 20px;
+      width: 20px;
       display: block;
       border-radius: 50%;
       background-position: center;
@@ -118,6 +118,7 @@ nav.navbar{
       align-self: center;
       margin-left: 5px;
       max-width: 100px;
+      font-size: 1.2rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

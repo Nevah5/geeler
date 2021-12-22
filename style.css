@@ -133,7 +133,7 @@ nav.navbar ul ~ ul.user a li {
 }
 
 nav.navbar a.user {
-  padding: 10px;
+  padding: 5px 15px;
   background-color: white;
   color: #144A8F;
   display: -webkit-box;
@@ -148,8 +148,8 @@ nav.navbar a.user {
 }
 
 nav.navbar a.user .image {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   display: block;
   border-radius: 50%;
   background-position: center;
@@ -164,6 +164,7 @@ nav.navbar a.user span {
       align-self: center;
   margin-left: 5px;
   max-width: 100px;
+  font-size: 1.2rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

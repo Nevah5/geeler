@@ -103,6 +103,32 @@ div.footer{
         color: white;
         border-radius: .3em;
       }
+      a.user{
+        padding: 5px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image{
+          height: 16px;
+          width: 16px;
+          display: block;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+        }
+        span{
+          color: white;
+          font-family: Alata;
+          align-self: center;
+          margin-left: 5px;
+          max-width: 100px;
+          font-size: .8rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
   }
 }

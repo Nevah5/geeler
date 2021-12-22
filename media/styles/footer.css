@@ -158,6 +158,42 @@ div.footer .foot .row a {
   border-radius: .3em;
 }
 
+div.footer .foot .row a.user {
+  padding: 5px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.footer .foot .row a.user .image {
+  height: 16px;
+  width: 16px;
+  display: block;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+div.footer .foot .row a.user span {
+  color: white;
+  font-family: Alata;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 5px;
+  max-width: 100px;
+  font-size: .8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media only screen and (max-width: 700px) {
   .footer {
     -ms-grid-rows: 500px 20px 60px 60px !important;

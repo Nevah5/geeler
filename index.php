@@ -377,7 +377,20 @@
       <div class="spacer"></div>
       <div class="row">
         <h1>geeler</h1>
+        <?php
+          if(!$_SESSION["login"]){
+        ?>
         <a href="/login/" class="login">Login</a>
+        <?php
+          }else{
+        ?>
+        <a class="user" href="/logout/">
+          <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+          <span class="account"><?= $_SESSION["username"] ?></span>
+        </a>
+        <?php
+          }
+        ?>
       </div>
     </div>
   </div>
