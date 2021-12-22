@@ -43,6 +43,10 @@ login.title:Login
 login.email:Email
 login.password:Password
 login.submit:Login
+login.error.noemail:Please specify an email adress.
+login.error.notexists:The user with the specified email adress does not exist!
+login.error.nopassword:Please specify a password!
+login.error.passwordwrong:The password doesn't match!
 
 footer.stuff.title:Stuff
 footer.stuff.tos:Terms of service

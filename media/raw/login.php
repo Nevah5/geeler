@@ -44,11 +44,11 @@
             if($_POST["submit"] && !$_SESSION["login"]){
               $userexists = false;
               if(empty($_POST["email"])){
-                echo "<span>Please specify an email adress.</span>" . PHP_EOL;
+                echo "<span>${login.error.noemail}</span>" . PHP_EOL;
               }else{
                 $email = $_POST["email"];
                 if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) != 1){
-                  echo "<span>This user does not exist!</span>" . PHP_EOL;
+                  echo "<span>${login.error.notexists}</span>" . PHP_EOL;
                 }else{
                   $userexists = true;
                 }
@@ -65,11 +65,11 @@
           <?php
             if($_POST["submit"] && !$_SESSION["login"]){
               if(empty($_POST["password"]) && $userexists){
-                echo "<span>Please specify a password!</span>" . PHP_EOL;
+                echo "<span>${login.error.nopassword}</span>" . PHP_EOL;
               }else if($userexists){
                 $pw = mysqli_fetch_array(mysqli_query($con, "SELECT password FROM users JOIN passwords ON users.ID = passwords.userFK WHERE email='$email' LIMIT 1"))["password"];
                 if(!password_verify($_POST["password"], $pw)){
-                  echo "<span>The password doesn't match!</span>" . PHP_EOL;
+                  echo "<span>${login.error.passwordwrong}</span>" . PHP_EOL;
                 }else{
                   //user login
                   $_SESSION["login"] = true;

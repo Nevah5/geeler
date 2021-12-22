@@ -43,6 +43,10 @@ login.title:Einloggen
 login.email:Email
 login.password:Passwort
 login.submit:Einloggen
+login.error.noemail:Bitte gib eine Email Adresse an!
+login.error.notexists:Ein Benutzer mit dieser Email Adresse existiert nicht!
+login.error.nopassword:Bitte gib ein Passwort an!
+login.error.passwordwrong:Das Passwort stimmt nicht überein!
 
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen
