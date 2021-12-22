@@ -28,7 +28,7 @@ CREATE TABLE lang(
   INDEX index_lang_id(ID)
 );
 
-INSERT INTO users VALUES (0, "admin", "email", DEFAULT);
+INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
 
 INSERT INTO lang (lang, type, title, content) VALUES

@@ -49,4 +49,4 @@ if ($handle) {
 file_put_contents($output, $new_content);
 
 $redirect = explode("index.php", $output)[0];
-header("Location: ../$redirect");
+header("Location: index.php");
