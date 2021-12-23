@@ -1,5 +1,6 @@
 <?php
 session_start();
+$con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 
 if(!isset($_GET["input"]) || !isset($_GET["lang"]) || !isset($_GET["output"])){
     header("Location: ../");
@@ -9,20 +10,14 @@ if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
 }
 
 $input = "../media/raw/" . $_GET["input"]; //input file with placeholders
-$file_replacements = "../media/lang/" . $_GET["lang"] . ".txt"; //placeholders contents to replace
+$lang = strtoupper($_GET["lang"]);
 $output = "../" . $_GET["output"]; //output
 
 $replace = [];
-//load contents to replace into array
-$handle = fopen($file_replacements, "r");
-if ($handle) {
-    while (($line = fgets($handle)) != false) {
-        $replace[explode(":", $line)[0]] = str_replace(array("\n", "\r"), '', explode(":", $line)[1]);
-    }
-    fclose($handle);
-} else {
-    echo "Error opening \"$file_replacements\"";
-    exit;
+//load contents to replace into array from database
+$data = mysqli_query($con, "SELECT * FROM lang WHERE lang='$lang'");
+foreach($data as $value){
+    $replace[$value["type"] . "." . $value["title"]] = $value["content"];
 }
 
 //replace placeholders
@@ -45,8 +40,10 @@ if ($handle) {
     exit;
 }
 
-//save compiled file
+// save compiled file
 file_put_contents($output, $new_content);
 
-$redirect = explode("index.php", $output)[0];
+// $redirect = explode("index.php", $output)[0];
+// print_r($replace);
+mysqli_close($con);
 header("Location: index.php");

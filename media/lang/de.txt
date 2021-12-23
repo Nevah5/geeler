@@ -1,4 +1,4 @@
-meta.desc:My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.
+meta.desc:Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker.
 
 title.home:Startseite - geeler.net
 home.navbar.title:Navigation

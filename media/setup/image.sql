@@ -32,7 +32,7 @@ INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
 
 INSERT INTO lang (lang, type, title, content) VALUES
-("DE", "meta", "desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
+("DE", "meta", "desc", "Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker."),
 ("DE", "title", "home", "Startseite - geeler.net"),
 ("DE", "home", "navbar.title", "Navigation"),
 ("DE", "home", "navbar.home", "Start"),
@@ -76,7 +76,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "password", "Passwort"),
 ("DE", "login", "submit", "Einloggen"),
 ("DE", "login", "error.noemail", "Bitte gib eine Email Adresse an!"),
-("DE", "login", "error.notexists", "Dieser Benutzer existiert nicht!"),
+("DE", "login", "error.notexists", "Ein Benutzer mit dieser Email Adresse existiert nicht!"),
 ("DE", "login", "error.nopassword", "Bitte gib ein Passwort an!"),
 ("DE", "login", "error.passwordwrong", "Das Passwort stimmt nicht überein!"),
 ("DE", "footer", "stuff.title", "Diverses"),
@@ -130,6 +130,10 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "email", "Email"),
 ("EN", "login", "password", "Password"),
 ("EN", "login", "submit", "Login"),
+("EN", "login", "error.noemail", "Please specify an email adress."),
+("EN", "login", "error.notexists", "The user with the specified email adress does not exist!"),
+("EN", "login", "error.nopassword", "Please specify a password!"),
+("EN", "login", "error.passwordwrong", "The password doesn't match!"),
 ("EN", "footer", "stuff.title", "Stuff"),
 ("EN", "footer", "stuff.tos", "Terms of service"),
 ("EN", "footer", "stuff.privacy", "Privacy"),
