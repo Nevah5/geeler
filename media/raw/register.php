@@ -45,17 +45,17 @@
               $emailexists = true;
               $emailvalid = false;
               if(empty($_POST["email"])){
-                echo "<span>Please specify an email adress</span>" . PHP_EOL;
+                echo "<span>${register.error.noemail}</span>" . PHP_EOL;
               }else{
                 $email = $_POST["email"];
                 if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) == 1){
-                  echo "<span>This email already exists.</span>" . PHP_EOL;
+                  echo "<span>${register.error.emailexists}</span>" . PHP_EOL;
                 }else{
                   $emailexists = false;
                   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                     $emailvalid = true;
                   }else{
-                    echo "<span>This email adress is not valid!</span>";
+                    echo "<span>${register.error.emailinvalid}</span>";
                   }
                 }
               }
@@ -76,10 +76,10 @@
                   if($_POST["email"] == $_POST["repemail"]){
                     $emailmatch = true;
                   }else{
-                    echo "<span>The email adresses dont match!</span>";
+                    echo "<span>${register.error.emailmatch}</span>";
                   }
                 }else{
-                  echo "<span>Please repeat the email adress.</span>";
+                  echo "<span>${register.error.repeatemailemtpy}</span>";
                 }
               }
             }
@@ -102,18 +102,18 @@
                   if(strlen($username) >= 3 && strlen($username) <= 32 && !preg_match($notallowed, $username)){
                     $usernamevalid = true;
                   }else{
-                    echo "<span>This username is not valid. [3-32 characters, no \'^£$%&*()}{@#~?><>,|=_+¬-]</span>";
+                    echo "<span>${register.error.usernameinvalid}</span>";
                   }
                   if($usernamevalid){
                     $username = $_POST["username"];
                     if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE username='$username'")) == 1){
-                      echo "<span>This username already exists.</span>";
+                      echo "<span>${register.error.userexists}</span>";
                     }else{
                       $usernameexists = false;
                     }
                   }
                 }else{
-                  echo "<span>Please specify a username.</span>";
+                  echo "<span>${register.error.emptyusername}</span>";
                 }
               }
             }
@@ -129,7 +129,7 @@
             if($_POST["submit"] && !$_SESSION["login"]){
               if(!$usernameexists){
                 if(empty($_POST["password"])){
-                  echo "<span>Please specify a password.</span>";
+                  echo "<span>${register.error.emptypassword}</span>";
                 }
               }
             }
@@ -145,7 +145,7 @@
             if($_POST["submit"] && !$_SESSION["login"]){
               if(!empty($_POST["password"])){
                 if($_POST["password"] != $_POST["repeatpassword"]){
-                  echo "<span>The passwords do not match!</span>";
+                  echo "<span>${register.error.passwordnotmatch}</span>";
                 }else{
                   echo "LOGIN";
                 }

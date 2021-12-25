@@ -56,6 +56,16 @@ register.username:Benutzername
 register.password:Passwort
 register.repeatpassword:Passwort wiederholen
 register.submit:Registrieren
+register.error.noemail:Bitte gib eine Email Adresse an.
+register.error.emailexists:Ein Account mit dieser Email Adresse existiert bereits.
+register.error.emailinvalid:Diese Email Adresse ist nicht gültig.
+register.error.emailmatch:Die Email Adressen stimmen nicht überein.
+register.error.repeatemailempty:Bitte wiederhole die Email Adresse.
+register.error.usernameinvalid:Dieser Benutzername ist nicht gültig. [3-32 Zeichen, keine \'^£$%&*()}{@#~?><>,|=_+¬-]
+register.error.userexists:Dieser Benutzername existiert bereits.
+register.error.emptyusername:Bitte gib einen Benutzernamen an.
+register.error.emptypassword:Bitte gib ein Passwort an.
+register.error.passwordnotmatch:Die Passwörter stimmen nicht überein!
 
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen

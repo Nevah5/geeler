@@ -56,6 +56,16 @@ register.username:Username
 register.password:Password
 register.repeatpassword:Repeat Password
 register.submit:Register
+register.error.noemail:Please specify an email adress.
+register.error.emailexists:An account was already registered with this email adress!
+register.error.emailinvalid:This email adress is not valid!
+register.error.emailmatch:The email adresses dont match!
+register.error.repeatemailempty:Please repeat the email adress.
+register.error.usernameinvalid:This username is not valid. [3-32 characters, no \'^£$%&*()}{@#~?><>,|=_+¬-]
+register.error.userexists:This username already exists.
+register.error.emptyusername:Please specify a username.
+register.error.emptypassword:Please specify a password.
+register.error.passwordnotmatch:The passwords dont match!
 
 footer.stuff.title:Stuff
 footer.stuff.tos:Terms of service
