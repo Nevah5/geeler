@@ -98,8 +98,7 @@
               $username = $_POST["username"];
               if($emailmatch){
                 if(!empty($_POST["username"])){
-                  $notallowed = '/[\'^£$%&*()}{@#~?><>,|=_+¬-]/';
-                  if(strlen($username) >= 3 && strlen($username) <= 32 && !preg_match($notallowed, $username)){
+                  if(strlen($username) >= 3 && strlen($username) <= 32){
                     $usernamevalid = true;
                   }else{
                     echo "<span>${register.error.usernameinvalid}</span>";
@@ -146,8 +145,6 @@
               if(!empty($_POST["password"])){
                 if($_POST["password"] != $_POST["repeatpassword"]){
                   echo "<span>${register.error.passwordnotmatch}</span>";
-                }else{
-                  echo "LOGIN";
                 }
               }
             }else if($_SESSION["login"]){
