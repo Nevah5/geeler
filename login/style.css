@@ -108,7 +108,7 @@ form .content .wrapper .box .grid {
       grid-template-rows: 10px 5px 1fr;
 }
 
-form .content .wrapper .box .grid#mtop {
+form .content .wrapper .box .grid:not(:first-child) {
   margin-top: 30px;
 }
 
@@ -122,6 +122,10 @@ form .content .wrapper .box .grid label:not(#submitbtn) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 form .content .wrapper .box .grid div {
@@ -171,7 +175,7 @@ form .content .wrapper .box .grid div i#email::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/user.png");
+  background-image: url("/media/icons/email.png");
 }
 
 form .content .wrapper .box .grid div i#pw::before {
@@ -189,6 +193,39 @@ form .content .wrapper .box .grid div i#pw::before {
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
   background-image: url("/media/icons/padlock.png");
+}
+
+form .content .wrapper .box .grid div i#empty::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+}
+
+form .content .wrapper .box .grid div i#user::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/user.png");
 }
 
 form .content .wrapper .box span {

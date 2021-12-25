@@ -75,7 +75,7 @@ form{
           grid-template-columns: 40px 10px 1fr;
           grid-template-rows: 10px 5px 1fr;
 
-          &#mtop{
+          &:not(:first-child){
             margin-top: 30px;
           }
 
@@ -85,6 +85,8 @@ form{
             font-size: 0.8rem;
             grid-column: 2/3;
             grid-row: 1/2;
+            width: fit-content;
+            white-space: nowrap;
           }
           div{
             font-size: 0.8rem;
@@ -119,11 +121,18 @@ form{
             }
             i#email::before{
               @include icon();
-              background-image: url("/media/icons/user.png");
+              background-image: url("/media/icons/email.png");
             }
             i#pw::before{
               @include icon();
               background-image: url("/media/icons/padlock.png");
+            }
+            i#empty::before{
+              @include icon();
+            }
+            i#user::before{
+              @include icon();
+              background-image: url("/media/icons/user.png");
             }
           }
         }

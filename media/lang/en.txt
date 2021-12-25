@@ -48,6 +48,15 @@ login.error.notexists:The user with the specified email adress does not exist!
 login.error.nopassword:Please specify a password!
 login.error.passwordwrong:The password doesn't match!
 
+title.register:Register - geeler.net
+register.title:Register
+register.email:Email
+register.repeatemail:Repeat Email
+register.username:Username
+register.password:Password
+register.repeatpassword:Repeat Password
+register.submit:Register
+
 footer.stuff.title:Stuff
 footer.stuff.tos:Terms of service
 footer.stuff.privacy:Privacy

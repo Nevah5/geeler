@@ -48,6 +48,15 @@ login.error.notexists:Ein Benutzer mit dieser Email Adresse existiert nicht!
 login.error.nopassword:Bitte gib ein Passwort an!
 login.error.passwordwrong:Das Passwort stimmt nicht überein!
 
+title.register:Registrieren - geeler.net
+register.title:Registrieren
+register.email:Email Adresse
+register.repeatemail:Email Adresse wiederholen
+register.username:Benutzername
+register.password:Passwort
+register.repeatpassword:Passwort wiederholen
+register.submit:Registrieren
+
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen
 footer.stuff.privacy:Datenschutz
