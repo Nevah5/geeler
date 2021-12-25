@@ -62,9 +62,9 @@
             }
           ?>
           <div class="grid">
-            <label for="email">${register.repeatemail}</label>
+            <label for="repemail">${register.repeatemail}</label>
             <div>
-              <i id="empty"></i>
+              <i id="emailrep"></i>
               <input type="text" name="repemail" id="repemail" value="<?= $_POST["repemail"] ?>">
             </div>
           </div>
@@ -85,7 +85,7 @@
             }
           ?>
           <div class="grid">
-            <label for="email">${register.username}</label>
+            <label for="username">${register.username}</label>
             <div>
               <i id="user"></i>
               <input type="text" name="username" id="username" value="<?= $_POST["username"] ?>">
@@ -136,7 +136,7 @@
           <div class="grid">
             <label for="repeatpassword">${register.repeatpassword}</label>
             <div>
-              <i id="empty"></i>
+              <i id="pwrep"></i>
               <input type="password" name="repeatpassword" id="repeatpassword">
             </div>
           </div>

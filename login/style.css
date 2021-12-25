@@ -178,6 +178,23 @@ form .content .wrapper .box .grid div i#email::before {
   background-image: url("/media/icons/email.png");
 }
 
+form .content .wrapper .box .grid div i#emailrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/emailrep.png");
+}
+
 form .content .wrapper .box .grid div i#pw::before {
   content: '';
   display: inline-block;
@@ -193,6 +210,23 @@ form .content .wrapper .box .grid div i#pw::before {
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
   background-image: url("/media/icons/padlock.png");
+}
+
+form .content .wrapper .box .grid div i#pwrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/padlockrep.png");
 }
 
 form .content .wrapper .box .grid div i#empty::before {
