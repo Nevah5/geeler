@@ -19,11 +19,11 @@
   <meta property="twitter:description" content="${meta.desc}">
   <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
   <meta name="author" content="Noah Geeler">
-  <meta name="description" content="${meta.desc}">
+  <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>${title.home}</title>
+  <title>${home.title}</title>
 </head>
 <body>
   <nav id="home"></nav>
@@ -57,8 +57,8 @@
             <?php
               if(!$_SESSION["login"]){
             ?>
-            <a href="/login/"><span>${user.login}</span></a>
-            <a href="/register/"><span>${user.register}</span></a>
+            <a href="/login/"><span>${home.user.login}</span></a>
+            <a href="/register/"><span>${home.user.register}</span></a>
             <?php
               }else{
             ?>
@@ -81,8 +81,8 @@
         if(!$_SESSION["login"]){
       ?>
       <ul class="user">
-        <a href="/login/">${user.login}</a>
-        <a href="/register/">${user.register}</a>
+        <a href="/login/">${home.user.login}</a>
+        <a href="/register/">${home.user.register}</a>
       </ul>
       <?php
         }else{
@@ -352,7 +352,7 @@
         <?php
           if(!$_SESSION["login"]){
         ?>
-        <a href="/login/" class="login">${user.login}</a>
+        <a href="/login/" class="login">${home.user.login}</a>
         <?php
           }else{
         ?>

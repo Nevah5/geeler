@@ -1,6 +1,5 @@
-meta.desc:Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker.
-
-title.home:Startseite - geeler.net
+home.meta.desc:Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker.
+home.title:Startseite - geeler.net
 home.navbar.title:Navigation
 home.navbar.home:Start
 home.navbar.about:Über mich
@@ -11,8 +10,8 @@ home.home.title:Noah Geeler
 home.home.subtitle1:Lernender Informatiker Applikationsentwicklung
 home.home.subtitle2:Hobby Programmierer
 home.home.subtitle3:Layer 8
-user.login:Einloggen
-user.register:Registrieren
+home.user.login:Einloggen
+home.user.register:Registrieren
 home.about.title:Über mich
 home.about.general.title:Allgemein
 home.about.general.text:Hallo, mein Name ist Noah Geeler. Ich bin 16 Jahre alt und mache eine Lehre als Informatiker im Fachbereich Applikationsentwicklung in Zürich. Meine Lieblingstiere Katzen, jegendlicher Grösse und Eichhörnchen, da ich sehr fasziniert war von ihren Spring-Fähigkeiten als ich noch klein war.<br> Meine Stärken sind PHP und vielleicht noch ein wenig CSS, da ich bereits sehr viel mit denen gearbeitet habe und fast nie auf etwas anderes fokussiert war. Meine Schwäche ist Französisch, weil ich die Sprache nicht mag.<br> Wenn ein Familienmitglied oder ein Freund mich beschreiben, sagen sie, dass ich immer pünklich, clever und ab und zu ein nerd bin.
@@ -38,8 +37,8 @@ home.contact.form.submit:Senden
 home.donate.title:Spenden um mich zu unterstützen
 home.donate.or:oder
 
-title.login:Einloggen - geeler.net
-login.title:Einloggen
+login.title:Einloggen - geeler.net
+login.section.title:Einloggen
 login.email:Email
 login.password:Passwort
 login.submit:Einloggen
@@ -47,9 +46,11 @@ login.error.noemail:Bitte gib eine Email Adresse an!
 login.error.notexists:Ein Benutzer mit dieser Email Adresse existiert nicht!
 login.error.nopassword:Bitte gib ein Passwort an!
 login.error.passwordwrong:Das Passwort stimmt nicht überein!
+login.user.login:Einloggen
+login.user.register:Registrieren
 
-title.register:Registrieren - geeler.net
-register.title:Registrieren
+register.title:Registrieren - geeler.net
+register.section.title:Registrieren
 register.email:Email Adresse
 register.repeatemail:Email Adresse wiederholen
 register.username:Benutzername
@@ -66,6 +67,8 @@ register.error.userexists:Dieser Benutzername existiert bereits.
 register.error.emptyusername:Bitte gib einen Benutzernamen an.
 register.error.emptypassword:Bitte gib ein Passwort an.
 register.error.passwordnotmatch:Die Passwörter stimmen nicht überein!
+register.user.login:Einloggen
+register.user.register:Registrieren
 
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen

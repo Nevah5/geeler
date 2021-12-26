@@ -17,20 +17,20 @@
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
   <meta property="twitter:title" content="geeler.net">
-  <meta property="twitter:description" content="${meta.desc}">
+  <meta property="twitter:description" content="${home.meta.desc}">
   <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
   <meta name="author" content="Noah Geeler">
   <meta name="description" content="${meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>${title.login}</title>
+  <title>${login.title}</title>
 </head>
 <body>
   <a href="/" class="logo"><span>geeler</span></a>
   <form action="index.php" method="POST">
     <div class="content">
-      <h2>${login.title}</h2>
+      <h2>${login.section.title}</h2>
       <div class="wrapper">
         <div class="box">
           <div class="grid">
@@ -132,7 +132,7 @@
         <?php
           if(!$_SESSION["login"]){
         ?>
-        <a href="/login/" class="login">${user.login}</a>
+        <a href="/login/" class="login">${login.user.login}</a>
         <?php
           }else{
         ?>

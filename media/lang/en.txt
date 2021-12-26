@@ -1,6 +1,5 @@
-meta.desc:My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.
-
-title.home:Home - geeler.net
+home.meta.desc:My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.
+home.title:Home - geeler.net
 home.navbar.title:Navigation
 home.navbar.home:Home
 home.navbar.about:About
@@ -11,8 +10,8 @@ home.home.title:Noah Geeler
 home.home.subtitle1:Apprentice Application Developer
 home.home.subtitle2:Hobby Programmer
 home.home.subtitle3:Layer 8
-user.login:Login
-user.register:Register
+home.user.login:Login
+home.user.register:Register
 home.about.title:About me
 home.about.general.title:General
 home.about.general.text:Hi, I'm Noah Geeler. I'm 16 years old and doing an apprenticeship as an application developer in Zurich (Switzerland). I really like cats of any size and squirrels, because of their jumping skills, they're both my favourite animals.<br> My strengths are PHP and maybe CSS, because I've worked with them for a longer time and haven't focused on anything else. My weakness is French, because I really don't like the language.<br> When family members and friends describe me, they say that I'm always on time, clever and sometimes a nerd. 
@@ -38,8 +37,8 @@ home.contact.form.submit:Submit
 home.donate.title:Donate to support me
 home.donate.or:or
 
-title.login:Login - geeler.net
-login.title:Login
+login.title:Login - geeler.net
+login.section.title:Login
 login.email:Email
 login.password:Password
 login.submit:Login
@@ -47,9 +46,11 @@ login.error.noemail:Please specify an email adress.
 login.error.notexists:The user with the specified email adress does not exist!
 login.error.nopassword:Please specify a password!
 login.error.passwordwrong:The password doesn't match!
+login.user.login:Login
+login.user.register:Register
 
-title.register:Register - geeler.net
-register.title:Register
+register.title:Register - geeler.net
+register.section.title:Register
 register.email:Email
 register.repeatemail:Repeat Email
 register.username:Username
@@ -66,6 +67,8 @@ register.error.userexists:This username already exists.
 register.error.emptyusername:Please specify a username.
 register.error.emptypassword:Please specify a password.
 register.error.passwordnotmatch:The passwords dont match!
+register.user.login:Login
+register.user.register:Register
 
 footer.stuff.title:Stuff
 footer.stuff.tos:Terms of service
