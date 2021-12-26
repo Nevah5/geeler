@@ -41,6 +41,7 @@ div#langs a {
 
 div#langs a#selected {
   background-color: #7b98c9;
+  cursor: not-allowed;
 }
 
 div#compile {
