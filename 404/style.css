@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+@import url("/media/styles/footer.css");
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+a.logo {
+  margin-top: 1vh;
+}
+
+a.logo span {
+  font-family: Russo One;
+  font-size: 3rem;
+  padding-left: 1vw;
+  color: #144A8F;
+}
+
+div::before {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(0.5px);
+          transform: translateY(0.5px);
+  -webkit-clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+          clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+}
+
+div {
+  margin-top: 10vh;
+  position: relative;
+  padding: 20vh 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+div .content {
+  background-color: #144A8F;
+  width: 100%;
+}
+
+div .content h2 {
+  margin: 0;
+  text-align: center;
+  font-family: Russo One;
+  font-size: 3.3rem;
+  color: white;
+}
+
+div .content .wrapper {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div .content .wrapper .box {
+  border: white solid 2px;
+  background-color: white;
+  padding: 70px 100px;
+  margin: 50px 0 30px;
+  border-radius: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 400px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+div .content .wrapper .box .grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 40px 10px 1fr;
+      grid-template-columns: 40px 10px 1fr;
+  -ms-grid-rows: 10px 5px 1fr;
+      grid-template-rows: 10px 5px 1fr;
+}
+
+div .content .wrapper .box .grid:not(:first-child) {
+  margin-top: 30px;
+}
+
+div .content .wrapper .box .grid label:not(#submitbtn) {
+  font-family: Alata;
+  color: #144A8F;
+  font-size: 0.8rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+div .content .wrapper .box .grid div {
+  font-size: 0.8rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+div .content .wrapper .box .grid div input:not([type="submit"]) {
+  border: none;
+  border-bottom: solid #144A8F 2px;
+  outline: none;
+  color: #144A8F;
+  font-family: Alata;
+  width: 100%;
+  height: 75%;
+  margin-left: 15px;
+  -webkit-transition: border .5s;
+  transition: border .5s;
+}
+
+div .content .wrapper .box .grid div i#email::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/email.png");
+}
+
+div .content .wrapper .box .grid div i#emailrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/emailrep.png");
+}
+
+div .content .wrapper .box .grid div i#pw::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/padlock.png");
+}
+
+div .content .wrapper .box .grid div i#pwrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/padlockrep.png");
+}
+
+div .content .wrapper .box .grid div i#empty::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+}
+
+div .content .wrapper .box .grid div i#user::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/media/icons/user.png");
+}
+
+div .content .wrapper .box span {
+  font-size: .8rem;
+  font-family: Alata;
+  color: #b34040;
+}
+
+div .content .wrapper .box label#submitbtn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+  padding: 6px 30px;
+  background-color: #144A8F;
+  color: white;
+  font-family: Alata;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+div .content .wrapper .box input[type="submit"] {
+  display: none;
+}
+
+div::after {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(-0.5px);
+          transform: translateY(-0.5px);
+  -webkit-clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+          clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+}
+
+@media only screen and (max-width: 700px) {
+  a span {
+    padding-left: 10px !important;
+  }
+  form .content .wrapper .box {
+    padding: 50px 30px;
+    margin: 50px 0 30px;
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+  form .content .wrapper .box {
+    padding: 50px 30px;
+    margin: 30px 0 30px;
+    width: 240px;
+    min-width: 240px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
