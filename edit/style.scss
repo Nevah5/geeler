@@ -70,6 +70,12 @@ div:not(#compile){
     font-family: Russo One;
     color: #1448a1;
     border-bottom: #1448a1 solid 3px;
+
+    a{
+      font-family: Alata;
+      color: #1448a1;
+      text-decoration: none;
+    }
   }
   form{
     display: flex;

@@ -35,17 +35,21 @@ $lang = $_GET["lang"];
       foreach($types as $value){
         $type = $value["type"];
         echo "<div>";
-        echo "<h1>".strtoupper($type)."</h1>";
-        $sitedata = mysqli_query($con, "SELECT * FROM lang WHERE lang='$lang' AND type='$type'");
-        foreach($sitedata as $value){
-          echo "
-            <form action=\"./?lang=".$lang ."&id=".$value['ID']."\" method=\"POST\">
-              <h3>".$value['title']."</h3>
-              <textarea name=\"content".$value['ID']."\" cols=\"30\" rows=\"10\">".htmlspecialchars($value['content'])."</textarea>
-              <label for=\"submitbtn".$value['ID']."\" id=\"submitbtn\">Update</label>
-              <input type=\"submit\" id=\"submitbtn".$value['ID']."\">
-            </form>
-          ";
+        $togglehref = $_GET["section"] != $type ? "?lang=".$lang."&section=".$type : "?lang=".$lang;
+        $togglearrow = $_GET["section"] != $type ? "🔼" : "🔽";
+        echo "<h1>".strtoupper($type)." <a href=\"$togglehref\">$togglearrow</a></h1>";
+        if($_GET["section"] == $type){
+          $sitedata = mysqli_query($con, "SELECT * FROM lang WHERE lang='$lang' AND type='$type'");
+          foreach($sitedata as $value){
+            echo "
+              <form action=\"./?lang=".$lang ."&id=".$value['ID']."\" method=\"POST\">
+                <h3>".$value['title']."</h3>
+                <textarea name=\"content".$value['ID']."\" cols=\"30\" rows=\"10\">".htmlspecialchars($value['content'])."</textarea>
+                <label for=\"submitbtn".$value['ID']."\" id=\"submitbtn\">Update</label>
+                <input type=\"submit\" id=\"submitbtn".$value['ID']."\">
+              </form>
+            ";
+          }
         }
         echo "</div>";
       }

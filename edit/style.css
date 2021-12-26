@@ -103,6 +103,12 @@ div:not(#compile) h1 {
   border-bottom: #1448a1 solid 3px;
 }
 
+div:not(#compile) h1 a {
+  font-family: Alata;
+  color: #1448a1;
+  text-decoration: none;
+}
+
 div:not(#compile) form {
   display: -webkit-box;
   display: -ms-flexbox;
