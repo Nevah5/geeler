@@ -18,33 +18,19 @@ $lang = $_GET["lang"];
   <title>Edit home - geeler.net</title>
 </head>
 <body>
-  <form action="./" method="GET">
-    <select name="lang" id="lang">
-      <option value="" <?= !isset($lang) || empty($lang) ? "selected" : "" ?> disabled hidden>Choose</option>
-      <option value="de" <?= $lang == "de" ? "selected" : "" ?>>DE</option>
-      <option value="en" <?= $lang == "en" ? "selected" : "" ?>>EN</option>
-    </select>
-    <input type="submit">
-  </form>
-  <div>
-    <div>
-      <a href="/">HOME</a>
-      <a href='/compiler/compile.php?input=home.php&lang=en&output=index.php'>Home Index [EN]</a>
-      <a href='/compiler/compile.php?input=home.php&lang=de&output=index.php'>Home Index [DE]</a>
-    </div>
-    <div>
-      <a href="/login/">LOGIN</a>
-      <a href='/compiler/compile.php?input=login.php&lang=en&output=login/index.php'>Login Index [EN]</a>
-      <a href='/compiler/compile.php?input=login.php&lang=de&output=login/index.php'>Login Index [DE]</a>
-    </div>
-    <div>
-      <a href="/register/">REGISTER</a>
-      <a href='/compiler/compile.php?input=register.php&lang=en&output=register/index.php'>Register Index [EN]</a>
-      <a href='/compiler/compile.php?input=register.php&lang=de&output=register/index.php'>Register Index [DE]</a>
-    </div>
+  <div id="langs">
+    <a <?= $lang != "en" ? "href=\"?lang=en\"" : "" ?> <?= $lang == "en" ? "id=\"selected\"" : "" ?>>EN</a>
+    <a <?= $lang != "de" ? "href=\"?lang=de\"" : "" ?> <?= $lang == "de" ? "id=\"selected\"" : "" ?>>DE</a>
   </div>
   <?php
     if(isset($lang) && in_array($lang, $langs)){
+  ?>
+  <div id="compile">
+    <a href='compile.php?input=home.php&lang=<?= $lang ?>&output=index.php'>Home</a>
+    <a href='compile.php?input=login.php&lang=<?= $lang ?>&output=login/index.php'>Login</a>
+    <a href='compile.php?input=register.php&lang=<?= $lang ?>&output=register/index.php'>Register</a>
+  </div>
+  <?php
       $types = mysqli_query($con, "SELECT DISTINCT type FROM lang WHERE lang='$lang'");
       foreach($types as $value){
         $type = $value["type"];
