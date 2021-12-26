@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 if(!$_SESSION["login"] || $_SESSION["username"] != "admin"){
   header("Location: ../");
@@ -19,7 +20,7 @@ $lang = $_GET["lang"];
 <body>
   <form action="./" method="GET">
     <select name="lang" id="lang">
-      <option value="" <?= !isset($lang) ? "selected" : "" ?> disabled hidden>Choose</option>
+      <option value="" <?= !isset($lang) || empty($lang) ? "selected" : "" ?> disabled hidden>Choose</option>
       <option value="de" <?= $lang == "de" ? "selected" : "" ?>>DE</option>
       <option value="en" <?= $lang == "en" ? "selected" : "" ?>>EN</option>
     </select>
@@ -37,7 +38,7 @@ $lang = $_GET["lang"];
           echo "
             <form action=\"./?lang=".$lang ."&id=".$value['ID']."\" method=\"POST\">
               <h3>".$value['title']."</h3>
-              <textarea name=\"site\" id=\"site\" cols=\"30\" rows=\"10\">".htmlspecialchars($value['content'])."</textarea>
+              <textarea name=\"content".$value['ID']."\" cols=\"30\" rows=\"10\">".htmlspecialchars($value['content'])."</textarea>
               <label for=\"submitbtn".$value['ID']."\" id=\"submitbtn\">Update</label>
               <input type=\"submit\" id=\"submitbtn".$value['ID']."\">
             </form>
@@ -47,6 +48,16 @@ $lang = $_GET["lang"];
       }
       // print_r($sitedata);
     }
+  ?>
+  <?php
+  if(isset($_GET["id"])){
+    $id = $_GET["id"];
+    $newcontent = $_POST["content$id"];
+    if(!empty($newcontent) && mysqli_num_rows(mysqli_query($con, "SELECT ID FROM lang WHERE ID=$id")) == 1){
+      mysqli_query($con, "UPDATE lang SET content='$newcontent' WHERE ID=$id");
+      header("Location: ./?lang=".$lang);
+    }
+  }
   ?>
 </body>
 </html>
