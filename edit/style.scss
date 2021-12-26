@@ -14,7 +14,45 @@ html, body{
     margin-top: 50px;
   }
 }
-div{
+div#langs{
+  margin-top: 50px;
+
+  a{
+    background-color: #1448a1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: .5em;
+    font-family: Alata;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 15px;
+
+    &#selected{
+      background-color: #7b98c9;
+    }
+  }
+}
+div#compile{
+  border-top: #1448a1 solid 3px;
+  margin-top: 50px;
+  padding: 50px 0;
+  border-bottom: dashed #1448a1 3px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    background-color: #1448a1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: .5em;
+    font-family: Alata;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+}
+div:not(#compile){
   display: flex;
   width: 100%;
   height: fit-content;

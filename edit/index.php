@@ -26,6 +26,23 @@ $lang = $_GET["lang"];
     </select>
     <input type="submit">
   </form>
+  <div>
+    <div>
+      <a href="/">HOME</a>
+      <a href='/compiler/compile.php?input=home.php&lang=en&output=index.php'>Home Index [EN]</a>
+      <a href='/compiler/compile.php?input=home.php&lang=de&output=index.php'>Home Index [DE]</a>
+    </div>
+    <div>
+      <a href="/login/">LOGIN</a>
+      <a href='/compiler/compile.php?input=login.php&lang=en&output=login/index.php'>Login Index [EN]</a>
+      <a href='/compiler/compile.php?input=login.php&lang=de&output=login/index.php'>Login Index [DE]</a>
+    </div>
+    <div>
+      <a href="/register/">REGISTER</a>
+      <a href='/compiler/compile.php?input=register.php&lang=en&output=register/index.php'>Register Index [EN]</a>
+      <a href='/compiler/compile.php?input=register.php&lang=de&output=register/index.php'>Register Index [DE]</a>
+    </div>
+  </div>
   <?php
     if(isset($lang) && in_array($lang, $langs)){
       $types = mysqli_query($con, "SELECT DISTINCT type FROM lang WHERE lang='$lang'");

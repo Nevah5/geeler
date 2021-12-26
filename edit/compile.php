@@ -46,4 +46,4 @@ file_put_contents($output, $new_content);
 // $redirect = explode("index.php", $output)[0];
 // print_r($replace);
 mysqli_close($con);
-header("Location: index.php");
+header("Location: index.php?lang=".$_GET["lang"]);
