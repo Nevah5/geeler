@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html > form, body > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: 50px;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div h1 {
+  width: 80%;
+  padding: 0 0 10px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: Russo One;
+  color: #1448a1;
+  border-bottom: #1448a1 solid 3px;
+}
+
+div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+div form h3 {
+  margin-top: 30px 0 10px;
+  font-family: Concert One;
+  color: #1448a1;
+}
+
+div form textarea {
+  display: block;
+  resize: vertical;
+  height: auto;
+  width: 300px;
+  margin: 0 40px 0;
+  font-family: Alata;
+  color: #1448a1;
+  border: #1448a1 solid 1px;
+  outline: none;
+}
+
+div form label#submitbtn {
+  padding: 5px 10px;
+  background-color: #1448a1;
+  color: white;
+  font-family: Alata;
+  border-radius: .5em;
+  cursor: pointer;
+  margin: 10px 0 30px;
+}
+
+div form input[type="submit"] {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

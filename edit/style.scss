@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
+
+html, body{
+  margin: 0;
+  padding: 0;
+
+  & > form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+  }
+}
+div{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  h1{
+    width: 80%;
+    padding: 0 0 10px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Russo One;
+    color: #1448a1;
+    border-bottom: #1448a1 solid 3px;
+  }
+  form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    h3{
+      margin-top: 30px 0 10px;
+      font-family: Concert One;
+      color: #1448a1;
+    }
+    textarea{
+      display: block;
+      resize: vertical;
+      height: auto;
+      width: 300px;
+      margin: 0 40px 0;
+      font-family: Alata;
+      color: #1448a1;
+      border: #1448a1 solid 1px;
+      outline: none;
+    }
+    label#submitbtn{
+      padding: 5px 10px;
+      background-color: #1448a1;
+      color: white;
+      font-family: Alata;
+      border-radius: .5em;
+      cursor: pointer;
+      margin: 10px 0 30px;
+    }
+    input[type="submit"]{
+      display: none;
+    }
+  }
+}
