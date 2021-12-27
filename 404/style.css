@@ -22,7 +22,7 @@ a.logo span {
   color: #144A8F;
 }
 
-div::before {
+div#error::before {
   content: '';
   display: block;
   height: 20vh;
@@ -36,7 +36,7 @@ div::before {
           clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
 }
 
-div {
+div#error {
   margin-top: 10vh;
   position: relative;
   padding: 20vh 0;
@@ -45,12 +45,12 @@ div {
   height: fit-content;
 }
 
-div .content {
+div#error .content {
   background-color: #144A8F;
   width: 100%;
 }
 
-div .content h2 {
+div#error .content h2 {
   margin: 0;
   text-align: center;
   font-family: Russo One;
@@ -58,7 +58,7 @@ div .content h2 {
   color: white;
 }
 
-div .content .wrapper {
+div#error .content .wrapper {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -74,7 +74,7 @@ div .content .wrapper {
           align-items: center;
 }
 
-div .content .wrapper .box {
+div#error .content .wrapper .box {
   border: white solid 2px;
   background-color: white;
   padding: 70px 100px;
@@ -98,7 +98,7 @@ div .content .wrapper .box {
   transition: all .5s;
 }
 
-div .content .wrapper .box .grid {
+div#error .content .wrapper .box .grid {
   display: -ms-grid;
   display: grid;
   width: 100%;
@@ -108,11 +108,11 @@ div .content .wrapper .box .grid {
       grid-template-rows: 10px 5px 1fr;
 }
 
-div .content .wrapper .box .grid:not(:first-child) {
+div#error .content .wrapper .box .grid:not(:first-child) {
   margin-top: 30px;
 }
 
-div .content .wrapper .box .grid label:not(#submitbtn) {
+div#error .content .wrapper .box .grid label:not(#submitbtn) {
   font-family: Alata;
   color: #144A8F;
   font-size: 0.8rem;
@@ -128,7 +128,7 @@ div .content .wrapper .box .grid label:not(#submitbtn) {
   white-space: nowrap;
 }
 
-div .content .wrapper .box .grid div {
+div#error .content .wrapper .box .grid div {
   font-size: 0.8rem;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -148,7 +148,7 @@ div .content .wrapper .box .grid div {
   width: 100%;
 }
 
-div .content .wrapper .box .grid div input:not([type="submit"]) {
+div#error .content .wrapper .box .grid div input:not([type="submit"]) {
   border: none;
   border-bottom: solid #144A8F 2px;
   outline: none;
@@ -161,7 +161,7 @@ div .content .wrapper .box .grid div input:not([type="submit"]) {
   transition: border .5s;
 }
 
-div .content .wrapper .box .grid div i#email::before {
+div#error .content .wrapper .box .grid div i#email::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -178,7 +178,7 @@ div .content .wrapper .box .grid div i#email::before {
   background-image: url("/media/icons/email.png");
 }
 
-div .content .wrapper .box .grid div i#emailrep::before {
+div#error .content .wrapper .box .grid div i#emailrep::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -195,7 +195,7 @@ div .content .wrapper .box .grid div i#emailrep::before {
   background-image: url("/media/icons/emailrep.png");
 }
 
-div .content .wrapper .box .grid div i#pw::before {
+div#error .content .wrapper .box .grid div i#pw::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -212,7 +212,7 @@ div .content .wrapper .box .grid div i#pw::before {
   background-image: url("/media/icons/padlock.png");
 }
 
-div .content .wrapper .box .grid div i#pwrep::before {
+div#error .content .wrapper .box .grid div i#pwrep::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -229,7 +229,7 @@ div .content .wrapper .box .grid div i#pwrep::before {
   background-image: url("/media/icons/padlockrep.png");
 }
 
-div .content .wrapper .box .grid div i#empty::before {
+div#error .content .wrapper .box .grid div i#empty::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -245,7 +245,7 @@ div .content .wrapper .box .grid div i#empty::before {
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
 }
 
-div .content .wrapper .box .grid div i#user::before {
+div#error .content .wrapper .box .grid div i#user::before {
   content: '';
   display: inline-block;
   height: 24px;
@@ -262,13 +262,13 @@ div .content .wrapper .box .grid div i#user::before {
   background-image: url("/media/icons/user.png");
 }
 
-div .content .wrapper .box span {
+div#error .content .wrapper .box span {
   font-size: .8rem;
   font-family: Alata;
   color: #b34040;
 }
 
-div .content .wrapper .box label#submitbtn {
+div#error .content .wrapper .box label#submitbtn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -281,11 +281,11 @@ div .content .wrapper .box label#submitbtn {
   cursor: pointer;
 }
 
-div .content .wrapper .box input[type="submit"] {
+div#error .content .wrapper .box input[type="submit"] {
   display: none;
 }
 
-div::after {
+div#error::after {
   content: '';
   display: block;
   height: 20vh;
