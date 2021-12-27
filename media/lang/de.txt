@@ -70,6 +70,8 @@ register.error.passwordnotmatch:Die Passwörter stimmen nicht überein!
 register.user.login:Einloggen
 register.user.register:Registrieren
 
+404.didyoumean:Meintest du
+
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen
 footer.stuff.privacy:Datenschutz

@@ -70,6 +70,8 @@ register.error.passwordnotmatch:The passwords dont match!
 register.user.login:Login
 register.user.register:Register
 
+404.didyoumean:Did you mean
+
 footer.stuff.title:Stuff
 footer.stuff.tos:Terms of service
 footer.stuff.privacy:Privacy
