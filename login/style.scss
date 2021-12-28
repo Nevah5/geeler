@@ -153,15 +153,46 @@ form{
           margin-top: 10px;
           font-family: Alata;
           color: #144A8F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
 
-          label{
-            margin-left: 4px;
+          input[type="checkbox"]{
+            display: none;
+          }
+          label#chkbx{
+            display: block;
+            min-height: 10px;
+            min-width: 10px;
+            width: 10px;
+            height: 10px;
+            margin-top: 3px;
+            margin-right: 10px;
+            background-color: white;
+            border: solid 2px #144A8F;
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            a{
-              text-decoration: underline;
-              color: #144A8F;
-              font-size: inherit;
+            & div#tik{
+              margin: 0;
+              display: block;
+              background-color: white;
+              width: 75%;
+              height: 75%;
+              clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
             }
+          }
+          input[type="checkbox"]:checked ~ label#chkbx{
+            background-color: #144A8F;
+          }
+          label a{
+            text-decoration: underline;
+            color: #144A8F;
+            font-size: inherit;
           }
         }
         label#submitbtn{

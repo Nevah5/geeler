@@ -272,10 +272,60 @@ form .content .wrapper .box div.check {
   margin-top: 10px;
   font-family: Alata;
   color: #144A8F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-form .content .wrapper .box div.check label {
-  margin-left: 4px;
+form .content .wrapper .box div.check input[type="checkbox"] {
+  display: none;
+}
+
+form .content .wrapper .box div.check label#chkbx {
+  display: block;
+  min-height: 10px;
+  min-width: 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
+  margin-right: 10px;
+  background-color: white;
+  border: solid 2px #144A8F;
+  border-radius: 2px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .content .wrapper .box div.check label#chkbx div#tik {
+  margin: 0;
+  display: block;
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  -webkit-clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+          clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+}
+
+form .content .wrapper .box div.check input[type="checkbox"]:checked ~ label#chkbx {
+  background-color: #144A8F;
 }
 
 form .content .wrapper .box div.check label a {
