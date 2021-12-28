@@ -84,6 +84,7 @@
             }
             mysqli_close($con);
           ?>
+          <div class="check"><input type="checkbox" id="stayloggedin"><label for="stayloggedin">Stay logged in</label></div>
           <label for="submit" id="submitbtn">${login.submit}</label>
           <input type="submit" name="submit" id="submit">
         </div>

@@ -149,6 +149,15 @@ form{
           font-family: Alata;
           color: #b34040;
         }
+        div.check{
+          margin-top: 10px;
+          font-family: Alata;
+          color: #144A8F;
+
+          label{
+            margin-left: 4px;
+          }
+        }
         label#submitbtn{
           align-self: center;
           margin-top: 20px;
