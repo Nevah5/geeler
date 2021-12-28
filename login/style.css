@@ -278,6 +278,12 @@ form .content .wrapper .box div.check label {
   margin-left: 4px;
 }
 
+form .content .wrapper .box div.check label a {
+  text-decoration: underline;
+  color: #144A8F;
+  font-size: inherit;
+}
+
 form .content .wrapper .box label#submitbtn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

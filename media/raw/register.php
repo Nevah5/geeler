@@ -152,6 +152,8 @@
             }
             mysqli_close($con);
           ?>
+          <div class="check"><input type="checkbox" id="acceptsecurity"><label for="acceptsecurity">You accept the <a href="/security/">Privacyagreement</a>.</label></div>
+          <div class="check"><input type="checkbox" id="acceptads"><label for="acceptads">You want to get updated with the newest informations per email.</label></div>
           <label for="submit" id="submitbtn">${register.submit}</label>
           <input type="submit" name="submit" id="submit">
           <?php
@@ -176,10 +178,10 @@
     <nav>
       <div>
         <h1>${home.navbar.home}</h1>
-        <a href="#general">${home.about.title}</a>
-        <a href="#hobby">${home.about.hobby.title}</a>
-        <a href="#motivation">${home.about.motivation.title}</a>
-        <a href="#whyme">${home.about.whyme.title}</a>
+        <a href="#general">About Me</a>
+        <a href="#hobby">My hobby</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#whyme">Why me?</a>
       </div>
       <div>
         <h1>${home.navbar.contact}</h1>
