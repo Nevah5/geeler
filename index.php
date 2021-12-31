@@ -11,12 +11,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
-  <meta property="og:description" content="My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.">
+  <meta property="og:description" content="">
   <meta property="og:image" content="https://geeler.net/media/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
   <meta property="twitter:title" content="geeler.net">
-  <meta property="twitter:description" content="My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.">
+  <meta property="twitter:description" content="">
   <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
   <meta name="author" content="Noah Geeler">
   <meta name="description" content="My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich.">
