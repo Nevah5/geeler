@@ -84,6 +84,7 @@
             }
             mysqli_close($con);
           ?>
+          <a href="./forgot-password/">Forgot Password?</a>
           <div class="check">
             <input type="checkbox" id="stayloggedin" name="stayloggedin">
             <label for="stayloggedin" id="chkbx"><div id="tik"></div></label>
