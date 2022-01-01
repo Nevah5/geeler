@@ -65,7 +65,7 @@ register.error.emailexists:Ein Account mit dieser Email Adresse existiert bereit
 register.error.emailinvalid:Diese Email Adresse ist nicht gültig.
 register.error.emailmatch:Die Email Adressen stimmen nicht überein.
 register.error.repeatemailempty:Bitte wiederhole die Email Adresse.
-register.error.usernameinvalid:Dieser Benutzername ist nicht gültig. [3-32 Zeichen, keine \'^£$%&*()}{@#~?><>,|=_+¬-]
+register.error.usernameinvalid:Dieser Benutzername ist nicht gültig. [3-32 Länge, keine Leer- und spezielle Zeichen]
 register.error.userexists:Dieser Benutzername existiert bereits.
 register.error.emptyusername:Bitte gib einen Benutzernamen an.
 register.error.emptypassword:Bitte gib ein Passwort an.
