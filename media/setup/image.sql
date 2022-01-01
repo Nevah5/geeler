@@ -27,6 +27,12 @@ CREATE TABLE lang(
   content TEXT NOT NULL,
   INDEX index_lang_id(ID)
 );
+CREATE TABLE verify(
+  userFK INT UNSIGNED NOT NULL,
+  token CHAR(32) NOT NULL,
+  generated TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1),
+  FOREIGN KEY (userFK) REFERENCES users(ID)
+);
 
 INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");

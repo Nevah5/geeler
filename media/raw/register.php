@@ -174,7 +174,10 @@
                 !empty($_POST["password"]) &&
                 $_POST["password"] == $_POST["repeatpassword"]
               ){
-                //insert account into db
+                $userID = uniqid();
+                mysqli_query($con, "INSERT INTO users VALUES ($userID, '$username', '$email', DEFAULT)");
+                $verifyToken = uniqid() . uniqid();
+                mysqli_query($con, "INSERT INTO verify VALUES ($userID, '$verifyToken', DEFAULT)");
               }
             }
           ?>
