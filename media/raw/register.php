@@ -155,12 +155,12 @@
           <div class="check">
             <input type="checkbox" id="acceptsecurity" name="acceptsecurity">
             <label for="acceptsecurity" id="chkbx"><div id="tik"></div></label>
-            <label for="acceptsecurity">You accept the <a href="/security/">Privacyagreement</a>.</label>
+            <label for="acceptsecurity">${home.contact.form.acceptsecurity}</label>
           </div>
           <div class="check">
             <input type="checkbox" id="acceptads" name="acceptads">
             <label for="acceptads" id="chkbx"><div id="tik"></div></label>
-            <label for="acceptads">You want to get updated with the newest informations per email.</label>
+            <label for="acceptads">${register.accept.email}</label>
           </div>
           <label for="submit" id="submitbtn">${register.submit}</label>
           <input type="submit" name="submit" id="submit">

@@ -71,6 +71,7 @@ register.error.emptypassword:Bitte gib ein Passwort an.
 register.error.passwordnotmatch:Die Passwörter stimmen nicht überein!
 register.user.login:Einloggen
 register.user.register:Registrieren
+register.accept.email:Du möchtest über Email Benachrichtigungen und Updates erhalten.
 
 404.didyoumean:Meintest du
 

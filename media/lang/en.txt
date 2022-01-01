@@ -71,6 +71,7 @@ register.error.emptypassword:Please specify a password.
 register.error.passwordnotmatch:The passwords dont match!
 register.user.login:Login
 register.user.register:Register
+register.accept.email:You want to get updated with the newest informations per email.
 
 404.didyoumean:Did you mean
 
