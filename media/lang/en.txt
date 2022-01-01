@@ -48,6 +48,8 @@ login.error.nopassword:Please specify a password!
 login.error.passwordwrong:The password doesn't match!
 login.user.login:Login
 login.user.register:Register
+login.password.forgot:Forgot Password?
+login.stayloggedin:Stay logged in
 
 register.title:Register - geeler.net
 register.section.title:Register

@@ -48,6 +48,8 @@ login.error.nopassword:Bitte gib ein Passwort an!
 login.error.passwordwrong:Das Passwort stimmt nicht überein!
 login.user.login:Einloggen
 login.user.register:Registrieren
+login.password.forgot:Passwort vergessen?
+login.stayloggedin:Eingeloggt bleiben
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren

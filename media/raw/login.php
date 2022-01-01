@@ -84,11 +84,11 @@
             }
             mysqli_close($con);
           ?>
-          <a href="./forgot-password/">Forgot Password?</a>
+          <a href="./forgot-password/">${login.password.forgot}</a>
           <div class="check">
             <input type="checkbox" id="stayloggedin" name="stayloggedin">
             <label for="stayloggedin" id="chkbx"><div id="tik"></div></label>
-            <label for="stayloggedin">Stay logged in</label>
+            <label for="stayloggedin">${login.stayloggedin}</label>
           </div>
           <label for="submit" id="submitbtn">${login.submit}</label>
           <input type="submit" name="submit" id="submit">
