@@ -98,7 +98,7 @@
               $username = $_POST["username"];
               if($emailmatch){
                 if(!empty($_POST["username"])){
-                  if(strlen($username) >= 3 && strlen($username) <= 32 && preg_match('/([A-Z]*[a-z]*[0-9]*)\s{0}/', $username)){
+                  if(strlen($username) >= 3 && strlen($username) <= 32){
                     $usernamevalid = true;
                   }else{
                     echo "<span>${register.error.usernameinvalid}</span>";
