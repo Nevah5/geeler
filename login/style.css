@@ -75,6 +75,7 @@ form .content .wrapper {
 }
 
 form .content .wrapper .box {
+  position: relative;
   border: white solid 2px;
   background-color: white;
   padding: 70px 100px;
@@ -346,6 +347,7 @@ form .content .wrapper .box label#submitbtn {
       -ms-grid-row-align: center;
       align-self: center;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 6px 30px;
   background-color: #144A8F;
   color: white;
@@ -356,6 +358,16 @@ form .content .wrapper .box label#submitbtn {
 
 form .content .wrapper .box input[type="submit"] {
   display: none;
+}
+
+form .content .wrapper .box p {
+  font-family: Alata;
+  color: #144A8F;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
 }
 
 form::after {

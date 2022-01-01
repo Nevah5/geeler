@@ -178,6 +178,7 @@
               }
             }
           ?>
+          <p>${register.accountlogin}</p>
         </div>
       </div>
     </div>

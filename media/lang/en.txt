@@ -50,6 +50,7 @@ login.user.login:Login
 login.user.register:Register
 login.password.forgot:Forgot Password?
 login.stayloggedin:Stay logged in
+login.accountregister:You don't have an account yet? Create one <a href="/register/">here</a>!
 
 register.title:Register - geeler.net
 register.section.title:Register
@@ -72,6 +73,7 @@ register.error.passwordnotmatch:The passwords dont match!
 register.user.login:Login
 register.user.register:Register
 register.accept.email:You want to get updated with the newest informations per email.
+register.accountlogin:You already have an account? Login <a href="/register/">here</a>!
 
 404.didyoumean:Did you mean
 

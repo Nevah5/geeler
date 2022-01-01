@@ -92,6 +92,7 @@
           </div>
           <label for="submit" id="submitbtn">${login.submit}</label>
           <input type="submit" name="submit" id="submit">
+          <p>${login.accountregister}</p>
         </div>
       </div>
     </div>
