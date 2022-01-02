@@ -175,9 +175,9 @@
                 $_POST["password"] == $_POST["repeatpassword"]
               ){
                 $userID = uniqid();
-                mysqli_query($con, "INSERT INTO users VALUES ($userID, '$username', '$email', DEFAULT)");
                 $verifyToken = uniqid() . uniqid();
-                mysqli_query($con, "INSERT INTO verify VALUES ($userID, '$verifyToken', DEFAULT)");
+                mysqli_query($con, "INSERT INTO users (ID, username, email) VALUES ($userID, '$username', '$email')");
+                mysqli_query($con, "INSERT INTO verify (userFK, token) VALUES ($userID, '$verifyToken')");
               }
             }
           ?>
