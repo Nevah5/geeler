@@ -174,10 +174,7 @@
                 !empty($_POST["password"]) &&
                 $_POST["password"] == $_POST["repeatpassword"]
               ){
-                $userID = uniqid();
-                $verifyToken = uniqid() . uniqid();
-                // mysqli_query($con, "INSERT INTO users VALUES ($userID, '$username', '$email', DEFAULT)");
-                // mysqli_query($con, "INSERT INTO verify VALUES ($userID, '$verifyToken', DEFAULT)");
+                registeruser($username, $email, $_POST["password"]);
               }
             }
           ?>
@@ -252,3 +249,15 @@ Site made by Noah Geeler
   -->
 </body>
 </html>
+<?php
+  function registeruser($u, $e, $p){
+    global $con;
+
+    $userID = uniqid();
+    $verifyToken = uniqid() . uniqid();
+    $pw = password_hash($p, PASSWORD_DEFAULT);
+
+    mysqli_query($con, "INSERT INTO users VALUES ($userID, '$u', '$e', DEFAULT)");
+    mysqli_query($con, "INSERT INTO verify VALUES ($userID, '$verifyToken', DEFAULT)");
+    mysqli_query($con, "INSERT INTO passwords VALUES ($userID, '$pw')");
+  }
