@@ -168,7 +168,7 @@
             if($_POST["submit"]){
               if(
                 $emailvalid &&
-                $emailexists &&
+                !$emailexists &&
                 $usernamevalid &&
                 !$usernameexists &&
                 !empty($_POST["password"]) &&
@@ -176,8 +176,8 @@
               ){
                 $userID = uniqid();
                 $verifyToken = uniqid() . uniqid();
-                mysqli_query($con, "INSERT INTO users (ID, username, email) VALUES ($userID, '$username', '$email')");
-                mysqli_query($con, "INSERT INTO verify (userFK, token) VALUES ($userID, '$verifyToken')");
+                // mysqli_query($con, "INSERT INTO users VALUES ($userID, '$username', '$email', DEFAULT)");
+                // mysqli_query($con, "INSERT INTO verify VALUES ($userID, '$verifyToken', DEFAULT)");
               }
             }
           ?>
