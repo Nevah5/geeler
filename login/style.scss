@@ -70,6 +70,11 @@ form{
         min-width: 400px;
         transition: all .5s;
 
+        &#successbox{
+          align-items: center !important;
+          flex-direction: column !important;
+          flex-wrap: nowrap;
+        }
         h3{ //success page title
           width: 100%;
           text-align: center;
@@ -79,8 +84,10 @@ form{
           color: #144A8F;
 
           & ~ p#success{
-            margin-bottom: 30px;
+            margin-bottom: 0;
             font-size: 1.2rem;
+            max-width: 400px;
+            position: relative;
           }
         }
         .grid{

@@ -30,7 +30,7 @@ CREATE TABLE lang(
 );
 CREATE TABLE verify(
   userFK VARCHAR(32) NOT NULL,
-  token CHAR(32) NOT NULL,
+  token CHAR(128) NOT NULL,
   generated TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1),
   FOREIGN KEY (userFK) REFERENCES users(ID)
 );
@@ -117,7 +117,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "register_success", "title", "Erfolg! - geeler.net"),
 ("DE", "register_success", "section.title", "Registrieren"),
 ("DE", "register_success", "success", "Erfolg!"),
-("DE", "register_success", "info", "Bitte verifiziere deine Email Adresse bevor du dich <a href=""/login/"">einloggen</a> kannst."),
+("DE", "register_success", "info", "Bitte verifiziere deine Email Adresse, mit der gesendeten Email adresse an <?= $email ?>, bevor du dich <a href=""/login/"">einloggen</a> kannst."),
 ("DE", "404", "didyoumean", "Meintest du"),
 ("DE", "footer", "stuff.title", "Diverses"),
 ("DE", "footer", "stuff.tos", "Nutzungsbedingungen"),
@@ -205,7 +205,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "register_success", "title", "Success! - geeler.net"),
 ("EN", "register_success", "section.title", "Register"),
 ("EN", "register_success", "success", "Success!"),
-("EN", "register_success", "info", "Please verify your email adress before you can <a href=""/login/"">sign in</a>."),
+("EN", "register_success", "info", "Please verify your email adress, with the sent email to <?= $email ?>, before you can <a href=""/login/"">sign in</a>."),
 ("EN", "404", "didyoumean", "Did you mean"),
 ("EN", "footer", "stuff.title", "Stuff"),
 ("EN", "footer", "stuff.tos", "Terms of service"),

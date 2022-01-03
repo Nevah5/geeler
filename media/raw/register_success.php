@@ -1,5 +1,8 @@
 <?php
   session_start();
+  if(!$_SESSION["registersuccess"] || $_SESSION["login"]){
+    header("Location: ../");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +34,14 @@
     <div class="content">
       <h2>${register_success.section.title}</h2>
       <div class="wrapper">
-        <div class="box">
+        <div class="box" id="successbox">
+          <?php
+            $email = explode("@", $_SESSION["registeremail"]);
+            $domain = $email[1];
+            $obfuscate = str_split($email[0]);
+            $obfuscate = $obfuscate[0] . "*****" . $obfuscate[count($obfuscate) - 1];
+            $email = $obfuscate . "@" . $domain;
+          ?>
           <h3>${register_success.success}</h3>
           <p id="success">${register_success.info}</p>
         </div>

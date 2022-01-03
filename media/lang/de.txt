@@ -78,7 +78,7 @@ register.accountlogin:Du hast bereits ein Account erstellt? Logge dich <a href="
 register_success.title:Erfolg! - geeler.net
 register_success.section.title:Registrieren
 register_success.success:Erfolg!
-register_success.info:Bitte verifiziere deine Email Adresse bevor du dich <a href="/login/">einloggen</a> kannst.
+register_success.info:Bitte verifiziere deine Email Adresse, mit der gesendeten Email adresse an <?= $email ?>, bevor du dich <a href="/login/">einloggen</a> kannst.
 
 404.didyoumean:Meintest du
 

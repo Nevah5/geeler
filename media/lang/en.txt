@@ -78,7 +78,7 @@ register.accountlogin:You already have an account? Login <a href="/register/">he
 register_success.title:Success! - geeler.net
 register_success.section.title:Register
 register_success.success:Success!
-register_success.info:Please verify your email adress before you can <a href="/login/">sign in</a>.
+register_success.info:Please verify your email adress, with the sent email to <?= $email ?>, before you can <a href="/login/">sign in</a>.
 
 404.didyoumean:Did you mean
 
