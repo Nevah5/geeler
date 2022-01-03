@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
-  <meta property="og:description" content="${meta.desc}">
+  <meta property="og:description" content="${home.meta.desc}">
   <meta property="og:image" content="https://geeler.net/media/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">

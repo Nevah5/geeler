@@ -1,6 +1,5 @@
 <?php
   session_start();
-  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,76 +22,18 @@
   <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>${login.title}</title>
+  <link rel="stylesheet" href="../../login/style.css">
+  <title>${register_success.title}</title>
 </head>
 <body>
   <a href="/" class="logo"><span>geeler</span></a>
   <form action="index.php" method="POST">
     <div class="content">
-      <h2>${login.section.title}</h2>
+      <h2>${register_success.section.title}</h2>
       <div class="wrapper">
         <div class="box">
-          <div class="grid">
-            <label for="email">${login.email}</label>
-            <div>
-              <i id="email"></i>
-              <input type="text" name="email" id="email" value="<?= $_POST["email"] ?>">
-            </div>
-          </div>
-          <?php
-            if($_POST["submit"] && !$_SESSION["login"]){
-              $userexists = false;
-              if(empty($_POST["email"])){
-                echo "<span>${login.error.noemail}</span>" . PHP_EOL;
-              }else{
-                $email = $_POST["email"];
-                if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) != 1){
-                  echo "<span>${login.error.notexists}</span>" . PHP_EOL;
-                }else{
-                  $userexists = true;
-                }
-              }
-            }
-          ?>
-          <div class="grid" id="mtop">
-            <label for="password">${login.password}</label>
-            <div>
-              <i id="pw"></i>
-              <input type="password" name="password" id="password">
-            </div>
-          </div>
-          <?php
-            if($_POST["submit"] && !$_SESSION["login"]){
-              if(empty($_POST["password"]) && $userexists){
-                echo "<span>${login.error.nopassword}</span>" . PHP_EOL;
-              }else if($userexists){
-                $pw = mysqli_fetch_array(mysqli_query($con, "SELECT password FROM users JOIN passwords ON users.ID = passwords.userFK WHERE email='$email' LIMIT 1"))["password"];
-                if(!password_verify($_POST["password"], $pw)){
-                  echo "<span>${login.error.passwordwrong}</span>" . PHP_EOL;
-                }else{
-                  //user login
-                  $_SESSION["login"] = true;
-                  $_SESSION["email"] = $email;
-                  $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
-                  $_SESSION["username"] = $username;
-                  header("Location: /");
-                }
-              }
-            }else if($_SESSION["login"]){
-              header("Location: /");
-            }
-            mysqli_close($con);
-          ?>
-          <a href="./forgot-password/">${login.password.forgot}</a>
-          <div class="check">
-            <input type="checkbox" id="stayloggedin" name="stayloggedin">
-            <label for="stayloggedin" id="chkbx"><div id="tik"></div></label>
-            <label for="stayloggedin">${login.stayloggedin}</label>
-          </div>
-          <label for="submit" id="submitbtn">${login.submit}</label>
-          <input type="submit" name="submit" id="submit">
-          <p>${login.accountregister}</p>
+          <h3>${register_success.success}</h3>
+          <p>${register_success.info}</p>
         </div>
       </div>
     </div>
@@ -101,10 +42,10 @@
     <nav>
       <div>
         <h1>${home.navbar.home}</h1>
-        <a href="#general">${home.about.title}</a>
-        <a href="#hobby">${home.about.hobby.title}</a>
-        <a href="#motivation">${home.about.motivation.title}</a>
-        <a href="#whyme">${home.about.whyme.title}</a>
+        <a href="#general">About Me</a>
+        <a href="#hobby">My hobby</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#whyme">Why me?</a>
       </div>
       <div>
         <h1>${home.navbar.contact}</h1>
@@ -139,7 +80,7 @@
         <?php
           if(!$_SESSION["login"]){
         ?>
-        <a href="/login/" class="login">${login.user.login}</a>
+        <a href="/login/" class="login">${register.user.login}</a>
         <?php
           }else{
         ?>

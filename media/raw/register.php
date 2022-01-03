@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
-  <meta property="og:description" content="${meta.desc}">
+  <meta property="og:description" content="${home.meta.desc}">
   <meta property="og:image" content="https://geeler.net/media/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
@@ -20,7 +20,7 @@
   <meta property="twitter:description" content="${home.meta.desc}">
   <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
   <meta name="author" content="Noah Geeler">
-  <meta name="description" content="${meta.desc}">
+  <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../login/style.css">
