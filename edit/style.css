@@ -94,7 +94,7 @@ div:not(#compile) {
 }
 
 div:not(#compile) h1 {
-  width: 80%;
+  width: 100%;
   padding: 0 0 10px;
   margin-top: 50px;
   text-align: center;
