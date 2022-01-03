@@ -33,7 +33,7 @@
       <div class="wrapper">
         <div class="box">
           <h3>${register_success.success}</h3>
-          <p>${register_success.info}</p>
+          <p id="success">${register_success.info}</p>
         </div>
       </div>
     </div>

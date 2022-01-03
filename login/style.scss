@@ -70,6 +70,19 @@ form{
         min-width: 400px;
         transition: all .5s;
 
+        h3{ //success page title
+          width: 100%;
+          text-align: center;
+          font-size: 2rem;
+          font-family: Concert One;
+          margin: 0 0 15px;
+          color: #144A8F;
+
+          & ~ p#success{
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+          }
+        }
         .grid{
           display: grid;
           width: 100%;

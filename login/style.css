@@ -99,6 +99,20 @@ form .content .wrapper .box {
   transition: all .5s;
 }
 
+form .content .wrapper .box h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Concert One;
+  margin: 0 0 15px;
+  color: #144A8F;
+}
+
+form .content .wrapper .box h3 ~ p#success {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
 form .content .wrapper .box .grid {
   display: -ms-grid;
   display: grid;
