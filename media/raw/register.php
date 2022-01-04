@@ -156,6 +156,13 @@
             <label for="acceptsecurity" id="chkbx"><div id="tik"></div></label>
             <label for="acceptsecurity">${home.contact.form.acceptsecurity}</label>
           </div>
+          <?php
+            if($_POST["submit"] && !$_POST["password"] != $_POST["repeatpassword"]){
+              if(!isset($_POST["acceptsecurity"])){
+                echo "<span>${home.contact.form.acceptsecurity.required}</span>";
+              }
+            }
+          ?>
           <div class="check">
             <input type="checkbox" id="acceptads" name="acceptads">
             <label for="acceptads" id="chkbx"><div id="tik"></div></label>
@@ -171,9 +178,10 @@
                 $usernamevalid &&
                 !$usernameexists &&
                 !empty($_POST["password"]) &&
-                $_POST["password"] == $_POST["repeatpassword"]
+                $_POST["password"] == $_POST["repeatpassword"] &&
+                isset($_POST["acceptsecurity"])
               ){
-                register_user($username, $email, $_POST["password"]);
+                register_user($username, $email, $_POST["password"], $_POST["acceptads"]);
               }
             }
           ?>
@@ -249,7 +257,7 @@ Site made by Noah Geeler
 </body>
 </html>
 <?php
-  function register_user($u, $e, $p){
+  function register_user($u, $e, $p, $ads){
     global $con;
 
     $userID = uniqid();
@@ -259,6 +267,10 @@ Site made by Noah Geeler
     mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT)");
     mysqli_query($con, "INSERT INTO verify VALUES ('$userID', '$verifyToken', DEFAULT)");
     mysqli_query($con, "INSERT INTO passwords VALUES ('$userID', '$pw')");
+
+    if($ads){
+      mysqli_query($con, "INSERT INTO ads VALUES ('$userID', DEFAULT)");
+    }
 
     if(!mysqli_error($con)){
       $_SESSION["registersuccess"] = true;

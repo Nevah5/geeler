@@ -33,6 +33,7 @@ home.contact.form.email:Deine Email
 home.contact.form.message:Deine Nachricht
 home.contact.form.acceptdb:Du bist dir bewusst, dass ich deine Email Adresse mit Nachricht und deiner IP Adresse in meiner Datenbank speichere. Ich werde diese nur für Private zwecke nutzen.
 home.contact.form.acceptsecurity:Du hast die <a href="/privacy/" target="_blank">Datenschutzbedingunen</a> gelesen und akzeptierst diese.
+home.contact.form.acceptsecurity.required:Du musst die Datenschutzbedingunen akzeptieren.
 home.contact.form.submit:Senden
 home.donate.title:Spenden um mich zu unterstützen
 home.donate.or:oder

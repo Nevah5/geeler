@@ -33,6 +33,7 @@ home.contact.form.email:Your Email
 home.contact.form.message:Your Message
 home.contact.form.acceptdb:You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only.
 home.contact.form.acceptsecurity:You have read the <a href="/privacy/" target="_blank">Privacy</a> agreement and accept it.
+home.contact.form.acceptsecurity.required:You have to accept the Privacyagreement.
 home.contact.form.submit:Submit
 home.donate.title:Donate to support me
 home.donate.or:or
