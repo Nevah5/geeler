@@ -70,7 +70,10 @@ div.error .content span {
   text-align: center;
   font-family: Russo One;
   font-size: 4rem;
-  max-width: 60%;
+  display: block;
+  max-width: 80%;
+  word-wrap: break-word;
+  word-break: keep-all;
   color: white;
 }
 
