@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/404/style.css">
-  <title>404 - geeler.net</title>
+  <title>401 - geeler.net</title>
 </head>
 <body>
   <?php
@@ -26,8 +26,7 @@
   ?>
   <a href="/" class="logo"><span>geeler</span></a>
   <div class="error"><div class="content">
-    <span>404 - ${404.errormessage}</span>
-    <p>${404.didyoumean} <?= "<a href=\"$closest\">geeler.net".$closest."</a>?" ?></p>
+    <span>401 - ${401.errormessage}</span>
   </div></div>
   <div class="footer">
     <nav>

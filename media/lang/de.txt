@@ -80,7 +80,11 @@ register_success.section.title:Registrieren
 register_success.success:Erfolg!
 register_success.info:Bitte verifiziere deine Email Adresse bevor du dich <a href="/login/">einloggen</a> kannst.
 
+401.errormessage:Unautorisiert!
+403.errormessage:Verboten!
+404.errormessage:Seite nicht gefunden!
 404.didyoumean:Meintest du
+410.errormessage:Verschwunden!
 
 footer.stuff.title:Diverses
 footer.stuff.tos:Nutzungsbedingungen

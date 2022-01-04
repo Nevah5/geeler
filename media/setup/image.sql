@@ -38,7 +38,6 @@ CREATE TABLE verify(
 INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
 
-
 INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "home", "meta.desc", "Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker."),
 ("DE", "home", "title", "Startseite - geeler.net"),
@@ -118,14 +117,17 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "register_success", "section.title", "Registrieren"),
 ("DE", "register_success", "success", "Erfolg!"),
 ("DE", "register_success", "info", "Bitte verifiziere deine Email Adresse bevor du dich <a href=""/login/"">einloggen</a> kannst."),
+("DE", "401", "errormessage", "Unautorisiert!"),
+("DE", "403", "errormessage", "Verboten!"),
+("DE", "404", "errormessage", "Seite nicht gefunden!"),
 ("DE", "404", "didyoumean", "Meintest du"),
+("DE", "410", "errormessage", "Verschwunden!"),
 ("DE", "footer", "stuff.title", "Diverses"),
 ("DE", "footer", "stuff.tos", "Nutzungsbedingungen"),
 ("DE", "footer", "stuff.privacy", "Datenschutz"),
 ("DE", "footer", "stuff.guidelines", "Richtlinien"),
 ("DE", "footer", "stuff.acknownledgements", "Dankeschön"),
 ("DE", "footer", "stuff.licence", "Lizenz");
-
 
 INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "meta.desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
@@ -206,7 +208,11 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "register_success", "section.title", "Register"),
 ("EN", "register_success", "success", "Success!"),
 ("EN", "register_success", "info", "Please verify your email adress before you can <a href=""/login/"">sign in</a>."),
+("EN", "401", "errormessage", "Unauthorized!"),
+("EN", "403", "errormessage", "Forbidden!"),
+("EN", "404", "errormessage", "Site not found!"),
 ("EN", "404", "didyoumean", "Did you mean"),
+("EN", "410", "errormessage", "Gone!"),
 ("EN", "footer", "stuff.title", "Stuff"),
 ("EN", "footer", "stuff.tos", "Terms of service"),
 ("EN", "footer", "stuff.privacy", "Privacy"),

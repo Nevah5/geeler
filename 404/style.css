@@ -69,7 +69,8 @@ div.error .content span {
   margin: 0;
   text-align: center;
   font-family: Russo One;
-  font-size: 3.3rem;
+  font-size: 4rem;
+  max-width: 60%;
   color: white;
 }
 
