@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS geeler;
 CREATE DATABASE IF NOT EXISTS geeler;
 USE geeler;
 
+DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS verify;
 DROP TABLE IF EXISTS lang;
 DROP TABLE IF EXISTS passwords;
@@ -33,6 +34,10 @@ CREATE TABLE verify(
   token CHAR(128) NOT NULL,
   generated TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1),
   FOREIGN KEY (userFK) REFERENCES users(ID)
+);
+CREATE TABLE ads(
+  userFK VARCHAR(32) NOT NULL,
+  accepted TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1)
 );
 
 INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
@@ -74,6 +79,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "home", "contact.form.message", "Deine Nachricht"),
 ("DE", "home", "contact.form.acceptdb", "Du bist dir bewusst, dass ich deine Email Adresse mit Nachricht und deiner IP Adresse in meiner Datenbank speichere. Ich werde diese nur für Private zwecke nutzen."),
 ("DE", "home", "contact.form.acceptsecurity", "Du hast die <a href=""/privacy/"" target=""_blank"">Datenschutzbedingunen</a> gelesen und akzeptierst diese."),
+("DE", "home", "contact.form.acceptsecurity.required", "Du musst die Datenschutzbedingunen akzeptieren."),
 ("DE", "home", "contact.form.submit", "Senden"),
 ("DE", "home", "donate.title", "Spenden um mich zu unterstützen"),
 ("DE", "home", "donate.or", "oder"),
@@ -165,6 +171,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "contact.form.message", "Your Message"),
 ("EN", "home", "contact.form.acceptdb", "You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only."),
 ("EN", "home", "contact.form.acceptsecurity", "You have read the <a href=""/privacy/"" target=""_blank"">Privacy</a> agreement and accept it."),
+("EN", "home", "contact.form.acceptsecurity.required", "You have to accept the Privacyagreement."),
 ("EN", "home", "contact.form.submit", "Submit"),
 ("EN", "home", "donate.title", "Donate to support me"),
 ("EN", "home", "donate.or", "or"),
