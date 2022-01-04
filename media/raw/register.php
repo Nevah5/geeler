@@ -253,11 +253,17 @@ Site made by Noah Geeler
     global $con;
 
     $userID = uniqid();
-    $verifyToken = uniqid() . uniqid();
+    $verifyToken = bin2hex(random_bytes(96));
     $pw = password_hash($p, PASSWORD_DEFAULT);
 
     mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT)");
     mysqli_query($con, "INSERT INTO verify VALUES ('$userID', '$verifyToken', DEFAULT)");
     mysqli_query($con, "INSERT INTO passwords VALUES ('$userID', '$pw')");
+
+    if(!mysqli_error($con)){
+      $_SESSION["registersuccess"] = true;
+      $_SESSION["registeremail"] = $e;
+      header("Location: ./success/");
+    }
   }
   mysqli_close($con);
