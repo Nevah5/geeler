@@ -90,14 +90,22 @@ form{
             position: relative;
           }
         }
+        sup{ //required stars
+          color: #b34040;
+          font-family: Alata;
+          margin-left: 3px;
+        }
+        span#required{ //required at bottom
+          margin-top: 10px;
+        }
         .grid{
           display: grid;
           width: 100%;
           grid-template-columns: 40px 10px 1fr;
-          grid-template-rows: 10px 5px 1fr;
+          grid-template-rows: 10px 10px 1fr;
 
           &:not(:first-child){
-            margin-top: 30px;
+            margin-top: 23px;
           }
 
           label:not(#submitbtn){
@@ -224,7 +232,7 @@ form{
         }
         label#submitbtn{
           align-self: center;
-          margin-top: 20px;
+          margin-top: 10px;
           margin-bottom: 20px;
           padding: 6px 30px;
           background-color: #144A8F;

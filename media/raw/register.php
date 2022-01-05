@@ -34,7 +34,7 @@
       <div class="wrapper">
         <div class="box">
           <div class="grid">
-            <label for="email">${register.email}</label>
+            <label for="email">${register.email}<sup>*</sup></label>
             <div>
               <i id="email"></i>
               <input type="text" name="email" id="email" value="<?= $_POST["email"] ?>">
@@ -62,7 +62,7 @@
             }
           ?>
           <div class="grid">
-            <label for="repemail">${register.repeatemail}</label>
+            <label for="repemail">${register.repeatemail}<sup>*</sup></label>
             <div>
               <i id="emailrep"></i>
               <input type="text" name="repemail" id="repemail" value="<?= $_POST["repemail"] ?>">
@@ -85,7 +85,7 @@
             }
           ?>
           <div class="grid">
-            <label for="username">${register.username}</label>
+            <label for="username">${register.username}<sup>*</sup></label>
             <div>
               <i id="user"></i>
               <input type="text" name="username" id="username" value="<?= $_POST["username"] ?>">
@@ -118,7 +118,7 @@
             }
           ?>
           <div class="grid">
-            <label for="password">${register.password}</label>
+            <label for="password">${register.password}<sup>*</sup></label>
             <div>
               <i id="pw"></i>
               <input type="password" name="password" id="password">
@@ -134,7 +134,7 @@
             }
           ?>
           <div class="grid">
-            <label for="repeatpassword">${register.repeatpassword}</label>
+            <label for="repeatpassword">${register.repeatpassword}<sup>*</sup></label>
             <div>
               <i id="pwrep"></i>
               <input type="password" name="repeatpassword" id="repeatpassword">
@@ -154,7 +154,7 @@
           <div class="check">
             <input type="checkbox" id="acceptsecurity" name="acceptsecurity">
             <label for="acceptsecurity" id="chkbx"><div id="tik"></div></label>
-            <label for="acceptsecurity">${home.contact.form.acceptsecurity}</label>
+            <label for="acceptsecurity">${home.contact.form.acceptsecurity}<sup>*</sup></label>
           </div>
           <?php
             if($_POST["submit"] && !$_POST["password"] != $_POST["repeatpassword"]){
@@ -168,6 +168,7 @@
             <label for="acceptads" id="chkbx"><div id="tik"></div></label>
             <label for="acceptads">${register.accept.email}</label>
           </div>
+          <span id="required"><sup>*</sup>${register.required}</span>
           <label for="submit" id="submitbtn">${register.submit}</label>
           <input type="submit" name="submit" id="submit">
           <?php

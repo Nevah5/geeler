@@ -127,18 +127,28 @@ form .content .wrapper .box h3 ~ p#success {
   position: relative;
 }
 
+form .content .wrapper .box sup {
+  color: #b34040;
+  font-family: Alata;
+  margin-left: 3px;
+}
+
+form .content .wrapper .box span#required {
+  margin-top: 10px;
+}
+
 form .content .wrapper .box .grid {
   display: -ms-grid;
   display: grid;
   width: 100%;
   -ms-grid-columns: 40px 10px 1fr;
       grid-template-columns: 40px 10px 1fr;
-  -ms-grid-rows: 10px 5px 1fr;
-      grid-template-rows: 10px 5px 1fr;
+  -ms-grid-rows: 10px 10px 1fr;
+      grid-template-rows: 10px 10px 1fr;
 }
 
 form .content .wrapper .box .grid:not(:first-child) {
-  margin-top: 30px;
+  margin-top: 23px;
 }
 
 form .content .wrapper .box .grid label:not(#submitbtn) {
@@ -374,7 +384,7 @@ form .content .wrapper .box label#submitbtn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   padding: 6px 30px;
   background-color: #144A8F;
