@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+@import url("/media/styles/footer.css");
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+a.logo {
+  margin-top: 1vh;
+}
+
+a.logo span {
+  font-family: Russo One;
+  font-size: 3rem;
+  padding-left: 1vw;
+  color: #144A8F;
+}
+
+div.info::before {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(0.5px);
+          transform: translateY(0.5px);
+  -webkit-clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+          clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+}
+
+div.info {
+  margin-top: 10vh;
+  position: relative;
+  padding: 20vh 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+div.info .content {
+  background-color: #144A8F;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+div.info .content span {
+  margin: 0;
+  text-align: center;
+  font-family: Russo One;
+  font-size: 2.4rem;
+  display: block;
+  max-width: 80%;
+  word-wrap: break-word;
+  word-break: keep-all;
+  color: white;
+}
+
+div.info .content p {
+  color: white;
+  font-family: Alata;
+}
+
+div.info .content p a {
+  color: white;
+  font-family: Alata;
+  text-decoration: underline;
+}
+
+div.info::after {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(-0.5px);
+          transform: translateY(-0.5px);
+  -webkit-clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+          clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+}
+/*# sourceMappingURL=style.css.map */
