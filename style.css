@@ -1112,6 +1112,12 @@ nav.navbar .align_end {
   color: #144A8F;
 }
 
+.contact .wrapper#form .form span#error {
+  font-size: .8rem;
+  font-family: Alata;
+  color: #b34040;
+}
+
 .contact .wrapper#form .form #submit {
   padding: 5px 15px;
   border-radius: .5em;

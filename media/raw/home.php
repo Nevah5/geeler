@@ -278,27 +278,80 @@
     </div>
     <div class="wrapper" id="form">
       <h3>${home.contact.form.title}</h3>
-      <form class="form">
+      <form class="form" action="?contact#contact" method="POST">
         <label for="sender">${home.contact.form.email}</label>
-        <input type="text" id="sender" name="sender" maxlength="320">
+        <input type="text" id="sender" name="sender" maxlength="320" value="<?= $_POST["sender"] ?>">
+        <?php
+          if(isset($_POST["submit"])){
+            $emailvalid = false;
+            if(!isset($_POST["sender"])){
+              echo "<span id=\"error\">${login.error.noemail}</span>";
+            }else{
+              if(!filter_var($_POST["sender"], FILTER_VALIDATE_EMAIL)){
+                echo "<span id=\"error\">${register.error.emailinvalid}</span>";
+              }else{
+                $emailvalid = true;
+              }
+            }
+          }
+        ?>
         <div>
           <label for="message">${home.contact.form.message}</label>
         </div>
         <textarea type="text" id="message" name="message"></textarea>
+        <?php
+          if(isset($_POST["submit"])){
+            $messagevalid = false;
+            if(!empty($_POST["message"])){
+              $messagevalid = true;
+            }else{
+              echo "<span id=\"error\">${home.contact.form.message.empty}</span>";
+            }
+          }
+        ?>
         <div>
           <input type="checkbox" id="acceptdb" name="acceptdb">
           <label for="acceptdb" id="chkbx"><div id="tik"></div></label>
           <label for="acceptdb">${home.contact.form.acceptdb}</label>
         </div>
+        <?php
+          if(isset($_POST["submit"])){
+            if(!isset($_POST["acceptb"])){
+              echo "<span id=\"error\">${home.contact.form.acceptdb.required}</span>";
+            }
+          }
+        ?>
         <div>
           <input type="checkbox" id="acceptsecurity" name="acceptsecurity">
           <label for="acceptsecurity" id="chkbx"><div id="tik"></div></label>
           <label for="acceptsecurity">${home.contact.form.acceptsecurity}</label>
         </div>
+        <?php
+          if(isset($_POST["submit"])){
+            if(!isset($_POST["acceptsecurity"])){
+              echo "<span id=\"error\">${home.contact.form.acceptsecurity.required}</span>";
+            }
+          }
+        ?>
         <div>
           <label for="submitbtn" id="submit">${home.contact.form.submit}</label>
         </div>
-        <input type="submit" id="submitbtn">
+        <input type="submit" id="submitbtn" name="submit">
+        <?php
+          if(isset($_POST["submit"])){
+            if(
+              $emailvalid &&
+              $messagevalid &&
+              isset($_POST["acceptb"]) &&
+              isset($_POST["acceptdb"])
+            ){
+              $_SESSION["contactmessage"] = $_POST["message"];
+              $_SESSION["contactemail"] = $_POST["sender"];
+              $_SESSION["contact"] = true;
+              header("Location: ./mailing/");
+            }
+          }
+        ?>
       </form>
     </div>
   </div>

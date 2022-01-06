@@ -28,13 +28,16 @@ home.contact.email:Email
 home.contact.phone.emoji:📞 Telefon
 home.contact.phone:Telefon
 home.contact.message:Wenn du versuchst mich mit der überstehenden Email zu erreichen, antworte ich wahrschinlich nicht direkt. Ich empfehle das Formular unten zu benutzen, das automatisch eine Email in meine private Inbox weiterleitet.
+home.contact.message.empty:Bitte gib eine Nachricht an.
 home.contact.form.title:Schick mir eine Nachricht
 home.contact.form.email:Deine Email
 home.contact.form.message:Deine Nachricht
 home.contact.form.acceptdb:Du bist dir bewusst, dass ich deine Email Adresse mit Nachricht und deiner IP Adresse in meiner Datenbank speichere. Ich werde diese nur für Private zwecke nutzen.
+home.contact.form.acceptdb.required:Du musst es akzeptieren.
 home.contact.form.acceptsecurity:Du hast die <a href="/privacy/" target="_blank">Datenschutzbedingunen</a> gelesen und akzeptierst diese.
 home.contact.form.acceptsecurity.required:Du musst die Datenschutzbedingunen akzeptieren.
 home.contact.form.submit:Senden
+home.contact.form.success:Deine Nachricht wurde erfolgreich versendet!
 home.donate.title:Spenden um mich zu unterstützen
 home.donate.or:oder
 

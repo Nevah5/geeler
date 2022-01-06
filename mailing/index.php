@@ -20,6 +20,17 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Verification Account";
   $emailAlt = "https://dev.geeler.net/verify?token=" . $_SESSION["verifyToken"];
   $msgHTML = preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'));
+}else if($_SESSION["contact"]){
+  $email = $_SESSION["contactemail"];
+  $smtpUsername = "contact@geeler.net";
+  $smtpPassword = "q6vuxly_Swu3Rec6lplN";
+  $emailFrom = $email;
+  $emailFromName = "Contact - geeler.net";
+  $emailTo = "noah.d.geeler@gmail.com";
+  $emailToName = "Noah Geeler";
+  $emailSubject = "Contact from $email";
+  $emailAlt = $_SESSION["contactmessage"];
+  $msgHTML = preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["contactmessage"], file_get_contents('contact.html'));
 }else{
   header("Location: ../404/");
 }
@@ -46,5 +57,12 @@ if(!$mail->send()){
   if(isset($_GET["verify"])){
     unset($_SESSION["verifyToken"]);
     header("Location: ../register/success/"); //when debugging comment out
+  }
+  if($_SESSION["contact"]){
+    //insert into db
+    unset($_SESSION["contact"]);
+    unset($_SESSION["contactmessage"]);
+    unset($_SESSION["contactemail"]);
+    header("Location: ./home/contact/success/");
   }
 }
