@@ -163,3 +163,5 @@ Site made by Noah Geeler
   -->
 </body>
 </html>
+<?php
+  mysqli_close($con);
