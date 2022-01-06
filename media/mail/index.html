@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Mail</title>
+</head>
+<body>
+  <div>
+    <div class="main">
+      <header>
+        <h1>geeler</h1>
+      </header>
+      <div class="body">
+        <a href="https://dev.geeler.net/verify?token=${token}">
+          Verify your Account
+        </a>
+      </div>
+      <footer>
+        <span>©️ 2021 - geeler.net</span>
+      </footer>
+    </div>
+  </div>
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  body > div{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+  div > div.main{
+    background-color: white;
+    border-left: #0d3263 solid 3px;
+    border-right: #0d3263 solid 3px;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    min-height: 600px;
+  }
+  header h1{
+    font-family: Russo One;
+    font-size: 6vw;
+    color: #144A8F;
+    padding-left: 20px;
+  }
+  .body{
+    height: 60%;
+    background-color: #144A8F;
+    background-image: url("https://dev.geeler.net/media/backgrounds/triangles.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .body a{
+    padding: 13px 20px;
+    border-radius: 3px;
+    color: #144A8F;
+    background-color: white;
+    font-family: Alata;
+    font-weight: 1000;
+    text-decoration: none;
+    font-size: 3vw;
+  }
+  footer{
+    font-family: Alata;
+    color: #144A8F;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+</html>
