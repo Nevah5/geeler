@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS geeler;
 CREATE DATABASE IF NOT EXISTS geeler;
 USE geeler;
 
+DROP TABLE IF EXISTS contact;
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS verify;
 DROP TABLE IF EXISTS lang;
@@ -39,6 +40,11 @@ CREATE TABLE ads(
   userFK VARCHAR(32) NOT NULL,
   accepted TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1)
 );
+CREATE TABLE contact(
+  ID INT UNSIGNED NOT NULL PRIMARY KEY,
+  email VARCHAR(300) NOT NULL,
+  message TEXT NOT NULL
+);
 
 INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
@@ -74,13 +80,16 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "home", "contact.phone.emoji", "📞 Telefon"),
 ("DE", "home", "contact.phone", "Telefon"),
 ("DE", "home", "contact.message", "Wenn du versuchst mich mit der überstehenden Email zu erreichen, antworte ich wahrschinlich nicht direkt. Ich empfehle das Formular unten zu benutzen, das automatisch eine Email in meine private Inbox weiterleitet."),
+("DE", "home", "contact.message.empty", "Bitte gib eine Nachricht an."),
 ("DE", "home", "contact.form.title", "Schick mir eine Nachricht"),
 ("DE", "home", "contact.form.email", "Deine Email"),
 ("DE", "home", "contact.form.message", "Deine Nachricht"),
 ("DE", "home", "contact.form.acceptdb", "Du bist dir bewusst, dass ich deine Email Adresse mit Nachricht und deiner IP Adresse in meiner Datenbank speichere. Ich werde diese nur für Private zwecke nutzen."),
+("DE", "home", "contact.form.acceptdb.required", "Du musst es akzeptieren."),
 ("DE", "home", "contact.form.acceptsecurity", "Du hast die <a href=""/privacy/"" target=""_blank"">Datenschutzbedingunen</a> gelesen und akzeptierst diese."),
 ("DE", "home", "contact.form.acceptsecurity.required", "Du musst die Datenschutzbedingunen akzeptieren."),
 ("DE", "home", "contact.form.submit", "Senden"),
+("DE", "home", "contact.form.success", "Deine Nachricht wurde erfolgreich versendet!"),
 ("DE", "home", "donate.title", "Spenden um mich zu unterstützen"),
 ("DE", "home", "donate.or", "oder"),
 ("DE", "login", "title", "Einloggen - geeler.net"),
@@ -119,7 +128,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "register", "user.register", "Registrieren"),
 ("DE", "register", "accept.email", "Du möchtest über Email Benachrichtigungen und Updates erhalten."),
 ("DE", "register", "accountlogin", "Du hast bereits ein Account erstellt? Logge dich <a href=""/register/"">hier</a> ein!"),
-("EN", "register", "required", "Benötigt"),
+("DE", "register", "required", "Benötigt"),
 ("DE", "register_success", "title", "Erfolg! - geeler.net"),
 ("DE", "register_success", "section.title", "Registrieren"),
 ("DE", "register_success", "success", "Erfolg!"),
@@ -167,13 +176,16 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "contact.phone.emoji", "📞 Phone"),
 ("EN", "home", "contact.phone", "Phone"),
 ("EN", "home", "contact.message", "If you try to reach me on the specified email above, I might not respond quickly. I'd recommend using the form below, that automatically sends an email, with your message to my private inbox."),
+("EN", "home", "contact.message.empty", "Please specify a message."),
 ("EN", "home", "contact.form.title", "Send me a message"),
 ("EN", "home", "contact.form.email", "Your Email"),
 ("EN", "home", "contact.form.message", "Your Message"),
 ("EN", "home", "contact.form.acceptdb", "You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only."),
+("EN", "home", "contact.form.acceptdb.required", "You have to accept."),
 ("EN", "home", "contact.form.acceptsecurity", "You have read the <a href=""/privacy/"" target=""_blank"">Privacy</a> agreement and accept it."),
 ("EN", "home", "contact.form.acceptsecurity.required", "You have to accept the Privacyagreement."),
 ("EN", "home", "contact.form.submit", "Submit"),
+("EN", "home", "contact.form.success", "Your message was sent successfully!"),
 ("EN", "home", "donate.title", "Donate to support me"),
 ("EN", "home", "donate.or", "or"),
 ("EN", "login", "title", "Login - geeler.net"),
