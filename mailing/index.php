@@ -10,7 +10,7 @@ require '../media/PHPMailer/src/Exception.php';
 require '../media/PHPMailer/src/PHPMailer.php';
 require '../media/PHPMailer/src/SMTP.php';
 
-if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && !isset($_SESSION["registeremail"])){
+if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["registeremail"])){
   $smtpUsername = "verify@geeler.net";
   $smtpPassword = "q6vuxly_Swu3Rec6lplN";
   $emailFrom = $smtpUsername;
@@ -19,6 +19,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && !isset($_SESSION["r
   $emailToName = $_SESSION["registeremail"];
   $emailSubject = "Verification Account";
   $emailAlt = "https://dev.geeler.net/verify?token=" . $_SESSION["verifyToken"];
+  $msgHTML = preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'));
 }else{
   header("Location: ../404/");
 }
@@ -36,7 +37,7 @@ $mail->setFrom($emailFrom, $emailFromName);
 $mail->addAddress($emailTo, $emailToName);
 $mail->Subject = $emailSubject;
 $mail->IsHTML(true);
-$mail->msgHTML(preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'), __DIR__)); //Read an HTML message body from an external file, convert referenced images to embedded,
+$mail->msgHTML($msgHTML, __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = $emailAlt;
 
 if(!$mail->send()){
