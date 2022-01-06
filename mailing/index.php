@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 ob_flush();
+$con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -59,10 +60,13 @@ if(!$mail->send()){
     header("Location: ../register/success/"); //when debugging comment out
   }
   if($_SESSION["contact"]){
-    //insert into db
+    $message = $_SESSION["contactmessage"];
+    mysqli_query($con, "INSERT INTO contact VALUES (, $email, $message)");
     unset($_SESSION["contact"]);
     unset($_SESSION["contactmessage"]);
     unset($_SESSION["contactemail"]);
     header("Location: ./home/contact/success/");
   }
 }
+
+mysqli_close($con);
