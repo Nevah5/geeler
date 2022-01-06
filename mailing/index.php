@@ -35,6 +35,7 @@ $mail->Password = $smtpPassword;
 $mail->setFrom($emailFrom, $emailFromName);
 $mail->addAddress($emailTo, $emailToName);
 $mail->Subject = $emailSubject;
+$mail->IsHTML(true);
 $mail->msgHTML(preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'), __DIR__)); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = $emailAlt;
 
