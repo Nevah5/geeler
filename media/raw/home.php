@@ -1,5 +1,7 @@
 <?php
   session_start();
+  ob_start();
+  ob_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -298,14 +300,14 @@
         <div>
           <label for="message">${home.contact.form.message}</label>
         </div>
-        <textarea type="text" id="message" name="message"></textarea>
+        <textarea type="text" id="message" name="message"><?= $_POST["message"] ?></textarea>
         <?php
           if(isset($_POST["submit"])){
             $messagevalid = false;
             if(!empty($_POST["message"])){
               $messagevalid = true;
             }else{
-              echo "<span id=\"error\">${home.contact.form.message.empty}</span>";
+              echo "<span id=\"error\">${home.contact.message.empty}</span>";
             }
           }
         ?>
@@ -316,7 +318,7 @@
         </div>
         <?php
           if(isset($_POST["submit"])){
-            if(!isset($_POST["acceptb"])){
+            if(!isset($_POST["acceptdb"])){
               echo "<span id=\"error\">${home.contact.form.acceptdb.required}</span>";
             }
           }
@@ -342,10 +344,11 @@
             if(
               $emailvalid &&
               $messagevalid &&
-              isset($_POST["acceptb"]) &&
-              isset($_POST["acceptdb"])
+              isset($_POST["acceptdb"]) &&
+              isset($_POST["acceptsecurity"])
             ){
-              $_SESSION["contactmessage"] = $_POST["message"];
+              $_SESSION["contactmessage"] = htmlspecialchars_decode($_POST["message"]);
+              // $_SESSION["contactmessage"] = str_replace(["\n", "\r"], "<br>", htmlspecialchars_decode($_POST["message"]));
               $_SESSION["contactemail"] = $_POST["sender"];
               $_SESSION["contact"] = true;
               header("Location: ./mailing/");
