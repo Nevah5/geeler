@@ -313,7 +313,7 @@
               if(strlen($_POST["message"]) > 75){
                 $txtlen = true;
               }else{
-                echo "<span id=\"error\">Please write at least 75 characters.</span>";
+                echo "<span id=\"error\">${home.contact.form.message.short}</span>";
               }
             }else{
               echo "<span id=\"error\">${home.contact.message.empty}</span>";
@@ -368,7 +368,7 @@
                 //mesage insert into db in: "/mailing/index.php"
                 header("Location: ./mailing/");
               }else{
-                echo "<span id=\"error\" style=\"margin-top: 10px; font-size: 1.5rem;\">Please stop spamming messages. Try again later.</span>";
+                echo "<span id=\"error\" style=\"margin-top: 10px; font-size: 1.5rem;\">${home.contact.form.spam}</span>";
               }
             }
           }

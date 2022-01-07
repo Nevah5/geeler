@@ -32,12 +32,14 @@ home.contact.message.empty:Please specify a message.
 home.contact.form.title:Send me a message
 home.contact.form.email:Your Email
 home.contact.form.message:Your Message
+home.contact.form.message.short:Please write at least 75 characters.
 home.contact.form.acceptdb:You are aware that I store your message with your given email adress and your IP Adress in my database. I will use them for private or checking purposes only.
 home.contact.form.acceptdb.required:You have to accept.
 home.contact.form.acceptsecurity:You have read the <a href="/privacy/" target="_blank">Privacy</a> agreement and accept it.
 home.contact.form.acceptsecurity.required:You have to accept the Privacyagreement.
 home.contact.form.submit:Submit
 home.contact.form.success:Your message was sent successfully!
+home.contact.form.spam:Please stop spamming messages. Try again later.
 home.donate.title:Donate to support me
 home.donate.or:or
 
@@ -55,6 +57,7 @@ login.user.register:Register
 login.password.forgot:Forgot Password?
 login.stayloggedin:Stay logged in
 login.accountregister:You don't have an account yet? Create one <a href="/register/">here</a>!
+login.account.verify.first:Please verify your account first.
 
 register.title:Register - geeler.net
 register.section.title:Register

@@ -32,12 +32,14 @@ home.contact.message.empty:Bitte gib eine Nachricht an.
 home.contact.form.title:Schick mir eine Nachricht
 home.contact.form.email:Deine Email
 home.contact.form.message:Deine Nachricht
+home.contact.form.message.short:Bitte schreibe mindestens 75 Zeichen als Nachricht.
 home.contact.form.acceptdb:Du bist dir bewusst, dass ich deine Email Adresse mit Nachricht und deiner IP Adresse in meiner Datenbank speichere. Ich werde diese nur für Private zwecke nutzen.
 home.contact.form.acceptdb.required:Du musst es akzeptieren.
 home.contact.form.acceptsecurity:Du hast die <a href="/privacy/" target="_blank">Datenschutzbedingunen</a> gelesen und akzeptierst diese.
 home.contact.form.acceptsecurity.required:Du musst die Datenschutzbedingunen akzeptieren.
 home.contact.form.submit:Senden
 home.contact.form.success:Deine Nachricht wurde erfolgreich versendet!
+home.contact.form.spam:Bitte hör auf Nachrichten zu spammen. Versuch es später erneut.
 home.donate.title:Spenden um mich zu unterstützen
 home.donate.or:oder
 
@@ -55,6 +57,7 @@ login.user.register:Registrieren
 login.password.forgot:Passwort vergessen?
 login.stayloggedin:Eingeloggt bleiben
 login.accountregister:Du hast noch kein Account? Erstelle einen <a href="/register/">hier</a>!
+login.account.verify.first:Bitte verifiziere deinen Account zuerst.
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren
