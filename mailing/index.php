@@ -74,7 +74,8 @@ if(!$mail->send()){
   if($_SESSION["contact"]){
     $message = $_SESSION["contactmessage"];
     $email = $_SESSION["contactemail"];
-    mysqli_query($con, "INSERT INTO contact VALUES (NULL, '$email', '$message')");
+    $IP = $_SERVER['REMOTE_ADDR'];
+    mysqli_query($con, "INSERT INTO contact VALUES (NULL, '$email', '$message', '$IP', DEFAULT)");
     unset($_SESSION["contact"]);
     unset($_SESSION["contactmessage"]);
     unset($_SESSION["contactemail"]);

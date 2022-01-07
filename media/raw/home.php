@@ -2,6 +2,9 @@
   session_start();
   ob_start();
   ob_flush();
+  // error_reporting(E_ALL);
+  // ini_set("display_errors", 1);
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -279,8 +282,8 @@
       </div>
     </div>
     <div class="wrapper" id="form">
-      <h3>${home.contact.form.title}</h3>
-      <form class="form" action="?contact#contact" method="POST">
+      <h3 id="contactform">${home.contact.form.title}</h3>
+      <form class="form" action="?contact#contactform" method="POST">
         <label for="sender">${home.contact.form.email}</label>
         <input type="text" id="sender" name="sender" maxlength="320" value="<?= $_POST["sender"] ?>">
         <?php
@@ -347,11 +350,19 @@
               isset($_POST["acceptdb"]) &&
               isset($_POST["acceptsecurity"])
             ){
-              $_SESSION["contactmessage"] = htmlspecialchars_decode($_POST["message"]);
-              // $_SESSION["contactmessage"] = str_replace(["\n", "\r"], "<br>", htmlspecialchars_decode($_POST["message"]));
-              $_SESSION["contactemail"] = $_POST["sender"];
-              $_SESSION["contact"] = true;
-              header("Location: ./mailing/");
+              $IP = $_SERVER['REMOTE_ADDR'];
+              $query = mysqli_query($con, "SELECT * FROM contact WHERE DATE_ADD(NOW(), INTERVAL 1 DAY) > sent AND IP='$IP'");
+              $numRequests = mysqli_num_rows($query);
+
+              if($numRequests < 2){
+                $_SESSION["contactmessage"] = htmlspecialchars_decode($_POST["message"]);
+                $_SESSION["contactemail"] = $_POST["sender"];
+                $_SESSION["contact"] = true;
+                //mesage insert into db in: "/mailing/index.php"
+                header("Location: ./mailing/");
+              }else{
+                echo "<span id=\"error\" style=\"margin-top: 10px; font-size: 1.5rem;\">Please stop spamming messages. Try again later.</span>";
+              }
             }
           }
         ?>
