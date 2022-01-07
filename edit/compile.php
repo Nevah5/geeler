@@ -27,7 +27,12 @@ if ($handle) {
   while (($line = fgets($handle)) != false) {
     if (preg_match('/[${]{1}.+[}]{1}/', $line)) {
       $index = explode('${', explode('}', $line)[0])[1]; //gets ${this}
-      $replace_with = $replace[$index]; //gets contents to replace with placeholder
+      //if footer replace with footer
+      if($index == "footer"){
+        $replace_with = file_get_contents("../media/footer/footer.php");
+      }else{
+        $replace_with = $replace[$index]; //gets contents to replace with placeholder
+      }
       $line = preg_replace('/[${]{1}.+[}]{1}/', $replace_with, $line); //replaces placeholder
       $new_content .= $line;
     } else {
