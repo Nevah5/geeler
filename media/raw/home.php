@@ -307,8 +307,14 @@
         <?php
           if(isset($_POST["submit"])){
             $messagevalid = false;
+            $txtlen = false;
             if(!empty($_POST["message"])){
               $messagevalid = true;
+              if(strlen($_POST["message"]) > 75){
+                $txtlen = true;
+              }else{
+                echo "<span id=\"error\">Please write at least 75 characters.</span>";
+              }
             }else{
               echo "<span id=\"error\">${home.contact.message.empty}</span>";
             }
@@ -347,6 +353,7 @@
             if(
               $emailvalid &&
               $messagevalid &&
+              $txtlen &&
               isset($_POST["acceptdb"]) &&
               isset($_POST["acceptsecurity"])
             ){
