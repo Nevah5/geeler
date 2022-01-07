@@ -37,7 +37,7 @@
             <label for="email">${login.email}</label>
             <div>
               <i id="email"></i>
-              <input type="text" name="email" id="email" value="<?= $_POST["email"] ?>">
+              <input type="text" name="email" id="email" value="<?php echo !$_SESSION["verified"] ? $_POST["email"] : $_SESSION["email"] ?>">
             </div>
           </div>
           <?php

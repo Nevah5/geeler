@@ -262,7 +262,7 @@ Site made by Noah Geeler
     global $con;
 
     $userID = uniqid();
-    $verifyToken = bin2hex(random_bytes(96));
+    $verifyToken = substr(bin2hex(random_bytes(96)), 0, 128);
     $pw = password_hash($p, PASSWORD_DEFAULT);
 
     mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT)");
