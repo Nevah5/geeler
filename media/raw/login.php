@@ -71,12 +71,16 @@
                 if(!password_verify($_POST["password"], $pw)){
                   echo "<span>${login.error.passwordwrong}</span>" . PHP_EOL;
                 }else{
-                  //user login
-                  $_SESSION["login"] = true;
-                  $_SESSION["email"] = $email;
-                  $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
-                  $_SESSION["username"] = $username;
-                  header("Location: /");
+                  if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){
+                    echo "<span>Please verify your account first.</span>";
+                  }else{
+                    //user login
+                    $_SESSION["login"] = true;
+                    $_SESSION["email"] = $email;
+                    $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
+                    $_SESSION["username"] = $username;
+                    header("Location: /");
+                  }
                 }
               }
             }else if($_SESSION["login"]){
