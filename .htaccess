@@ -1,0 +1,14 @@
+Require valid-user
+AuthType Basic
+AuthName 'Developer Access'
+AuthUserFile /home/ubibudud/.htpasswds/.dev
+
+AddHandler application/x-httpd-php80 .php
+
+ErrorDocument 401 /401/
+ErrorDocument 403 /403/
+ErrorDocument 404 /404/
+ErrorDocument 410 /410/
+
+#@__HCP_END__@#
+# Anything after the comment above is left alone
