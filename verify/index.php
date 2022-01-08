@@ -2,6 +2,7 @@
 session_start();
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 
+//verify account
 if(!isset($_GET["token"])){
   $_SESSION["verifiederror"] = "error_token_not_set";
   header("Location: ../login/");
@@ -16,6 +17,12 @@ if(!isset($_GET["token"])){
     mysqli_query($con, "DELETE FROM verify WHERE token='$token'");
     $_SESSION["verified"] = true;
     $_SESSION["email"] = $email;
+
+    //if user already logged in
+    if($_SESSION["login"]){
+      session_destroy();
+      session_start();
+    }
     header("Location: ../login/");
   }
 }
