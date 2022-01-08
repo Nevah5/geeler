@@ -36,9 +36,9 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailToName = "Noah Geeler";
   $emailSubject = "Contact from $email";
   $emailAlt = $_SESSION["contactmessage"];
-  $isHTML = false;
-  // $msgHTML = preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["contactmessage"], file_get_contents('contact.html'));
-  $msgHTML = null;
+  $isHTML = true;
+  $msgHTML = file_get_contents("contact.html");
+  $msgHTML = preg_replace('/[${]{1}.[message]+[}]{1}/', str_replace("\n", "<br>", $_SESSION["contactmessage"]), $msgHTML);
 }else{
   header("Location: ../404/");
 }
