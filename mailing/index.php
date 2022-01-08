@@ -23,7 +23,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Verification Account";
   $emailAlt = "https://dev.geeler.net/verify?token=" . $_SESSION["verifyToken"];
   $isHTML = true;
-  $msgHTML = preg_replace('/[${]{1}.+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'));
+  $msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'));
 }else if($_SESSION["contact"]){
   $email = $_SESSION["contactemail"];
   $smtpUsername = "contact@geeler.net";
