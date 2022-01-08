@@ -94,7 +94,7 @@
                   echo "<span>${login.error.passwordwrong}</span>" . PHP_EOL;
                 }else{
                   if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){
-                    echo "<span>Please verify your account first.</span>";
+                    echo "<span>${login.account.verify.first}</span>";
                   }else{
                     //user login
                     $_SESSION["login"] = true;
