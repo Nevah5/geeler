@@ -6,7 +6,7 @@ foreach($langs as $lang){
   echo "INSERT INTO lang (lang, type, title, content) VALUES" . PHP_EOL;
   while($line = fgets($file)){
     //split up line with both title and value
-    $content = explode(":", $line);
+    $content = explode(":", $line, 2);
     $content = str_replace(array("\r", "\n"), '', $content);
     $title = $content[0];
     $value = str_replace('"', '""', $content[1]);
