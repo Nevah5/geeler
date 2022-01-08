@@ -1,29 +1,116 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-  <meta charset='UTF-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap" rel="stylesheet">
-  <title>Verification Mail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap" rel="stylesheet">
+  <title>Verification Email</title>
+  <style>
+    body, table, tbody{
+      margin: 0;
+      padding: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+      color: #144A8F;
+    }
+    h1{
+      font-family: 'Russo One', 'arial black';
+    }
+    h2, h3{
+      font-family: 'Concert One', 'arial black';
+    }
+    h4, h5, h6, p{
+      font-family: 'Alata', 'arial black';
+    }
+    a, a:visited {
+      color: #144A8F !important; /* Or whatever white you're using */
+    }
+    td.wrapper > table{
+      border: #144A8F solid 3px;
+    }
+    h1{
+      margin-left: 15px;
+      font-size: 2.5rem;
+    }
+    h1 a{
+      text-decoration: none;
+      color: #144A8F;
+    }
+    .header{
+      border-bottom: #144A8F solid 3px;
+    }
+    .body h2{
+      font-size: 2rem;
+      margin: 50px 0 0;
+    }
+    .body a{
+      padding: 10px 50px;
+      background-color: #144A8F;
+      color: white !important;
+      font-family: Concert One;
+      font-size: 1.4rem;
+      text-decoration: none;
+      border-radius: .2em;
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0;">
-  <div style="display: flex; justify-content: center; height: 100vh; position: relative;">
-    <div class='main' style="background-color: white; border-left: solid #0d3263 3px; width: 70%; height: 100%; position: relative; min-height: 600px;">
-      <header>
-        <h1 style="font-family: 'Russo One', sans-serif; font-size: 6vw; color: #144A8F; padding-left: 20px;">geeler</h1>
-      </header>
-      <div class='body' style="height: 60%; width: 100%; display: flex; justify-content: center; align-items: center;">
-        <a href='https://dev.geeler.net/verify?token=${verifyToken}' style="padding: 13px 20px; border-radius: 3px; color: #144A8F; background-color: white; font-family: 'Alata', sans-serif; text-decoration: none; font-size: 3vw;">
-          Verify your Account
-        </a>
-      </div>
-      <footer style="font-family: 'Alata', sans-serif; color: #144A8F; width: 100%; text-align: center;">
-        <span>©️ 2021 - geeler.net</span>
-      </footer>
-    </div>
-  </div>
+
+<body>
+  <table width="100%">
+    <tr>
+      <td class="wrapper" width="600" align="center">
+        <table cellpadding="0" cellspacing="0">
+          <tr class="header">
+            <td width="600">
+              <table>
+                <tr>
+                  <td align="left">
+                    <h1><a href="https://geeler.net/">geeler.net</a></h1>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="body">
+            <td width="600">
+              <table>
+                <tr>
+                  <td align="center" width="600">
+                    <h2>Verify your account</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" width="600">
+                    <p>By clicking the button down below, your account will be verified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" width="600" height="200">
+                    <a href="https://dev.geeler.net/verify?token=${verifyToken}">Verify</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="footer">
+            <td width="600">
+              <table>
+                <tr>
+                  <td align="center" width="600" height="100">
+                    <p>©️ 2022 - <a href="https://geeler.net/">geeler.net</a></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+
 </html>
