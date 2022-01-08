@@ -96,19 +96,13 @@
                   if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){
                     echo "<span>${login.account.verify.first}</span>";
                   }else{
-                    //user login
-                    $_SESSION["login"] = true;
-                    $_SESSION["email"] = $email;
-                    $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
-                    $_SESSION["username"] = $username;
-                    header("Location: /");
+                    $login = true;
                   }
                 }
               }
             }else if($_SESSION["login"]){
               header("Location: /");
             }
-            mysqli_close($con);
           ?>
           <a href="./forgot-password/">${login.password.forgot}</a>
           <div class="check">
@@ -116,6 +110,25 @@
             <label for="stayloggedin" id="chkbx"><div id="tik"></div></label>
             <label for="stayloggedin">${login.stayloggedin}</label>
           </div>
+          <?php
+            if(isset($_POST["submit"])){
+              if(isset($login)){
+                $uID = mysqli_fetch_array(mysqli_query($con, "SELECT ID FROM users WHERE email='$email'"))["ID"];
+                if(isset($_POST["stayloggedin"])){
+                  $token = bin2hex(random_bytes(8));
+                  $secret = bin2hex(random_bytes(8));
+                  $cookie = hash_hmac('sha256', $uID . ":" . $token, $secret);
+                  setcookie("stayloggedin", $cookie, time()+60*60*24*30);
+                }
+                //user login
+                $_SESSION["login"] = true;
+                $_SESSION["email"] = $email;
+                $username = mysqli_fetch_array(mysqli_query($con, "SELECT username FROM users WHERE email='$email' LIMIT 1"))["username"];
+                $_SESSION["username"] = $username;
+                header("Location: /");
+              }
+            }
+          ?>
           <label for="submit" id="submitbtn">${login.submit}</label>
           <input type="submit" name="submit" id="submit">
           <p>${login.accountregister}</p>
