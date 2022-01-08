@@ -111,6 +111,10 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "stayloggedin", "Eingeloggt bleiben"),
 ("DE", "login", "accountregister", "Du hast noch kein Account? Erstelle einen <a href=""/register/"">hier</a>!"),
 ("DE", "login", "account.verify.first", "Bitte verifiziere deinen Account zuerst."),
+("DE", "login", "verification.error.title", "Verifizierungsfehler:"),
+("DE", "login", "verification.error.tokennotset", "Du musst einen Token angeben."),
+("DE", "login", "verification.error.tokeninvalid", "Der angegebene Token ist nicht gültig."),
+("DE", "login", "verification.success", "Du hast deinen Account erfolgreich verifiziert."),
 ("DE", "register", "title", "Registrieren - geeler.net"),
 ("DE", "register", "section.title", "Registrieren"),
 ("DE", "register", "email", "Email Adresse"),
@@ -210,6 +214,10 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "stayloggedin", "Stay logged in"),
 ("EN", "login", "accountregister", "You don't have an account yet? Create one <a href=""/register/"">here</a>!"),
 ("EN", "login", "account.verify.first", "Please verify your account first."),
+("EN", "login", "verification.error.title", "Verification Error:"),
+("EN", "login", "verification.error.tokennotset", "You have to specify a Token."),
+("EN", "login", "verification.error.tokeninvalid", "The specified Token is invalid."),
+("EN", "login", "verification.success", "You successfully verified your account."),
 ("EN", "register", "title", "Register - geeler.net"),
 ("EN", "register", "section.title", "Register"),
 ("EN", "register", "email", "Email"),
@@ -248,3 +256,4 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "footer", "stuff.guidelines", "Guidelines"),
 ("EN", "footer", "stuff.acknownledgements", "Acknownledgements"),
 ("EN", "footer", "stuff.licence", "Licence");
+

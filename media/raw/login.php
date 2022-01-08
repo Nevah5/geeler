@@ -33,6 +33,28 @@
       <h2>${login.section.title}</h2>
       <div class="wrapper">
         <div class="box">
+          <?php
+            if(isset($_SESSION["verifiederror"])){
+              if($_SESSION["verifiederror"] == "error_token_not_set"){
+                echo "<div class=\"verification\">
+                  <span id=\"title\">${login.verification.error.title}</span>
+                  <span>${login.verification.error.tokennotset}</span>
+                </div>";
+              }else{
+                echo "<div class=\"verification\">
+                  <span id=\"title\">${login.verification.error.title}</span>
+                  <span>${login.verification.error.tokeninvalid}</span>
+                </div>";
+              }
+              unset($_SESSION["verifiederror"]);
+            }else if($_SESSION["verified"]){
+              echo "
+              <div class=\"verification\" id=\"success\">
+                <span id=\"title\">${register_success.success}</span>
+                <span>${login.verification.success}</span>
+              </div>";
+            }
+          ?>
           <div class="grid">
             <label for="email">${login.email}</label>
             <div>

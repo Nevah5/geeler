@@ -58,6 +58,10 @@ login.password.forgot:Forgot Password?
 login.stayloggedin:Stay logged in
 login.accountregister:You don't have an account yet? Create one <a href="/register/">here</a>!
 login.account.verify.first:Please verify your account first.
+login.verification.error.title:Verification Error:
+login.verification.error.tokennotset:You have to specify a Token.
+login.verification.error.tokeninvalid:The specified Token is invalid.
+login.verification.success:You successfully verified your account.
 
 register.title:Register - geeler.net
 register.section.title:Register

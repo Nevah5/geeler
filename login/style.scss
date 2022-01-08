@@ -70,6 +70,36 @@ form{
         min-width: 400px;
         transition: all .5s;
 
+        div.verification{
+          border: #b34040 solid 2px;
+          border-radius: .3em;
+          padding: 20px 0 20px 15px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          background-color: rgba(179, 64, 64, 0.255);
+
+          &#success{
+            border: #0d8b28 solid 2px;
+            background-color: rgba(13, 139, 40, 0.255);
+
+            span{
+              color: #0d8b28;
+            }
+          }
+          span{
+            color: #b34040;
+          }
+          span#title{
+            font-size: .9rem;
+          }
+          span:not(#title){
+            font-size: .75rem;
+          }
+        }
         &#successbox{
           align-items: center !important;
           flex-direction: column !important;

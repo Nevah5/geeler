@@ -58,6 +58,10 @@ login.password.forgot:Passwort vergessen?
 login.stayloggedin:Eingeloggt bleiben
 login.accountregister:Du hast noch kein Account? Erstelle einen <a href="/register/">hier</a>!
 login.account.verify.first:Bitte verifiziere deinen Account zuerst.
+login.verification.error.title:Verifizierungsfehler:
+login.verification.error.tokennotset:Du musst einen Token angeben.
+login.verification.error.tokeninvalid:Der angegebene Token ist nicht gültig.
+login.verification.success:Du hast deinen Account erfolgreich verifiziert.
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren
