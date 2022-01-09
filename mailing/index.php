@@ -52,6 +52,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Two factor authentication code - geeler.net";
 
   $TwoFacAuthCode = bin2hex(random_bytes(3));
+  $TwoFacAuthCode = strtoupper($TwoFacAuthCode);
   //insert code into db
   $uID = $_SESSION["2FA_userID"];
   mysqli_query($con, "INSERT INTO 2FA (ID, userFK, code, valid) VALUES (NULL, '$uID', '$TwoFacAuthCode', NOW() + INTERVAL 15 MINUTE)");

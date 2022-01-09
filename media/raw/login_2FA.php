@@ -67,6 +67,26 @@
           </div>
           <?php
             //validate code
+            if(isset($_POST["submit"])){
+              $uID = $_SESSION["2FA_userID"];
+              $code = strtolower($_POST["2fa"]);
+              $sql = "SELECT * FROM 2FA WHERE userFK='$uID' AND code='$code' AND valid > NOW() ORDER BY valid DESC LIMIT 1";
+              $query = mysqli_query($con, $sql);
+              if(mysqli_num_rows($query) != 1){
+                echo "<span id=\"error\">${login.2fa.error.code.invalid}</span>";
+              }else{
+                //code is valid
+                $_SESSION["login"] = true;
+                $_SESSION["userID"] = $_SESSION["2FA_userID"];
+                $_SESSION["email"] = $_SESSION["2FA_email"];
+                $_SESSION["username"] = $_SESSION["2FA_username"];
+                unset($_SESSION["2FA_username"]);
+                unset($_SESSION["2FA_email"]);
+                unset($_SESSION["2FA_userID"]);
+                unset($_SESSION["2FA_sent"]);
+                header("Location: ../../");
+              }
+            }
           ?>
           <a href="./resend/">${login.2fa.resend}</a>
           <label for="submit" id="submitbtn">${login.submit.2fa}</label>

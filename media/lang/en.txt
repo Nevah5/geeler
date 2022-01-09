@@ -70,7 +70,8 @@ login.submit.2fa:Validate
 login.2fa.message.title:Two Factor Authentication:
 login.2fa.message.resent:The Code was successfully resent. Please check your inbox.
 login.2fa.message.sent:The Code was successfully sent. Please check your inbox.
-login.2fa.message.wait:Please wait a bit befor resending.
+login.2fa.message.wait:Please wait a bit before resending.
+login.2fa.error.code.invalid:This code is not valid.
 
 register.title:Register - geeler.net
 register.section.title:Register
