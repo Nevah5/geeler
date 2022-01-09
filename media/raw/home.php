@@ -85,7 +85,7 @@
         <div></div>
       </label>
       <?php
-        if(!$_SESSION["login"]){
+        if(!isset($_SESSION["login"])){
       ?>
       <ul class="user">
         <a href="/login/">${home.user.login}</a>

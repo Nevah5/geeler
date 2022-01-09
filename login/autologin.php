@@ -11,9 +11,10 @@ if(isset($_COOKIE["stayloggedin"])){
   if(hash_hmac('sha256', $uID . ":" . $token, $secret) == $hash){
     //login
     $_SESSION["login"] = true;
-    $email = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE ID='$uID'"))["email"];
+    $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE ID='$uID'"));
     $_SESSION["userID"] = $uID;
-    $_SESSION["email"] = $email;
+    $_SESSION["email"] = $userData["email"];
+    $_SESSION["username"] = $userData["username"];
   }
 }
 mysqli_close($con);
