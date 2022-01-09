@@ -119,7 +119,7 @@
                   $token = bin2hex(random_bytes(8));
                   $secret = bin2hex(random_bytes(8));
                   $cookie = $uID . ":" . $secret . ":" . hash_hmac('sha256', $uID . ":" . $token, $secret);
-                  setcookie("stayloggedin", $cookie, time()+60*60*24*30);
+                  setcookie("stayloggedin", $cookie, time()+60*60*24*30, "/");
                   mysqli_query($con, "INSERT INTO cookie VALUES (NULL, '$uID', '$token', '$secret')");
                 }
                 //user login
