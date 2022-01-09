@@ -123,14 +123,24 @@
                   setcookie("stayloggedin", $cookie, time()+60*60*24*30, "/");
                   mysqli_query($con, "INSERT INTO cookie VALUES (NULL, '$uID', '$token', '$secret')");
                 }
-                //user login
-                $_SESSION["login"] = true;
-                $_SESSION["email"] = $email;
                 $userData = mysqli_fetch_array(mysqli_query($con, "SELECT username, ID FROM users WHERE email='$email' LIMIT 1"));
-                $uID = $userData["ID"];
-                $_SESSION["username"] = $userData["username"];
-                $_SESSION["userID"] = $uID;
-                header("Location: /");
+                if(mysqli_fetch_array(mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'"))["2FA"] == true){
+                  //user has 2FA enabled
+                  $_SESSION["2FA"] = true;
+                  $_SESSION["2FA_email"] = $email;
+                  $_SESSION["2FA_username"] = $userData["username"];
+                  $_SESSION["2FA_userID"] = $uID;
+                  //send mail
+                  header("Location: ../mailing/");
+                }else{
+                  //user login
+                  $_SESSION["login"] = true;
+                  $_SESSION["email"] = $email;
+                  $uID = $userData["ID"];
+                  $_SESSION["username"] = $userData["username"];
+                  $_SESSION["userID"] = $uID;
+                  header("Location: /");
+                }
               }
             }
           ?>

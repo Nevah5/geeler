@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap" rel="stylesheet">
-  <title>Contact Email</title>
+  <title>2FA Email</title>
   <style>
     body, table, tbody{
       margin: 0;
@@ -47,6 +47,15 @@
       font-size: 2rem;
       margin: 50px 0 0;
     }
+    .body a{
+      padding: 10px 50px;
+      background-color: #144A8F;
+      color: white !important;
+      font-family: Concert One;
+      font-size: 1.4rem;
+      text-decoration: none !important;
+      border-radius: .2em;
+    }
   </style>
 </head>
 
@@ -71,12 +80,17 @@
               <table>
                 <tr>
                   <td align="center" width="600">
-                    <h2>You have received a new message!</h2>
+                    <h2>Two Factor Authentication</h2>
                   </td>
                 </tr>
                 <tr>
                   <td align="center" width="600">
-                    <p>${message}</p>
+                    <p>Please type in the code below. Keep in mind that this code is only valid 15 Minutes after generation.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" width="600" height="200">
+                    <a>${code}</a>
                   </td>
                 </tr>
               </table>
