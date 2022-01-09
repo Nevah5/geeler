@@ -48,7 +48,7 @@
                 </div>";
               }
               unset($_SESSION["verifiederror"]);
-            }else if($_SESSION["verified"]){
+            }else if(isset($_SESSION["verified"])){
               echo "
               <div class=\"verification\" id=\"success\">
                 <span id=\"title\">${register_success.success}</span>
@@ -87,6 +87,7 @@
           </div>
           <?php
             if($_POST["submit"] && !$_SESSION["login"]){
+              $login = false;
               if(empty($_POST["password"]) && $userexists){
                 echo "<span>${login.error.nopassword}</span>" . PHP_EOL;
               }else if($userexists){
@@ -102,7 +103,7 @@
                 }
               }
             }else if($_SESSION["login"]){
-              header("Location: /");
+              header("Location: ../");
             }
           ?>
           <a href="./forgot-password/">${login.password.forgot}</a>
@@ -112,8 +113,8 @@
             <label for="stayloggedin">${login.stayloggedin}</label>
           </div>
           <?php
-            if(isset($_POST["submit"])){
-              if(isset($login)){
+            if($_POST["submit"] && !$_SESSION["login"]){
+              if($login){
                 $uID = mysqli_fetch_array(mysqli_query($con, "SELECT ID FROM users WHERE email='$email'"))["ID"];
                 if(isset($_POST["stayloggedin"])){
                   $token = bin2hex(random_bytes(8));
