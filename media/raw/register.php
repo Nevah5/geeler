@@ -212,11 +212,11 @@ Site made by Noah Geeler
     $pw = password_hash($p, PASSWORD_DEFAULT);
 
     mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT, DEFAULT)");
-    mysqli_query($con, "INSERT INTO verify VALUES ('$userID', '$verifyToken', DEFAULT)");
-    mysqli_query($con, "INSERT INTO passwords VALUES ('$userID', '$pw')");
+    mysqli_query($con, "INSERT INTO verify VALUES (NULL, '$userID', '$verifyToken', DEFAULT)");
+    mysqli_query($con, "INSERT INTO passwords VALUES (NULL, '$userID', '$pw')");
 
     if($ads){
-      mysqli_query($con, "INSERT INTO ads VALUES ('$userID', DEFAULT)");
+      mysqli_query($con, "INSERT INTO ads VALUES (NULL, '$userID', DEFAULT)");
     }
 
     if(!mysqli_error($con)){
