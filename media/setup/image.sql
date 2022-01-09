@@ -70,7 +70,6 @@ CREATE TABLE contact(
 
 INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT, 1);
 INSERT INTO passwords VALUES(NULL, 0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
-
 INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "home", "meta.desc", "Hallo, ich bin Noah Geeler und mache eine Ausbildung als Informatiker."),
 ("DE", "home", "title", "Startseite - geeler.net"),
@@ -131,7 +130,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "stayloggedin", "Eingeloggt bleiben"),
 ("DE", "login", "accountregister", "Du hast noch kein Account? Erstelle einen <a href=""/register/"">hier</a>!"),
 ("DE", "login", "account.verify.first", "Bitte verifiziere deinen Account zuerst."),
-("DE", "login", "verification.error.title", "Verifizierungsfehler"),
+("DE", "login", "verification.error.title", "Verifizierungsfehler:"),
 ("DE", "login", "verification.error.tokennotset", "Du musst einen Token angeben."),
 ("DE", "login", "verification.error.tokeninvalid", "Der angegebene Token ist nicht gültig."),
 ("DE", "login", "verification.success", "Du hast deinen Account erfolgreich verifiziert."),
@@ -145,7 +144,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "2fa.message.sent", "Der Code wurde erfolgreich versendet. Bitte schau in deine Mails."),
 ("DE", "login", "2fa.message.wait", "Bitte warte bevor du den Code erneut versendest."),
 ("DE", "login", "2fa.error.code.invalid", "Dieser Code ist nicht gültig."),
-("DE", "login", "2fa.sentto", "Der Code wurde gesendet an:"),
+("DE", "login", "2fa.sentto", "Der Code wurde an $email gesendet."),
 ("DE", "register", "title", "Registrieren - geeler.net"),
 ("DE", "register", "section.title", "Registrieren"),
 ("DE", "register", "email", "Email Adresse"),
@@ -245,7 +244,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "stayloggedin", "Stay logged in"),
 ("EN", "login", "accountregister", "You don't have an account yet? Create one <a href=""/register/"">here</a>!"),
 ("EN", "login", "account.verify.first", "Please verify your account first."),
-("EN", "login", "verification.error.title", "Verification Error"),
+("EN", "login", "verification.error.title", "Verification Error:"),
 ("EN", "login", "verification.error.tokennotset", "You have to specify a Token."),
 ("EN", "login", "verification.error.tokeninvalid", "The specified Token is invalid."),
 ("EN", "login", "verification.success", "You successfully verified your account."),
@@ -254,12 +253,12 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "2fa", "Code"),
 ("EN", "login", "2fa.resend", "Resend Code"),
 ("EN", "login", "submit.2fa", "Validate"),
-("EN", "login", "2fa.message.title", "Two Factor Authentication"),
+("EN", "login", "2fa.message.title", "Two Factor Authentication:"),
 ("EN", "login", "2fa.message.resent", "The Code was successfully resent. Please check your inbox."),
 ("EN", "login", "2fa.message.sent", "The Code was successfully sent. Please check your inbox."),
 ("EN", "login", "2fa.message.wait", "Please wait a bit before resending."),
 ("EN", "login", "2fa.error.code.invalid", "This code is not valid."),
-("EN", "login", "2fa.sentto", "Code was sent to:"),
+("EN", "login", "2fa.sentto", "Code was sent to: $email"),
 ("EN", "register", "title", "Register - geeler.net"),
 ("EN", "register", "section.title", "Register"),
 ("EN", "register", "email", "Email"),

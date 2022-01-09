@@ -72,7 +72,7 @@ login.2fa.message.resent:Der Code wurde erfolgreich erneut versendet. Bitte scha
 login.2fa.message.sent:Der Code wurde erfolgreich versendet. Bitte schau in deine Mails.
 login.2fa.message.wait:Bitte warte bevor du den Code erneut versendest.
 login.2fa.error.code.invalid:Dieser Code ist nicht gültig.
-login.2fa.sentto:Der Code wurde gesendet an:
+login.2fa.sentto:Der Code wurde an $email gesendet.
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren
