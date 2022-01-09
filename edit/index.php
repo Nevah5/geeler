@@ -29,6 +29,7 @@ $lang = $_GET["lang"];
     <a href='compile.php?input=home.php&lang=<?= $lang ?>&output=index.php'>Home</a>
     <a href='compile.php?input=home_contact_success.php&lang=<?= $lang ?>&output=home/contact/success/index.php'>Home/Contact/Success</a>
     <a href='compile.php?input=login.php&lang=<?= $lang ?>&output=login/index.php'>Login</a>
+    <a href='compile.php?input=login_2FA.php&lang=<?= $lang ?>&output=login/2FA/index.php'>Login/2FA</a>
     <a href='compile.php?input=register.php&lang=<?= $lang ?>&output=register/index.php'>Register</a>
     <a href='compile.php?input=register_success.php&lang=<?= $lang ?>&output=register/success/index.php'>Register/Success</a>
     <a href='compile.php?input=footer.php&lang=<?= $lang ?>&output=media/footer/footer.php'>Footer</a>

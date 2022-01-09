@@ -62,6 +62,15 @@ login.verification.error.title:Verification Error:
 login.verification.error.tokennotset:You have to specify a Token.
 login.verification.error.tokeninvalid:The specified Token is invalid.
 login.verification.success:You successfully verified your account.
+login.title.2fa:2FA - geeler.net
+login.section.title.2fa:2FA
+login.2fa:Code
+login.2fa.resend:Resend Code
+login.submit.2fa:Validate
+login.2fa.message.title:Two Factor Authentication:
+login.2fa.message.resent:The Code was successfully resent. Please check your inbox.
+login.2fa.message.sent:The Code was successfully sent. Please check your inbox.
+login.2fa.message.wait:Please wait a bit befor resending.
 
 register.title:Register - geeler.net
 register.section.title:Register
