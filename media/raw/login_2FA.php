@@ -91,6 +91,14 @@
           <a href="./resend/">${login.2fa.resend}</a>
           <label for="submit" id="submitbtn">${login.submit.2fa}</label>
           <input type="submit" name="submit" id="submit">
+          <?php
+            $email = explode("@", $_SESSION["2FA_email"]);
+            $domain = $email[1];
+            $obfuscate = str_split($email[0]);
+            $obfuscate = $obfuscate[0] . "*****" . $obfuscate[count($obfuscate) - 1];
+            $email = $obfuscate . "@" . $domain;
+            echo "<p>${login.2fa.sentto} $email<p>";
+          ?>
         </div>
       </div>
     </div>

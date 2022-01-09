@@ -72,6 +72,7 @@ login.2fa.message.resent:The Code was successfully resent. Please check your inb
 login.2fa.message.sent:The Code was successfully sent. Please check your inbox.
 login.2fa.message.wait:Please wait a bit before resending.
 login.2fa.error.code.invalid:This code is not valid.
+login.2fa.sentto:Code was sent to:
 
 register.title:Register - geeler.net
 register.section.title:Register
