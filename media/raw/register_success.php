@@ -1,5 +1,7 @@
 <?php
   session_start();
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+  include("../../login/autologin.php");
   if(!$_SESSION["registersuccess"] || $_SESSION["login"]){
     header("Location: ../");
   }
@@ -59,3 +61,5 @@ Site made by Noah Geeler
   -->
 </body>
 </html>
+<?php
+mysqli_close($con);
