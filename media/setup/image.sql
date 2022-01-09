@@ -15,6 +15,7 @@ CREATE TABLE users(
   username VARCHAR(25) NOT NULL UNIQUE,
   email VARCHAR(300) NOT NULL UNIQUE,
   joined TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP(1),
+  2FA TINYINT(1) DEFAULT NULL,
   INDEX index_users_username(username),
   INDEX index_users_email(email)
 );
@@ -56,7 +57,7 @@ CREATE TABLE contact(
   sent TIMESTAMP(1) DEFAULT CURRENT_TIMESTAMP(1)
 );
 
-INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT);
+INSERT INTO users VALUES (0, "admin", "admin@geeler.net", DEFAULT, DEFAULT);
 INSERT INTO passwords VALUES(0, "$2y$10$pBKGMHH67Ql3taIlDwzriOycP9KBYfPrlSISjYAalVoVwGz5azAZa");
 
 INSERT INTO lang (lang, type, title, content) VALUES
