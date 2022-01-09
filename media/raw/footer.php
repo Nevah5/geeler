@@ -37,6 +37,7 @@
     <div class="spacer"></div>
     <div class="row">
       <h1>geeler</h1>
+      <span>© 2022 - geeler.net</span>
       <?php
         if(!$_SESSION["login"]){
       ?>

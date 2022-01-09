@@ -150,6 +150,11 @@ div.footer .foot .row h1 {
   margin: 10px 0;
 }
 
+div.footer .foot .row span {
+  font-family: Alata;
+  color: #144A8F;
+}
+
 div.footer .foot .row a {
   margin: 10px 0;
   padding: 5px 15px;
