@@ -211,7 +211,7 @@ Site made by Noah Geeler
     $verifyToken = substr(bin2hex(random_bytes(96)), 0, 128);
     $pw = password_hash($p, PASSWORD_DEFAULT);
 
-    mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT)");
+    mysqli_query($con, "INSERT INTO users VALUES ('$userID', '$u', '$e', DEFAULT, DEFAULT)");
     mysqli_query($con, "INSERT INTO verify VALUES ('$userID', '$verifyToken', DEFAULT)");
     mysqli_query($con, "INSERT INTO passwords VALUES ('$userID', '$pw')");
 
