@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS 2FA;
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS verify;
 DROP TABLE IF EXISTS lang;
+DROP TABLE IF EXISTS pwreset;
 DROP TABLE IF EXISTS passwords;
 DROP TABLE IF EXISTS users;
 
@@ -24,6 +25,13 @@ CREATE TABLE passwords(
   ID INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   userFK VARCHAR(32) NOT NULL,
   password VARCHAR(256) NOT NULL,
+  FOREIGN KEY (userFK) REFERENCES users(ID)
+);
+CREATE TABLE pwreset(
+  ID INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  userFK VARCHAR(32) NOT NULL,
+  token VARCHAR(64) NOT NULL,
+  created TIMESTAMP(1) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (userFK) REFERENCES users(ID)
 );
 CREATE TABLE lang(
@@ -150,7 +158,6 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "section.title.forgotpassword", "Passwort zurücksetzen"),
 ("DE", "login", "passwordreset.message.title", "Passwort zurücksetzen:"),
 ("DE", "login", "passwordreset.message.wait", "Bitte warte ein wenig, bevor du erneut eine Email versendest."),
-("DE", "login", "passwordreset.message.resent", "Die Email wurde erfolgreich erneut gesendet. Bitte schau in deine Emails."),
 ("DE", "login", "passwordreset.message.sent", "Die Email wurde erfolgreich versendest. Bitte schau in deine Emails."),
 ("DE", "login", "forgotpassword.email", "Deine Email"),
 ("DE", "login", "forgotpassword.email.empty", "Bitte gib die Email deines Accounts an."),
@@ -277,7 +284,6 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "section.title.forgotpassword", "Reset Password"),
 ("EN", "login", "passwordreset.message.title", "Password reset:"),
 ("EN", "login", "passwordreset.message.wait", "Please wait before resending an email."),
-("EN", "login", "passwordreset.message.resent", "The email was resent successfully. Please check your inbox."),
 ("EN", "login", "passwordreset.message.sent", "An email was sent successfully. Please check your inbox."),
 ("EN", "login", "forgotpassword.email", "Your email"),
 ("EN", "login", "forgotpassword.email.empty", "Please specify the email of your account."),

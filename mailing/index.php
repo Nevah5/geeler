@@ -61,6 +61,39 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $isHTML = true;
   $msgHTML = file_get_contents("2FA.html");
   $msgHTML = preg_replace('/[${]{1}.[code]+[}]{1}/', $TwoFacAuthCode, $msgHTML);
+}else if(isset($_SESSION["pwreset"])){
+  $email = $_SESSION["pwreset_email"];
+  //test if already sent email
+  $sql = "SELECT * FROM pwreset
+    JOIN users ON users.ID = pwreset.userFK
+    WHERE email='$email' AND created > NOW() - INTERVAL 3 MINUTE
+    ORDER BY created DESC LIMIT 1
+  ";
+  if(mysqli_num_rows(mysqli_query($con, $sql)) == 1){ //if user already sent email last 3 minutes.
+    unset($_SESSION["pwreset"]);
+    $_SESSION["pwreset_wait"] = true;
+    header("Location: ../login/forgotpassword/");
+  }else{                                              //if user can reset pw
+    $smtpUsername = "noreply@geeler.net";
+    $smtpPassword = "q6vuxly_Swu3Rec6lplN";
+    $emailFrom = $smtpUsername;
+    $emailFromName = "Noreply geeler.net";
+    $emailReplyTo = "contact@geeler.net";
+    $emailReplyToName = "Contact geeler.net";
+    $emailTo = $email;
+    $emailToName = $email;
+    $emailSubject = "Two factor authentication code - geeler.net";
+    $token = bin2hex(random_bytes(16));
+    //insert code into db
+    $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
+    $uID = $userData["ID"];
+    mysqli_query($con, "INSERT INTO pwreset VALUES (NULL, '$uID', '$token', DEFAULT)");
+
+    $emailAlt = "https://dev.geeler.net/login/forgotpassword?token=$token";
+    $isHTML = true;
+    $msgHTML = file_get_contents("forgotpassword.html");
+    $msgHTML = preg_replace('/[${]{1}.[token]+[}]{1}/', $token, $msgHTML);
+  }
 }else{
   header("Location: ../404/");
 }
@@ -107,6 +140,11 @@ if(!$mail->send()){
     unset($_SESSION["2FA"]);
     $_SESSION["2FA_sent"] = true;
     header("Location: ../login/2FA");
+  }
+  if(isset($_SESSION["pwreset"])){
+    $_SESSION["pwreset_sent"] = true;
+    unset($_SESSION["pwreset"]);
+    header("Location: ../login/forgotpassword/");
   }
 }
 

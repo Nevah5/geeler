@@ -77,7 +77,6 @@ login.title.forgotpassword:Passwort vergessen - geeler.net
 login.section.title.forgotpassword:Passwort zurücksetzen
 login.passwordreset.message.title:Passwort zurücksetzen:
 login.passwordreset.message.wait:Bitte warte ein wenig, bevor du erneut eine Email versendest.
-login.passwordreset.message.resent:Die Email wurde erfolgreich erneut gesendet. Bitte schau in deine Emails.
 login.passwordreset.message.sent:Die Email wurde erfolgreich versendest. Bitte schau in deine Emails.
 login.forgotpassword.email:Deine Email
 login.forgotpassword.email.empty:Bitte gib die Email deines Accounts an.

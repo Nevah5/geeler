@@ -1,7 +1,9 @@
 <?php
   session_start();
+  // error_reporting(E_ALL);
+  // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("../login/autologin.php");
+  include("../autologin.php");
   if(isset($_SESSION["login"])){
     header("Location: ../../");
   }
@@ -46,12 +48,6 @@
                   <span>${login.passwordreset.message.wait}</span>
                 </div>";
                 unset($_SESSION["pwreset_wait"]);
-              }else if(isset($_SESSION["pwreset_resent"])){
-                echo "<div class=\"verification\" id=\"success\">
-                  <span id=\"title\">${login.passwordreset.message.title}</span>
-                  <span>${login.passwordreset.message.resent}</span>
-                </div>";
-                unset($_SESSION["pwreset_resent"]);
               }else if(isset($_SESSION["pwreset_sent"])){
                 echo "
                 <div class=\"verification\" id=\"success\">
@@ -69,14 +65,19 @@
           </div>
           <?php
               if(empty($_POST["email"]) && isset($_POST["submit"])){
-                echo "<span id=\"error\">${login.forgotpassword.email.empty}</span>";
+                echo "<span id='error'>${login.forgotpassword.email.empty}</span>";
               }else if(isset($_POST["submit"])){
                 //test email in db
                 $email = $_POST["email"];
-                if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email='$email'")) != 1){
+                $sql = "SELECT * FROM users WHERE email='$email'";
+                $query = mysqli_query($con, $sql);
+                print_r($query);
+                if(mysqli_num_rows($query) != 1){
                   echo "<span id=\"error\">${login.forgotpassword.email.notexists}</span>";
                 }else{
-                  $error = false;
+                  $_SESSION["pwreset"] = true;
+                  $_SESSION["pwreset_email"] = $email;
+                  header("Location: ../../mailing/");
                 }
               }
           ?>
@@ -110,7 +111,7 @@
           <?php
               if($pw !== $pwrep && !$error && isset($_POST["submit"])){
                 echo "<span id=\"error\">${register.error.passwordnotmatch}</span>";
-              }else{
+              }else if(isset($_POST["submit"]) && !$error){
                 //change pw for user
                 $uID = $_SESSION["pwreset_userID"];
                 $pw = password_hash($pw, PASSWORD_DEFAULT);
