@@ -83,7 +83,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
     $emailTo = $email;
     $emailToName = $email;
     $emailSubject = "Two factor authentication code - geeler.net";
-    $token = bin2hex(random_bytes(16));
+    $token = bin2hex(random_bytes(128));
     //insert code into db
     $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
     $uID = $userData["ID"];
