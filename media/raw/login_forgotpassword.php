@@ -58,7 +58,7 @@
                 }else{
                   $_SESSION["pwreset"] = true;
                   $_SESSION["pwreset_token"] = $_GET["token"];
-                  header("Location: ../forgotpassword/"); // to clear url
+                  header("Location: ./"); // to clear url
                 }
               }else if(isset($_SESSION["pwreset_wait"])){
                 echo "<div class=\"verification\">
@@ -153,7 +153,10 @@
                 unset($_SESSION["pwreset_sent"]);
                 unset($_SESSION["pwreset_wait"]);
                 //send success email
-                header("Location: ../");
+                $email = $data["email"];
+                $_SESSION["pwreset_success"] = true;
+                $_SESSION["pwreset_email"] = $email;
+                header("Location: ../../mailing/");
               }
           ?>
           <label for="submit" id="submitbtn">${login.forgotpassword.submit}</label>

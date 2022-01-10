@@ -82,7 +82,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
     $emailReplyToName = "Contact geeler.net";
     $emailTo = $email;
     $emailToName = $email;
-    $emailSubject = "Two factor authentication code - geeler.net";
+    $emailSubject = "Password Reset Link - geeler.net";
     $token = bin2hex(random_bytes(128));
     //insert code into db
     $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
@@ -94,6 +94,21 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
     $msgHTML = file_get_contents("forgotpassword.html");
     $msgHTML = preg_replace('/[${]{1}.[token]+[}]{1}/', $token, $msgHTML);
   }
+}else if(isset($_SESSION["pwreset_success"])){
+  $email = $_SESSION["pwreset_email"];
+  $smtpUsername = "noreply@geeler.net";
+  $smtpPassword = "q6vuxly_Swu3Rec6lplN";
+  $emailFrom = $smtpUsername;
+  $emailFromName = "Noreply geeler.net";
+  $emailReplyTo = "contact@geeler.net";
+  $emailReplyToName = "Contact geeler.net";
+  $emailTo = $email;
+  $data = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
+  $emailToName = $data["username"];
+  $emailSubject = "Password changed - geeler.net";
+  $emailAlt = "Your password has successfully changed.";
+  $isHTML = true;
+  $msgHTML = file_get_contents("passwordchanged.html");
 }else{
   header("Location: ../404/");
 }
@@ -145,6 +160,10 @@ if(!$mail->send()){
     $_SESSION["pwreset_sent"] = true;
     unset($_SESSION["pwreset"]);
     header("Location: ../login/forgotpassword/");
+  }
+  if(isset($_SESSION["pwreset_success"])){
+    unset($_SESSION["pwreset_email"]);
+    header("Location: ../login/");
   }
 }
 

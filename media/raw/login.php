@@ -35,8 +35,14 @@
       <div class="wrapper">
         <div class="box">
           <?php
-            if(isset($_SESSION["verifiederror"])){
-              if($_SESSION["verifiederror"] == "error_token_not_set"){
+            if($_SESSION["pwreset_success"]){
+              echo "<div class=\"verification\" id=\"success\">
+                <span id=\"title\">${login.passwordreset.success.title}</span>
+                <span>${login.passwordreset.success.text}</span>
+              </div>";
+              unset($_SESSION["pwreset_success"]);
+            }
+            if(isset($_SESSION["verifiederror"])){if($_SESSION["verifiederror"] == "error_token_not_set"){
                 echo "<div class=\"verification\">
                   <span id=\"title\">${login.verification.error.title}</span>
                   <span>${login.verification.error.tokennotset}</span>
