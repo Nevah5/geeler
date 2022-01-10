@@ -77,7 +77,6 @@ login.title.forgotpassword:Forgot Password - geeler.net
 login.section.title.forgotpassword:Reset Password
 login.passwordreset.message.title:Password reset:
 login.passwordreset.message.wait:Please wait before resending an email.
-login.passwordreset.message.resent:The email was resent successfully. Please check your inbox.
 login.passwordreset.message.sent:An email was sent successfully. Please check your inbox.
 login.forgotpassword.email:Your email
 login.forgotpassword.email.empty:Please specify the email of your account.
