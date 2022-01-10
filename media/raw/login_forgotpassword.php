@@ -135,9 +135,6 @@
                 WHERE token='$token'
               ";
               $data = mysqli_fetch_array(mysqli_query($con, $sql));
-              $email = explode("@", $data["email"]);
-              $email = str_split($email[0])[0] . "*****" . substr($email[0], -1, 1) . "@" . $email[1];
-              echo "<span style='color: #144A8F; margin-top: 20px;'>${login.forgotpassword.email.changefor}</span>";
               if($pw !== $pwrep && !$error && isset($_POST["submit"])){
                 echo "<span id=\"error\">${register.error.passwordnotmatch}</span>";
               }else if(isset($_POST["submit"]) && !$error){
@@ -158,6 +155,9 @@
                 $_SESSION["pwreset_email"] = $email;
                 header("Location: ../../mailing/");
               }
+              $email = explode("@", $data["email"]);
+              $email = str_split($email[0])[0] . "*****" . substr($email[0], -1, 1) . "@" . $email[1];
+              echo "<span style='color: #144A8F; margin-top: 20px;'>${login.forgotpassword.email.changefor}</span>";
           ?>
           <label for="submit" id="submitbtn">${login.forgotpassword.submit}</label>
           <?php
