@@ -85,6 +85,8 @@ login.forgotpassword.pw:Dein neues Passwort
 login.forgotpassword.pwrep:Wiederhole das Passwort
 login.forgotpassword.submit.send:Email senden
 login.forgotpassword.submit:Neues Passwort setzen
+login.passwordreset.message.tokeninvalid:Dieser Token ist entweder ungültig oder abgelaufen.
+login.forgotpassword.email.changefor:Passwort ändern für: $email
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren

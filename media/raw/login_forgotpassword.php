@@ -42,7 +42,25 @@
           <?php
             $error = true;
             if(!isset($_SESSION["pwreset"])){
-              if(isset($_SESSION["pwreset_wait"])){
+              if(isset($_GET["token"])){
+                $token = $_GET["token"];
+                //test token
+                $sql = "SELECT * FROM pwreset
+                  WHERE token='$token' AND created > NOW() - INTERVAL 15 MINUTE
+                  ORDER BY created DESC LIMIT 1
+                ";
+                if(mysqli_num_rows(mysqli_query($con, $sql)) != 1){
+                  //token either invalid or expired
+                  echo "<div class=\"verification\">
+                    <span id=\"title\">${login.passwordreset.message.title}</span>
+                    <span>${login.passwordreset.message.tokeninvalid}</span>
+                  </div>";
+                }else{
+                  $_SESSION["pwreset"] = true;
+                  $_SESSION["pwreset_token"] = $_GET["token"];
+                  header("Location: ../forgotpassword/"); // to clear url
+                }
+              }else if(isset($_SESSION["pwreset_wait"])){
                 echo "<div class=\"verification\">
                   <span id=\"title\">${login.passwordreset.message.title}</span>
                   <span>${login.passwordreset.message.wait}</span>
@@ -91,33 +109,51 @@
             <label for="pw">${login.forgotpassword.pw}</label>
             <div>
               <i id="pw"></i>
-              <input type="text" name="pw" id="pw">
+              <input type="password" name="pw" id="pw">
             </div>
           </div>
           <?php
-            if(empty($pw) && isset($_POST["submit"])){
-              echo "<span id=\"error\">${register.error.emptypassword}</span>";
-            }else{
-              $error = false;
+            if(isset($_POST["submit"])){
+              if(empty($pw)){
+                echo "<span id=\"error\">${register.error.emptypassword}</span>";
+              }else{
+                $error = false;
+              }
             }
           ?>
           <div class="grid">
             <label for="pwrep">${login.forgotpassword.pwrep}</label>
             <div>
               <i id="pwrep"></i>
-              <input type="text" name="pwrep" id="pwrep">
+              <input type="password" name="pwrep" id="pwrep">
             </div>
           </div>
           <?php
+              $token = $_SESSION["pwreset_token"];
+              $sql = "SELECT * FROM users
+                JOIN pwreset ON users.ID = pwreset.userFK
+                WHERE token='$token'
+              ";
+              $data = mysqli_fetch_array(mysqli_query($con, $sql));
+              $email = explode("@", $data["email"]);
+              $email = str_split($email[0])[0] . "*****" . substr($email[0], -1, 1) . "@" . $email[1];
+              echo "<span style='color: #144A8F; margin-top: 20px;'>${login.forgotpassword.email.changefor}</span>";
               if($pw !== $pwrep && !$error && isset($_POST["submit"])){
                 echo "<span id=\"error\">${register.error.passwordnotmatch}</span>";
               }else if(isset($_POST["submit"]) && !$error){
                 //change pw for user
-                $uID = $_SESSION["pwreset_userID"];
                 $pw = password_hash($pw, PASSWORD_DEFAULT);
-                // mysqli_query($con, "UPDATE passwords SET password='$pw' WHERE userFK='$uID'");
-                echo "success";
+                $uID = $data["userFK"];
+                echo $uID;
+                mysqli_query($con, "UPDATE passwords SET password='$pw' WHERE userFK='$uID'");
+                unset($_SESSION["pwreset"]);
+                unset($_SESSION["pwreset_email"]);
+                unset($_SESSION["pwreset_userID"]);
+                unset($_SESSION["pwreset_token"]);
+                unset($_SESSION["pwreset_sent"]);
+                unset($_SESSION["pwreset_wait"]);
                 //send success email
+                header("Location: ../");
               }
           ?>
           <label for="submit" id="submitbtn">${login.forgotpassword.submit}</label>
