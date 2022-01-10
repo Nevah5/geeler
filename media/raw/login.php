@@ -106,7 +106,7 @@
               header("Location: ../");
             }
           ?>
-          <a href="./forgot-password/">${login.password.forgot}</a>
+          <a href="./forgotpassword/">${login.password.forgot}</a>
           <div class="check">
             <input type="checkbox" id="stayloggedin" name="stayloggedin">
             <label for="stayloggedin" id="chkbx"><div id="tik"></div></label>

@@ -73,6 +73,19 @@ login.2fa.message.sent:The Code was successfully sent. Please check your inbox.
 login.2fa.message.wait:Please wait a bit before resending.
 login.2fa.error.code.invalid:This code is not valid.
 login.2fa.sentto:Code was sent to: $email
+login.title.forgotpassword:Forgot Password - geeler.net
+login.section.title.forgotpassword:Reset Password
+login.passwordreset.message.title:Password reset:
+login.passwordreset.message.wait:Please wait before resending an email.
+login.passwordreset.message.resent:The email was resent successfully. Please check your inbox.
+login.passwordreset.message.sent:An email was sent successfully. Please check your inbox.
+login.forgotpassword.email:Your email
+login.forgotpassword.email.empty:Please specify the email of your account.
+login.forgotpassword.email.notexists:There is no account with this email.
+login.forgotpassword.pw:Your new password
+login.forgotpassword.pwrep:Repeat the new password
+login.forgotpassword.submit.send:Send email
+login.forgotpassword.submit:Set new password
 
 register.title:Register - geeler.net
 register.section.title:Register

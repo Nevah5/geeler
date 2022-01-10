@@ -73,6 +73,19 @@ login.2fa.message.sent:Der Code wurde erfolgreich versendet. Bitte schau in dein
 login.2fa.message.wait:Bitte warte bevor du den Code erneut versendest.
 login.2fa.error.code.invalid:Dieser Code ist nicht gültig.
 login.2fa.sentto:Der Code wurde an $email gesendet.
+login.title.forgotpassword:Passwort vergessen - geeler.net
+login.section.title.forgotpassword:Passwort zurücksetzen
+login.passwordreset.message.title:Passwort zurücksetzen:
+login.passwordreset.message.wait:Bitte warte ein wenig, bevor du erneut eine Email versendest.
+login.passwordreset.message.resent:Die Email wurde erfolgreich erneut gesendet. Bitte schau in deine Emails.
+login.passwordreset.message.sent:Die Email wurde erfolgreich versendest. Bitte schau in deine Emails.
+login.forgotpassword.email:Deine Email
+login.forgotpassword.email.empty:Bitte gib die Email deines Accounts an.
+login.forgotpassword.email.notexists:Es gibt keinen Account mit dieser Email Adresse.
+login.forgotpassword.pw:Dein neues Passwort
+login.forgotpassword.pwrep:Wiederhole das Passwort
+login.forgotpassword.submit.send:Email senden
+login.forgotpassword.submit:Neues Passwort setzen
 
 register.title:Registrieren - geeler.net
 register.section.title:Registrieren
