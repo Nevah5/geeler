@@ -297,7 +297,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "login", "forgotpassword.submit.send", "Send email"),
 ("EN", "login", "forgotpassword.submit", "Set new password"),
 ("EN", "login", "passwordreset.message.tokeninvalid", "This token is either invalid or expired."),
-("EN", "login", "forgotpassword.email.changefor", "Changing email for: $email"),
+("EN", "login", "forgotpassword.email.changefor", "Changing password for: $email"),
 ("EN", "login", "passwordreset.success.title", "Password reset:"),
 ("EN", "login", "passwordreset.success.text", "Your password has successfully changed!"),
 ("EN", "register", "title", "Register - geeler.net"),

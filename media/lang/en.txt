@@ -86,7 +86,7 @@ login.forgotpassword.pwrep:Repeat the new password
 login.forgotpassword.submit.send:Send email
 login.forgotpassword.submit:Set new password
 login.passwordreset.message.tokeninvalid:This token is either invalid or expired.
-login.forgotpassword.email.changefor:Changing email for: $email
+login.forgotpassword.email.changefor:Changing password for: $email
 login.passwordreset.success.title:Password reset:
 login.passwordreset.success.text:Your password has successfully changed!
 
