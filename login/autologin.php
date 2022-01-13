@@ -6,7 +6,7 @@ if(isset($_COOKIE["stayloggedin"]) && !$_SESSION["login"]){
   $secret = $cookie[1];
   $hash = $cookie[2];
   //get user cookie info
-  $query = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM cookie WHERE userFK='$uID' AND cookie.secret='$secret'"));
+  $query = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM cookie WHERE userFK='$uID' AND cookie.secret='$secret' AND created > NOW() - INTERVAL 30 DAY"));
   $token = $query["token"];
   if(hash_hmac('sha256', $uID . ":" . $token, $secret) == $hash){
     //login

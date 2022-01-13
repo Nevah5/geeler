@@ -128,7 +128,7 @@
                   $secret = bin2hex(random_bytes(8));
                   $cookie = $uID . ":" . $secret . ":" . hash_hmac('sha256', $uID . ":" . $token, $secret);
                   setcookie("stayloggedin", $cookie, time()+60*60*24*30, "/");
-                  mysqli_query($con, "INSERT INTO cookie VALUES (NULL, '$uID', '$token', '$secret')");
+                  mysqli_query($con, "INSERT INTO cookie VALUES (NULL, '$uID', '$token', '$secret', DEFAULT)");
                 }
                 $userData = mysqli_fetch_array(mysqli_query($con, "SELECT username, ID FROM users WHERE email='$email' LIMIT 1"));
                 if(mysqli_fetch_array(mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'"))["2FA"] == true){
