@@ -19,12 +19,12 @@
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
   <meta property="og:description" content="${home.meta.desc}">
-  <meta property="og:image" content="https://geeler.net/media/preview/site.png">
+  <meta property="og:image" content="https://geeler.net/media/pictures/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
   <meta property="twitter:title" content="geeler.net">
   <meta property="twitter:description" content="${home.meta.desc}">
-  <meta property="twitter:image" content="https://geeler.net/media/preview/site.png">
+  <meta property="twitter:image" content="https://geeler.net/media/pictures/preview/site.png">
   <meta name="author" content="Noah Geeler">
   <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
