@@ -9,7 +9,7 @@ if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
   header("Location: ../");
 }
 
-$input = "../resources/raw/" . $_GET["input"]; //input file with placeholders
+$input = "../resources/templates/" . $_GET["input"]; //input file with placeholders
 $lang = strtoupper($_GET["lang"]);
 $output = "../" . $_GET["output"]; //output
 
