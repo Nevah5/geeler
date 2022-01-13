@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
-@import url("/media/styles/footer.css");
+@import url("/resources/styles/footer.css");
 
 html, body{
   margin: 0;
@@ -180,26 +180,26 @@ form{
             }
             i#email::before{
               @include icon();
-              background-image: url("/media/icons/email.png");
+              background-image: url("/resources/icons/email.png");
             }
             i#emailrep::before{
               @include icon();
-              background-image: url("/media/icons/emailrep.png");
+              background-image: url("/resources/icons/emailrep.png");
             }
             i#pw::before{
               @include icon();
-              background-image: url("/media/icons/padlock.png");
+              background-image: url("/resources/icons/padlock.png");
             }
             i#pwrep::before{
               @include icon();
-              background-image: url("/media/icons/padlockrep.png");
+              background-image: url("/resources/icons/padlockrep.png");
             }
             i#empty::before{
               @include icon();
             }
             i#user::before{
               @include icon();
-              background-image: url("/media/icons/user.png");
+              background-image: url("/resources/icons/user.png");
             }
           }
         }

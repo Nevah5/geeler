@@ -46,7 +46,7 @@
         }else{
       ?>
       <a class="user" href="/logout/">
-        <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+        <div class="image" style="background-image: url('/resources/icons/user.png');"></div>
         <span class="account"><?= $_SESSION["username"] ?></span>
       </a>
       <?php

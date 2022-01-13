@@ -7,9 +7,9 @@ $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../media/PHPMailer/src/Exception.php';
-require '../media/PHPMailer/src/PHPMailer.php';
-require '../media/PHPMailer/src/SMTP.php';
+require '../resources/PHPMailer/src/Exception.php';
+require '../resources/PHPMailer/src/PHPMailer.php';
+require '../resources/PHPMailer/src/SMTP.php';
 
 if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["registeremail"])){
   $smtpUsername = "verify@geeler.net";

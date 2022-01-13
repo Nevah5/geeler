@@ -1,7 +1,7 @@
 <?php
   session_start();
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("../media/scripts/autologin.php");
+  include("../resources/scripts/autologin.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +14,18 @@
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
   <meta property="og:description" content="${home.meta.desc}">
-  <meta property="og:image" content="https://geeler.net/media/pictures/preview/site.png">
+  <meta property="og:image" content="https://geeler.net/resources/pictures/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
   <meta property="twitter:title" content="geeler.net">
   <meta property="twitter:description" content="${home.meta.desc}">
-  <meta property="twitter:image" content="https://geeler.net/media/pictures/preview/site.png">
+  <meta property="twitter:image" content="https://geeler.net/resources/pictures/preview/site.png">
   <meta name="author" content="Noah Geeler">
   <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../login/style.css">
-  <link rel="icon" href="/media/icons/logo.png">
+  <link rel="icon" href="/resources/icons/logo.png">
   <title>${register.title}</title>
 </head>
 <body>

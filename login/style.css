@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
-@import url("/media/styles/footer.css");
+@import url("/resources/styles/footer.css");
 html, body {
   margin: 0;
   padding: 0;
@@ -258,7 +258,7 @@ form .content .wrapper .box .grid div i#email::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/email.png");
+  background-image: url("/resources/icons/email.png");
 }
 
 form .content .wrapper .box .grid div i#emailrep::before {
@@ -275,7 +275,7 @@ form .content .wrapper .box .grid div i#emailrep::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/emailrep.png");
+  background-image: url("/resources/icons/emailrep.png");
 }
 
 form .content .wrapper .box .grid div i#pw::before {
@@ -292,7 +292,7 @@ form .content .wrapper .box .grid div i#pw::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/padlock.png");
+  background-image: url("/resources/icons/padlock.png");
 }
 
 form .content .wrapper .box .grid div i#pwrep::before {
@@ -309,7 +309,7 @@ form .content .wrapper .box .grid div i#pwrep::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/padlockrep.png");
+  background-image: url("/resources/icons/padlockrep.png");
 }
 
 form .content .wrapper .box .grid div i#empty::before {
@@ -342,7 +342,7 @@ form .content .wrapper .box .grid div i#user::before {
   transition: filter .5s, -webkit-filter .5s;
   -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
           filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
-  background-image: url("/media/icons/user.png");
+  background-image: url("/resources/icons/user.png");
 }
 
 form .content .wrapper .box span {

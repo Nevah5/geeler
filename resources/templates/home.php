@@ -5,7 +5,7 @@
   // error_reporting(E_ALL);
   // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("./media/scripts/autologin.php");
+  include("./resources/scripts/autologin.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,18 +19,18 @@
   <meta property="og:url" content="https://geeler.net/">
   <meta property="og:title" content="geeler.net">
   <meta property="og:description" content="${home.meta.desc}">
-  <meta property="og:image" content="https://geeler.net/media/pictures/preview/site.png">
+  <meta property="og:image" content="https://geeler.net/resources/pictures/preview/site.png">
   <meta name="twitter:card" content="summary">
   <meta property="twitter:url" content="https://geeler.net">
   <meta property="twitter:title" content="geeler.net">
   <meta property="twitter:description" content="${meta.desc}">
-  <meta property="twitter:image" content="https://geeler.net/media/pictures/preview/site.png">
+  <meta property="twitter:image" content="https://geeler.net/resources/pictures/preview/site.png">
   <meta name="author" content="Noah Geeler">
   <meta name="description" content="${home.meta.desc}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/media/icons/logo.png">
+  <link rel="icon" href="/resources/icons/logo.png">
   <title>${home.title}</title>
 </head>
 <body>
@@ -71,7 +71,7 @@
               }else{
             ?>
             <a class="user" href="/logout/">
-              <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+              <div class="image" style="background-image: url('/resources/icons/user.png');"></div>
               <span class="account"><?= $_SESSION["username"] ?></span>
             </a>
             <?php
@@ -96,7 +96,7 @@
         }else{
       ?>
       <a class="user" href="/logout/">
-        <div class="image" style="background-image: url('/media/icons/user.png');"></div>
+        <div class="image" style="background-image: url('/resources/icons/user.png');"></div>
         <span class="account"><?= $_SESSION["username"] ?></span>
       </a>
       <?php
@@ -118,7 +118,7 @@
         <div class="chevron"></div>
       </div>
     </div>
-    <img src="/media/pictures/backgrounds/triangles.svg" alt="backdrop" class="backdrop">
+    <img src="/resources/pictures/backgrounds/triangles.svg" alt="backdrop" class="backdrop">
   </div>
   <div class="about" id="about">
     <h1>${home.about.title}</h1>
@@ -179,7 +179,7 @@
             </p>
             <div class="anchors">
               <a href="https://nevah5.com">Visit Beta Version &#10095;</a>
-              <a href="/media/pictures/nevah5.com.jpg" target="_blank">Image &#10095;</a>
+              <a href="/resources/pictures/nevah5.com.jpg" target="_blank">Image &#10095;</a>
             </div>
             <div class="type">
               <div id="unfinished"></div>
@@ -207,7 +207,7 @@
               will do that for a final project at the end of the first year of my apprenticeship.
             </p>
             <div class="anchors">
-              <a href="/media/pictures/geeler.net.png" target="_blank">Image &#10095;</a>
+              <a href="/resources/pictures/geeler.net.png" target="_blank">Image &#10095;</a>
             </div>
             <div class="type">
               <div id="unfinished"></div>
@@ -232,7 +232,7 @@
             </p>
             <div class="anchors">
               <a href="https://github.com/nevah5/discoin">Visit GitHub &#10095;</a>
-              <a href="/media/pictures/discoin.png" target="_blank">Image &#10095;</a>
+              <a href="/resources/pictures/discoin.png" target="_blank">Image &#10095;</a>
             </div>
             <div class="type">
               <div id="teamwork"></div>

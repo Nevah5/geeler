@@ -59,19 +59,19 @@ div.footer{
       filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
 
       &:nth-child(1){
-        background-image: url("/media/icons/github.png");
+        background-image: url("/resources/icons/github.png");
       }
       &:nth-child(2){
-        background-image: url("/media/icons/reddit.png");
+        background-image: url("/resources/icons/reddit.png");
       }
       &:nth-child(3){
-        background-image: url("/media/icons/steam.png");
+        background-image: url("/resources/icons/steam.png");
       }
       &:nth-child(4){
-        background-image: url("/media/icons/twitter.png");
+        background-image: url("/resources/icons/twitter.png");
       }
       &:nth-child(5){
-        background-image: url("/media/icons/stack-overflow.png");
+        background-image: url("/resources/icons/stack-overflow.png");
       }
     }
   }

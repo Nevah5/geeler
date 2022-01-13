@@ -1,7 +1,7 @@
 <?php
 session_start();
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-include("../media/scripts/autologin.php");
+include("../resources/scripts/autologin.php");
 if(!isset($_SESSION["2FA_sent"])){
   header("Location: ../../");
 }

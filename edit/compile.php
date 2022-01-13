@@ -9,7 +9,7 @@ if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
   header("Location: ../");
 }
 
-$input = "../media/raw/" . $_GET["input"]; //input file with placeholders
+$input = "../resources/raw/" . $_GET["input"]; //input file with placeholders
 $lang = strtoupper($_GET["lang"]);
 $output = "../" . $_GET["output"]; //output
 
@@ -29,7 +29,7 @@ if ($handle) {
       $index = explode('${', explode('}', $line)[0])[1]; //gets ${this}
       //if footer replace with footer
       if($index == "footer"){
-        $replace_with = file_get_contents("../media/footer/footer.php");
+        $replace_with = file_get_contents("../resources/footer/footer.php");
       }else{
         $replace_with = $replace[$index]; //gets contents to replace with placeholder
       }
