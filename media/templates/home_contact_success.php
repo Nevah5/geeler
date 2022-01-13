@@ -1,7 +1,7 @@
 <?php
   session_start();
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("../../../login/autologin.php");
+  include("../../../media/scripts/autologin.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

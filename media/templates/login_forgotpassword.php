@@ -3,7 +3,7 @@
   // error_reporting(E_ALL);
   // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("../autologin.php");
+  include("../media/scripts/autologin.php");
   if(isset($_SESSION["login"])){
     header("Location: ../../");
   }
