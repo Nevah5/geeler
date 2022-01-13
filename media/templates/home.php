@@ -118,7 +118,7 @@
         <div class="chevron"></div>
       </div>
     </div>
-    <img src="/media/backgrounds/triangles.svg" alt="backdrop" class="backdrop">
+    <img src="/media/pictures/backgrounds/triangles.svg" alt="backdrop" class="backdrop">
   </div>
   <div class="about" id="about">
     <h1>${home.about.title}</h1>
