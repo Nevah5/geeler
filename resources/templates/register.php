@@ -224,7 +224,7 @@ Site made by Noah Geeler
       $_SESSION["registersuccess"] = true;
       $_SESSION["registeremail"] = $e;
       $_SESSION["verifyToken"] = $verifyToken;
-      header("Location: ../mailing/?verify");
+      header("Location: ../resources/scripts/mailing.php?verify");
     }
   }
   mysqli_close($con);

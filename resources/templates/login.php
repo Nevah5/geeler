@@ -138,7 +138,7 @@
                   $_SESSION["2FA_username"] = $userData["username"];
                   $_SESSION["2FA_userID"] = $uID;
                   //send mail
-                  header("Location: ../mailing/");
+                  header("Location: ../resources/scripts/mailing.php");
                 }else{
                   //user login
                   $_SESSION["login"] = true;

@@ -139,7 +139,7 @@ if(!$mail->send()){
 }else{
   if(isset($_GET["verify"])){
     unset($_SESSION["verifyToken"]);
-    header("Location: ../register/success/"); //when debugging comment out
+    header("Location: ../../register/success/"); //when debugging comment out
   }
   if($_SESSION["contact"]){
     $message = $_SESSION["contactmessage"];
@@ -149,21 +149,21 @@ if(!$mail->send()){
     unset($_SESSION["contact"]);
     unset($_SESSION["contactmessage"]);
     unset($_SESSION["contactemail"]);
-    header("Location: ../home/contact/success/");
+    header("Location: ../../home/contact/success/");
   }
   if(isset($_SESSION["2FA"])){
     unset($_SESSION["2FA"]);
     $_SESSION["2FA_sent"] = true;
-    header("Location: ../login/2FA");
+    header("Location: ../../login/2FA");
   }
   if(isset($_SESSION["pwreset"])){
     $_SESSION["pwreset_sent"] = true;
     unset($_SESSION["pwreset"]);
-    header("Location: ../login/forgotpassword/");
+    header("Location: ../../login/forgotpassword/");
   }
   if(isset($_SESSION["pwreset_success"])){
     unset($_SESSION["pwreset_email"]);
-    header("Location: ../login/");
+    header("Location: ../../login/");
   }
 }
 

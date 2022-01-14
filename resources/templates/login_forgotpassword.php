@@ -96,7 +96,7 @@
                 }else{
                   $_SESSION["pwreset"] = true;
                   $_SESSION["pwreset_email"] = $email;
-                  header("Location: ../../mailing/");
+                  header("Location: ../../resources/scripts/mailing.php");
                 }
               }
           ?>
@@ -154,7 +154,7 @@
                 $email = $data["email"];
                 $_SESSION["pwreset_success"] = true;
                 $_SESSION["pwreset_email"] = $email;
-                header("Location: ../../mailing/");
+                header("Location: ../../resources/scripts/mailing.php/");
               }
               $email = explode("@", $data["email"]);
               $email = str_split($email[0])[0] . "*****" . substr($email[0], -1, 1) . "@" . $email[1];

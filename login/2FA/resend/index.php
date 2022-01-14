@@ -17,5 +17,5 @@ if(mysqli_num_rows($query) >= 1){
   //resend code
   $_SESSION["2FA"] = true;
   $_SESSION["2FA_resent"] = true;
-  header("Location: ../../../mailing/");
+  header("Location: ../../../resources/scripts/mailing.php");
 }

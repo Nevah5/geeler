@@ -369,7 +369,7 @@
                 $_SESSION["contactemail"] = $_POST["sender"];
                 $_SESSION["contact"] = true;
                 //mesage insert into db in: "/mailing/index.php"
-                header("Location: ./mailing/");
+                header("Location: ./resources/scripts/mailing.php");
               }else{
                 echo "<span id=\"error\" style=\"margin-top: 10px; font-size: 1.5rem;\">${home.contact.form.spam}</span>";
               }
