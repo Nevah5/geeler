@@ -60,6 +60,26 @@ class sendMail {
       header("Location: ./home/contact/success/");
     }
   }
+  public function twoFA($userID, $email, $username, $con){
+    $this->emailTo = $email;
+    $this->emailToName = $username;
+    $this->emailSubject = "2FA Code - geeler.net";
+
+    $TwoFacAuthCode = bin2hex(random_bytes(3));
+    $TwoFacAuthCode = strtoupper($TwoFacAuthCode);
+    //insert code into db
+    mysqli_query($con, "INSERT INTO 2FA (ID, userFK, code, valid) VALUES (NULL, '$userID', '$TwoFacAuthCode', NOW() + INTERVAL 15 MINUTE)");
+
+    $this->emailAlt = "You code has arrived: $TwoFacAuthCode (only valid 15 Minutes)";
+    $this->isHTML = true;
+    $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/2FA.html");
+    $this->msgHTML = preg_replace('/[${]{1}.[code]+[}]{1}/', $TwoFacAuthCode, $this->msgHTML);
+
+    if($this->send()){
+      $_SESSION["2FA_sent"] = true;
+      header("Location: ./2FA");
+    }
+  }
   public function send(){
     $mail = new PHPMailer;
     $mail->isSMTP();
