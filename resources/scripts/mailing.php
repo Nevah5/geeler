@@ -43,7 +43,7 @@ class sendMail {
     $this->msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $verifyToken, file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/verify.html"));
 
     if($this->send()){
-      header("Location: " . $_SERVER["DOCUMENT_ROOT"] . "/register/success/");
+      header("Location: ./success/");
     }
   }
   public function contact($email, $message, $con){
