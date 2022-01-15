@@ -2,6 +2,7 @@
   session_start();
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
   include("../resources/scripts/autologin.php");
+  include("../resources/scripts/mailing.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -222,9 +223,8 @@ Site made by Noah Geeler
 
     if(!mysqli_error($con)){
       $_SESSION["registersuccess"] = true;
-      $_SESSION["registeremail"] = $e;
-      $_SESSION["verifyToken"] = $verifyToken;
-      header("Location: ../resources/scripts/mailing.php?verify");
+      $sendMail = new sendMail;
+      $sendMail->verify($verifyToken, $e, $u);
     }
   }
   mysqli_close($con);
