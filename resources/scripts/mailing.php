@@ -46,6 +46,27 @@ class sendMail {
       header("Location: " . $_SERVER["DOCUMENT_ROOT"] . "/register/success/");
     }
   }
+  public function contact($email, $message, $con){
+    $this->smtpUsername = "contact@geeler.net";
+    $this->smtpPassword = "q6vuxly_Swu3Rec6lplN";
+    $this->emailFrom = $this->smtpUsername;
+    $this->emailFromName = $email;
+    $this->emailReplyTo = $email;
+    $this->emailReplyToName = $email;
+    $this->emailTo = "noah.d.geeler@gmail.com";
+    $this->emailToName = "Noah Geeler";
+    $this->emailSubject = "Contact from $email";
+    $this->emailAlt = $message;
+    $this->isHTML = true;
+    $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/contact.html");
+    $this->msgHTML = preg_replace('/[${]{1}.[message]+[}]{1}/', str_replace("\n", "<br>", $message), $this->msgHTML);
+
+    if($this->send()){
+      $IP = $_SERVER['REMOTE_ADDR'];
+      mysqli_query($con, "INSERT INTO contact VALUES (NULL, '$email', '$message', '$IP', DEFAULT)");
+      header("Location: ./home/contact/success/");
+    }
+  }
   public function send(){
     $mail = new PHPMailer;
     $mail->isSMTP();

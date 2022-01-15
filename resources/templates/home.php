@@ -6,6 +6,7 @@
   // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
   include("./resources/scripts/autologin.php");
+  include("./resources/scripts/mailing.php");
 ?>
 
 <!DOCTYPE html>
@@ -365,11 +366,10 @@
               $numRequests = mysqli_num_rows($query);
 
               if($numRequests < 2){
-                $_SESSION["contactmessage"] = htmlspecialchars_decode($_POST["message"]);
-                $_SESSION["contactemail"] = $_POST["sender"];
-                $_SESSION["contact"] = true;
-                //mesage insert into db in: "/mailing/index.php"
-                header("Location: ./resources/scripts/mailing.php");
+                $message = htmlspecialchars_decode($_POST["message"]);
+                $email = $_POST["sender"];
+                $sendMail = new sendMail;
+                $sendMail->contact($email, $message, $con);
               }else{
                 echo "<span id=\"error\" style=\"margin-top: 10px; font-size: 1.5rem;\">${home.contact.form.spam}</span>";
               }
