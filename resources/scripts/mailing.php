@@ -2,14 +2,17 @@
 session_start();
 ob_start();
 ob_flush();
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+$emailpath = "../mails/";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../resources/PHPMailer/src/Exception.php';
-require '../resources/PHPMailer/src/PHPMailer.php';
-require '../resources/PHPMailer/src/SMTP.php';
+require '../PHPMailer/src/Exception.php';
+require '../PHPMailer/src/PHPMailer.php';
+require '../PHPMailer/src/SMTP.php';
 
 if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["registeremail"])){
   $smtpUsername = "verify@geeler.net";
@@ -23,7 +26,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Verification Account";
   $emailAlt = "https://dev.geeler.net/verify?token=" . $_SESSION["verifyToken"];
   $isHTML = true;
-  $msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $_SESSION["verifyToken"], file_get_contents('verify.html'));
+  $msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $_SESSION["verifyToken"], file_get_contents($emailpath . 'verify.html'));
 }else if($_SESSION["contact"]){
   $email = $_SESSION["contactemail"];
   $smtpUsername = "contact@geeler.net";
@@ -37,7 +40,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Contact from $email";
   $emailAlt = $_SESSION["contactmessage"];
   $isHTML = true;
-  $msgHTML = file_get_contents("contact.html");
+  $msgHTML = file_get_contents($emailpath . "contact.html");
   $msgHTML = preg_replace('/[${]{1}.[message]+[}]{1}/', str_replace("\n", "<br>", $_SESSION["contactmessage"]), $msgHTML);
 }else if(isset($_SESSION["2FA"])){
   $email = $_SESSION["2FA_email"];
@@ -59,7 +62,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
 
   $emailAlt = "You code has arrived: $TwoFacAuthCode (only valid 15 Minutes)";
   $isHTML = true;
-  $msgHTML = file_get_contents("2FA.html");
+  $msgHTML = file_get_contents($emailpath . "2FA.html");
   $msgHTML = preg_replace('/[${]{1}.[code]+[}]{1}/', $TwoFacAuthCode, $msgHTML);
 }else if(isset($_SESSION["pwreset"])){
   $email = $_SESSION["pwreset_email"];
@@ -91,7 +94,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
 
     $emailAlt = "https://dev.geeler.net/login/forgotpassword?token=$token";
     $isHTML = true;
-    $msgHTML = file_get_contents("forgotpassword.html");
+    $msgHTML = file_get_contents($emailpath . "forgotpassword.html");
     $msgHTML = preg_replace('/[${]{1}.[token]+[}]{1}/', $token, $msgHTML);
   }
 }else if(isset($_SESSION["pwreset_success"])){
@@ -108,7 +111,7 @@ if(isset($_GET["verify"]) && $_SESSION["registersuccess"] && isset($_SESSION["re
   $emailSubject = "Password changed - geeler.net";
   $emailAlt = "Your password has successfully changed.";
   $isHTML = true;
-  $msgHTML = file_get_contents("passwordchanged.html");
+  $msgHTML = file_get_contents($emailpath . "passwordchanged.html");
 }else{
   header("Location: ../404/");
 }
