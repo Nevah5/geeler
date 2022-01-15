@@ -441,7 +441,7 @@ nav.navbar .align_end {
 }
 
 .about div.section#general .center .img {
-  background-image: url("media/pictures/portrait.jpg");
+  background-image: url("resources/pictures/portrait.jpg");
 }
 
 .about div.section#hobby .center .img, .about div.section#motivation .center .img {
@@ -456,7 +456,7 @@ nav.navbar .align_end {
 }
 
 .about div.section#hobby .center .img {
-  background-image: url("media/pictures/setup.jpg");
+  background-image: url("resources/pictures/setup.jpg");
 }
 
 .about div.section#hobby .text {
@@ -472,7 +472,7 @@ nav.navbar .align_end {
 }
 
 .about div.section#motivation .center .img {
-  background-image: url("media/pictures/code.jpg");
+  background-image: url("resources/pictures/code.jpg");
 }
 
 .about div.section#motivation .text {
@@ -606,15 +606,15 @@ nav.navbar .align_end {
 }
 
 .projects .contents .wrapper .project#nevah5com {
-  background-image: url("media/pictures/nevah5.com.jpg");
+  background-image: url("resources/pictures/nevah5.com.jpg");
 }
 
 .projects .contents .wrapper .project#geelernetv2 {
-  background-image: url("media/pictures/geeler.net.png");
+  background-image: url("resources/pictures/geeler.net.png");
 }
 
 .projects .contents .wrapper .project#discoin {
-  background-image: url("media/pictures/discoin.png");
+  background-image: url("resources/pictures/discoin.png");
 }
 
 .projects .contents .wrapper .project#checkmkdocker {
@@ -1198,7 +1198,7 @@ nav.navbar .align_end {
   padding: 15px 50px;
   border-radius: .5em;
   font-weight: 1000;
-  background-image: url("media/pictures/paypal.png");
+  background-image: url("resources/pictures/paypal.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1210,7 +1210,7 @@ nav.navbar .align_end {
   width: 20vw;
   height: 9vh;
   max-height: 70px;
-  background-image: url("media/pictures/buymeacoffee.svg");
+  background-image: url("resources/pictures/buymeacoffee.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1974,11 +1974,11 @@ nav.navbar .align_end {
 }
 
 .projects .contents .grid #projectnevah .project .overlay::before {
-  background-image: url("media/pictures/nevah5.com.jpg");
+  background-image: url("resources/pictures/nevah5.com.jpg");
 }
 
 .projects .contents .grid #projectdiscoin .project .overlay::before {
-  background-image: url("media/pictures/discoin.png");
+  background-image: url("resources/pictures/discoin.png");
 }
 
 .projects .contents .grid #projectcheckmk .project .overlay::before {
@@ -1986,6 +1986,6 @@ nav.navbar .align_end {
 }
 
 .projects .contents .grid #projectgeeler .project .overlay::before {
-  background-image: url("media/pictures/geeler.net.png");
+  background-image: url("resources/pictures/geeler.net.png");
 }
 /*# sourceMappingURL=style.css.map */

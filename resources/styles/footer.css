@@ -12,10 +12,7 @@ div.footer {
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 160px 0 50px 60px;
       grid-template-rows: 160px 0 50px 60px;
-      grid-template-areas: "nav nav nav nav"
- ". . . ."
- "socials socials socials socials"
- "foot foot foot foot";
+      grid-template-areas: "nav nav nav nav" ". . . ." "socials socials socials socials" "foot foot foot foot";
 }
 
 div.footer nav {
@@ -97,26 +94,26 @@ div.footer .wrapper a {
   width: 40px;
   -webkit-filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
           filter: invert(20%) sepia(89%) saturate(1488%) hue-rotate(196deg) brightness(92%) contrast(91%);
-}/resources/
+}
 
 div.footer .wrapper a:nth-child(1) {
-  background-image: url("/media/icons/github.png");
-}/resources/
+  background-image: url("/resources/icons/github.png");
+}
 
 div.footer .wrapper a:nth-child(2) {
-  background-image: url("/media/icons/reddit.png");
-}/resources/
+  background-image: url("/resources/icons/reddit.png");
+}
 
 div.footer .wrapper a:nth-child(3) {
-  background-image: url("/media/icons/steam.png");
-}/resources/
+  background-image: url("/resources/icons/steam.png");
+}
 
 div.footer .wrapper a:nth-child(4) {
-  background-image: url("/media/icons/twitter.png");
-}/resources/
+  background-image: url("/resources/icons/twitter.png");
+}
 
 div.footer .wrapper a:nth-child(5) {
-  background-image: url("/media/icons/stack-overflow.png");
+  background-image: url("/resources/icons/stack-overflow.png");
 }
 
 div.footer .foot {

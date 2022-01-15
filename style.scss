@@ -302,7 +302,7 @@ nav.navbar{
   }
   div.section#general{
     .center .img{
-      background-image: url("media/pictures/portrait.jpg");
+      background-image: url("resources/pictures/portrait.jpg");
     }
   }
   div.section#hobby .center .img, div.section#motivation .center .img{
@@ -314,7 +314,7 @@ nav.navbar{
       grid-column: 6 / 10;
 
       .img{
-        background-image: url("media/pictures/setup.jpg");
+        background-image: url("resources/pictures/setup.jpg");
       }
     }
     .text{
@@ -326,7 +326,7 @@ nav.navbar{
       grid-column: 1 / 5;
 
       .img{
-        background-image: url("media/pictures/code.jpg");
+        background-image: url("resources/pictures/code.jpg");
       }
     }
     .text{
@@ -416,13 +416,13 @@ nav.navbar{
         background-position: center;
 
         &#nevah5com{
-          background-image: url("media/pictures/nevah5.com.jpg");
+          background-image: url("resources/pictures/nevah5.com.jpg");
         }
         &#geelernetv2{
-          background-image: url("media/pictures/geeler.net.png");
+          background-image: url("resources/pictures/geeler.net.png");
         }
         &#discoin{
-          background-image: url("media/pictures/discoin.png");
+          background-image: url("resources/pictures/discoin.png");
         }
         &#checkmkdocker{
           background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
@@ -835,7 +835,7 @@ nav.navbar{
       padding: 15px 50px;
       border-radius: .5em;
       font-weight: 1000;
-      background-image: url("media/pictures/paypal.png");
+      background-image: url("resources/pictures/paypal.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -846,7 +846,7 @@ nav.navbar{
       width: 20vw;
       height: 9vh;
       max-height: 70px;
-      background-image: url("media/pictures/buymeacoffee.svg");
+      background-image: url("resources/pictures/buymeacoffee.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1503,14 +1503,14 @@ nav.navbar{
 
 //project images
 .projects .contents .grid #projectnevah .project .overlay::before{
-  background-image: url("media/pictures/nevah5.com.jpg");
+  background-image: url("resources/pictures/nevah5.com.jpg");
 }
 .projects .contents .grid #projectdiscoin .project .overlay::before{
-  background-image: url("media/pictures/discoin.png");
+  background-image: url("resources/pictures/discoin.png");
 }
 .projects .contents .grid #projectcheckmk .project .overlay::before{
   background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/7.png");
 }
 .projects .contents .grid #projectgeeler .project .overlay::before{
-  background-image: url("media/pictures/geeler.net.png");
+  background-image: url("resources/pictures/geeler.net.png");
 }
