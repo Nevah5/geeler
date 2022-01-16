@@ -9,7 +9,7 @@ if(!$_SESSION["admin_access"]){
   header("Location: ../");
 }
 
-$input = $_SERVER["DOCUMENT_ROOT"] . "resources/templates/" . $_GET["input"]; //input file with placeholders
+$input = $_SERVER["DOCUMENT_ROOT"] . "/resources/templates/" . $_GET["input"]; //input file with placeholders
 $lang = strtoupper($_GET["lang"]);
 $output = $_SERVER["DOCUMENT_ROOT"] . $_GET["output"]; //output
 
