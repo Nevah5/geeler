@@ -50,6 +50,7 @@ div#compile {
   padding: 50px 0;
   border-bottom: dashed #1448a1 3px;
   width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +60,8 @@ div#compile {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 div#compile a {
@@ -68,7 +71,7 @@ div#compile a {
   border-radius: .5em;
   font-family: Alata;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 5px 15px;
 }
 
 div:not(#compile) {

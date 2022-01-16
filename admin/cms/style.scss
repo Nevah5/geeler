@@ -39,9 +39,11 @@ div#compile{
   padding: 50px 0;
   border-bottom: dashed #1448a1 3px;
   width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   a{
     background-color: #1448a1;
@@ -50,7 +52,7 @@ div#compile{
     border-radius: .5em;
     font-family: Alata;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 5px 15px;
   }
 }
 div:not(#compile){
