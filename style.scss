@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
 @import url("/resources/styles/footer.css");
+@import url("/resources/styles/scrollbar.css");
 
 /**
  * Big Titles - Russo One
@@ -16,22 +17,6 @@ html, body{
 a{
   font-family: Concert One;
   text-decoration: none;
-}
-//Scrollbar
-::-webkit-scrollbar{
-  width: 10px;
-  background-color: white;
-}
-::-webkit-scrollbar-track{
-  background-color: transparent;
-}
-::-webkit-scrollbar-thumb{
-  background: rgba(0, 0, 0, 0.589);
-  border-radius: .5em;
-
-  &:hover{
-    background: rgba(0, 0, 0, 0.76);
-  }
 }
 nav.navbar{
   display: flex;
