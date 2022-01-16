@@ -3,15 +3,15 @@ session_start();
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
 
 if(!isset($_GET["input"]) || !isset($_GET["lang"]) || !isset($_GET["output"])){
-  header("Location: ../../");
+  header("Location: ../");
 }
 if(!$_SESSION["admin_access"]){
-  header("Location: ../../");
+  header("Location: ../");
 }
 
-$input = "../../resources/templates/" . $_GET["input"]; //input file with placeholders
+$input = $_SERVER["DOCUMENT_ROOT"] . "resources/templates/" . $_GET["input"]; //input file with placeholders
 $lang = strtoupper($_GET["lang"]);
-$output = "../../" . $_GET["output"]; //output
+$output = $_SERVER["DOCUMENT_ROOT"] . $_GET["output"]; //output
 
 $replace = [];
 //load contents to replace into array from database
@@ -29,7 +29,7 @@ if ($handle) {
       $index = explode('${', explode('}', $line)[0])[1]; //gets ${this}
       //if footer replace with footer
       if($index == "footer"){
-        $replace_with = file_get_contents("../../resources/footer/footer.php");
+        $replace_with = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/footer/footer.php");
       }else{
         $replace_with = $replace[$index]; //gets contents to replace with placeholder
       }
