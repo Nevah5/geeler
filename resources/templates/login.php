@@ -2,6 +2,7 @@
   session_start();
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
   include("../resources/scripts/autologin.php");
+  include("../resources/scripts/mailing.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,12 +134,13 @@
                 $userData = mysqli_fetch_array(mysqli_query($con, "SELECT username, ID FROM users WHERE email='$email' LIMIT 1"));
                 if(mysqli_fetch_array(mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'"))["2FA"] == true){
                   //user has 2FA enabled
-                  $_SESSION["2FA"] = true;
+                  //values for login after 2FA code validation
                   $_SESSION["2FA_email"] = $email;
                   $_SESSION["2FA_username"] = $userData["username"];
                   $_SESSION["2FA_userID"] = $uID;
                   //send mail
-                  header("Location: ../resources/scripts/mailing.php");
+                  $sendMail = new sendMail;
+                  $sendMail->twoFA($uID, $email, $userData["username"], $con);
                 }else{
                   //user login
                   $_SESSION["login"] = true;
