@@ -2,10 +2,10 @@
   <nav>
     <div>
       <h1>${home.navbar.home}</h1>
-      <a href="#general">About Me</a>
-      <a href="#hobby">My hobby</a>
-      <a href="#motivation">Motivation</a>
-      <a href="#whyme">Why me?</a>
+      <a href="/#general">About Me</a>
+      <a href="/#hobby">My hobby</a>
+      <a href="/#motivation">Motivation</a>
+      <a href="/#whyme">Why me?</a>
     </div>
     <div>
       <h1>${home.navbar.contact}</h1>
