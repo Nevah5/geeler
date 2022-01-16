@@ -11,7 +11,7 @@ if(!$_SESSION["admin_access"]){
 
 $input = $_SERVER["DOCUMENT_ROOT"] . "/resources/templates/" . $_GET["input"]; //input file with placeholders
 $lang = strtoupper($_GET["lang"]);
-$output = $_SERVER["DOCUMENT_ROOT"] . $_GET["output"]; //output
+$output = $_SERVER["DOCUMENT_ROOT"] . "/" . $_GET["output"]; //output
 
 $replace = [];
 //load contents to replace into array from database

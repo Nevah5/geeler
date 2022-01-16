@@ -36,7 +36,7 @@
   <div class="foot">
     <div class="spacer"></div>
     <div class="row">
-      <h1>geeler</h1>
+      <h1><a href="/">geeler</a></h1>
       <span>© 2022 - geeler.net</span>
       <?php
         if(!$_SESSION["login"]){
