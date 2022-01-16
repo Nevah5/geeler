@@ -111,6 +111,20 @@ class sendMail {
       }
     }
   }
+  public function pwreset_success($email, $con){
+    $data = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
+    $this->emailTo = $email;
+    $this->emailToName = $data["username"];
+    $this->emailSubject = "Password changed - geeler.net";
+    $this->emailAlt = "Your password has successfully changed.";
+    $this->isHTML = true;
+    $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/passwordchanged.html");
+
+    if($this->send()){
+      $_SESSION["pwreset_success"] = true;
+      header("Location: ../");
+    }
+  }
   public function send(){
     $mail = new PHPMailer;
     $mail->isSMTP();

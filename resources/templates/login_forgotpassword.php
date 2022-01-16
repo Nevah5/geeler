@@ -144,16 +144,13 @@
                 echo $uID;
                 mysqli_query($con, "UPDATE passwords SET password='$pw' WHERE userFK='$uID'");
                 unset($_SESSION["pwreset"]);
-                unset($_SESSION["pwreset_email"]);
-                unset($_SESSION["pwreset_userID"]);
                 unset($_SESSION["pwreset_token"]);
                 unset($_SESSION["pwreset_sent"]);
                 unset($_SESSION["pwreset_wait"]);
                 //send success email
                 $email = $data["email"];
-                $_SESSION["pwreset_success"] = true;
-                $_SESSION["pwreset_email"] = $email;
-                header("Location: ../../resources/scripts/mailing.php/");
+                $sendMail = new sendMail;
+                $sendMail->pwreset_success($email, $con);
               }
               $email = explode("@", $data["email"]);
               $email = str_split($email[0])[0] . "*****" . substr($email[0], -1, 1) . "@" . $email[1];
