@@ -5,7 +5,7 @@ $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$
 if(!isset($_GET["input"]) || !isset($_GET["lang"]) || !isset($_GET["output"])){
   header("Location: ../../");
 }
-if(!$_SESSION["login"] && $_SESSION["username"] == "admin"){
+if(!$_SESSION["admin_access"]){
   header("Location: ../../");
 }
 

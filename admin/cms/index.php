@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-if(!$_SESSION["login"] || $_SESSION["username"] != "admin"){
+if(!$_SESSION["admin_access"]){
   header("Location: ../../");
 }
 $langs = ["de", "en"];
