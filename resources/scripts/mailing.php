@@ -80,6 +80,37 @@ class sendMail {
       header("Location: ./2FA");
     }
   }
+  public function pwreset($email, $con){
+    //test if already sent email
+    $sql = "SELECT * FROM pwreset
+      JOIN users ON users.ID = pwreset.userFK
+      WHERE email='$email' AND created > NOW() - INTERVAL 3 MINUTE
+      ORDER BY created DESC LIMIT 1
+    ";
+    if(mysqli_num_rows(mysqli_query($con, $sql)) == 1){ //if user already sent email last 3 minutes.
+      $_SESSION["pwreset_wait"] = true;
+      header("Location: ./"); //refresh
+    }else{ //if user can send reset email
+      $this->emailTo = $email;
+      $this->emailToName = $email;
+      $this->emailSubject = "Password Reset Link - geeler.net";
+      $token = bin2hex(random_bytes(128));
+      //insert code into db
+      $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
+      $uID = $userData["ID"];
+      mysqli_query($con, "INSERT INTO pwreset VALUES (NULL, '$uID', '$token', DEFAULT)");
+
+      $this->emailAlt = "https://dev.geeler.net/login/forgotpassword?token=$token";
+      $this->isHTML = true;
+      $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/forgotpassword.html");
+      $this->msgHTML = preg_replace('/[${]{1}.[token]+[}]{1}/', $token, $this->msgHTML);
+
+      if($this->send()){
+        $_SESSION["pwreset_sent"] = true;
+        header("Location: ./");
+      }
+    }
+  }
   public function send(){
     $mail = new PHPMailer;
     $mail->isSMTP();

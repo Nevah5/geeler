@@ -3,7 +3,8 @@
   // error_reporting(E_ALL);
   // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("../resources/scripts/autologin.php");
+  include("../../resources/scripts/autologin.php");
+  include("../../resources/scripts/mailing.php");
   if(isset($_SESSION["login"])){
     header("Location: ../../");
   }
@@ -90,13 +91,11 @@
                 $email = $_POST["email"];
                 $sql = "SELECT * FROM users WHERE email='$email'";
                 $query = mysqli_query($con, $sql);
-                print_r($query);
                 if(mysqli_num_rows($query) != 1){
                   echo "<span id=\"error\">${login.forgotpassword.email.notexists}</span>";
                 }else{
-                  $_SESSION["pwreset"] = true;
-                  $_SESSION["pwreset_email"] = $email;
-                  header("Location: ../../resources/scripts/mailing.php");
+                  $sendMail = new sendMail;
+                  $sendMail->pwreset($email, $con);
                 }
               }
           ?>
