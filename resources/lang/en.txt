@@ -111,7 +111,7 @@ register.error.passwordnotmatch:The passwords dont match!
 register.user.login:Login
 register.user.register:Register
 register.accept.email:You want to get updated with the newest informations per email.
-register.accountlogin:You already have an account? Login <a href="/register/">here</a>!
+register.accountlogin:You already have an account? Login <a href="/login/">here</a>!
 register.required:Required
 
 register_success.title:Success! - geeler.net

@@ -111,7 +111,7 @@ register.error.passwordnotmatch:Die Passwörter stimmen nicht überein!
 register.user.login:Einloggen
 register.user.register:Registrieren
 register.accept.email:Du möchtest über Email Benachrichtigungen und Updates erhalten.
-register.accountlogin:Du hast bereits ein Account erstellt? Logge dich <a href="/register/">hier</a> ein!
+register.accountlogin:Du hast bereits ein Account erstellt? Logge dich <a href="/login/">hier</a> ein!
 register.required:Benötigt
 
 register_success.title:Erfolg! - geeler.net
