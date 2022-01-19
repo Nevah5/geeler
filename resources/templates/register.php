@@ -223,6 +223,7 @@ Site made by Noah Geeler
 
     if(!mysqli_error($con)){
       $_SESSION["registersuccess"] = true;
+      $_SESSION["registeremail"] = $e;
       $sendMail = new sendMail;
       $sendMail->verify($verifyToken, $e, $u);
     }
