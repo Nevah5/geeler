@@ -146,6 +146,17 @@ class sendMail {
     }else{
       $mail->Body = $this->emailAlt;
     }
-    return $mail->send() ? true : false;
+    if($mail->send()){
+      return true;
+    }else{
+      $this->trowerror($mail->ErrorInfo);
+    }
+  }
+  public function trowerror($errorMessage){
+    $errorCode = strtoupper(bin2hex(random_bytes(3)));
+
+    $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+    mysqli_query($con, "INSERT INTO mailerrors VALUES (NULL, '$errorCode', '$errorMessage')");
+    mysqli_close($con);
   }
 }
