@@ -214,7 +214,8 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "footer", "stuff.privacy", "Datenschutz"),
 ("DE", "footer", "stuff.guidelines", "Richtlinien"),
 ("DE", "footer", "stuff.acknownledgements", "Dankeschön"),
-("DE", "footer", "stuff.licence", "Lizenz");
+("DE", "footer", "stuff.licence", "Lizenz"),
+("DE", "copyright", "title", "Copyright");
 
 INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "meta.desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
@@ -344,4 +345,5 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "footer", "stuff.privacy", "Privacy"),
 ("EN", "footer", "stuff.guidelines", "Guidelines"),
 ("EN", "footer", "stuff.acknownledgements", "Acknownledgements"),
-("EN", "footer", "stuff.licence", "Licence");
+("EN", "footer", "stuff.licence", "Licence"),
+("EN", "copyright", "title", "Copyright");

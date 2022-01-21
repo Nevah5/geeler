@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap');
+@import url("/resources/styles/footer.css");
+@import url("/resources/styles/scrollbar.css");
+
+html, body{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+a{
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+a.logo{
+  margin-top: 1vh;
+
+  span{
+    font-family: Russo One;
+    font-size: 3rem;
+    padding-left: 1vw;
+    color: #144A8F;
+  }
+}
+form::before{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  transform: translateY(0.5px);
+  clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+}
+form{
+  margin-top: 10vh;
+  position: relative;
+  padding: 20vh 0;
+  height: fit-content;
+
+  .content{
+    background-color: #144A8F;
+    width: 100%;
+
+    h2{
+      margin: 0;
+      text-align: center;
+      font-family: Russo One;
+      font-size: 3.3rem;
+      color: white;
+    }
+    .wrapper{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .box{
+        position: relative;
+        border: white solid 2px;
+        background-color: white;
+        padding: 70px 100px;
+        margin: 50px 0 30px;
+        border-radius: .5em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        min-width: 400px;
+        max-width: 70%;
+        transition: all .5s;
+
+        div.verification{
+          border: #b34040 solid 2px;
+          border-radius: .3em;
+          padding: 20px 0 20px 15px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          background-color: rgba(179, 64, 64, 0.255);
+
+          &#success{
+            border: #0d8b28 solid 2px;
+            background-color: rgba(13, 139, 40, 0.255);
+
+            span{
+              color: #0d8b28;
+            }
+          }
+          span{
+            color: #b34040;
+          }
+          span#title{
+            font-size: .9rem;
+          }
+          span:not(#title){
+            font-size: .75rem;
+          }
+        }
+        &#successbox{
+          align-items: center !important;
+          flex-direction: column !important;
+          flex-wrap: nowrap;
+        }
+        h3{ //success page title
+          width: 100%;
+          text-align: center;
+          font-size: 2rem;
+          font-family: Concert One;
+          margin: 0 0 15px;
+          color: #144A8F;
+
+          & ~ p#success{
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            max-width: 400px;
+            position: relative;
+          }
+        }
+        sup{ //required stars
+          color: #b34040;
+          font-family: Alata;
+          margin-left: 3px;
+        }
+        span#required{ //required at bottom
+          margin-top: 10px;
+        }
+        .grid{
+          display: grid;
+          width: 100%;
+          grid-template-columns: 40px 10px 1fr;
+          grid-template-rows: 10px 10px 1fr;
+
+          &:not(:first-child){
+            margin-top: 23px;
+          }
+
+          label:not(#submitbtn){
+            font-family: Alata;
+            color: #144A8F;
+            font-size: 0.8rem;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: fit-content;
+            white-space: nowrap;
+          }
+          div{
+            font-size: 0.8rem;
+            grid-column: 1/4;
+            grid-row: 3/4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            input:not([type="submit"]){
+              border: none;
+              border-bottom: solid #144A8F 2px;
+              outline: none;
+              color: #144A8F;
+              font-family: Alata;
+              width: 100%;
+              height: 75%;
+              margin-left: 15px;
+              transition: border .5s;
+            }
+            @mixin icon {
+              content: '';
+              display: inline-block;
+              height: 24px;
+              width: 24px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              transition: filter .5s;
+              filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+            }
+            i#email::before{
+              @include icon();
+              background-image: url("/resources/icons/email.png");
+            }
+            i#emailrep::before{
+              @include icon();
+              background-image: url("/resources/icons/emailrep.png");
+            }
+            i#pw::before{
+              @include icon();
+              background-image: url("/resources/icons/padlock.png");
+            }
+            i#pwrep::before{
+              @include icon();
+              background-image: url("/resources/icons/padlockrep.png");
+            }
+            i#empty::before{
+              @include icon();
+            }
+            i#user::before{
+              @include icon();
+              background-image: url("/resources/icons/user.png");
+            }
+          }
+        }
+        span{
+          font-size: .8rem;
+          font-family: Alata;
+          color: #b34040;
+        }
+        a{ //forgot password
+          text-decoration: underline;
+          color: #144A8F;
+          font-family: Alata;
+          margin-top: 10px;
+        }
+        div.check{
+          margin-top: 10px;
+          font-family: Alata;
+          color: #144A8F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+
+          input[type="checkbox"]{
+            display: none;
+          }
+          label#chkbx{
+            display: block;
+            min-height: 10px;
+            min-width: 10px;
+            width: 10px;
+            height: 10px;
+            margin-top: 3px;
+            margin-right: 10px;
+            background-color: white;
+            border: solid 2px #144A8F;
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & div#tik{
+              margin: 0;
+              display: block;
+              background-color: white;
+              width: 75%;
+              height: 75%;
+              clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+            }
+          }
+          input[type="checkbox"]:checked ~ label#chkbx{
+            background-color: #144A8F;
+          }
+          label a{
+            text-decoration: underline;
+            color: #144A8F;
+            font-size: inherit;
+          }
+        }
+        label#submitbtn{
+          align-self: center;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          padding: 6px 30px;
+          background-color: #144A8F;
+          color: white;
+          font-family: Alata;
+          border-radius: .5em;
+          cursor: pointer;
+        }
+        input[type="submit"]{
+          display: none;
+        }
+        p{
+          font-family: Alata;
+          color: #144A8F;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+form::after{
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-0.5px);
+  clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+}
+
+@media only screen and (max-width: 700px) {
+  a span{
+    padding-left: 10px !important;
+  }
+  form{
+    .content{
+      .wrapper{
+        .box{
+          padding: 50px 30px;
+          margin: 50px 0 30px;
+          width: 300px;
+          min-width: 300px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-device-width: 500px) {
+  form{
+    .content{
+      .wrapper{
+        .box{
+          padding: 50px 30px;
+          margin: 30px 0 30px;
+          width: 240px;
+          min-width: 240px;
+        }
+      }
+    }
+  }
+}

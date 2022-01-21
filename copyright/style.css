@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+@import url("/resources/styles/footer.css");
+@import url("/resources/styles/scrollbar.css");
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+a.logo {
+  margin-top: 1vh;
+}
+
+a.logo span {
+  font-family: Russo One;
+  font-size: 3rem;
+  padding-left: 1vw;
+  color: #144A8F;
+}
+
+form::before {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(0.5px);
+          transform: translateY(0.5px);
+  -webkit-clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+          clip-path: polygon(-1% -1%, -1% 101%, 101% 101%);
+}
+
+form {
+  margin-top: 10vh;
+  position: relative;
+  padding: 20vh 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+form .content {
+  background-color: #144A8F;
+  width: 100%;
+}
+
+form .content h2 {
+  margin: 0;
+  text-align: center;
+  font-family: Russo One;
+  font-size: 3.3rem;
+  color: white;
+}
+
+form .content .wrapper {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .content .wrapper .box {
+  position: relative;
+  border: white solid 2px;
+  background-color: white;
+  padding: 70px 100px;
+  margin: 50px 0 30px;
+  border-radius: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 400px;
+  max-width: 70%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+form .content .wrapper .box div.verification {
+  border: #b34040 solid 2px;
+  border-radius: .3em;
+  padding: 20px 0 20px 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: rgba(179, 64, 64, 0.255);
+}
+
+form .content .wrapper .box div.verification#success {
+  border: #0d8b28 solid 2px;
+  background-color: rgba(13, 139, 40, 0.255);
+}
+
+form .content .wrapper .box div.verification#success span {
+  color: #0d8b28;
+}
+
+form .content .wrapper .box div.verification span {
+  color: #b34040;
+}
+
+form .content .wrapper .box div.verification span#title {
+  font-size: .9rem;
+}
+
+form .content .wrapper .box div.verification span:not(#title) {
+  font-size: .75rem;
+}
+
+form .content .wrapper .box#successbox {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+form .content .wrapper .box h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Concert One;
+  margin: 0 0 15px;
+  color: #144A8F;
+}
+
+form .content .wrapper .box h3 ~ p#success {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  max-width: 400px;
+  position: relative;
+}
+
+form .content .wrapper .box sup {
+  color: #b34040;
+  font-family: Alata;
+  margin-left: 3px;
+}
+
+form .content .wrapper .box span#required {
+  margin-top: 10px;
+}
+
+form .content .wrapper .box .grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 40px 10px 1fr;
+      grid-template-columns: 40px 10px 1fr;
+  -ms-grid-rows: 10px 10px 1fr;
+      grid-template-rows: 10px 10px 1fr;
+}
+
+form .content .wrapper .box .grid:not(:first-child) {
+  margin-top: 23px;
+}
+
+form .content .wrapper .box .grid label:not(#submitbtn) {
+  font-family: Alata;
+  color: #144A8F;
+  font-size: 0.8rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+form .content .wrapper .box .grid div {
+  font-size: 0.8rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+form .content .wrapper .box .grid div input:not([type="submit"]) {
+  border: none;
+  border-bottom: solid #144A8F 2px;
+  outline: none;
+  color: #144A8F;
+  font-family: Alata;
+  width: 100%;
+  height: 75%;
+  margin-left: 15px;
+  -webkit-transition: border .5s;
+  transition: border .5s;
+}
+
+form .content .wrapper .box .grid div i#email::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/resources/icons/email.png");
+}
+
+form .content .wrapper .box .grid div i#emailrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/resources/icons/emailrep.png");
+}
+
+form .content .wrapper .box .grid div i#pw::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/resources/icons/padlock.png");
+}
+
+form .content .wrapper .box .grid div i#pwrep::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/resources/icons/padlockrep.png");
+}
+
+form .content .wrapper .box .grid div i#empty::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+}
+
+form .content .wrapper .box .grid div i#user::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+          filter: invert(20%) sepia(45%) saturate(2999%) hue-rotate(200deg) brightness(93%) contrast(90%);
+  background-image: url("/resources/icons/user.png");
+}
+
+form .content .wrapper .box span {
+  font-size: .8rem;
+  font-family: Alata;
+  color: #b34040;
+}
+
+form .content .wrapper .box a {
+  text-decoration: underline;
+  color: #144A8F;
+  font-family: Alata;
+  margin-top: 10px;
+}
+
+form .content .wrapper .box div.check {
+  margin-top: 10px;
+  font-family: Alata;
+  color: #144A8F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+form .content .wrapper .box div.check input[type="checkbox"] {
+  display: none;
+}
+
+form .content .wrapper .box div.check label#chkbx {
+  display: block;
+  min-height: 10px;
+  min-width: 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
+  margin-right: 10px;
+  background-color: white;
+  border: solid 2px #144A8F;
+  border-radius: 2px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .content .wrapper .box div.check label#chkbx div#tik {
+  margin: 0;
+  display: block;
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  -webkit-clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+          clip-path: polygon(48% 62%, 76% 23%, 90% 33%, 52% 82%, 22% 66%, 31% 52%);
+}
+
+form .content .wrapper .box div.check input[type="checkbox"]:checked ~ label#chkbx {
+  background-color: #144A8F;
+}
+
+form .content .wrapper .box div.check label a {
+  text-decoration: underline;
+  color: #144A8F;
+  font-size: inherit;
+}
+
+form .content .wrapper .box label#submitbtn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 6px 30px;
+  background-color: #144A8F;
+  color: white;
+  font-family: Alata;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+form .content .wrapper .box input[type="submit"] {
+  display: none;
+}
+
+form .content .wrapper .box p {
+  font-family: Alata;
+  color: #144A8F;
+  width: 100%;
+  text-align: center;
+}
+
+form::after {
+  content: '';
+  display: block;
+  height: 20vh;
+  width: 100%;
+  background-color: #144A8F;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(-0.5px);
+          transform: translateY(-0.5px);
+  -webkit-clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+          clip-path: polygon(-1% -1%, 101% 101%, 101% -1%);
+}
+
+@media only screen and (max-width: 700px) {
+  a span {
+    padding-left: 10px !important;
+  }
+  form .content .wrapper .box {
+    padding: 50px 30px;
+    margin: 50px 0 30px;
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+  form .content .wrapper .box {
+    padding: 50px 30px;
+    margin: 30px 0 30px;
+    width: 240px;
+    min-width: 240px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

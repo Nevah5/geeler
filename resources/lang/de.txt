@@ -131,3 +131,5 @@ footer.stuff.privacy:Datenschutz
 footer.stuff.guidelines:Richtlinien
 footer.stuff.acknownledgements:Dankeschön
 footer.stuff.licence:Lizenz
+
+copyright.section.title:Copyright
