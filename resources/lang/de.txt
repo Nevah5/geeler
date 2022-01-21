@@ -133,3 +133,5 @@ footer.stuff.acknownledgements:Dankeschön
 footer.stuff.licence:Lizenz
 
 copyright.section.title:Copyright
+
+acknownledgements.title:Dankeschön - geeler.net

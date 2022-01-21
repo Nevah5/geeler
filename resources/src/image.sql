@@ -144,7 +144,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "login", "user.register", "Registrieren"),
 ("DE", "login", "password.forgot", "Passwort vergessen?"),
 ("DE", "login", "stayloggedin", "Eingeloggt bleiben"),
-("DE", "login", "accountregister", "Du hast noch kein Account? Erstelle einen <a href=""/login/"">hier</a>!"),
+("DE", "login", "accountregister", "Du hast noch kein Account? Erstelle einen <a href=""/register/"">hier</a>!"),
 ("DE", "login", "account.verify.first", "Bitte verifiziere deinen Account zuerst."),
 ("DE", "login", "verification.error.title", "Verifizierungsfehler:"),
 ("DE", "login", "verification.error.tokennotset", "Du musst einen Token angeben."),
@@ -215,7 +215,8 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("DE", "footer", "stuff.guidelines", "Richtlinien"),
 ("DE", "footer", "stuff.acknownledgements", "Dankeschön"),
 ("DE", "footer", "stuff.licence", "Lizenz"),
-("DE", "copyright", "title", "Copyright");
+("DE", "copyright", "section.title", "Copyright"),
+("DE", "acknownledgements", "title", "Dankeschön - geeler.net");
 
 INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "meta.desc", "My name is Noah Geeler, I'm an apprentice as an aplication developer in Zürich."),
@@ -346,4 +347,5 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "footer", "stuff.guidelines", "Guidelines"),
 ("EN", "footer", "stuff.acknownledgements", "Acknownledgements"),
 ("EN", "footer", "stuff.licence", "Licence"),
-("EN", "copyright", "title", "Copyright");
+("EN", "copyright", "section.title", "Copyright"),
+("EN", "acknownledgements", "title", "Acknownledgements - geeler.net");

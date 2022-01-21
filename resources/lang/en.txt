@@ -133,3 +133,5 @@ footer.stuff.acknownledgements:Acknownledgements
 footer.stuff.licence:Licence
 
 copyright.section.title:Copyright
+
+acknownledgements.title:Acknownledgements - geeler.net

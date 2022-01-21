@@ -39,6 +39,7 @@ $lang = $_GET["lang"];
     <a href='compile.php?input=404.php&lang=<?= $lang ?>&output=404/index.php'>404</a>
     <a href='compile.php?input=410.php&lang=<?= $lang ?>&output=410/index.php'>410</a>
     <a href='compile.php?input=copyright.php&lang=<?= $lang ?>&output=copyright/index.php'>Copyright</a>
+    <a href='compile.php?input=acknownledgements.php&lang=<?= $lang ?>&output=acknownledgements/index.php'>Acknownledgements</a>
   </div>
   <?php
       $types = mysqli_query($con, "SELECT DISTINCT type FROM lang WHERE lang='$lang'");
