@@ -48,6 +48,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  padding: 0 30px;
 }
 
 .site .navbar .wrap {

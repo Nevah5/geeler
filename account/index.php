@@ -29,11 +29,10 @@
       <div class="wrap"><a href="/" class="logo">geeler</a></div>
       <nav>
         <span>Settings</span>
-        <a href="./test">Profile</a>
-        <a href="./test">Account</a>
-        <a href="./test">Email</a>
-        <a href="./test">Accessibility</a>
-        <a href="./test">Security</a>
+        <a href="?profile">Profile</a>
+        <a href="./">Account</a>
+        <a href="?accessibility">Accessibility</a>
+        <a href="?security">Security</a>
         <a href="./logout/">Logout</a>
       </nav>
     </div>
