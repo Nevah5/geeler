@@ -117,5 +117,112 @@ a {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (65px)[6] (1fr)[9];
+      grid-template-columns: repeat(6, 65px) repeat(9, 1fr);
+  -ms-grid-rows: (65px)[5] 30px (100px)[5] 1fr;
+      grid-template-rows: repeat(5, 65px) 30px repeat(5, 100px) 1fr;
+}
+
+.site .content .headerbg {
+  z-index: 1;
+  background-image: url("/resources/pictures/backgrounds/triangles.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 15;
+  grid-column: 1 / 16;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1/7;
+}
+
+.site .content .banner {
+  z-index: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 15;
+  grid-column: 1 / 16;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.site .content .pfp {
+  z-index: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3 / 6;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: .5em;
+}
+
+.site .content .pfp#border {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.site .content .username {
+  z-index: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 7;
+  grid-column: 7/14;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+}
+
+.site .content .username h2 {
+  padding-left: 30px;
+  color: #144A8F;
+  font-family: Concert One;
+  font-size: 2rem;
+}
+
+.site .content .message {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7/12;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 3;
+  grid-row: 8/11;
+  background-color: rgba(219, 57, 57, 0.562);
+  border: solid #d14747 3px;
+  color: white;
+  padding: 50px;
+  border-radius: .5em;
+}
+
+.site .content .message h3 {
+  font-family: Concert One;
+  font-size: 1.6rem;
+}
+
+.site .content .message span {
+  font-family: Alata;
 }
 /*# sourceMappingURL=style.css.map */

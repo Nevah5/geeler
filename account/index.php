@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  ob_start();
+  ob_flush();
+  // error_reporting(E_ALL);
+  // ini_set("display_errors", 1);
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+  include("./resources/scripts/autologin.php");
+  include("./resources/scripts/mailing.php");
+  if(!$_SESSION["login"]){
+    header("Location: ../");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,12 +44,37 @@
         <span>Settings</span>
         <a href="?profile">Profile</a>
         <a href="./">Account</a>
-        <a href="?accessibility">Accessibility</a>
         <a href="?security">Security</a>
-        <a href="./logout/">Logout</a>
       </nav>
     </div>
     <div class="content">
+      <?php
+        if(isset($_GET["profile"])){
+      ?>
+      <div class="headerbg"></div>
+      <div class="banner"></div>
+      <div class="pfp" id="border"></div>
+      <div class="pfp" style="background-image: url('/resources/icons/user.png');"></div>
+      <div class="username"><h2>XSAVAS</h2></div>
+      <div class="message">
+        <h3>This site is not done yet.</h3>
+        <span>I will add more features soon, when I got time and more energy, so please be patient.</span>
+      </div>
+      <?php
+        }else if(isset($_GET["security"])){
+      ?>
+      change pw
+      2fa enable/disable
+      <?php
+        }else{
+      ?>
+      Change pb
+      change uname
+      change email
+      change email settings
+      <?php
+        }
+      ?>
     </div>
   </div>
   <!--
