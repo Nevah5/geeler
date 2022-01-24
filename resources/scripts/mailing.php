@@ -77,7 +77,11 @@ class sendMail {
 
     if($this->send()){
       $_SESSION["2FA_sent"] = true;
-      header("Location: ./2FA");
+      if(!$_SESSION["2FA_resent"]){
+        header("Location: ./2FA");
+      }else{
+        header("Location: ../");
+      }
     }
   }
   public function pwreset($email, $con){
