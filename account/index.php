@@ -55,7 +55,7 @@
       <div class="banner"></div>
       <div class="pfp" id="border"></div>
       <div class="pfp" style="background-image: url('/resources/icons/user.png');"></div>
-      <div class="username"><h2>XSAVAS</h2></div>
+      <div class="username"><h2><?= $_SESSION["username"] ?></h2></div>
       <div class="message">
         <h3>This site is not done yet.</h3>
         <span>I will add more features soon, when I got time and more energy, so please be patient.</span>
@@ -63,8 +63,28 @@
       <?php
         }else if(isset($_GET["security"])){
       ?>
-      change pw
-      2fa enable/disable
+      <form action="./?security" method="post">
+        <label for="pw">Current Password</label>
+        <input type="password" name="password" id="pw">
+        <label for="newpw">New Password</label>
+        <input type="password" name="password" id="newpw">
+        <label for="reppw">Repeat Password</label>
+        <input type="password" name="password" id="reppw">
+        <input type="submit" value="Change">
+      </form>
+      <?php
+        $uID = $_SESSION["userID"];
+        $userData = mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'");
+        $userData = mysqli_fetch_array($userData);
+        if($userData){
+          $twoFAlink = "tfa=false";
+          $twoFAmsg = "Disable 2FA";
+        }else{
+          $twoFAlink = "tfa=true";
+          $twoFAmsg = "Enable 2FA";
+        }
+      ?>
+      <a href="?security&<?= $twoFAlink ?>"><?= $twoFAmsg ?></a>
       <?php
         }else{
       ?>
