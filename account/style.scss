@@ -78,6 +78,17 @@ a{
         color: white;
       }
     }
+    a#logout{
+      background-color: #da545f;
+      padding: 10px 30px;
+      border-radius: .5em;
+      color: white;
+      font-family: 'Alata', sans-serif;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+    }
   }
   .content{
     grid-column: 2 / 7;
@@ -152,6 +163,76 @@ a{
       }
       span{
         font-family: Alata;
+      }
+    }
+    .box{
+      grid-column: 2/15;
+      grid-row: 2/12;
+      border: #144A8F solid 3px;
+      border-radius: .5em;
+      position: relative;
+      display: grid;
+      grid-template-columns: 30px 250px 30px 2fr 30px;
+      grid-template-rows: 30px 250px repeat(10, 1fr);
+
+      #pfp{
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        border-radius: 50%;
+        border: #144A8F solid 3px;
+      }
+      .align{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &#changeimage{
+          grid-column: 2/3;
+          grid-row: 3/4;
+          align-items: flex-end;
+          
+
+          span{
+            background-color: #144A8F;
+            color: white;
+            font-family: 'Alata', sans-serif;
+            padding: 6px 10px;
+            border-radius: .5em;
+          }
+        }
+        &#banner{
+          grid-column: 2/3;
+          grid-row: 5/6;
+
+          span{
+            font-family: Concert One, sans-serif;
+            color: #144A8F;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      #userinfo{
+        grid-column: 4/5;
+        grid-row: 2/3;
+        height: 100%;
+        width: 100%;
+
+        h2{
+          font-family: Concert One, sans-serif;
+          color: #144A8F;
+
+          span{
+            font-family: Alata;
+            color: #144A8F;
+          }
+        }
       }
     }
   }

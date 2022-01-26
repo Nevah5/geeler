@@ -46,6 +46,7 @@
         <a href="./">Account</a>
         <a href="?security">Security</a>
       </nav>
+      <a href="./logout/" id="logout">Logout</a>
     </div>
     <div class="content">
       <?php
@@ -88,10 +89,20 @@
       <?php
         }else{
       ?>
-      Change pb
-      change uname
-      change email
-      change email settings
+      <div class="box">
+        <div id="pfp" style="background-image: url('/resources/icons/user.png');"></div>
+        <div class="align" id="changeimage"><span id="changeimage">Change Image</span></div>
+        <div id="userinfo">
+          <h2>Username: <span><?= $_SESSION["username"] ?></span></h2>
+          <h2>Email: <span><?= $_SESSION["email"] ?></span></h2>
+          <?php
+            $uID = $_SESSION["userID"];
+            $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE ID='$uID'"));
+          ?>
+          <h2>Joined: <span><?= $userData["joined"] ?></span></h2>
+        </div>
+        <div class="align" id="banner"><span>Banner:</span></div>
+      </div>
       <?php
         }
       ?>
