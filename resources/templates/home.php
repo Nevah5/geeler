@@ -96,7 +96,7 @@
       <?php
         }else{
       ?>
-      <a class="user" href="/logout/">
+      <a class="user" href="/account/logout/">
         <div class="image" style="background-image: url('/resources/icons/user.png');"></div>
         <span class="account"><?= $_SESSION["username"] ?></span>
       </a>

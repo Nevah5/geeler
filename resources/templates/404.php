@@ -15,7 +15,7 @@
 </head>
 <body>
   <?php
-    $sites = ["/home/", "/login/", "/register/", "/account/", "/login/2FA/", "/logout/", "/verify/", "/login/forgotpassword/", "/acknownledgements/", "/copyright/", "/privacy/", "/guidelines/", "/tos/"];
+    $sites = ["/home/", "/login/", "/register/", "/account/", "/login/2FA/", "/account/logout/", "/verify/", "/login/forgotpassword/", "/acknownledgements/", "/copyright/", "/privacy/", "/guidelines/", "/tos/"];
     $shortest = 100;
     $closest = "";
 
