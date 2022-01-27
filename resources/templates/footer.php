@@ -32,6 +32,7 @@
     <a href="https://steamcommunity.com/id/nevah5/" target="_blank"></a>
     <a href="https://twitter.com/Neevaah5" target="_blank"></a>
     <a href="https://stackoverflow.com/users/16029189/nevah5" target="_blank"></a>
+    <a href="https://www.linkedin.com/in/noah-geeler-820b4b22b/" target="_blank"></a>
   </div>
   <div class="foot">
     <div class="spacer"></div>

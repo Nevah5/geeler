@@ -116,6 +116,10 @@ div.footer .wrapper a:nth-child(5) {
   background-image: url("/resources/icons/stack-overflow.png");
 }
 
+div.footer .wrapper a:nth-child(6) {
+  background-image: url("/resources/icons/linkedin.png");
+}
+
 div.footer .foot {
   width: 100%;
   -ms-grid-row: 4;
