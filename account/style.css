@@ -285,9 +285,9 @@ div.toggle a div#dot {
 }
 
 .site .content .message {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 5;
-  grid-column: 7/12;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
   -ms-grid-row: 8;
   -ms-grid-row-span: 3;
   grid-row: 8/11;
