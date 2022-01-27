@@ -102,13 +102,13 @@
           <?php
             $uID = $_SESSION["userID"];
             $sql = "SELECT * FROM users
-              JOIN ads on users.ID = ads.userFK
               WHERE users.ID='$uID'
             ";
             $userData = mysqli_fetch_array(mysqli_query($con, $sql));
           ?>
           <h2>Joined: <span><?= $userData["joined"] ?></span></h2>
           <?php
+            $sql = "SELECT * FROM ads WHERE userFK='$uID'";
             $dbEmailAds = mysqli_num_rows(mysqli_query($con, $sql));
             $onoff = $dbEmailAds >= 1 ? "on" : "off";
             $link = $dbEmailAds >= 1 ? "?getupdatesperemail=false" : "?getupdatesperemail=true";
