@@ -554,4 +554,10 @@ div.toggle a div#dot {
   margin-top: 10px;
   cursor: pointer;
 }
+
+.site .content form span#error {
+  margin-top: 5px;
+  color: #da545f;
+  font-family: Alata;
+}
 /*# sourceMappingURL=style.css.map */

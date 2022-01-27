@@ -5,8 +5,8 @@
   // error_reporting(E_ALL);
   // ini_set("display_errors", 1);
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
-  include("./resources/scripts/autologin.php");
-  include("./resources/scripts/mailing.php");
+  include("../resources/scripts/autologin.php");
+  include("../resources/scripts/mailing.php");
   if(!$_SESSION["login"]){
     header("Location: ../");
   }
@@ -81,7 +81,7 @@
             $onoff = "off";
           }
       ?>
-      <form action="./?security" method="post">
+      <form action="./index.php?security" method="post">
         <div class="toggle">
           <h4>2FA</h4>
           <a id="<?= $onoff ?>" href="?security&<?= $twoFAlink ?>"><div id="dot"></div></a>
@@ -91,11 +91,35 @@
         <label for="pw">Current Password</label>
         <input type="password" name="password" id="pw">
         <label for="newpw">New Password</label>
-        <input type="password" name="password" id="newpw">
+        <input type="password" name="newpassword" id="newpw">
         <label for="reppw">Repeat Password</label>
-        <input type="password" name="password" id="reppw">
+        <input type="password" name="reppassword" id="reppw">
         <label for="submit" id="submitbtn">Change</label>
-        <input type="submit" id="submit">
+        <input type="submit" id="submit" name="submit">
+        <?php
+          if(isset($_POST["submit"])){
+            $uID = $_SESSION["userID"];
+            $email = $_SESSION["email"];
+            $query = mysqli_query($con, "SELECT * FROM passwords WHERE userFK='$uID'");
+            $currentPasswordHash = mysqli_fetch_array($query)["password"];
+            if(empty($_POST["password"]) || empty($_POST["newpassword"]) || empty($_POST["reppassword"])){
+              echo "<span id=\"error\">All fields have to be specified.</span>";
+            }else if($_POST["newpassword"] != $_POST["reppassword"]){
+              echo "<span id=\"error\">The new passwords do not match!</span>";
+            }else if(!password_verify($_POST["password"], $currentPasswordHash)){
+              echo "<span id=\"error\">Your current password is incorrect.</span>";
+            }else{
+              //change pw
+              $pw = password_hash($_POST["newpassword"], PASSWORD_DEFAULT);
+              $query = mysqli_query($con, "UPDATE passwords SET password='$pw' WHERE userFK='$uID'");
+              if(!mysqli_error($con)){
+                $sendMail = new sendMail;
+                $sendMail->pwreset_success($email, $con);
+                header("Location: ./logout/");
+              }
+            }
+          }
+        ?>
       </form>
       <?php
         }else{
