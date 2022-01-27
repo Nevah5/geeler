@@ -75,7 +75,7 @@
           }
       ?>
       <form action="./?security" method="post">
-        <div>
+        <div class="toggle">
           <h4>2FA</h4>
           <a id="<?= $onoff ?>" href="?security&<?= $twoFAlink ?>"><div id="dot"></div></a>
         </div>
@@ -101,9 +101,22 @@
           <h2>Email: <span><?= $_SESSION["email"] ?></span></h2>
           <?php
             $uID = $_SESSION["userID"];
-            $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE ID='$uID'"));
+            $sql = "SELECT * FROM users
+              JOIN ads on users.ID = ads.userFK
+              WHERE users.ID='$uID'
+            ";
+            $userData = mysqli_fetch_array(mysqli_query($con, $sql));
           ?>
           <h2>Joined: <span><?= $userData["joined"] ?></span></h2>
+          <?php
+            $dbEmailAds = mysqli_num_rows(mysqli_query($con, $sql));
+            $onoff = $dbEmailAds >= 1 ? "on" : "off";
+            $link = $dbEmailAds >= 1 ? "?getupdatesperemail=false" : "?getupdatesperemail=true";
+          ?>
+          <div class="toggle">
+            <h4>Get recent updates and news per email:</h4>
+            <a id="<?= $onoff ?>" href="<?= $link ?>"><div id="dot"></div></a>
+          </div>
         </div>
         <div class="align" id="banner"><span>Banner:</span></div>
         <div id="bannerpreview" style="background-image: url('/resources/pictures/backgrounds/triangles.svg');"></div>

@@ -19,6 +19,53 @@ a{
   text-decoration: none;
 }
 
+div.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  h4{
+    font-family: Concert One, sans-serif;
+    color: #144A8F;
+    font-weight: 1000;
+    margin: 0 10px 0 0;
+  }
+  a {
+    border: #144A8F 3px solid;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 24px;
+    position: relative;
+
+    &#on{
+      background-color: #144A8F;
+      justify-content: flex-end;
+
+      div#dot{
+        background-color: white;
+        margin-right: 6px;
+      }
+    }
+    &#off{
+      background-color: white;
+      justify-content: flex-start;
+
+      div#dot{
+        margin-left: 6px;
+        background-color: #144A8F;
+      }
+    }
+    div#dot{
+      display: block;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+    }
+  }
+}
 .site{
   width: 100%;
   height: 100vh;
@@ -294,53 +341,8 @@ a{
       border: #144A8F solid 3px;
       border-radius: .5em;
 
-      & > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        margin-bottom: 100px;
-
-        h4{
-          font-family: Concert One, sans-serif;
-          color: #144A8F;
-          font-weight: 1000;
-          margin: 0 10px 0 0;
-        }
-        a {
-          border: #144A8F 3px solid;
-          border-radius: 30px;
-          display: flex;
-          align-items: center;
-          width: 60px;
-          height: 24px;
-          position: relative;
-
-          &#on{
-            background-color: #144A8F;
-            justify-content: flex-end;
-
-            div#dot{
-              background-color: white;
-              margin-right: 6px;
-            }
-          }
-          &#off{
-            background-color: white;
-            justify-content: flex-start;
-
-            div#dot{
-              margin-left: 6px;
-              background-color: #144A8F;
-            }
-          }
-          div#dot{
-            display: block;
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-          }
-        }
+      & > div{
+        margin-bottom: 30px;
       }
       h2{
         font-family: Concert One, sans-serif;
@@ -366,6 +368,8 @@ a{
         color: white;
         background-color: #144A8F;
         border-radius: .5em;
+        margin-top: 10px;
+        cursor: pointer;
       }
     }
   }
