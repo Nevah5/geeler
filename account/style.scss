@@ -167,7 +167,7 @@ a{
     }
     .box{
       grid-column: 2/15;
-      grid-row: 2/12;
+      grid-row: 2/11;
       border: #144A8F solid 3px;
       border-radius: .5em;
       position: relative;
@@ -197,24 +197,28 @@ a{
           grid-column: 2/3;
           grid-row: 3/4;
           align-items: flex-end;
-          
 
           span{
             background-color: #144A8F;
             color: white;
             font-family: 'Alata', sans-serif;
+            margin-top: 10px;
             padding: 6px 10px;
             border-radius: .5em;
+            cursor: pointer;
           }
         }
         &#banner{
           grid-column: 2/3;
           grid-row: 5/6;
+          justify-content: flex-end;
+          align-self: center;
 
           span{
             font-family: Concert One, sans-serif;
             color: #144A8F;
             font-size: 1.5rem;
+            cursor: pointer;
           }
         }
       }
@@ -233,6 +237,135 @@ a{
             color: #144A8F;
           }
         }
+      }
+      div#bannerpreview{
+        background-position: center;
+        background-size: cover;
+        grid-column: 4/5;
+        grid-row: 5/8;
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: .5em;
+      }
+      div#changebanner{
+        grid-column: 4/5;
+        grid-row: 8/9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        span{
+          padding: 5px 10px;
+          background-color: #144A8F;
+          color: white;
+          font-family: Alata, sans-serif;
+          border-radius: .5em;
+          margin: 6px 10px;
+          cursor: pointer;
+        }
+      }
+      div#accountactions{
+        grid-column: 2/5;
+        grid-row: 10/12;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a{
+          text-decoration: none;
+          padding: 8px 13px;
+          background-color: #da545f;
+          color: white;
+          font-family: Alata, sans-serif;
+          border-radius: .5em;
+        }
+      }
+    }
+    form{
+      grid-column: 2/15;
+      grid-row: 2/11;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: #144A8F solid 3px;
+      border-radius: .5em;
+
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 100px;
+
+        h4{
+          font-family: Concert One, sans-serif;
+          color: #144A8F;
+          font-weight: 1000;
+          margin: 0 10px 0 0;
+        }
+        a {
+          border: #144A8F 3px solid;
+          border-radius: 30px;
+          display: flex;
+          align-items: center;
+          width: 60px;
+          height: 24px;
+          position: relative;
+
+          &#on{
+            background-color: #144A8F;
+            justify-content: flex-end;
+
+            div#dot{
+              background-color: white;
+              margin-right: 6px;
+            }
+          }
+          &#off{
+            background-color: white;
+            justify-content: flex-start;
+
+            div#dot{
+              margin-left: 6px;
+              background-color: #144A8F;
+            }
+          }
+          div#dot{
+            display: block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+          }
+        }
+      }
+      h2{
+        font-family: Concert One, sans-serif;
+        font-weight: 1000;
+        color: #144A8F;
+      }
+      label{
+        font-family: Alata, sans-serif;
+        color: #144A8F;
+      }
+      input[type="password"]{
+        border: none;
+        border-bottom: #144A8F solid 2px;
+        font-family: Alata;
+        color: #144A8F;
+        outline: none;
+      }
+      input[type="submit"]{
+        display: none;
+      }
+      label#submitbtn{
+        padding: 6px 10px;
+        color: white;
+        background-color: #144A8F;
+        border-radius: .5em;
       }
     }
   }

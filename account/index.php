@@ -63,29 +63,33 @@
       </div>
       <?php
         }else if(isset($_GET["security"])){
+          $uID = $_SESSION["userID"];
+          $userData = mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'");
+          $userData = mysqli_fetch_array($userData);
+          if($userData){
+            $twoFAlink = "tfa=false";
+            $onoff = "on";
+          }else{
+            $twoFAlink = "tfa=true";
+            $onoff = "off";
+          }
       ?>
       <form action="./?security" method="post">
+        <div>
+          <h4>2FA</h4>
+          <a id="<?= $onoff ?>" href="?security&<?= $twoFAlink ?>"><div id="dot"></div></a>
+        </div>
+
+        <h2>Change Password</h2>
         <label for="pw">Current Password</label>
         <input type="password" name="password" id="pw">
         <label for="newpw">New Password</label>
         <input type="password" name="password" id="newpw">
         <label for="reppw">Repeat Password</label>
         <input type="password" name="password" id="reppw">
-        <input type="submit" value="Change">
+        <label for="submit" id="submitbtn">Change</label>
+        <input type="submit" id="submit">
       </form>
-      <?php
-        $uID = $_SESSION["userID"];
-        $userData = mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'");
-        $userData = mysqli_fetch_array($userData);
-        if($userData){
-          $twoFAlink = "tfa=false";
-          $twoFAmsg = "Disable 2FA";
-        }else{
-          $twoFAlink = "tfa=true";
-          $twoFAmsg = "Enable 2FA";
-        }
-      ?>
-      <a href="?security&<?= $twoFAlink ?>"><?= $twoFAmsg ?></a>
       <?php
         }else{
       ?>
@@ -102,6 +106,12 @@
           <h2>Joined: <span><?= $userData["joined"] ?></span></h2>
         </div>
         <div class="align" id="banner"><span>Banner:</span></div>
+        <div id="bannerpreview" style="background-image: url('/resources/pictures/backgrounds/triangles.svg');"></div>
+        <div id="changebanner"><span id="changebanner">Change Banner</span><span id="reset">Reset Banner</span></div>
+        <div id="accountactions">
+          <a href="./logout/" id="logout">Logout</a>
+          <a href="./delete/" id="delete">Delete Account</a>
+        </div>
       </div>
       <?php
         }
