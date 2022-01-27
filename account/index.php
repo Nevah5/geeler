@@ -119,6 +119,14 @@
             $dbEmailAds = mysqli_num_rows(mysqli_query($con, $sql));
             $onoff = $dbEmailAds >= 1 ? "on" : "off";
             $link = $dbEmailAds >= 1 ? "?getupdatesperemail=false" : "?getupdatesperemail=true";
+
+            if($_GET["getupdatesperemail"] == "true"){
+              mysqli_query($con, "INSERT INTO ads VALUES (NULL, '$uID', DEFAULT)");
+              header("Location: ./");
+            }else if($_GET["getupdatesperemail"] == "false"){
+              mysqli_query($con, "DELETE FROM ads WHERE userFK='$uID'");
+              header("Location: ./");
+            }
           ?>
           <div class="toggle">
             <h4>Get recent updates and news per email:</h4>
