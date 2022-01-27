@@ -66,7 +66,14 @@
           $uID = $_SESSION["userID"];
           $userData = mysqli_query($con, "SELECT 2FA FROM users WHERE ID='$uID'");
           $userData = mysqli_fetch_array($userData);
-          if($userData){
+          if($_GET["tfa"] == "true"){
+            mysqli_query($con, "UPDATE users SET 2FA=1 WHERE ID='$uID'");
+            header("Location: ./?security");
+          }else if($_GET["tfa"] == "false"){
+            mysqli_query($con, "UPDATE users SET 2FA=0 WHERE ID='$uID'");
+            header("Location: ./?security");
+          }
+          if($userData["2FA"]){
             $twoFAlink = "tfa=false";
             $onoff = "on";
           }else{
