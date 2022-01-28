@@ -53,7 +53,7 @@
           <?php
             if($resendVerifyMail){
               echo "<div class=\"verification\" id=\"success\">
-                <span id=\"title\">${login.verification.error.title}</span>
+                <span id=\"title\">${login.verification.success.title}</span>
                 <span>${login.verification.resend.success}</span>
               </div>";
             }
@@ -132,7 +132,7 @@
                   if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){ 
                     $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
                     echo "<span>${login.account.verify.first}</span>";
-                    echo "<a href='?verify=". $userData["ID"] ."'>Verifizierungsemail erneut senden</a>";
+                    echo "<a href='?verify=". $userData["ID"] ."'>${login.account.verify.resend}</a>";
                   }else{
                     $login = true;
                   }

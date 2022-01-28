@@ -62,6 +62,10 @@ login.verification.error.title:Verifizierungsfehler:
 login.verification.error.tokennotset:Du musst einen Token angeben.
 login.verification.error.tokeninvalid:Der angegebene Token ist nicht gültig.
 login.verification.success:Du hast deinen Account erfolgreich verifiziert.
+login.verification.success.title:Verifizierungsemail:
+login.verification.resend.success:Die Email wurde erfolgreich erneut versendet.
+login.verification.resend.wait:Bitte warte noch einen Moment.
+login.account.verify.resend:Verifizierungsemail erneut senden.
 login.title.2fa:2FA - geeler.net
 login.section.title.2fa:2FA
 login.2fa:Code
