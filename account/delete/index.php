@@ -10,4 +10,20 @@
   if(!$_SESSION["login"]){
     header("Location: ../");
   }
+  if(!isset($_GET["success"]) || !isset($_GET["token"])){
+    //send deletion mail
+    $sendMail = new sendMail;
+    $sendMail->deleteAccount($_SESSION["email"], $con);
+  }else if(isset($_GET["success"])){
+    echo "A confirmation Email has been sent. Please check your inbox.";
+  }else if(isset($_GET["token"])){
+    $token = $_GET["token"];
+    $sql = "SELECT * FROM deleteTokens WHERE token='$token'";
+    if(mysqli_num_rows(mysqli_query($con, $sql)) == 1){
+      //delete account
+      echo "Your account has been deleted successfully!";
+      header("refresh:5; Location: ../../");
+    }
+  }
+  mysqli_close($con);
 ?>
