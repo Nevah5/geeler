@@ -21,7 +21,7 @@ class sendMail {
   private $isHTML = true;
   private $msgHTML = "";
 
-  public function verify($verifyToken, $email, $username) {
+  public function verify($verifyToken, $email, $username, $redirect) {
     $this->smtpUsername = "verify@geeler.net";
     $this->smtpPassword = "q6vuxly_Swu3Rec6lplN";
     $this->emailFrom = $this->smtpUsername;
@@ -36,7 +36,11 @@ class sendMail {
     $this->msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $verifyToken, file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/verify.html"));
 
     if($this->send()){
-      header("Location: ./success/");
+      if($redirect){
+        header("Location: ./success/");
+      }else{
+        header("Location: ./");
+      }
     }
   }
   public function contact($email, $message, $con){

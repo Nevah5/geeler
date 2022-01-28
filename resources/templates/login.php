@@ -11,7 +11,7 @@
     if(mysqli_num_rows($query) == 1){
       $data = mysqli_fetch_array($query);
       $sendMail = new sendMail;
-      $sendMail->verify($data["token"], $data["email"], $data["username"]);
+      $sendMail->verify($data["token"], $data["email"], $data["username"], false);
       $resendVerifyMail = true;
     }else{
       $resendVerifyMailWait = true;
