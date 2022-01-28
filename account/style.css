@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Concert+One&family=Russo+One&display=swap");
+@import url("/resources/styles/footer.css");
+@import url("/resources/styles/scrollbar.css");
+/**
+ * Big Titles - Russo One
+ * Important Text - Concert One
+ * Text - Alata
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: Concert One;
+  text-decoration: none;
+}
+
+div.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+div.toggle h4 {
+  font-family: Concert One, sans-serif;
+  color: #144A8F;
+  font-weight: 1000;
+  margin: 0 10px 0 0;
+}
+
+div.toggle a {
+  border: #144A8F 3px solid;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 24px;
+  position: relative;
+}
+
+div.toggle a#on {
+  background-color: #144A8F;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+div.toggle a#on div#dot {
+  background-color: white;
+  margin-right: 6px;
+}
+
+div.toggle a#off {
+  background-color: white;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+div.toggle a#off div#dot {
+  margin-left: 6px;
+  background-color: #144A8F;
+}
+
+div.toggle a div#dot {
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.site {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (1fr)[5];
+      grid-template-columns: 1fr repeat(5, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background-color: white;
+}
+
+.site .navbar {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  background-color: #144A8F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 0 30px;
+}
+
+.site .navbar .wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site .navbar .wrap a.logo {
+  color: white;
+  font-family: Russo One;
+  font-size: 3rem;
+}
+
+.site .navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: solid white 1px;
+  color: white;
+  padding: 10px 0 0;
+  margin-top: 50px;
+  border-radius: .5em;
+}
+
+.site .navbar nav span {
+  padding-bottom: 10px;
+  font-family: Alata;
+  font-weight: 1000;
+  font-size: 1.3rem;
+}
+
+.site .navbar nav a {
+  min-width: 200px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: white 1px solid;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Alata;
+  color: white;
+}
+
+.site .navbar a#logout {
+  background-color: #da545f;
+  padding: 10px 30px;
+  border-radius: .5em;
+  color: white;
+  font-family: 'Alata', sans-serif;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 30px;
+}
+
+.site .content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2 / 7;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (65px)[6] (1fr)[9];
+      grid-template-columns: repeat(6, 65px) repeat(9, 1fr);
+  -ms-grid-rows: (65px)[5] 30px (100px)[5] 1fr;
+      grid-template-rows: repeat(5, 65px) 30px repeat(5, 100px) 1fr;
+}
+
+.site .content .headerbg {
+  z-index: 1;
+  background-image: url("/resources/pictures/backgrounds/triangles.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 15;
+  grid-column: 1 / 16;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1/7;
+}
+
+.site .content .banner {
+  z-index: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 15;
+  grid-column: 1 / 16;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.site .content .pfp {
+  z-index: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3 / 6;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: .5em;
+}
+
+.site .content .pfp#border {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.site .content .username {
+  z-index: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 7;
+  grid-column: 7/14;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+}
+
+.site .content .username h2 {
+  padding-left: 30px;
+  color: #144A8F;
+  font-family: Concert One;
+  font-size: 2rem;
+}
+
+.site .content .message {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 3;
+  grid-row: 8/11;
+  background-color: rgba(219, 57, 57, 0.562);
+  border: solid #d14747 3px;
+  color: white;
+  padding: 50px;
+  border-radius: .5em;
+}
+
+.site .content .message h3 {
+  font-family: Concert One;
+  font-size: 1.6rem;
+}
+
+.site .content .message span {
+  font-family: Alata;
+}
+
+.site .content .box {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 13;
+  grid-column: 2/15;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 9;
+  grid-row: 2/11;
+  border: #144A8F solid 3px;
+  border-radius: .5em;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 250px 30px 2fr 30px;
+      grid-template-columns: 30px 250px 30px 2fr 30px;
+  -ms-grid-rows: 30px 250px (1fr)[10];
+      grid-template-rows: 30px 250px repeat(10, 1fr);
+}
+
+.site .content .box #pfp {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border-radius: 50%;
+  border: #144A8F solid 3px;
+}
+
+.site .content .box .align {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site .content .box .align#changeimage {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.site .content .box .align#changeimage span {
+  background-color: #144A8F;
+  color: white;
+  font-family: 'Alata', sans-serif;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+.site .content .box .align#banner {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.site .content .box .align#banner span {
+  font-family: Concert One, sans-serif;
+  color: #144A8F;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.site .content .box #userinfo {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 100%;
+  width: 100%;
+}
+
+.site .content .box #userinfo h2 {
+  font-family: Concert One, sans-serif;
+  color: #144A8F;
+}
+
+.site .content .box #userinfo h2 span {
+  font-family: Alata;
+  color: #144A8F;
+}
+
+.site .content .box div#bannerpreview {
+  background-position: center;
+  background-size: cover;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  grid-row: 5/8;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: .5em;
+}
+
+.site .content .box div#changebanner {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8/9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.site .content .box div#changebanner span {
+  padding: 5px 10px;
+  background-color: #144A8F;
+  color: white;
+  font-family: Alata, sans-serif;
+  border-radius: .5em;
+  margin: 6px 10px;
+  cursor: pointer;
+}
+
+.site .content .box div#accountactions {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 2;
+  grid-row: 10/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site .content .box div#accountactions a {
+  text-decoration: none;
+  padding: 8px 13px;
+  background-color: #da545f;
+  color: white;
+  font-family: Alata, sans-serif;
+  border-radius: .5em;
+}
+
+.site .content form {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 13;
+  grid-column: 2/15;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 9;
+  grid-row: 2/11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: #144A8F solid 3px;
+  border-radius: .5em;
+}
+
+.site .content form > div {
+  margin-bottom: 30px;
+}
+
+.site .content form h2 {
+  font-family: Concert One, sans-serif;
+  font-weight: 1000;
+  color: #144A8F;
+}
+
+.site .content form label {
+  font-family: Alata, sans-serif;
+  color: #144A8F;
+}
+
+.site .content form input[type="password"] {
+  border: none;
+  border-bottom: #144A8F solid 2px;
+  font-family: Alata;
+  color: #144A8F;
+  outline: none;
+}
+
+.site .content form input[type="submit"] {
+  display: none;
+}
+
+.site .content form label#submitbtn {
+  padding: 6px 10px;
+  color: white;
+  background-color: #144A8F;
+  border-radius: .5em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.site .content form span#error {
+  margin-top: 5px;
+  color: #da545f;
+  font-family: Alata;
+}
+/*# sourceMappingURL=style.css.map */

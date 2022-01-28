@@ -129,6 +129,21 @@ class sendMail {
       header("Location: ../");
     }
   }
+  public function deleteAccount($email, $con){
+    $deleteToken = bin2hex(random_bytes(64));
+    $link = "https://dev.geeler.net/account/delete?token=" . $deleteToken;
+    $username = $_SESSION["username"];
+    $uID = $_SESSION["userID"];
+    mysqli_query($con, "INSERT INTO deleteTokens VALUES (NULL, '$uID', '$deleteToken', DEFAULT)");
+    $this->emailTo = $email;
+    $this->emailToName = $username;
+    $this->isHTML = true;
+    $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/deleteaccount.html");
+    $this->msgHTML = preg_replace('/[${]{1}.[link]+[}]{1}/', $link, $this->msgHTML);
+    if($this->send()){
+      header("Location: ./?success");
+    }
+  }
   public function send(){
     $mail = new PHPMailer;
     $mail->isSMTP();
