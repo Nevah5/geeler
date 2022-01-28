@@ -10,7 +10,7 @@
   if(!$_SESSION["login"]){
     header("Location: ../");
   }
-  if(!isset($_GET["success"]) || !isset($_GET["token"])){
+  if(!isset($_GET["success"]) && !isset($_GET["token"])){
     //send deletion mail
     $sendMail = new sendMail;
     $sendMail->deleteAccount($_SESSION["email"], $con);
@@ -18,11 +18,25 @@
     echo "A confirmation Email has been sent. Please check your inbox.";
   }else if(isset($_GET["token"])){
     $token = $_GET["token"];
-    $sql = "SELECT * FROM deleteTokens WHERE token='$token'";
+    $sql = "SELECT * FROM deleteTokens
+      WHERE token='$token'
+      AND created > NOW() - INTERVAL 15 MINUTE
+      ORDER BY created DESC LIMIT 1";
     if(mysqli_num_rows(mysqli_query($con, $sql)) == 1){
       //delete account
-      echo "Your account has been deleted successfully!";
-      header("refresh:5; Location: ../../");
+      $uID = $_SESSION["userID"];
+      mysqli_query($con, "DELETE FROM deleteTokens WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM cookie WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM 2FA WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM ads WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM verify WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM pwreset WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM passwords WHERE userFK='$uID'");
+      mysqli_query($con, "DELETE FROM users WHERE ID='$uID'");
+      echo mysqli_error($con);
+      setcookie("stayloggedin", "", time() - 1, "/");
+      session_destroy();
+      echo "Your account has been deleted successfully! <a href='../'>go back</a>'";
     }
   }
   mysqli_close($con);
