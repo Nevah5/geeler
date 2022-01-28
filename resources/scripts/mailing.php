@@ -133,6 +133,7 @@ class sendMail {
     mysqli_query($con, "INSERT INTO deleteTokens VALUES (NULL, '$uID', '$deleteToken', DEFAULT)");
     $this->emailTo = $email;
     $this->emailToName = $username;
+    $this->emailSubject = "Account Deletion Confimation";
     $this->isHTML = true;
     $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/deleteaccount.html");
     $this->msgHTML = preg_replace('/[${]{1}.[link]+[}]{1}/', $link, $this->msgHTML);
