@@ -139,3 +139,25 @@ footer.stuff.licence:Licence
 copyright.section.title:Copyright
 
 acknownledgements.title:Acknownledgements - geeler.net
+
+account.title:Account - geeler.net
+account.nav.settings:Settings
+account.nav.profile:Profile
+account.nav.account:Account
+account.nav.security:Security
+account.logout:Logout
+account.logout:Delete
+account.sitenotdone:This site is not done yet
+account.sitenotdone.text:I will add more features soon, when I got time and more energy, so please be patient.
+account.security.password.change:Change Password
+account.security.password.current:Current Password
+account.security.password.new:New Password
+account.security.password.repeat:Repeat Password
+account.security.password.submit:Change
+account.account.username:Username:
+account.account.email:Email:
+account.account.joined:Joined:
+account.account.getupdates:Get recent updates and news per email:
+account.account.banner:Banner:
+account.account.banner.change:Change Banner
+account.account.banner.reset:Reset Banner

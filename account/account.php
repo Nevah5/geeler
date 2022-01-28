@@ -41,12 +41,12 @@
     <div class="navbar">
       <div class="wrap"><a href="/" class="logo">geeler</a></div>
       <nav>
-        <span>Settings</span>
-        <a href="?profile">Profile</a>
-        <a href="./">Account</a>
-        <a href="?security">Security</a>
+        <span>${account.nav.settings}</span>
+        <a href="?profile">${account.nav.profile}</a>
+        <a href="./">${account.nav.account}</a>
+        <a href="?security">${account.nav.security}</a>
       </nav>
-      <a href="./logout/" id="logout">Logout</a>
+      <a href="./logout/" id="logout">${account.logout}</a>
     </div>
     <div class="content">
       <?php
@@ -58,8 +58,8 @@
       <div class="pfp" style="background-image: url('/resources/icons/user.png');"></div>
       <div class="username"><h2><?= $_SESSION["username"] ?></h2></div>
       <div class="message">
-        <h3>This site is not done yet.</h3>
-        <span>I will add more features soon, when I got time and more energy, so please be patient.</span>
+        <h3>${account.sitenotdone}</h3>
+        <span>${account.sitenotdone.text}</span>
       </div>
       <?php
         }else if(isset($_GET["security"])){
@@ -87,14 +87,14 @@
           <a id="<?= $onoff ?>" href="?security&<?= $twoFAlink ?>"><div id="dot"></div></a>
         </div>
 
-        <h2>Change Password</h2>
-        <label for="pw">Current Password</label>
+        <h2>${account.security.password.change}</h2>
+        <label for="pw">${account.security.password.current}</label>
         <input type="password" name="password" id="pw">
-        <label for="newpw">New Password</label>
+        <label for="newpw">${account.security.password.new}</label>
         <input type="password" name="newpassword" id="newpw">
-        <label for="reppw">Repeat Password</label>
+        <label for="reppw">${account.security.password.repeat}</label>
         <input type="password" name="reppassword" id="reppw">
-        <label for="submit" id="submitbtn">Change</label>
+        <label for="submit" id="submitbtn">${account.security.password.submit}</label>
         <input type="submit" id="submit" name="submit">
         <?php
           if(isset($_POST["submit"])){
@@ -128,8 +128,8 @@
         <div id="pfp" style="background-image: url('/resources/icons/user.png');"></div>
         <div class="align" id="changeimage"><span id="changeimage">Change Image</span></div>
         <div id="userinfo">
-          <h2>Username: <span><?= $_SESSION["username"] ?></span></h2>
-          <h2>Email: <span><?= $_SESSION["email"] ?></span></h2>
+          <h2>${account.account.username} <span><?= $_SESSION["username"] ?></span></h2>
+          <h2>${account.account.email} <span><?= $_SESSION["email"] ?></span></h2>
           <?php
             $uID = $_SESSION["userID"];
             $sql = "SELECT * FROM users
@@ -137,7 +137,7 @@
             ";
             $userData = mysqli_fetch_array(mysqli_query($con, $sql));
           ?>
-          <h2>Joined: <span><?= $userData["joined"] ?></span></h2>
+          <h2>${account.account.joined} <span><?= $userData["joined"] ?></span></h2>
           <?php
             $sql = "SELECT * FROM ads WHERE userFK='$uID'";
             $dbEmailAds = mysqli_num_rows(mysqli_query($con, $sql));
@@ -153,16 +153,16 @@
             }
           ?>
           <div class="toggle">
-            <h4>Get recent updates and news per email:</h4>
+            <h4>${account.account.getupdates}</h4>
             <a id="<?= $onoff ?>" href="<?= $link ?>"><div id="dot"></div></a>
           </div>
         </div>
-        <div class="align" id="banner"><span>Banner:</span></div>
+        <div class="align" id="banner"><span>${account.account.banner}</span></div>
         <div id="bannerpreview" style="background-image: url('/resources/pictures/backgrounds/triangles.svg');"></div>
-        <div id="changebanner"><span id="changebanner">Change Banner</span><span id="reset">Reset Banner</span></div>
+        <div id="changebanner"><span id="changebanner">${account.account.banner.change}</span><span id="reset">${account.account.banner.reset}</span></div>
         <div id="accountactions">
-          <a href="./logout/" id="logout">Logout</a>
-          <a href="./delete/" id="delete">Delete Account</a>
+          <a href="./logout/" id="logout">${account.logout}</a>
+          <a href="./delete/" id="delete">${account.delete}</a>
         </div>
       </div>
       <?php

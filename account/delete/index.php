@@ -15,7 +15,7 @@
     $sendMail = new sendMail;
     $sendMail->deleteAccount($_SESSION["email"], $con);
   }else if(isset($_GET["success"])){
-    echo "A confirmation Email has been sent. Please check your inbox.";
+    echo "A confirmation email has been sent. Please check your inbox.";
   }else if(isset($_GET["token"])){
     $token = $_GET["token"];
     $sql = "SELECT * FROM deleteTokens WHERE token='$token'";
