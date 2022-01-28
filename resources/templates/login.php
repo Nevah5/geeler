@@ -3,6 +3,20 @@
   $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
   include("../resources/scripts/autologin.php");
   include("../resources/scripts/mailing.php");
+
+  if(isset($_GET["verify"])){
+    $userID = $_GET["verify"];
+    $sql = "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE users.ID='$userID' AND generated < NOW() - INTERVAL 3 MINUTE";
+    $query = mysqli_query($con, $sql);
+    if(mysqli_num_rows($query) == 1){
+      $data = mysqli_fetch_array($query);
+      $sendMail = new sendMail;
+      $sendMail->verify($data["token"], $data["email"], $data["username"]);
+      $resendVerifyMail = true;
+    }else{
+      $resendVerifyMailWait = true;
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +51,18 @@
       <div class="wrapper">
         <div class="box">
           <?php
+            if($resendVerifyMail){
+              echo "<div class=\"verification\" id=\"success\">
+                <span id=\"title\">${login.verification.error.title}</span>
+                <span>${login.verification.resend.success}</span>
+              </div>";
+            }
+            if($resendVerifyMailWait){
+              echo "<div class=\"verification\" id=\"success\">
+                <span id=\"title\">${login.verification.error.title}</span>
+                <span>${login.verification.resend.wait}</span>
+              </div>";
+            }
             if($_SESSION["pwreset_success"]){
               echo "<div class=\"verification\" id=\"success\">
                 <span id=\"title\">${login.passwordreset.success.title}</span>
@@ -103,8 +129,10 @@
                 if(!password_verify($_POST["password"], $pw)){
                   echo "<span>${login.error.passwordwrong}</span>" . PHP_EOL;
                 }else{
-                  if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){
+                  if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){ 
+                    $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
                     echo "<span>${login.account.verify.first}</span>";
+                    echo "<a href='?verify=". $userData["ID"] ."'>Verifizierungsemail erneut senden</a>";
                   }else{
                     $login = true;
                   }
