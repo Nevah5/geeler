@@ -225,7 +225,7 @@ Site made by Noah Geeler
       $_SESSION["registersuccess"] = true;
       $_SESSION["registeremail"] = $e;
       $sendMail = new sendMail;
-      $sendMail->verify($verifyToken, $e, $u);
+      $sendMail->verify($verifyToken, $e, $u, true);
     }
   }
   mysqli_close($con);

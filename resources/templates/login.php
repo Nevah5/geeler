@@ -132,7 +132,8 @@
                   if(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users JOIN verify ON users.ID = verify.userFK WHERE email='$email'")) != 0){ 
                     $userData = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email='$email'"));
                     echo "<span>${login.account.verify.first}</span>";
-                    echo "<a href='?verify=". $userData["ID"] ."'>${login.account.verify.resend}</a>";
+                    $uID = $userData['ID'];
+                    echo "<a href=\"?verify=$uID\">${login.account.verify.resend}</a>";
                   }else{
                     $login = true;
                   }
