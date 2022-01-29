@@ -146,7 +146,7 @@ account.nav.profile:Profil
 account.nav.account:Account
 account.nav.security:Sicherheit
 account.logout:Ausloggen
-account.logout:Löschen
+account.delete:Löschen
 account.sitenotdone:Diese Seite ist noch nicht fertig.
 account.sitenotdone.text:Ich werde bald neue Features hinzufügen, wenn ich mehr Zeit und Energie habe.
 account.security.password.change:Passwort ändern

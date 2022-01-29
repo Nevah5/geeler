@@ -159,7 +159,10 @@
         </div>
         <div class="align" id="banner"><span>${account.account.banner}</span></div>
         <div id="bannerpreview" style="background-image: url('/resources/pictures/backgrounds/triangles.svg');"></div>
-        <div id="changebanner"><span id="changebanner">${account.account.banner.change}</span><span id="reset">${account.account.banner.reset}</span></div>
+        <div id="changebanner">
+          <span id="changebanner">${account.account.banner.change}</span>
+          <span id="reset">${account.account.banner.reset}</span>
+        </div>
         <div id="accountactions">
           <a href="./logout/" id="logout">${account.logout}</a>
           <a href="./delete/" id="delete">${account.delete}</a>
