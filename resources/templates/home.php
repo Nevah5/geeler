@@ -174,9 +174,8 @@
           </div>
           <div class="text">
             <p>
-              This project is currently my biggest one. Sadly, I dont have time to work on it. I will try to finish it
-              soon. It's about collecting cards, trading them and opening boxes. I've mainly focused on the backend
-              part, that's why the site doesn't look well.
+              This project was my biggest one, until now. Sadly I had other work to do and lacked in time to finish it. I still have a beta version of it online for you.
+              It's about trading and collecting virtual cards. There I's even a daily shop. I wanted to learn jQuery with this project, but in the end, I have written it in PHP.
             </p>
             <div class="anchors">
               <a href="https://nevah5.com">Visit Beta Version &#10095;</a>
@@ -203,9 +202,7 @@
           </div>
           <div class="text">
             <p>
-              This project was made before I have started my apprenticeship. I'm very proud of the finished project,
-              but not the code. It is horrible. If I would have enough time, I would redo the whole project, maybe I
-              will do that for a final project at the end of the first year of my apprenticeship.
+              This website here is this project. I have worked on it for 9-11 weeks, during my first year in my apprenticeship. I'm very proud of it, but I could have made it even better. The original idea was a forum, a better version of my final project in 10th class. But it became a website about me with a useless login system.
             </p>
             <div class="anchors">
               <a href="/resources/pictures/geeler.net.png" target="_blank">Image &#10095;</a>
