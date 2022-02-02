@@ -1,0 +1,8 @@
+Options -Indexes
+
+AddHandler application/x-httpd-php80 .php
+
+ErrorDocument 404 /
+
+#@__HCP_END__@#
+# Anything after the comment above is left alone
