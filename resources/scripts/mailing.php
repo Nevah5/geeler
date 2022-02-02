@@ -31,9 +31,10 @@ class sendMail {
     $this->emailTo = $email;
     $this->emailToName = $username;
     $this->emailSubject = "Test";
-    $this->emailAlt = "https://dev.geeler.net/verify?token=" . $verifyToken;
+    $this->emailAlt = "https://" . $_SERVER["SERVER_NAME"] . "/verify?token=" . $verifyToken;
     $this->isHTML = true;
     $this->msgHTML = preg_replace('/[${]{1}.[verifyToken]+[}]{1}/', $verifyToken, file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/verify.html"));
+    $this->msgHTML = preg_replace('/[${]{1}.[domain]+[}]{1}/', $_SERVER["SERVER_NAME"], $this->msgHTML);
 
     if($this->send()){
       if($redirect){
@@ -108,10 +109,11 @@ class sendMail {
       $uID = $userData["ID"];
       mysqli_query($con, "INSERT INTO pwreset VALUES (NULL, '$uID', '$token', DEFAULT)");
 
-      $this->emailAlt = "https://dev.geeler.net/login/forgotpassword?token=$token";
+      $this->emailAlt = "https://" . $_SERVER["SERVER_NAME"] . "/login/forgotpassword?token=$token";
       $this->isHTML = true;
       $this->msgHTML = file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/resources/mails/forgotpassword.html");
       $this->msgHTML = preg_replace('/[${]{1}.[token]+[}]{1}/', $token, $this->msgHTML);
+      $this->msgHTML = preg_replace('/[${]{1}.[domain]+[}]{1}/', $_SERVER["SERVER_NAME"], $this->msgHTML);
 
       if($this->send()){
         $_SESSION["pwreset_sent"] = true;
@@ -135,7 +137,7 @@ class sendMail {
   }
   public function deleteAccount($email, $con){
     $deleteToken = bin2hex(random_bytes(64));
-    $link = "https://dev.geeler.net/account/delete?token=" . $deleteToken;
+    $link = "https://" . $_SERVER["SERVER_NAME"] . "/account/delete?token=" . $deleteToken;
     $username = $_SESSION["username"];
     $uID = $_SESSION["userID"];
     mysqli_query($con, "INSERT INTO deleteTokens VALUES (NULL, '$uID', '$deleteToken', DEFAULT)");
