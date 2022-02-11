@@ -604,6 +604,18 @@ nav.navbar .align_end {
   background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/1.png");
 }
 
+.projects .contents .wrapper .project#ictmod294 {
+  background-image: url("/resources/pictures/ictmodule294.png");
+}
+
+.projects .contents .wrapper .project#wordlebot {
+  background-image: url("/resources/pictures/wordlebot.png");
+}
+
+.projects .contents .wrapper .project#tictactoeai {
+  background-image: url("/resources/pictures/tictactoeai.png");
+}
+
 .projects .contents .wrapper .project .overlay {
   background-color: rgba(0, 0, 0, 0.233);
   position: absolute;

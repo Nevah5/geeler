@@ -219,6 +219,7 @@
           <div class="head">
             <h2>Discoin</h2>
             <div class="tags">
+              <span id="discord"></span>
               <span id="php"></span>
             </div>
           </div>
