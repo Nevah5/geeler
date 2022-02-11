@@ -330,7 +330,7 @@
               and make an AI, that plays against the user.
             </p>
             <div class="anchors">
-              <a href="/projects/tictactoe">Checkout Project &#10095;</a>
+              <a href="/projects/tictactoeai">Checkout Project &#10095;</a>
               <a href="https://github.com/Nevah5/tictactoeai">Visit GitHub &#10095;</a>
               <a href="/resources/pictures/tictactoeai.png" target="_blank">Image &#10095;</a>
             </div>
