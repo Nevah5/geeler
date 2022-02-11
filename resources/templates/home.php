@@ -288,6 +288,33 @@
             </div>
           </div>
         </div>
+        <div class="project" id="tictactoeai">
+          <div class="overlay"></div>
+          <div class="line"><div class="slider"></div></div>
+          <div class="head">
+            <h2>TicTacToe AI</h2>
+            <div class="tags">
+              <span id="html"></span>
+              <span id="css"></span>
+              <span id="js"></span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              This week was made at work again, like <a href="#discoin">Discoin</a>. The idea was to create TicTacToe as a web-application
+              and make an AI, that plays against the user.
+            </p>
+            <div class="anchors">
+              <a href="/projects/tictactoe">Checkout Project &#10095;</a>
+              <a href="https://github.com/Nevah5/tictactoeai">Visit GitHub &#10095;</a>
+              <a href="/resources/pictures/tictactoeai.png" target="_blank">Image &#10095;</a>
+            </div>
+            <div class="type">
+              <div id="opensource"></div>
+              <div id="teamwork"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
