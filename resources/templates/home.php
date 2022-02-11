@@ -261,6 +261,30 @@
             </div>
           </div>
         </div>
+        <div class="project" id="ictmod294">
+          <div class="overlay"></div>
+          <div class="line"><div class="slider"></div></div>
+          <div class="head">
+            <h2>Checkmk Node Container</h2>
+            <div class="tags">
+              <span id="html"></span>
+              <span id="css"></span>
+              <span id="js"></span>
+              <span id="node"></span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              I have made this webapplication in the ICT ÜK 294. It displays, fetches and updates tasks from an API.
+            </p>
+            <div class="anchors">
+              <a href="/resources/pictures/ictmodule294.png" target="_blank">Image &#10095;</a>
+            </div>
+            <div class="type">
+              <div id="private"></div>
+            </div>
+          </div>
+        </div>
         <div class="project" id="wordlebot">
           <div class="overlay"></div>
           <div class="line"><div class="slider"></div></div>
