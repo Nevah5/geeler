@@ -261,6 +261,33 @@
             </div>
           </div>
         </div>
+        <div class="project" id="wordlebot">
+          <div class="overlay"></div>
+          <div class="line"><div class="slider"></div></div>
+          <div class="head">
+            <h2>Discord Wordle</h2>
+            <div class="tags">
+              <span id="js"></span>
+              <span id="node"></span>
+              <span id="discord"></span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              I have made this project in my freetime, because I wanted to make something with Node.js and Discord. Since
+              Wordle is currently in a hype and I also really like it, I decided to make a bot with it.
+            </p>
+            <div class="anchors">
+              <a href="https://github.com/Nevah5/wordlebot">Visit GitHub &#10095;</a>
+              <a href="/resources/pictures/wordlebot.png" target="_blank">Image &#10095;</a>
+            </div>
+            <div class="type">
+              <div id="opensource"></div>
+              <div id="unfinished"></div>
+              <div id="inprogress"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

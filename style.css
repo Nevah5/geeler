@@ -701,6 +701,21 @@ nav.navbar .align_end {
   background-color: #0098D4;
 }
 
+.projects .contents .wrapper .project .head .tags #js::after {
+  content: 'JS';
+  background-color: #EFD81D;
+}
+
+.projects .contents .wrapper .project .head .tags #node::after {
+  content: 'Node.js';
+  background-color: #73AB60;
+}
+
+.projects .contents .wrapper .project .head .tags #discord::after {
+  content: 'Discord';
+  background-color: #5662F6;
+}
+
 .projects .contents .wrapper .project .text {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -1957,11 +1972,11 @@ nav.navbar .align_end {
 }
 
 .projects .contents .grid #projectnevah .project .overlay::before {
-  background-image: url("resources/pictures/nevah5.com.jpg");
+  background-image: url("/resources/pictures/nevah5.com.jpg");
 }
 
 .projects .contents .grid #projectdiscoin .project .overlay::before {
-  background-image: url("resources/pictures/discoin.png");
+  background-image: url("/resources/pictures/discoin.png");
 }
 
 .projects .contents .grid #projectcheckmk .project .overlay::before {
@@ -1969,6 +1984,10 @@ nav.navbar .align_end {
 }
 
 .projects .contents .grid #projectgeeler .project .overlay::before {
-  background-image: url("resources/pictures/geeler.net.png");
+  background-image: url("/resources/pictures/geeler.net.png");
+}
+
+.projects .contents .grid #wordlebot .project .overlay::before {
+  background-image: url("/resources/pictures/wordlebot.png");
 }
 /*# sourceMappingURL=style.css.map */

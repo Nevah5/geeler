@@ -488,6 +488,18 @@ nav.navbar{
               content: 'Docker';
               background-color: #0098D4;
             }
+            #js::after{
+              content: 'JS';
+              background-color: #EFD81D;
+            }
+            #node::after{
+              content: 'Node.js';
+              background-color: #73AB60;
+            }
+            #discord::after{
+              content: 'Discord';
+              background-color: #5662F6;
+            }
           }
         }
         .text{
@@ -1488,14 +1500,17 @@ nav.navbar{
 
 //project images
 .projects .contents .grid #projectnevah .project .overlay::before{
-  background-image: url("resources/pictures/nevah5.com.jpg");
+  background-image: url("/resources/pictures/nevah5.com.jpg");
 }
 .projects .contents .grid #projectdiscoin .project .overlay::before{
-  background-image: url("resources/pictures/discoin.png");
+  background-image: url("/resources/pictures/discoin.png");
 }
 .projects .contents .grid #projectcheckmk .project .overlay::before{
   background-image: url("https://github.com/Nevah5/DockerMonitoring/raw/images/7.png");
 }
 .projects .contents .grid #projectgeeler .project .overlay::before{
-  background-image: url("resources/pictures/geeler.net.png");
+  background-image: url("/resources/pictures/geeler.net.png");
+}
+.projects .contents .grid #wordlebot .project .overlay::before{
+  background-image: url("/resources/pictures/wordlebot.png");
 }
