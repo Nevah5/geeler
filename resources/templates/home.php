@@ -266,7 +266,7 @@
           <div class="overlay"></div>
           <div class="line"><div class="slider"></div></div>
           <div class="head">
-            <h2>Checkmk Node Container</h2>
+            <h2>ICT ÜK 294</h2>
             <div class="tags">
               <span id="html"></span>
               <span id="css"></span>
