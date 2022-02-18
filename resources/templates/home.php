@@ -238,7 +238,7 @@
           <div class="overlay"></div>
           <div class="line"><div class="slider"></div></div>
           <div class="head">
-            <h2>ICT ÜK 294</h2>
+            <h2>ICT ÜK 294 & 295</h2>
             <div class="tags">
               <span id="html"></span>
               <span id="css"></span>
@@ -248,9 +248,10 @@
           </div>
           <div class="text">
             <p>
-              I have made this webapplication in the ICT ÜK 294. It displays, fetches and updates tasks from an API.
+              I have made this webapplication in the ICT ÜK 294. It displays, fetches and updates tasks from an API (API made in ÜK 295).
             </p>
             <div class="anchors">
+              <a href="/projects/m294-m295">Checkout Project &#10095;</a>
               <a href="/resources/pictures/ictmodule294.png" target="_blank">Image &#10095;</a>
             </div>
             <div class="type">
