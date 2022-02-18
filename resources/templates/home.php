@@ -161,34 +161,6 @@
     <div class="contents">
       <h1>${home.project.title}</h1>
       <div class="wrapper">
-        <div class="project" id="nevah5com">
-          <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
-          <div class="head">
-            <h2>nevah5.com</h2>
-            <div class="tags">
-              <span id="php"></span>
-              <span id="css"></span>
-              <span id="html"></span>
-            </div>
-          </div>
-          <div class="text">
-            <p>
-              This project was my biggest one, until now. Sadly I had other work to do and lacked in time to finish it. I still have a beta version of it online for you.
-              It's about trading and collecting virtual cards. There I's even a daily shop. I wanted to learn jQuery with this project, but in the end, I have written it in PHP.
-            </p>
-            <div class="anchors">
-              <a href="https://nevah5.com">Visit Beta Version &#10095;</a>
-              <a href="/resources/pictures/nevah5.com.jpg" target="_blank">Image &#10095;</a>
-            </div>
-            <div class="type">
-              <div id="unfinished"></div>
-              <div id="inprogress"></div>
-              <div id="private"></div>
-              <div id="copyright"></div>
-            </div>
-          </div>
-        </div>
         <div class="project" id="geelernetv2">
           <div class="overlay"></div>
           <div class="line"><div class="slider"></div></div>
