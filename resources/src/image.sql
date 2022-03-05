@@ -261,7 +261,7 @@ INSERT INTO lang (lang, type, title, content) VALUES
 ("EN", "home", "navbar.contact", "Contact"),
 ("EN", "home", "navbar.donate", "Donate"),
 ("EN", "home", "home.title", "Noah Geeler"),
-("EN", "home", "home.subtitle1", "Apprentice Application Developer"),
+("EN", "home", "home.subtitle1", "Apprentice Software Engineer"),
 ("EN", "home", "home.subtitle2", "Hobby Programmer"),
 ("EN", "home", "home.subtitle3", "Layer 8"),
 ("EN", "home", "user.login", "Login"),
