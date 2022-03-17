@@ -181,7 +181,7 @@ class sendMail {
   public function trowerror($errorMessage){
     $errorCode = strtoupper(bin2hex(random_bytes(3)));
 
-    $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+    $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'f!ch#zen0!ac9#5Acr=7', "ubibudud_geeler");
     mysqli_query($con, "INSERT INTO mailerrors VALUES (NULL, '$errorCode', '$errorMessage')");
     mysqli_close($con);
   }

@@ -2,7 +2,7 @@
   session_start();
   // error_reporting(E_ALL);
   // ini_set("display_errors", 1);
-  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'f!ch#zen0!ac9#5Acr=7', "ubibudud_geeler");
   include("../../resources/scripts/autologin.php");
   include("../../resources/scripts/mailing.php");
   if(isset($_SESSION["login"])){

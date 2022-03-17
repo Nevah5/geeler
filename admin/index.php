@@ -2,7 +2,7 @@
   session_start();
   ob_start();
   ob_flush();
-  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'qucoCr=$Es=uzaWret5I', "ubibudud_geeler");
+  $con = mysqli_connect("ubibudud.mysql.db.internal", "ubibudud_geeler", 'f!ch#zen0!ac9#5Acr=7', "ubibudud_geeler");
   include("../../resources/scripts/autologin.php");
 ?>
 <!DOCTYPE html>
