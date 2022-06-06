@@ -616,6 +616,10 @@ nav.navbar .align_end {
   background-image: url("/resources/pictures/tictactoeai.png");
 }
 
+.projects .contents .wrapper .project#notensystem {
+  background-image: url("/resources/pictures/notensystem.png");
+}
+
 .projects .contents .wrapper .project .overlay {
   background-color: rgba(0, 0, 0, 0.233);
   position: absolute;
@@ -721,6 +725,16 @@ nav.navbar .align_end {
 .projects .contents .wrapper .project .head .tags #node::after {
   content: 'Node.js';
   background-color: #73AB60;
+}
+
+.projects .contents .wrapper .project .head .tags #vue::after {
+  content: 'Vue.js';
+  background-color: #41b883;
+}
+
+.projects .contents .wrapper .project .head .tags #express::after {
+  content: 'Express';
+  background-color: #5a5a5a;
 }
 
 .projects .contents .wrapper .project .head .tags #discord::after {

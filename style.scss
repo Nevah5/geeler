@@ -421,6 +421,9 @@ nav.navbar{
         &#tictactoeai{
           background-image: url("/resources/pictures/tictactoeai.png");
         }
+        &#notensystem{
+          background-image: url("/resources/pictures/notensystem.png");
+        }
         .overlay{
           background-color: rgba(0, 0, 0, 0.233);
           position: absolute;
@@ -504,6 +507,14 @@ nav.navbar{
             #node::after{
               content: 'Node.js';
               background-color: #73AB60;
+            }
+            #vue::after{
+              content: 'Vue.js';
+              background-color: #41b883;
+            }
+            #express::after{
+              content: 'Express';
+              background-color: #5a5a5a;
             }
             #discord::after{
               content: 'Discord';

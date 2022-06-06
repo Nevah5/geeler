@@ -11,6 +11,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
@@ -34,6 +35,7 @@
   <link rel="icon" href="/resources/icons/logo.png">
   <title>${home.title}</title>
 </head>
+
 <body>
   <nav id="home"></nav>
   <div class="home">
@@ -163,7 +165,9 @@
       <div class="wrapper">
         <div class="project" id="geelernetv2">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>geeler.net V2</h2>
             <div class="tags">
@@ -174,7 +178,10 @@
           </div>
           <div class="text">
             <p>
-              This website here is this project. I have worked on it for 9-11 weeks, during my first year in my apprenticeship. I'm very proud of it, but I could have made it even better. The original idea was a forum, a better version of my final project in 10th class. But it became a website about me with a useless login system.
+              This website here is this project. I have worked on it for 9-11 weeks, during my first year in my
+              apprenticeship. I'm very proud of it, but I could have made it even better. The original idea was a forum,
+              a better version of my final project in 10th class. But it became a website about me with a useless login
+              system.
             </p>
             <div class="anchors">
               <a href="/resources/pictures/geeler.net.png" target="_blank">Image &#10095;</a>
@@ -187,7 +194,9 @@
         </div>
         <div class="project" id="discoin">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>Discoin</h2>
             <div class="tags">
@@ -213,7 +222,9 @@
         </div>
         <div class="project" id="checkmkdocker">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>Checkmk Node Container</h2>
             <div class="tags">
@@ -236,7 +247,9 @@
         </div>
         <div class="project" id="ictmod294">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>ICT ÜK 294 & 295</h2>
             <div class="tags">
@@ -248,7 +261,8 @@
           </div>
           <div class="text">
             <p>
-              I have made this webapplication in the ICT ÜK 294. It displays, fetches and updates tasks from an API (API made in ÜK 295).
+              I have made this webapplication in the ICT ÜK 294. It displays, fetches and updates tasks from an API (API
+              made in ÜK 295).
             </p>
             <div class="anchors">
               <a href="/projects/m294-m295">Checkout Project &#10095;</a>
@@ -261,7 +275,9 @@
         </div>
         <div class="project" id="wordlebot">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>Discord Wordle</h2>
             <div class="tags">
@@ -272,7 +288,8 @@
           </div>
           <div class="text">
             <p>
-              I have made this project in my freetime, because I wanted to make something with Node.js and Discord. Since
+              I have made this project in my freetime, because I wanted to make something with Node.js and Discord.
+              Since
               Wordle is currently in a hype and I also really like it, I decided to make a bot with it.
             </p>
             <div class="anchors">
@@ -288,7 +305,9 @@
         </div>
         <div class="project" id="tictactoeai">
           <div class="overlay"></div>
-          <div class="line"><div class="slider"></div></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
           <div class="head">
             <h2>TicTacToe AI</h2>
             <div class="tags">
@@ -299,7 +318,8 @@
           </div>
           <div class="text">
             <p>
-              This week was made at work again, like <a href="#discoin">Discoin</a>. The idea was to create TicTacToe as a web-application
+              This week was made at work again, like <a href="#discoin">Discoin</a>. The idea was to create TicTacToe as
+              a web-application
               and make an AI, that plays against the user.
             </p>
             <div class="anchors">
@@ -310,6 +330,33 @@
             <div class="type">
               <div id="opensource"></div>
               <div id="teamwork"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project" id="notensystem">
+          <div class="overlay"></div>
+          <div class="line">
+            <div class="slider"></div>
+          </div>
+          <div class="head">
+            <h2>Geeler.net Notensystem</h2>
+            <div class="tags">
+              <span id="vue"></span>
+              <span id="express"></span>
+              <span id="node"></span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              This project was for my final project in the first year of my apprenticeship. It is a Grade Managment
+              System with a great overview on your performance.
+            </p>
+            <div class="anchors">
+              <a href="https://notensystem.geeler.net">Checkout Project &#10095;</a>
+              <a href="/resources/pictures/notensystem.png" target="_blank">Image &#10095;</a>
+            </div>
+            <div class="type">
+              <div id="private"></div>
             </div>
           </div>
         </div>
@@ -330,7 +377,9 @@
     </div>
     <div class="message">
       <div class="wrapper">
-        <div class="exclamation"><h3>⚠️</h3></div>
+        <div class="exclamation">
+          <h3>⚠️</h3>
+        </div>
         <p>${home.contact.message}</p>
       </div>
     </div>
@@ -375,7 +424,9 @@
         ?>
         <div>
           <input type="checkbox" id="acceptdb" name="acceptdb">
-          <label for="acceptdb" id="chkbx"><div id="tik"></div></label>
+          <label for="acceptdb" id="chkbx">
+            <div id="tik"></div>
+          </label>
           <label for="acceptdb">${home.contact.form.acceptdb}</label>
         </div>
         <?php
@@ -387,7 +438,9 @@
         ?>
         <div>
           <input type="checkbox" id="acceptsecurity" name="acceptsecurity">
-          <label for="acceptsecurity" id="chkbx"><div id="tik"></div></label>
+          <label for="acceptsecurity" id="chkbx">
+            <div id="tik"></div>
+          </label>
           <label for="acceptsecurity">${home.contact.form.acceptsecurity}</label>
         </div>
         <?php
@@ -446,4 +499,5 @@
 Site made by Noah Geeler
   -->
 </body>
+
 </html>
