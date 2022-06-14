@@ -348,7 +348,7 @@
           </div>
           <div class="text">
             <p>
-              This project was for my final project in the first year of my apprenticeship. It is a Grade Managment
+              This project was for my final project in the first year of my apprenticeship. It is a Grade-Management-
               System with a great overview on your performance.
             </p>
             <div class="anchors">
